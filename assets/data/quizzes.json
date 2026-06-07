@@ -1,5 +1,5 @@
 {
-  "data_version": 3,
+  "data_version": 4,
   "quizzes": [
     {
       "id": 1,
@@ -12,24 +12,24 @@
         "壊して"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ないように」は「〜が起こらないために」という意味です。",
-      "explanation_id": "「〜ないように」berarti 'agar tidak terjadi ~'.",
+      "explanation": "正解は「壊れない」。「〜ないように」は「〜が起こらないために」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '壊れない'. 「〜ないように」berarti 'agar tidak terjadi ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 2,
-      "question": "この部品は軽い＿＿＿、とても丈夫です。",
-      "question_id": "Meskipun bagian ini ringan, sangat kuat.",
+      "question": "何度も練習した＿＿＿、まだうまくできません。",
+      "question_id": "Meskipun sudah berlatih berkali-kali, masih belum bisa dengan baik.",
       "options": [
         "から",
+        "し",
         "のに",
-        "ので",
-        "けど"
+        "ので"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜のに」は意外な対比を表します。",
-      "explanation_id": "「〜のに」menunjukkan kontras yang tidak terduga.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「のに」。「〜のに」は予想と違う結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'のに'. 「〜のに」menunjukkan hasil yang berbeda dari perkiraan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -44,8 +44,8 @@
         "始めている"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜する前に」は動詞の辞書形を使います。",
-      "explanation_id": "「〜する前に」menggunakan bentuk kamus dari kata kerja.",
+      "explanation": "正解は「始める」。「〜する前に」は動詞の辞書形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '始める'. 「〜する前に」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -60,8 +60,8 @@
         "運ばない"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜するとき」は動詞の辞書形を使います。",
-      "explanation_id": "「〜するとき」menggunakan bentuk kamus dari kata kerja.",
+      "explanation": "正解は「運ぶ」。「〜するとき」は動詞の辞書形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '運ぶ'. 「〜するとき」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -76,24 +76,24 @@
         "見つけない"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜たら」は動詞のた形を使います。",
-      "explanation_id": "「〜たら」menggunakan bentuk ta dari kata kerja.",
+      "explanation": "正解は「見つけた」。「〜たら」は動詞のた形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '見つけた'. 「〜たら」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 6,
-      "question": "機械の調子が＿＿＿そうです。",
-      "question_id": "Sepertinya kondisi mesin tidak baik.",
+      "question": "あの棚の箱は、今にも落ち＿＿＿です。",
+      "question_id": "Kotak di rak itu kelihatannya hampir jatuh.",
       "options": [
-        "悪い",
-        "悪そう",
-        "悪く",
-        "悪かった"
+        "らしい",
+        "みたい",
+        "そう",
+        "よう"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜そうです」は様態を表し、い形容詞の語幹＋そうです。",
-      "explanation_id": "「〜そうです」menunjukkan keadaan, menggunakan stem dari i-keiyoushi + そうです.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「そう」。様態の「〜そうだ」はます形（落ち）に接続します。「よう・らしい・みたい」はこの形には接続できません。",
+      "explanation_id": "Jawaban yang benar adalah 'そう'. 「〜そうだ」(penampilan) tersambung ke masu-stem (落ち). Pilihan lain tidak bisa tersambung ke bentuk ini.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -108,8 +108,8 @@
         "使った"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜やすい」は動詞のます形の語幹に接続します。",
-      "explanation_id": "「〜やすい」terhubung ke stem dari bentuk masu kata kerja.",
+      "explanation": "正解は「使い」。「〜やすい」は動詞のます形の語幹に接続します。",
+      "explanation_id": "Jawaban yang benar adalah '使い'. 「〜やすい」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -124,24 +124,24 @@
         "かぶり"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ていてください」は継続的な状態を保つことを依頼する表現です。",
-      "explanation_id": "「〜ていてください」adalah ungkapan untuk meminta menjaga keadaan yang berkelanjutan.",
+      "explanation": "正解は「かぶって」。「〜ていてください」は継続的な状態を保つことを依頼する表現です。",
+      "explanation_id": "Jawaban yang benar adalah 'かぶって'. 「〜ていてください」adalah ungkapan untuk meminta menjaga keadaan yang berkelanjutan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 9,
-      "question": "この機械は＿＿＿ばかりです。",
-      "question_id": "Mesin ini baru saja diperbaiki.",
+      "question": "この機械は先週修理した＿＿＿なので、調子がいいです。",
+      "question_id": "Mesin ini baru saja diperbaiki minggu lalu, jadi kondisinya baik.",
       "options": [
-        "修理した",
-        "修理する",
-        "修理して",
-        "修理しない"
+        "うち",
+        "まで",
+        "ほど",
+        "ばかり"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜たばかり」は「〜したばかり（直後）」を表します。",
-      "explanation_id": "「〜たばかり」berarti 'baru saja ~'.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「ばかり」。「〜たばかり」は動作の直後を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ばかり'. 「〜たばかり」menunjukkan baru saja selesai melakukan sesuatu.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -156,88 +156,88 @@
         "締めた"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜すぎる」は動詞のます形の語幹に接続します。",
-      "explanation_id": "「〜すぎる」terhubung ke stem dari bentuk masu kata kerja.",
+      "explanation": "正解は「締め」。「〜すぎる」は動詞のます形の語幹に接続します。",
+      "explanation_id": "Jawaban yang benar adalah '締め'. 「〜すぎる」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 11,
-      "question": "作業が終わった＿＿＿、道具を片付けてください。",
-      "question_id": "Setelah pekerjaan selesai, rapikan alat.",
+      "question": "作業が終わっ＿＿＿、道具を片付けてください。",
+      "question_id": "Setelah pekerjaan selesai, rapikan alat-alatnya.",
       "options": [
-        "ら",
-        "と",
         "なら",
-        "たら"
+        "たら",
+        "ば",
+        "と"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜たら」は条件や時間的な順序を表します。",
-      "explanation_id": "「〜たら」menunjukkan kondisi atau urutan waktu.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「たら」。「終わったら」の形になります。「ば・と・なら」はこの形（終わっ＋）には接続できません。",
+      "explanation_id": "Jawaban yang benar adalah 'たら'. Bentuknya menjadi「終わったら」. Pilihan lain tidak bisa tersambung ke bentuk「終わっ」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 12,
-      "question": "この部品を「組み立てる」の意味は？",
-      "question_id": "Apa arti dari 'くみたてる' (merakit)?",
+      "question": "説明書を見ながら、棚を＿＿＿ました。",
+      "question_id": "Saya merakit rak sambil melihat buku petunjuk.",
       "options": [
-        "壊す",
-        "作る",
-        "パーツを合わせて完成させる",
-        "運ぶ"
+        "組み立て",
+        "折りたたみ",
+        "張り替え",
+        "塗り替え"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「組み立てる」は部品を合わせて製品を完成させることです。",
-      "explanation_id": "'Kumitate-ru' berarti menggabungkan bagian-bagian untuk menyelesaikan produk.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「組み立て」。「組み立てる」は部品を合わせて作ることです。",
+      "explanation_id": "Jawaban yang benar adalah '組み立て'. 「組み立てる」berarti merakit dari beberapa bagian.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 13,
-      "question": "「検査する」の意味は？",
-      "question_id": "Apa arti dari 'けんさする' (inspeksi)?",
+      "question": "部品の長さを定規で＿＿＿ます。",
+      "question_id": "Mengukur panjang suku cadang dengan penggaris.",
       "options": [
-        "作る",
-        "運ぶ",
-        "品質や不良をチェックする",
-        "修理する"
+        "数え",
+        "比べ",
+        "混ぜ",
+        "測り"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「検査する」は製品の品質や不良品がないかチェックすることです。",
-      "explanation_id": "'Kensa suru' berarti memeriksa kualitas produk atau apakah ada cacat.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「測り」。「測る」は長さや大きさをはかることです。",
+      "explanation_id": "Jawaban yang benar adalah '測り'. 「測る」berarti mengukur panjang atau ukuran.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 14,
-      "question": "「不良品」とは？",
-      "question_id": "Apa itu 'ふりょうひん' (produk cacat)?",
+      "question": "古い部品を新しいものと＿＿＿しました。",
+      "question_id": "Saya menukar suku cadang lama dengan yang baru.",
       "options": [
-        "良い製品",
-        "新しい製品",
-        "品質が悪い製品",
-        "古い製品"
+        "変換",
+        "交流",
+        "交換",
+        "交代"
       ],
       "correct_answer_index": 2,
-      "explanation": "「不良品」は品質基準を満たしていない製品のことです。",
-      "explanation_id": "'Furyouhin' adalah produk yang tidak memenuhi standar kualitas.",
+      "explanation": "正解は「交換」。「交換」は物を取り替えることです。「交代」は人が入れ替わることです。",
+      "explanation_id": "Jawaban yang benar adalah '交換'. 「交換」berarti menukar barang. 「交代」dipakai untuk pergantian orang.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 15,
-      "question": "「取り付ける」の意味は？",
-      "question_id": "Apa arti dari 'とりつける' (memasang)?",
+      "question": "壁に新しい棚を＿＿＿ました。",
+      "question_id": "Saya memasang rak baru di dinding.",
       "options": [
-        "取る",
-        "外す",
-        "設置する・装着する",
-        "運ぶ"
+        "取り上げ",
+        "取り付け",
+        "取り出し",
+        "取り消し"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「取り付ける」は部品などを設置・装着することです。",
-      "explanation_id": "'Toritsukeru' berarti memasang atau menginstal bagian.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「取り付け」。「取り付ける」は設置・装着することです。",
+      "explanation_id": "Jawaban yang benar adalah '取り付け'. 「取り付ける」berarti memasang.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -252,8 +252,8 @@
         "した"
       ],
       "correct_answer_index": 0,
-      "explanation": "「故障している」は機械が壊れている状態を表します。",
-      "explanation_id": "'Koshou shite iru' menunjukkan keadaan mesin yang rusak.",
+      "explanation": "正解は「して」。「故障している」は機械が壊れている状態を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'して'. 'Koshou shite iru' menunjukkan keadaan mesin yang rusak.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -268,24 +268,24 @@
         "完成"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜なければなりません」の前は動詞の未然形を使います。",
-      "explanation_id": "Sebelum 「〜なければなりません」menggunakan bentuk mizenkei dari kata kerja.",
+      "explanation": "正解は「完成させ」。「〜なければなりません」の前は動詞の未然形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '完成させ'. Sebelum 「〜なければなりません」menggunakan bentuk mizenkei dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 18,
-      "question": "「段取り」の意味は？",
-      "question_id": "Apa arti dari 'だんどり' (persiapan)?",
+      "question": "完成した製品を棚にきれいに＿＿＿てください。",
+      "question_id": "Susunlah produk jadi dengan rapi di rak.",
       "options": [
-        "作業の準備と手順",
-        "休憩時間",
-        "給料",
-        "機械の名前"
+        "数え",
+        "つぶし",
+        "並べ",
+        "混ぜ"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「段取り」は作業を効率的に進めるための準備と手順です。",
-      "explanation_id": "'Dandori' adalah persiapan dan prosedur untuk melakukan pekerjaan secara efisien.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「並べ」。「並べる」は順序よく置くことです。",
+      "explanation_id": "Jawaban yang benar adalah '並べ'. 「並べる」berarti menyusun dengan teratur.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -300,8 +300,8 @@
         "発見しない"
       ],
       "correct_answer_index": 2,
-      "explanation": "「〜たら」の前は動詞のた形を使います。",
-      "explanation_id": "Sebelum 「〜たら」menggunakan bentuk ta dari kata kerja.",
+      "explanation": "正解は「発見して」。「〜たら」の前は動詞のた形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '発見して'. Sebelum 「〜たら」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -316,24 +316,24 @@
         "のに"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜だから」は理由を表します。",
-      "explanation_id": "「〜だから」menunjukkan alasan.",
+      "explanation": "正解は「だから」。「〜だから」は理由を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'だから'. 「〜だから」menunjukkan alasan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 21,
-      "question": "「歩留まり」とは？",
-      "question_id": "Apa itu 'ぶどまり' (yield)?",
+      "question": "製品に＿＿＿が付かないように、手袋をして作業します。",
+      "question_id": "Bekerja dengan sarung tangan agar produk tidak kotor.",
       "options": [
-        "不良品の数",
-        "良品の割合",
-        "作業時間",
-        "休憩時間"
+        "音",
+        "味",
+        "値段",
+        "汚れ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「歩留まり」は生産した製品のうち良品の割合を指します。",
-      "explanation_id": "'Budoomari' menunjukkan persentase produk baik dari total produksi.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「汚れ」。「汚れ」はよごれのことです。",
+      "explanation_id": "Jawaban yang benar adalah '汚れ'. 「汚れ」berarti kotoran.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -348,8 +348,8 @@
         "履いた"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ないまま」は「〜しない状態で」という意味です。",
-      "explanation_id": "「〜ないまま」berarti 'dalam keadaan tidak ~'.",
+      "explanation": "正解は「履かない」。「〜ないまま」は「〜しない状態で」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '履かない'. 「〜ないまま」berarti 'dalam keadaan tidak ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -364,104 +364,104 @@
         "壊して"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ないように」は否定の目的を表します。",
-      "explanation_id": "「〜ないように」menunjukkan tujuan negatif.",
+      "explanation": "正解は「壊れない」。「〜ないように」は否定の目的を表します。",
+      "explanation_id": "Jawaban yang benar adalah '壊れない'. 「〜ないように」menunjukkan tujuan negatif.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 24,
-      "question": "「塗装する」の意味は？",
-      "question_id": "Apa arti dari 'とそうする' (mengecat)?",
+      "question": "テーブルをぞうきんで＿＿＿てください。",
+      "question_id": "Laplah meja dengan kain lap.",
       "options": [
-        "洗う",
-        "ペンキを塗る",
-        "磨く",
-        "切る"
+        "拭い",
+        "掃い",
+        "磨い",
+        "洗い"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「塗装する」は表面にペンキや塗料を塗ることです。",
-      "explanation_id": "'Tosou suru' berarti mengoleskan cat atau pelapis pada permukaan.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「拭い」。「拭く」は布などでよごれを取ることです。「ぞうきんで」とあるので「拭く」を選びます。",
+      "explanation_id": "Jawaban yang benar adalah '拭い'. 「拭く」berarti mengelap dengan kain. Karena ada kata \"kain lap\", pilih「拭く」.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 25,
-      "question": "この機械は使い方が簡単＿＿＿、よく壊れます。",
-      "question_id": "Mesin ini mudah digunakan, tetapi sering rusak.",
+      "question": "この機械は操作が簡単だ＿＿＿、力が必要です。",
+      "question_id": "Mesin ini mudah dioperasikan, tetapi membutuhkan tenaga.",
       "options": [
-        "だから",
+        "のに",
         "ので",
-        "が",
-        "のに"
+        "から",
+        "が"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「〜が」は逆接を表します。",
-      "explanation_id": "「〜が」menunjukkan pertentangan.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「が」。「簡単だが」の形で逆接を表します。「のに・ので」は「簡単なのに・簡単なので」の形になるため「だ」には接続できません。",
+      "explanation_id": "Jawaban yang benar adalah 'が'. 「簡単だが」menunjukkan pertentangan. 「のに・ので」harus berbentuk「簡単なのに・簡単なので」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 26,
-      "question": "「梱包する」の意味は？",
-      "question_id": "Apa arti dari 'こんぽうする' (mengemas)?",
+      "question": "割れないように、ガラスを新聞紙で＿＿＿ました。",
+      "question_id": "Saya membungkus kaca dengan koran agar tidak pecah.",
       "options": [
-        "開ける",
-        "箱に詰める",
-        "運ぶ",
-        "洗う"
+        "掛け",
+        "敷き",
+        "包み",
+        "積み"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「梱包する」は製品を箱に入れて包装することです。",
-      "explanation_id": "'Konpou suru' berarti memasukkan produk ke dalam kotak dan mengemas.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「包み」。「包む」は紙や布で覆うことです。",
+      "explanation_id": "Jawaban yang benar adalah '包み'. 「包む」berarti membungkus.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 27,
-      "question": "この部品は高い＿＿＿、品質がとても良いです。",
-      "question_id": "Bagian ini mahal, tetapi kualitasnya sangat baik.",
+      "question": "値段は高い＿＿＿、長く使えるのでお得です。",
+      "question_id": "Harganya mahal, tetapi bisa dipakai lama jadi menguntungkan.",
       "options": [
-        "だから",
-        "ので",
+        "し",
         "けれども",
-        "のに"
+        "ので",
+        "から"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「〜けれども」は逆接を表します。",
-      "explanation_id": "「〜けれども」menunjukkan pertentangan.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「けれども」。「〜けれども」は逆接（〜だが）を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'けれども'. 「〜けれども」menunjukkan pertentangan (tetapi).",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 28,
-      "question": "作業を＿＿＿ところです。",
-      "question_id": "Saya baru akan memulai pekerjaan.",
+      "question": "たった今、作業を始めた＿＿＿です。",
+      "question_id": "Saya baru saja mulai bekerja barusan.",
       "options": [
-        "始める",
-        "始めた",
-        "始めて",
-        "始めている"
+        "ところ",
+        "こと",
+        "もの",
+        "うち"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜するところです」は「今から〜する」という意味です。",
-      "explanation_id": "「〜するところです」berarti 'akan ~ sekarang'.",
+      "explanation": "正解は「ところ」。「〜たところ」は動作の直後を表します。「たった今」とよく一緒に使います。",
+      "explanation_id": "Jawaban yang benar adalah 'ところ'. 「〜たところ」menunjukkan tepat setelah melakukan sesuatu, sering dipakai dengan「たった今」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 29,
-      "question": "「締め切り」とは？",
-      "question_id": "Apa itu 'しめきり' (deadline)?",
+      "question": "重い箱を二人で＿＿＿ました。",
+      "question_id": "Kami mengangkat kotak berat berdua.",
       "options": [
-        "開始時間",
-        "終了期限",
-        "休憩時間",
-        "給料日"
+        "見上げ",
+        "読み上げ",
+        "磨き上げ",
+        "持ち上げ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「締め切り」は仕事などを終わらせなければならない期限です。",
-      "explanation_id": "'Shimekiri' adalah batas waktu untuk menyelesaikan pekerjaan.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「持ち上げ」。「持ち上げる」は上に持つことです。",
+      "explanation_id": "Jawaban yang benar adalah '持ち上げ'. 「持ち上げる」berarti mengangkat.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -476,8 +476,8 @@
         "使っている"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜た後で」は動詞のた形を使います。",
-      "explanation_id": "「〜た後で」menggunakan bentuk ta dari kata kerja.",
+      "explanation": "正解は「使った」。「〜た後で」は動詞のた形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '使った'. 「〜た後で」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -492,8 +492,8 @@
         "やった"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜にくい」は動詞のます形の語幹に接続します。",
-      "explanation_id": "「〜にくい」terhubung ke stem dari bentuk masu kata kerja.",
+      "explanation": "正解は「やり」。「〜にくい」は動詞のます形の語幹に接続します。",
+      "explanation_id": "Jawaban yang benar adalah 'やり'. 「〜にくい」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -508,8 +508,8 @@
         "を"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜になっています」は状態を表します。",
-      "explanation_id": "「〜になっています」menunjukkan keadaan.",
+      "explanation": "正解は「に」。「〜になっています」は状態を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜になっています」menunjukkan keadaan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -524,72 +524,72 @@
         "上がって"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ために」の前は動詞の辞書形を使います。",
-      "explanation_id": "Sebelum 「〜ために」menggunakan bentuk kamus dari kata kerja.",
+      "explanation": "正解は「上げる」。「〜ために」の前は動詞の辞書形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '上げる'. Sebelum 「〜ために」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 34,
-      "question": "「溶接する」の意味は？",
-      "question_id": "Apa arti dari 'ようせつする' (pengelasan)?",
+      "question": "ラベルの位置が＿＿＿いるので、直してください。",
+      "question_id": "Posisi labelnya bergeser, tolong diperbaiki.",
       "options": [
-        "切る",
-        "金属をつなぎ合わせる",
-        "磨く",
-        "測る"
+        "濡れて",
+        "破れて",
+        "ずれて",
+        "こぼれて"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「溶接する」は熱で金属をつなぎ合わせることです。",
-      "explanation_id": "'Yousetsu suru' berarti menyambungkan logam dengan panas.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「ずれて」。「ずれる」は正しい位置から動いてしまうことです。",
+      "explanation_id": "Jawaban yang benar adalah 'ずれて'. 「ずれる」berarti bergeser dari posisi yang benar.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 35,
-      "question": "ネジを＿＿＿ておいてください。",
-      "question_id": "Tolong kencangkan sekrupnya terlebih dahulu.",
+      "question": "使った工具は、棚に＿＿＿おいてください。",
+      "question_id": "Kembalikan perkakas yang sudah dipakai ke rak.",
       "options": [
-        "締めて",
-        "締める",
-        "締めた",
-        "締め"
+        "戻り",
+        "戻して",
+        "戻った",
+        "戻す"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜ておく」は事前準備を表します。",
-      "explanation_id": "「〜ておく」menunjukkan persiapan sebelumnya.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「戻して」。「〜ておく」はて形に接続します（戻しておく）。",
+      "explanation_id": "Jawaban yang benar adalah '戻して'. 「〜ておく」tersambung ke bentuk te (戻しておく).",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 36,
-      "question": "「仕上げる」の意味は？",
-      "question_id": "Apa arti dari 'しあげる' (menyelesaikan)?",
+      "question": "最後に表面を磨いて、製品を＿＿＿ます。",
+      "question_id": "Terakhir, permukaan dipoles untuk menyelesaikan produk.",
       "options": [
-        "始める",
-        "最後まで完成させる",
-        "準備する",
-        "計画する"
+        "仕上げ",
+        "仕入れ",
+        "仕分け",
+        "仕掛け"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「仕上げる」は作業を最後まで完成させることです。",
-      "explanation_id": "'Shiageru' berarti menyelesaikan pekerjaan sampai akhir.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「仕上げ」。「仕上げる」は最後まで完成させることです。",
+      "explanation_id": "Jawaban yang benar adalah '仕上げ'. 「仕上げる」berarti menyelesaikan hingga akhir.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 37,
-      "question": "この材料は熱に＿＿＿です。",
-      "question_id": "Bahan ini lemah terhadap panas.",
+      "question": "このプラスチックは熱に＿＿＿ので、火のそばに置かないでください。",
+      "question_id": "Plastik ini tidak tahan panas, jadi jangan diletakkan dekat api.",
       "options": [
         "強い",
-        "弱い",
-        "強く",
-        "弱く"
+        "低い",
+        "短い",
+        "弱い"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜に弱い」は「〜に対して耐性がない」という意味です。",
-      "explanation_id": "「〜に弱い」berarti 'tidak tahan terhadap ~'.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「弱い」。「熱に弱い」は熱で壊れやすいという意味です。「火のそばに置かない」という文脈から判断します。",
+      "explanation_id": "Jawaban yang benar adalah '弱い'. 「熱に弱い」berarti mudah rusak karena panas. Dilihat dari konteks (jangan dekat api).",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -604,24 +604,24 @@
         "着ている"
       ],
       "correct_answer_index": 2,
-      "explanation": "「〜てから」は動作の順序を表します。",
-      "explanation_id": "「〜てから」menunjukkan urutan tindakan.",
+      "explanation": "正解は「着て」。「〜てから」は動作の順序を表します。",
+      "explanation_id": "Jawaban yang benar adalah '着て'. 「〜てから」menunjukkan urutan tindakan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 39,
-      "question": "「研磨する」とは？",
-      "question_id": "Apa itu 'けんまする' (mengampelas)?",
+      "question": "木の角を少し＿＿＿て、丸くしました。",
+      "question_id": "Saya mengikis sedikit sudut kayu agar bulat.",
       "options": [
-        "切る",
-        "表面を滑らかにする",
-        "曲げる",
-        "穴を開ける"
+        "抜い",
+        "削っ",
+        "折っ",
+        "破っ"
       ],
       "correct_answer_index": 1,
-      "explanation": "「研磨する」は表面を滑らかに磨くことです。",
-      "explanation_id": "'Kenma suru' berarti menghaluskan permukaan dengan mengampelas.",
+      "explanation": "正解は「削っ」。「削る」は表面を少しずつ取り除くことです。",
+      "explanation_id": "Jawaban yang benar adalah '削っ'. 「削る」berarti mengikis sedikit demi sedikit.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -632,44 +632,44 @@
       "options": [
         "と",
         "ば",
-        "たら",
-        "なら"
+        "ても",
+        "まで"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜と」は自然な結果を表します。",
-      "explanation_id": "「〜と」menunjukkan hasil yang alami.",
+      "explanation": "正解は「と」。条件の「と」は辞書形に接続します（高すぎると）。「ば」は「高すぎれば」の形になります。",
+      "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional tersambung ke bentuk kamus (高すぎると).",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 41,
-      "question": "この工程は省略＿＿＿ません。",
-      "question_id": "Proses ini tidak boleh dilewati.",
+      "question": "この工程は大切なので、省略することが＿＿＿ません。",
+      "question_id": "Proses ini penting, jadi tidak dapat dihilangkan.",
       "options": [
-        "して",
-        "する",
-        "でき",
-        "され"
+        "し",
+        "なり",
+        "いけ",
+        "でき"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「〜できません」は可能形の否定です。",
-      "explanation_id": "「〜できません」adalah bentuk negatif dari bentuk potensial.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「でき」。「〜ことができません」は不可能を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'でき'. 「〜ことができません」menunjukkan ketidakmungkinan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 42,
-      "question": "「在庫」の意味は？",
-      "question_id": "Apa arti dari 'ざいこ' (stok)?",
+      "question": "材料が＿＿＿たら、倉庫に戻してください。",
+      "question_id": "Jika bahan tersisa, kembalikan ke gudang.",
       "options": [
-        "注文",
-        "保管されている商品",
-        "価格",
-        "販売"
+        "増え",
+        "超え",
+        "余っ",
+        "減っ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「在庫」は倉庫に保管されている商品のことです。",
-      "explanation_id": "'Zaiko' berarti barang yang disimpan di gudang.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「余っ」。「余る」は必要より多くて残ることです。",
+      "explanation_id": "Jawaban yang benar adalah '余っ'. 「余る」berarti tersisa karena lebih dari yang diperlukan.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -684,8 +684,8 @@
         "に"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜なってしまう」は望ましくない変化を表します。",
-      "explanation_id": "「〜なってしまう」menunjukkan perubahan yang tidak diinginkan.",
+      "explanation": "正解は「なって」。「〜なってしまう」は望ましくない変化を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'なって'. 「〜なってしまう」menunjukkan perubahan yang tidak diinginkan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -700,40 +700,40 @@
         "で"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜に合う」は「〜と一致する」という意味です。",
-      "explanation_id": "「〜に合う」berarti 'sesuai dengan ~'.",
+      "explanation": "正解は「に」。「〜に合う」は「〜と一致する」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に合う」berarti 'sesuai dengan ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 45,
-      "question": "「加工する」とは？",
-      "question_id": "Apa itu 'かこうする' (memproses)?",
+      "question": "塗料を使う前に、よく＿＿＿てください。",
+      "question_id": "Aduklah cat dengan baik sebelum digunakan.",
       "options": [
-        "保管する",
-        "材料を目的の形にする",
-        "捨てる",
-        "数える"
+        "折り",
+        "曲げ",
+        "破り",
+        "混ぜ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「加工する」は材料を加工して目的の形にすることです。",
-      "explanation_id": "'Kakou suru' berarti memproses bahan menjadi bentuk yang diinginkan.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「混ぜ」。「混ぜる」はかき回して均一にすることです。",
+      "explanation_id": "Jawaban yang benar adalah '混ぜ'. 「混ぜる」berarti mengaduk hingga rata.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 46,
-      "question": "作業が終わり＿＿＿、報告書を書きます。",
-      "question_id": "Setelah pekerjaan selesai, saya akan menulis laporan.",
+      "question": "昼休みの＿＿＿に、銀行へ行ってきました。",
+      "question_id": "Saat istirahat siang, saya pergi ke bank.",
       "options": [
-        "次第",
         "ながら",
-        "最中",
-        "途中"
+        "ほど",
+        "あいだ",
+        "まで"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜次第」は「〜したらすぐに」という意味です。",
-      "explanation_id": "「〜次第」berarti 'segera setelah ~'.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「あいだ」。「〜のあいだに」は期間の中のある時点を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'あいだ'. 「〜のあいだに」menunjukkan suatu titik dalam jangka waktu.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -748,24 +748,24 @@
         "が"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜通りに」は「〜と同じように」という意味です。",
-      "explanation_id": "「〜通りに」berarti 'sesuai dengan ~'.",
+      "explanation": "正解は「に」。「〜通りに」は「〜と同じように」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜通りに」berarti 'sesuai dengan ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 48,
-      "question": "「寸法」の意味は？",
-      "question_id": "Apa arti dari 'すんぽう' (dimensi)?",
+      "question": "ドアの＿＿＿から冷たい風が入ってきます。",
+      "question_id": "Angin dingin masuk dari celah pintu.",
       "options": [
-        "重さ",
-        "大きさ・サイズ",
-        "色",
-        "温度"
+        "隙間",
+        "表面",
+        "裏側",
+        "角"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「寸法」は物の大きさやサイズのことです。",
-      "explanation_id": "'Sunpou' berarti ukuran atau dimensi suatu benda.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「隙間」。「隙間（すきま）」は物と物の間の細い空きのことです。",
+      "explanation_id": "Jawaban yang benar adalah '隙間'. 「隙間」berarti celah sempit di antara benda.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -780,8 +780,8 @@
         "が"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜で」は方法や手段を表します。",
-      "explanation_id": "「〜で」menunjukkan cara atau metode.",
+      "explanation": "正解は「で」。「〜で」は方法や手段を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'で'. 「〜で」menunjukkan cara atau metode.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -796,24 +796,24 @@
         "で"
       ],
       "correct_answer_index": 1,
-      "explanation": "な形容詞の連体修飾には「な」を使います。",
-      "explanation_id": "Untuk memodifikasi kata benda dengan na-keiyoushi, gunakan 「な」.",
+      "explanation": "正解は「な」。な形容詞の連体修飾には「な」を使います。",
+      "explanation_id": "Jawaban yang benar adalah 'な'. Untuk memodifikasi kata benda dengan na-keiyoushi, gunakan 「な」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 51,
-      "question": "「手順」とは？",
-      "question_id": "Apa itu 'てじゅん' (prosedur)?",
+      "question": "今週の掃除＿＿＿は私です。",
+      "question_id": "Petugas piket kebersihan minggu ini adalah saya.",
       "options": [
-        "結果",
-        "作業の進め方",
-        "道具",
-        "材料"
+        "交番",
+        "当番",
+        "番組",
+        "番地"
       ],
       "correct_answer_index": 1,
-      "explanation": "「手順」は作業を進める順序や方法のことです。",
-      "explanation_id": "'Tejun' berarti urutan atau metode untuk melanjutkan pekerjaan.",
+      "explanation": "正解は「当番」。「当番」は順番に担当する役のことです。",
+      "explanation_id": "Jawaban yang benar adalah '当番'. 「当番」berarti giliran tugas.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -828,8 +828,8 @@
         "で"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜になる」は時間の到達を表します。",
-      "explanation_id": "「〜になる」menunjukkan waktu telah tiba.",
+      "explanation": "正解は「に」。「〜になる」は時間の到達を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜になる」menunjukkan waktu telah tiba.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -844,40 +844,40 @@
         "で"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜に気づく」は「〜を認識する」という意味です。",
-      "explanation_id": "「〜に気づく」berarti 'menyadari ~'.",
+      "explanation": "正解は「に」。「〜に気づく」は「〜を認識する」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に気づく」berarti 'menyadari ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 54,
-      "question": "「歩留まり率」の意味は？",
-      "question_id": "Apa arti dari 'ぶどまりりつ' (yield rate)?",
+      "question": "この部品を＿＿＿ずつ、二つの箱に分けてください。",
+      "question_id": "Bagilah suku cadang ini setengah-setengah ke dalam dua kotak.",
       "options": [
-        "不良品の比率",
-        "良品の割合",
-        "作業速度",
-        "残業時間"
+        "半日",
+        "半年",
+        "半分",
+        "半額"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「歩留まり率」は全体の製品のうち良品の割合です。",
-      "explanation_id": "'Budoomari-ritsu' adalah persentase produk baik dari total produksi.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「半分」。「半分」は二つに分けた一方のことです。",
+      "explanation_id": "Jawaban yang benar adalah '半分'. 「半分」berarti setengah bagian.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 55,
-      "question": "この工具は＿＿＿も使えます。",
-      "question_id": "Alat ini dapat digunakan untuk hal lain juga.",
+      "question": "この工具は、ドライバー＿＿＿も使えます。",
+      "question_id": "Perkakas ini juga bisa digunakan sebagai obeng.",
       "options": [
-        "他に",
-        "他の",
-        "別に",
-        "外に"
+        "とし",
+        "として",
+        "とした",
+        "とする"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜にも」は追加の可能性を表します。",
-      "explanation_id": "「〜にも」menunjukkan kemungkinan tambahan.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「として」。「〜として」は資格・用途を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'として'. 「〜として」menunjukkan fungsi atau peran.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -892,72 +892,72 @@
         "され"
       ],
       "correct_answer_index": 0,
-      "explanation": "「作動している」は動作中の状態を表します。",
-      "explanation_id": "'Sadou shite iru' menunjukkan keadaan sedang beroperasi.",
+      "explanation": "正解は「して」。「作動している」は動作中の状態を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'して'. 'Sadou shite iru' menunjukkan keadaan sedang beroperasi.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 57,
-      "question": "「部材」とは？",
-      "question_id": "Apa itu 'ぶざい' (komponen)?",
+      "question": "作業が楽になるように、道具の置き方を＿＿＿しました。",
+      "question_id": "Saya mengatur cara meletakkan alat agar pekerjaan lebih mudah.",
       "options": [
-        "完成品",
-        "組み立てに使う材料・部品",
-        "工具",
-        "機械"
+        "工事",
+        "工場",
+        "工業",
+        "工夫"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「部材」は製品を組み立てるための材料や部品のことです。",
-      "explanation_id": "'Buzai' berarti bahan atau bagian untuk merakit produk.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「工夫」。「工夫」は良い方法を考えることです。",
+      "explanation_id": "Jawaban yang benar adalah '工夫'. 「工夫」berarti memikirkan cara yang lebih baik.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 58,
-      "question": "作業中、問題が＿＿＿場合は報告してください。",
-      "question_id": "Jika terjadi masalah saat bekerja, laporkan.",
+      "question": "問題が＿＿＿場合は、すぐに報告してください。",
+      "question_id": "Jika terjadi masalah, segera laporkan.",
       "options": [
-        "起こる",
+        "起こり",
+        "起ころう",
         "起こった",
-        "起きた",
-        "起こり"
+        "起こって"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜た場合」は仮定の条件を表します。",
-      "explanation_id": "「〜た場合」menunjukkan kondisi hipotetis.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「起こった」。「〜た場合は」の形で使います。",
+      "explanation_id": "Jawaban yang benar adalah '起こった'. Digunakan dalam bentuk「〜た場合は」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 59,
-      "question": "この機械は定期的＿＿＿メンテナンスが必要です。",
-      "question_id": "Mesin ini memerlukan perawatan secara berkala.",
+      "question": "この部屋は、定期的＿＿＿換気してください。",
+      "question_id": "Ventilasilah ruangan ini secara berkala.",
       "options": [
+        "で",
         "に",
         "な",
-        "の",
-        "で"
+        "の"
       ],
       "correct_answer_index": 1,
-      "explanation": "な形容詞＋名詞の形です。",
-      "explanation_id": "Bentuk na-keiyoushi + kata benda.",
+      "explanation": "正解は「に」。動詞（換気する）を修飾するので「定期的に」になります。「定期的な」は名詞を修飾する形です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. Karena menerangkan kata kerja, bentuknya「定期的に」. 「定期的な」menerangkan kata benda.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 60,
-      "question": "「耐久性」の意味は？",
-      "question_id": "Apa arti dari 'たいきゅうせい' (daya tahan)?",
+      "question": "この箱はとても＿＿＿で、重い物を入れても壊れません。",
+      "question_id": "Kotak ini sangat kuat, tidak rusak meski diisi barang berat.",
       "options": [
-        "重さ",
-        "壊れにくさ",
-        "速さ",
-        "大きさ"
+        "丈夫",
+        "大変",
+        "上手",
+        "十分"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「耐久性」は壊れにくい性質のことです。",
-      "explanation_id": "'Taikyuu-sei' berarti sifat yang tidak mudah rusak.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「丈夫」。「丈夫」は壊れにくいことです。",
+      "explanation_id": "Jawaban yang benar adalah '丈夫'. 「丈夫」berarti kuat dan tidak mudah rusak.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -972,8 +972,8 @@
         "が"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜をよく見る」は注意深く見ることを表します。",
-      "explanation_id": "「〜をよく見る」berarti melihat dengan seksama.",
+      "explanation": "正解は「を」。「〜をよく見る」は注意深く見ることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'を'. 「〜をよく見る」berarti melihat dengan seksama.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -988,24 +988,24 @@
         "こと"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜には」は目的達成の条件を表します。",
-      "explanation_id": "「〜には」menunjukkan kondisi untuk mencapai tujuan.",
+      "explanation": "正解は「には」。「〜には」は目的達成の条件を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'には'. 「〜には」menunjukkan kondisi untuk mencapai tujuan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 63,
-      "question": "「仕様書」とは？",
-      "question_id": "Apa itu 'しようしょ' (spesifikasi)?",
+      "question": "非常ベルが鳴っても＿＿＿ずに、落ち着いて避難してください。",
+      "question_id": "Meski bel darurat berbunyi, jangan panik dan evakuasilah dengan tenang.",
       "options": [
-        "契約書",
-        "製品の詳細が書かれた文書",
-        "請求書",
-        "報告書"
+        "汚れ",
+        "慌て",
+        "疲れ",
+        "遅れ"
       ],
       "correct_answer_index": 1,
-      "explanation": "「仕様書」は製品の仕様や規格が記載された文書です。",
-      "explanation_id": "'Shiyousho' adalah dokumen yang mencantumkan spesifikasi produk.",
+      "explanation": "正解は「慌て」。「慌てる」は落ち着きをなくすことです。",
+      "explanation_id": "Jawaban yang benar adalah '慌て'. 「慌てる」berarti panik.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1020,40 +1020,40 @@
         "終わった"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ように」の前は動詞の辞書形を使います。",
-      "explanation_id": "Sebelum 「〜ように」menggunakan bentuk kamus dari kata kerja.",
+      "explanation": "正解は「終わる」。「〜ように」の前は動詞の辞書形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '終わる'. Sebelum 「〜ように」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 65,
-      "question": "材料が不足＿＿＿そうです。",
-      "question_id": "Sepertinya bahan akan habis.",
+      "question": "在庫の棚を見ると、材料が足りなく＿＿＿そうです。",
+      "question_id": "Melihat rak stok, sepertinya bahan akan segera kurang.",
       "options": [
-        "する",
-        "して",
-        "し",
-        "した"
+        "なる",
+        "なって",
+        "なった",
+        "なり"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「〜しそう」はサ変動詞の推量形です。",
-      "explanation_id": "「〜しそう」adalah bentuk dugaan dari kata kerja suru.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「なり」。見た様子からの判断（様態）なので、ます形（なり）＋そうです。「なるそうです」は人から聞いた話（伝聞）になります。",
+      "explanation_id": "Jawaban yang benar adalah 'なり'. Karena penilaian dari yang terlihat, bentuknya masu-stem +そうです. 「なるそうです」berarti kabar dari orang lain.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 66,
-      "question": "「納期」の意味は？",
-      "question_id": "Apa arti dari 'のうき' (tanggal pengiriman)?",
+      "question": "急げば、締め切りに＿＿＿ます。",
+      "question_id": "Kalau bergegas, masih sempat sebelum batas waktu.",
       "options": [
-        "製造日",
-        "商品を納める期限",
-        "発注日",
-        "検査日"
+        "付き合い",
+        "似合い",
+        "間に合い",
+        "出会い"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「納期」は製品を顧客に納める期限のことです。",
-      "explanation_id": "'Nouki' adalah batas waktu untuk mengirimkan produk ke pelanggan.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「間に合い」。「間に合う」は時間内にできることです。",
+      "explanation_id": "Jawaban yang benar adalah '間に合い'. 「間に合う」berarti sempat dalam waktu yang ditentukan.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1068,56 +1068,56 @@
         "が"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜に基づいて」は「〜を根拠にして」という意味です。",
-      "explanation_id": "「〜に基づいて」berarti 'berdasarkan ~'.",
+      "explanation": "正解は「に」。「〜に基づいて」は「〜を根拠にして」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に基づいて」berarti 'berdasarkan ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 68,
-      "question": "製品が完成＿＿＿から、梱包します。",
-      "question_id": "Setelah produk selesai, akan dikemas.",
+      "question": "毎回、手を洗っ＿＿＿作業を始めてください。",
+      "question_id": "Setiap kali, mulailah bekerja setelah mencuci tangan.",
       "options": [
-        "する",
-        "して",
-        "した",
-        "し"
+        "てから",
+        "たから",
+        "たことが",
+        "たほうが"
       ],
-      "correct_answer_index": 2,
-      "explanation": "「〜してから」は動作の順序を表します。",
-      "explanation_id": "「〜してから」menunjukkan urutan tindakan.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「てから」。「〜てから」は動作の順序を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'てから'. 「〜てから」menunjukkan urutan tindakan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 69,
-      "question": "「工程管理」とは？",
-      "question_id": "Apa itu 'こうていかんり' (manajemen proses)?",
+      "question": "メンバーが全員＿＿＿たら、ミーティングを始めます。",
+      "question_id": "Setelah semua anggota lengkap, rapat akan dimulai.",
       "options": [
-        "品質管理",
-        "製造の各段階を管理すること",
-        "在庫管理",
-        "人事管理"
+        "重なっ",
+        "混ざっ",
+        "繋がっ",
+        "揃っ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「工程管理」は製造の各段階を管理することです。",
-      "explanation_id": "'Koutei kanri' berarti mengelola setiap tahap produksi.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「揃っ」。「揃う」は全員・全部が集まることです。",
+      "explanation_id": "Jawaban yang benar adalah '揃っ'. 「揃う」berarti semua sudah lengkap.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 70,
       "question": "安全規則を守らない＿＿＿、事故が起こります。",
-      "question_id": "Jika tidak mengikuti peraturan keselamatan, kecelakaan akan terjadi.",
+      "question_id": "Jika tidak mematuhi aturan keselamatan, akan terjadi kecelakaan.",
       "options": [
+        "ても",
+        "のに",
         "と",
-        "ば",
-        "なら",
-        "ても"
+        "ば"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜と」は必然的な結果を表します。",
-      "explanation_id": "「〜と」menunjukkan hasil yang pasti.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「と」。条件の「と」は「守らないと」の形で使います。「ば」は「守らなければ」の形になります。",
+      "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional dipakai dalam bentuk「守らないと」.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1132,24 +1132,24 @@
         "品質高い"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ばかりか」の前は普通形を使います。",
-      "explanation_id": "Sebelum 「〜ばかりか」menggunakan bentuk biasa.",
+      "explanation": "正解は「品質が高い」。「〜ばかりか」の前は普通形を使います。",
+      "explanation_id": "Jawaban yang benar adalah '品質が高い'. Sebelum 「〜ばかりか」menggunakan bentuk biasa.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 72,
-      "question": "「原材料」の意味は？",
-      "question_id": "Apa arti dari 'げんざいりょう' (bahan baku)?",
+      "question": "ごみを＿＿＿ないで、毎日捨ててください。",
+      "question_id": "Jangan menumpuk sampah, buanglah setiap hari.",
       "options": [
-        "完成品",
-        "製造に使う元の材料",
-        "廃棄物",
-        "工具"
+        "ため",
+        "やめ",
+        "とめ",
+        "きめ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「原材料」は製品を作るための元となる材料のことです。",
-      "explanation_id": "'Genzairyou' berarti bahan dasar untuk membuat produk.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「ため」。「ためる」は少しずつ集めて多くすることです。",
+      "explanation_id": "Jawaban yang benar adalah 'ため'. 「ためる」berarti menumpuk sedikit demi sedikit.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1164,40 +1164,40 @@
         "ほどに"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜ために」は目的を表します。",
-      "explanation_id": "「〜ために」menunjukkan tujuan.",
+      "explanation": "正解は「ために」。「〜ために」は目的を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ために'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 74,
-      "question": "新しい機械が導入＿＿＿、作業が楽になりました。",
-      "question_id": "Karena mesin baru diperkenalkan, pekerjaan menjadi lebih mudah.",
+      "question": "朝礼で、新しいルールが発表＿＿＿ました。",
+      "question_id": "Aturan baru diumumkan pada briefing pagi.",
       "options": [
-        "されて",
-        "して",
+        "させ",
+        "する",
         "され",
-        "する"
+        "し"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「導入される」は受身形です。",
-      "explanation_id": "'Dounyuu sareru' adalah bentuk pasif.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「され」。「ルールが発表される」は受身形です。主語が「ルール」なので「発表し」は使えません。",
+      "explanation_id": "Jawaban yang benar adalah 'され'. 「ルールが発表される」adalah bentuk pasif. Karena subjeknya \"aturan\",「発表し」tidak bisa dipakai.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 75,
-      "question": "「作業標準」とは？",
-      "question_id": "Apa itu 'さぎょうひょうじゅん' (standar kerja)?",
+      "question": "袋が＿＿＿て、中身がこぼれてしまいました。",
+      "question_id": "Kantongnya robek dan isinya tumpah.",
       "options": [
-        "作業時間",
-        "作業の正しい手順や方法",
-        "作業場所",
-        "作業服"
+        "曲がっ",
+        "破れ",
+        "割れ",
+        "折れ"
       ],
       "correct_answer_index": 1,
-      "explanation": "「作業標準」は作業の正しい手順や方法を定めたものです。",
-      "explanation_id": "'Sagyou hyoujun' adalah prosedur dan metode kerja yang benar.",
+      "explanation": "正解は「破れ」。「破れる」は紙や布が裂けることです。ガラスは「割れる」、棒は「折れる」を使います。",
+      "explanation_id": "Jawaban yang benar adalah '破れ'. 「破れる」dipakai untuk kertas/kain yang robek. Kaca pakai「割れる」, batang pakai「折れる」.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1212,8 +1212,8 @@
         "確認した"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ながら」は同時進行を表します。",
-      "explanation_id": "「〜ながら」menunjukkan tindakan simultan.",
+      "explanation": "正解は「確認し」。「〜ながら」は同時進行を表します。",
+      "explanation_id": "Jawaban yang benar adalah '確認し'. 「〜ながら」menunjukkan tindakan simultan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1228,24 +1228,24 @@
         "高かった"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ば〜ほど」は比例関係を表します。",
-      "explanation_id": "「〜ば〜ほど」menunjukkan hubungan proporsional.",
+      "explanation": "正解は「高い」。「〜ば〜ほど」は比例関係を表します。",
+      "explanation_id": "Jawaban yang benar adalah '高い'. 「〜ば〜ほど」menunjukkan hubungan proporsional.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 78,
-      "question": "「不具合」の意味は？",
-      "question_id": "Apa arti dari 'ふぐあい' (kerusakan)?",
+      "question": "時間が＿＿＿なくて、最後まで終わりませんでした。",
+      "question_id": "Waktunya tidak cukup, jadi tidak selesai sampai akhir.",
       "options": [
-        "利点",
-        "正常に機能しない状態",
-        "改善",
-        "完成"
+        "減ら",
+        "止まら",
+        "足り",
+        "過ぎ"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「不具合」は正常に機能しない状態や問題のことです。",
-      "explanation_id": "'Fuguai' berarti keadaan tidak berfungsi normal atau masalah.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「足り」。「足りる」は必要な量があることです。「足りない」で不足を表します。",
+      "explanation_id": "Jawaban yang benar adalah '足り'. 「足りる」berarti cukup. 「足りない」berarti kurang.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1260,8 +1260,8 @@
         "が"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜に強い」は「〜に対して耐性がある」という意味です。",
-      "explanation_id": "「〜に強い」berarti 'tahan terhadap ~'.",
+      "explanation": "正解は「に」。「〜に強い」は「〜に対して耐性がある」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に強い」berarti 'tahan terhadap ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1276,40 +1276,40 @@
         "しなくて"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜せざるを得ない」は「仕方なく〜する」という意味です。",
-      "explanation_id": "「〜せざるを得ない」berarti 'terpaksa harus ~'.",
+      "explanation": "正解は「せざるを」。「〜せざるを得ない」は「仕方なく〜する」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'せざるを'. 「〜せざるを得ない」berarti 'terpaksa harus ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 81,
-      "question": "「品質保証」とは？",
-      "question_id": "Apa itu 'ひんしつほしょう' (jaminan kualitas)?",
+      "question": "貴重品はロッカーに＿＿＿てください。",
+      "question_id": "Simpanlah barang berharga di loker.",
       "options": [
-        "価格保証",
-        "製品の品質を保証すること",
-        "納期保証",
-        "数量保証"
+        "借り",
+        "貸し",
+        "返し",
+        "預け"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「品質保証」は製品の品質が基準を満たしていることを保証することです。",
-      "explanation_id": "'Hinshitsu hoshou' berarti menjamin bahwa kualitas produk memenuhi standar.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「預け」。「預ける」は保管を頼むことです。",
+      "explanation_id": "Jawaban yang benar adalah '預け'. 「預ける」berarti menitipkan.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 82,
-      "question": "指示された通り＿＿＿作業を進めてください。",
-      "question_id": "Tolong lanjutkan pekerjaan sesuai instruksi.",
+      "question": "お客様が工場を＿＿＿になります。",
+      "question_id": "Tamu akan melihat pabrik.",
       "options": [
-        "を",
-        "に",
-        "で",
-        "が"
+        "お目",
+        "見学",
+        "ご覧",
+        "拝見"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜通りに」は指示や見本に従うことを表します。",
-      "explanation_id": "「〜通りに」menunjukkan mengikuti instruksi atau contoh.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「ご覧」。「ご覧になる」は「見る」の尊敬語です。「拝見する」は謙譲語なので、お客様の動作には使えません。",
+      "explanation_id": "Jawaban yang benar adalah 'ご覧'. 「ご覧になる」adalah bentuk hormat dari「見る」. 「拝見する」adalah bentuk merendah, tidak dipakai untuk tindakan tamu.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1324,88 +1324,88 @@
         "した"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜しないよう」は否定の目的を表します。",
-      "explanation_id": "「〜しないよう」menunjukkan tujuan negatif.",
+      "explanation": "正解は「し」。「〜しないよう」は否定の目的を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'し'. 「〜しないよう」menunjukkan tujuan negatif.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 84,
-      "question": "「外注」の意味は？",
-      "question_id": "Apa arti dari 'がいちゅう' (outsourcing)?",
+      "question": "フォークリフトの講習に＿＿＿ました。",
+      "question_id": "Saya mendaftar pelatihan forklift.",
       "options": [
-        "社内で製造",
-        "外部の会社に依頼",
-        "輸出",
-        "輸入"
+        "申し込み",
+        "書き込み",
+        "打ち込み",
+        "思い込み"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「外注」は自社ではなく外部の会社に製造などを依頼することです。",
-      "explanation_id": "'Gaichuu' berarti meminta perusahaan eksternal untuk produksi, bukan internal.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「申し込み」。「申し込む」は参加などを正式に頼むことです。",
+      "explanation_id": "Jawaban yang benar adalah '申し込み'. 「申し込む」berarti mendaftar secara resmi.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 85,
       "question": "この工具は使い方を間違える＿＿＿、危険です。",
-      "question_id": "Jika salah menggunakan alat ini, berbahaya.",
+      "question_id": "Perkakas ini berbahaya jika cara pakainya salah.",
       "options": [
-        "と",
         "ば",
-        "たら",
-        "なら"
+        "まま",
+        "ほど",
+        "と"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜と」は一般的な条件と結果を表します。",
-      "explanation_id": "「〜と」menunjukkan kondisi dan hasil umum.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「と」。条件の「と」は辞書形に接続します（間違えると）。",
+      "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional tersambung ke bentuk kamus (間違えると).",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 86,
       "question": "製品の出荷＿＿＿、最終検査を行います。",
-      "question_id": "Sebelum pengiriman produk, kami melakukan inspeksi akhir.",
+      "question_id": "Sebelum pengiriman produk, dilakukan inspeksi akhir.",
       "options": [
+        "まで",
+        "まま",
         "前に",
-        "後に",
-        "時に",
-        "まで"
+        "後で"
       ],
-      "correct_answer_index": 0,
-      "explanation": "「〜前に」は動作の順序を表します。",
-      "explanation_id": "「〜前に」menunjukkan urutan tindakan.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「前に」。出荷の前に検査をします。意味から判断します。",
+      "explanation_id": "Jawaban yang benar adalah '前に'. Inspeksi dilakukan sebelum pengiriman. Dilihat dari makna kalimat.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 87,
-      "question": "「ロット」とは？",
-      "question_id": "Apa itu 'ロット' (lot)?",
+      "question": "製品を箱に＿＿＿て、テープで閉じます。",
+      "question_id": "Produk dimasukkan rapat ke kotak lalu ditutup dengan selotip.",
       "options": [
-        "工場",
-        "同じ条件で生産された製品のまとまり",
-        "工具",
-        "材料"
+        "攻め",
+        "詰め",
+        "埋め",
+        "染め"
       ],
       "correct_answer_index": 1,
-      "explanation": "「ロット」は同じ条件で生産された製品のまとまりのことです。",
-      "explanation_id": "'Lot' berarti kelompok produk yang diproduksi dalam kondisi yang sama.",
+      "explanation": "正解は「詰め」。「詰める」は中にいっぱい入れることです。",
+      "explanation_id": "Jawaban yang benar adalah '詰め'. 「詰める」berarti mengisi penuh ke dalam.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
     {
       "id": 88,
       "question": "問題が発生＿＿＿次第、上司に報告します。",
-      "question_id": "Begitu masalah terjadi, saya akan melaporkan kepada atasan.",
+      "question_id": "Begitu masalah terjadi, saya akan segera melapor ke atasan.",
       "options": [
+        "し",
         "する",
         "した",
-        "し",
         "して"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜次第」は「〜したらすぐに」という意味です。",
-      "explanation_id": "「〜次第」berarti 'segera setelah ~'.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「し」。「〜次第」はます形（発生し）に接続します。「発生した次第」は誤りです。",
+      "explanation_id": "Jawaban yang benar adalah 'し'. 「〜次第」tersambung ke masu-stem (発生し).",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1420,24 +1420,24 @@
         "が"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜に応じて」は「〜に合わせて」という意味です。",
-      "explanation_id": "「〜に応じて」berarti 'sesuai dengan ~'.",
+      "explanation": "正解は「に」。「〜に応じて」は「〜に合わせて」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に応じて」berarti 'sesuai dengan ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 90,
-      "question": "「改善提案」の意味は？",
-      "question_id": "Apa arti dari 'かいぜんていあん' (usulan perbaikan)?",
+      "question": "機械の悪いところを＿＿＿ました。",
+      "question_id": "Saya memperbaiki bagian mesin yang rusak.",
       "options": [
-        "問題",
-        "より良くするための提案",
-        "結果",
-        "評価"
+        "通し",
+        "返し",
+        "直し",
+        "治し"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「改善提案」は現状をより良くするための提案のことです。",
-      "explanation_id": "'Kaizen teian' berarti usulan untuk memperbaiki situasi saat ini.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「直し」。機械や物は「直す」、病気やけがは「治す」と書きます。",
+      "explanation_id": "Jawaban yang benar adalah '直し'. Untuk mesin/barang ditulis「直す」, untuk penyakit ditulis「治す」.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1452,8 +1452,8 @@
         "ないで"
       ],
       "correct_answer_index": 2,
-      "explanation": "「〜ずに」は「〜しないで」という意味です。",
-      "explanation_id": "「〜ずに」berarti 'tanpa ~'.",
+      "explanation": "正解は「ず」。「〜ずに」は「〜しないで」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'ず'. 「〜ずに」berarti 'tanpa ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },
@@ -1468,24 +1468,24 @@
         "のに"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜ために」は目的を表します。",
-      "explanation_id": "「〜ために」menunjukkan tujuan.",
+      "explanation": "正解は「ために」。「〜ために」は目的を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ために'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 93,
-      "question": "「量産」とは？",
-      "question_id": "Apa itu 'りょうさん' (produksi massal)?",
+      "question": "ごみの量が＿＿＿ています。気をつけましょう。",
+      "question_id": "Jumlah sampah terus bertambah. Mari berhati-hati.",
       "options": [
-        "少量生産",
-        "大量に製造すること",
-        "試作",
-        "設計"
+        "太っ",
+        "育っ",
+        "伸び",
+        "増え"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「量産」は製品を大量に生産することです。",
-      "explanation_id": "'Ryousan' berarti memproduksi produk dalam jumlah besar.",
+      "correct_answer_index": 3,
+      "explanation": "正解は「増え」。「増える」は数や量が多くなることです。",
+      "explanation_id": "Jawaban yang benar adalah '増え'. 「増える」berarti bertambah jumlahnya.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1500,40 +1500,40 @@
         "なら"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ば」は仮定条件を表します。",
-      "explanation_id": "「〜ば」menunjukkan kondisi hipotetis.",
+      "explanation": "正解は「ば」。「〜ば」は仮定条件を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ば'. 「〜ば」menunjukkan kondisi hipotetis.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 95,
-      "question": "このプロジェクトは予定＿＿＿進んでいます。",
-      "question_id": "Proyek ini berjalan sesuai rencana.",
+      "question": "作業はマニュアル＿＿＿に進めてください。",
+      "question_id": "Lakukan pekerjaan sesuai dengan manual.",
       "options": [
-        "通り",
-        "通りに",
+        "とうり",
         "どおり",
-        "どおりに"
+        "とおり",
+        "どうり"
       ],
-      "correct_answer_index": 3,
-      "explanation": "「予定どおりに」は計画通りという意味です。",
-      "explanation_id": "'Yotei doori ni' berarti sesuai rencana.",
+      "correct_answer_index": 1,
+      "explanation": "正解は「どおり」。名詞の後ろでは「どおり」と濁ります（マニュアルどおり）。「どうり・とうり」は仮名の誤りです。",
+      "explanation_id": "Jawaban yang benar adalah 'どおり'. Setelah kata benda dibaca「どおり」(bunyi berubah). 「どうり・とうり」adalah ejaan yang salah.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 96,
-      "question": "「トラブル」の意味は？",
-      "question_id": "Apa arti dari 'トラブル' (trouble)?",
+      "question": "＿＿＿に機械が止まって、びっくりしました。",
+      "question_id": "Tiba-tiba mesin berhenti dan saya kaget.",
       "options": [
-        "成功",
-        "問題・困った事態",
-        "改善",
-        "計画"
+        "急",
+        "早速",
+        "直接",
+        "最近"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「トラブル」は問題や困った事態のことです。",
-      "explanation_id": "'Toraburu' berarti masalah atau situasi yang sulit.",
+      "correct_answer_index": 0,
+      "explanation": "正解は「急」。「急に」は突然という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '急'. 「急に」berarti tiba-tiba.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1548,40 +1548,40 @@
         "の"
       ],
       "correct_answer_index": 0,
-      "explanation": "「〜ために」は目的を表します。",
-      "explanation_id": "「〜ために」menunjukkan tujuan.",
+      "explanation": "正解は「ため」。「〜ために」は目的を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ため'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 98,
-      "question": "安全確認を怠る＿＿＿いけません。",
-      "question_id": "Tidak boleh mengabaikan konfirmasi keselamatan.",
+      "question": "安全確認を怠っ＿＿＿いけません。",
+      "question_id": "Tidak boleh lalai memeriksa keselamatan.",
       "options": [
         "ことは",
+        "べきは",
         "ては",
-        "のは",
-        "べきは"
+        "のは"
       ],
-      "correct_answer_index": 1,
-      "explanation": "「〜てはいけません」は禁止を表します。",
-      "explanation_id": "「〜てはいけません」menunjukkan larangan.",
+      "correct_answer_index": 2,
+      "explanation": "正解は「ては」。「〜てはいけません」はて形に接続します（怠ってはいけません）。",
+      "explanation_id": "Jawaban yang benar adalah 'ては'. 「〜てはいけません」tersambung ke bentuk te (怠ってはいけません).",
       "category": "文法",
       "jlpt_level": "N3"
     },
     {
       "id": 99,
-      "question": "「稼働率」の意味は？",
-      "question_id": "Apa arti dari 'かどうりつ' (tingkat operasi)?",
+      "question": "この資格は仕事に＿＿＿ます。",
+      "question_id": "Sertifikat ini berguna untuk pekerjaan.",
       "options": [
-        "故障率",
-        "機械が実際に動いている割合",
-        "不良率",
-        "生産速度"
+        "目に入り",
+        "役に立ち",
+        "気に入り",
+        "手に入り"
       ],
       "correct_answer_index": 1,
-      "explanation": "「稼働率」は機械が実際に稼働している時間の割合のことです。",
-      "explanation_id": "'Kadou-ritsu' berarti persentase waktu mesin benar-benar beroperasi.",
+      "explanation": "正解は「役に立ち」。「役に立つ」は助けになる・有用だという意味です。",
+      "explanation_id": "Jawaban yang benar adalah '役に立ち'. 「役に立つ」berarti berguna.",
       "category": "語彙",
       "jlpt_level": "N3"
     },
@@ -1596,8 +1596,8 @@
         "が"
       ],
       "correct_answer_index": 1,
-      "explanation": "「〜に気づく」は「〜を認識する」という意味です。",
-      "explanation_id": "「〜に気づく」berarti 'menyadari ~'.",
+      "explanation": "正解は「に」。「〜に気づく」は「〜を認識する」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に気づく」berarti 'menyadari ~'.",
       "category": "文法",
       "jlpt_level": "N3"
     },

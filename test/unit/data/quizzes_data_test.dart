@@ -15,9 +15,9 @@ void main() {
       quizzes = (jsonData['quizzes'] as List).cast<Map<String, dynamic>>();
     });
 
-    test('data_versionが3以上である', () {
+    test('data_versionが4以上である', () {
       expect(jsonData['data_version'], isA<int>());
-      expect(jsonData['data_version'], greaterThanOrEqualTo(3));
+      expect(jsonData['data_version'], greaterThanOrEqualTo(4));
     });
 
     test('すべてのクイズがQuizモデルにパースできる', () {
@@ -107,9 +107,8 @@ void main() {
         expect(correct, inInclusiveRange(0, 3),
             reason: 'id $id の正解indexが範囲外です');
 
-        // 空欄（＿）形式のチェックは対策パックの文法・語彙のみ
-        // （漢字読みは「読み方はどれですか」形式、既存の無料問題には定義形式もある）
-        if (q['pack_id'] == 'jlpt_n3n2' && q['category'] != '漢字読み') {
+        // 文法・語彙は全問ドリル形式（空欄＿あり）。漢字読みは「読み方はどれですか」形式
+        if (q['category'] != '漢字読み') {
           expect((q['question'] as String).contains('＿'), isTrue,
               reason: 'id $id の問題文に空欄（＿）がありません');
         }
@@ -122,14 +121,31 @@ void main() {
       }
     });
 
-    test('対策パックの解説には正答が明記されている', () {
+    test('全問題の解説に正答が明記されている（解説と答えの不一致を防ぐ）', () {
       // 解説フォーマット「正解は「○○」。」の○○が実際の正答と一致するか検証
-      for (final q in quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2')) {
+      for (final q in quizzes) {
         final options = (q['options'] as List).cast<String>();
         final correct = options[q['correct_answer_index'] as int];
-        expect((q['explanation'] as String).contains('「$correct」'), isTrue,
+        expect((q['explanation'] as String).startsWith('正解は「$correct」'), isTrue,
             reason: 'id ${q['id']} の解説と正答が一致しません');
       }
+    });
+
+    test('無料の語彙正答は対策パックの語彙正答と重複しない', () {
+      String answerOf(Map<String, dynamic> q) =>
+          ((q['options'] as List).cast<String>())[q['correct_answer_index'] as int];
+
+      final freeVocab = quizzes
+          .where((q) => q['pack_id'] == null && q['category'] == '語彙')
+          .map(answerOf)
+          .toSet();
+      final paidVocab = quizzes
+          .where((q) => q['pack_id'] != null && q['category'] == '語彙')
+          .map(answerOf)
+          .toSet();
+
+      expect(freeVocab.intersection(paidVocab), isEmpty,
+          reason: '無料と有料で同じ語彙が正答になっています');
     });
   });
 }
