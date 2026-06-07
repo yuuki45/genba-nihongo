@@ -33,6 +33,15 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
   int _correctCount = 0;
   bool _isCompleted = false;
 
+  /// 次の問題へ進んだとき問題文（上部）へ戻すためのコントローラ
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   /// 間違えた問題（結果画面で保存を促す）
   final List<KanjiQuizQuestion> _wrongQuestions = [];
 
@@ -82,6 +91,10 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
       _selectedAnswer = null;
       _hasAnswered = false;
     });
+    // 次の問題の問題文がすぐ読めるよう先頭へ戻す
+    if (!_isCompleted && _scrollController.hasClients) {
+      _scrollController.jumpTo(0);
+    }
   }
 
   @override
@@ -136,6 +149,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
           _buildProgressBar(context, questions.length),
           Expanded(
             child: SingleChildScrollView(
+              controller: _scrollController,
               padding: const EdgeInsets.all(24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

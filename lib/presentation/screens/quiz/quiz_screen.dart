@@ -25,6 +25,22 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   bool _hasAnswered = false;
   bool _isLoading = false;
 
+  /// 次の問題へ進んだとき問題文（上部）へ戻すためのコントローラ
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  /// 問題文がすぐ読めるようスクロール位置を先頭へ戻す
+  void _scrollToTop() {
+    if (_scrollController.hasClients) {
+      _scrollController.jumpTo(0);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
@@ -78,24 +94,13 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   }
 
   void _nextQuestion() {
-    final session = ref.read(quizSessionProvider);
-    final isLastQuestion = session.currentIndex == session.totalQuestions - 1;
-
-    if (isLastQuestion) {
-      // 最後の問題の場合は完了状態に移行
-      ref.read(quizSessionProvider.notifier).nextQuestion();
-      setState(() {
-        _selectedAnswer = null;
-        _hasAnswered = false;
-      });
-    } else {
-      // 通常の次の問題へ移行
-      ref.read(quizSessionProvider.notifier).nextQuestion();
-      setState(() {
-        _selectedAnswer = null;
-        _hasAnswered = false;
-      });
-    }
+    ref.read(quizSessionProvider.notifier).nextQuestion();
+    setState(() {
+      _selectedAnswer = null;
+      _hasAnswered = false;
+    });
+    // 次の問題の問題文がすぐ読めるよう先頭へ戻す
+    _scrollToTop();
   }
 
   @override
@@ -165,6 +170,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           // クイズコンテンツ
           Expanded(
             child: SingleChildScrollView(
+              controller: _scrollController,
               padding: const EdgeInsets.all(24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
