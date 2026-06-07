@@ -395,13 +395,13 @@ abstract class AppLocalizations {
   /// クイズ画面のタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N3クイズ'**
+  /// **'N3演習問題'**
   String get quizTitle;
 
   /// ホーム画面のクイズカードタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N3クイズに挑戦'**
+  /// **'N3演習問題に挑戦'**
   String get quizCardTitle;
 
   /// ホーム画面のクイズカード説明
@@ -443,7 +443,7 @@ abstract class AppLocalizations {
   /// クイズ完了メッセージ
   ///
   /// In ja, this message translates to:
-  /// **'クイズ完了！'**
+  /// **'おつかれさまでした！'**
   String get quizCompleted;
 
   /// あなたのスコア
@@ -527,13 +527,13 @@ abstract class AppLocalizations {
   /// N2クイズ画面のタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N2クイズ'**
+  /// **'N2演習問題'**
   String get quizTitleN2;
 
   /// ホーム画面のN2クイズカードタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N2クイズに挑戦'**
+  /// **'N2演習問題に挑戦'**
   String get quizCardTitleN2;
 
   /// ホーム画面のN2クイズカード説明

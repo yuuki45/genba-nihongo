@@ -103,14 +103,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     child: _buildKanjiCard(context),
                   ),
 
-                  // N3クイズカード
+                  // N3演習問題カード
                   const SizedBox(height: 12),
                   _StaggeredFadeIn(
                     index: 4,
                     child: _buildQuizCard(context),
                   ),
 
-                  // N2クイズカード（対策パック）
+                  // N2演習問題カード（対策パック）
                   const SizedBox(height: 12),
                   _StaggeredFadeIn(
                     index: 5,
@@ -337,7 +337,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  /// N3クイズカード（墨色の標識パネル）
+  /// N3演習問題カード（墨色の標識パネル）
   Widget _buildQuizCard(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
@@ -360,7 +360,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  /// N2クイズカード（対策パック — JIS青の指示標識パネル）
+  /// N2演習問題カード（対策パック — JIS青の指示標識パネル）
   ///
   /// 未購入時はロックアイコンを表示し、タップでストア画面へ誘導する。
   Widget _buildN2QuizCard(BuildContext context) {

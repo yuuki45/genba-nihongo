@@ -256,12 +256,12 @@
     "description": "検索結果が見つからない時のメッセージ"
   },
 
-  "quizTitle": "N3クイズ",
+  "quizTitle": "N3演習問題",
   "@quizTitle": {
     "description": "クイズ画面のタイトル"
   },
 
-  "quizCardTitle": "N3クイズに挑戦",
+  "quizCardTitle": "N3演習問題に挑戦",
   "@quizCardTitle": {
     "description": "ホーム画面のクイズカードタイトル"
   },
@@ -296,7 +296,7 @@
     "description": "結果画面のタイトル"
   },
 
-  "quizCompleted": "クイズ完了！",
+  "quizCompleted": "おつかれさまでした！",
   "@quizCompleted": {
     "description": "クイズ完了メッセージ"
   },
@@ -366,12 +366,12 @@
     "description": "最終更新日"
   },
 
-  "quizTitleN2": "N2クイズ",
+  "quizTitleN2": "N2演習問題",
   "@quizTitleN2": {
     "description": "N2クイズ画面のタイトル"
   },
 
-  "quizCardTitleN2": "N2クイズに挑戦",
+  "quizCardTitleN2": "N2演習問題に挑戦",
   "@quizCardTitleN2": {
     "description": "ホーム画面のN2クイズカードタイトル"
   },

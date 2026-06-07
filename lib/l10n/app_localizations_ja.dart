@@ -160,10 +160,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get noSearchResults => '検索結果がありません';
 
   @override
-  String get quizTitle => 'N3クイズ';
+  String get quizTitle => 'N3演習問題';
 
   @override
-  String get quizCardTitle => 'N3クイズに挑戦';
+  String get quizCardTitle => 'N3演習問題に挑戦';
 
   @override
   String get quizCardDescription => '文法と語彙を学ぼう！';
@@ -184,7 +184,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quizResultTitle => '結果';
 
   @override
-  String get quizCompleted => 'クイズ完了！';
+  String get quizCompleted => 'おつかれさまでした！';
 
   @override
   String get quizYourScore => 'あなたのスコア';
@@ -226,10 +226,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
-  String get quizTitleN2 => 'N2クイズ';
+  String get quizTitleN2 => 'N2演習問題';
 
   @override
-  String get quizCardTitleN2 => 'N2クイズに挑戦';
+  String get quizCardTitleN2 => 'N2演習問題に挑戦';
 
   @override
   String get quizCardDescriptionN2 => '対策パックでN2の文法・語彙を学ぼう';

@@ -6,7 +6,7 @@ import '../../providers/settings_provider.dart';
 import '../../widgets/locked_content_banner.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// JLPTクイズ画面（N3: 無料 / N2: 対策パック）
+/// JLPT演習問題画面（N3: 無料 / N2: 対策パック）
 class QuizScreen extends ConsumerStatefulWidget {
   /// 出題するJLPTレベル（'N3' または 'N2'）
   final String jlptLevel;

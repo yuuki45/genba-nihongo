@@ -256,12 +256,12 @@
     "description": "Pesan ketika hasil pencarian tidak ditemukan"
   },
 
-  "quizTitle": "Kuis N3",
+  "quizTitle": "Latihan Soal N3",
   "@quizTitle": {
     "description": "Judul layar kuis"
   },
 
-  "quizCardTitle": "Tantang Kuis N3",
+  "quizCardTitle": "Coba Latihan Soal N3",
   "@quizCardTitle": {
     "description": "Judul kartu kuis di layar beranda"
   },
@@ -296,7 +296,7 @@
     "description": "Judul layar hasil"
   },
 
-  "quizCompleted": "Kuis Selesai!",
+  "quizCompleted": "Selesai! Kerja bagus!",
   "@quizCompleted": {
     "description": "Pesan kuis selesai"
   },
@@ -366,12 +366,12 @@
     "description": "Terakhir diperbarui"
   },
 
-  "quizTitleN2": "Kuis N2",
+  "quizTitleN2": "Latihan Soal N2",
   "@quizTitleN2": {
     "description": "Judul layar kuis N2"
   },
 
-  "quizCardTitleN2": "Tantang Kuis N2",
+  "quizCardTitleN2": "Coba Latihan Soal N2",
   "@quizCardTitleN2": {
     "description": "Judul kartu kuis N2 di layar beranda"
   },

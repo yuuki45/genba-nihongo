@@ -164,10 +164,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get noSearchResults => 'Tidak ada hasil pencarian';
 
   @override
-  String get quizTitle => 'Kuis N3';
+  String get quizTitle => 'Latihan Soal N3';
 
   @override
-  String get quizCardTitle => 'Tantang Kuis N3';
+  String get quizCardTitle => 'Coba Latihan Soal N3';
 
   @override
   String get quizCardDescription => 'Pelajari tata bahasa dan kosakata!';
@@ -188,7 +188,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get quizResultTitle => 'Hasil';
 
   @override
-  String get quizCompleted => 'Kuis Selesai!';
+  String get quizCompleted => 'Selesai! Kerja bagus!';
 
   @override
   String get quizYourScore => 'Skor Anda';
@@ -231,10 +231,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
-  String get quizTitleN2 => 'Kuis N2';
+  String get quizTitleN2 => 'Latihan Soal N2';
 
   @override
-  String get quizCardTitleN2 => 'Tantang Kuis N2';
+  String get quizCardTitleN2 => 'Coba Latihan Soal N2';
 
   @override
   String get quizCardDescriptionN2 =>
