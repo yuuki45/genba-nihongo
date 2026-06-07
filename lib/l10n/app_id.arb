@@ -416,6 +416,11 @@
     "description": "Bagian kanji penyusun pada detail kata"
   },
 
+  "kanjiDictTapHint": "Ketuk untuk melihat cara baca & arti",
+  "@kanjiDictTapHint": {
+    "description": "Petunjuk bahwa kanji penyusun dapat diketuk"
+  },
+
   "kanjiDictOnYomi": "On'yomi",
   "@kanjiDictOnYomi": {
     "description": "Label on'yomi pada detail kanji"

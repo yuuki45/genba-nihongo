@@ -298,40 +298,105 @@ class _KanjiDictionaryScreenState extends ConsumerState<KanjiDictionaryScreen> {
                   // 構成漢字（漢字辞書パック）
                   if (chars.isNotEmpty) ...[
                     const Divider(height: 24),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        isDictUnlocked
-                            ? l10n.kanjiDictChars
-                            : '${l10n.kanjiDictChars} 🔒',
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
+                    Row(
+                      children: [
+                        Text(
+                          isDictUnlocked
+                              ? l10n.kanjiDictChars
+                              : '${l10n.kanjiDictChars} 🔒',
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: chars.map((ch) {
-                        return ActionChip(
-                          label: Text(
-                            ch,
-                            style: const TextStyle(
-                              fontFamily: AppTheme.displayFont,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
+                        if (isDictUnlocked) ...[
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              l10n.kanjiDictTapHint,
+                              style: TextStyle(
+                                fontSize: 11,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurfaceVariant,
+                              ),
                             ),
                           ),
-                          onPressed: isDictUnlocked
-                              ? () =>
-                                  _showCharacterDetail(context, charMap[ch]!)
-                              : null,
-                        );
-                      }).toList(),
+                        ],
+                      ],
                     ),
-                    if (!isDictUnlocked) ...[
+                    const SizedBox(height: 8),
+                    if (isDictUnlocked)
+                      // 解錠済み: 読み・意味付きの行ボタン（タップで単漢字詳細）
+                      ...chars.map((ch) {
+                        final character = charMap[ch]!;
+                        final readings = [
+                          character.onReadings,
+                          character.kunReadings,
+                        ].where((r) => r.isNotEmpty).join('｜');
+
+                        return Card(
+                          margin: const EdgeInsets.only(bottom: 8.0),
+                          child: ListTile(
+                            dense: true,
+                            contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 12.0, vertical: 2.0),
+                            leading: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: AppColors.ink,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  ch,
+                                  style: const TextStyle(
+                                    fontFamily: AppTheme.displayFont,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w900,
+                                    color: AppColors.safetyYellow,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            title: Text(
+                              readings,
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            subtitle: Text(
+                              character.meaningId,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                            trailing: const Icon(Icons.chevron_right),
+                            onTap: () =>
+                                _showCharacterDetail(context, character),
+                          ),
+                        );
+                      })
+                    else ...[
+                      // 未購入: チップ表示 + 解錠バナー
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: chars.map((ch) {
+                          return Chip(
+                            label: Text(
+                              ch,
+                              style: const TextStyle(
+                                fontFamily: AppTheme.displayFont,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                      ),
                       const SizedBox(height: 12),
                       const LockedContentBanner(),
                     ],

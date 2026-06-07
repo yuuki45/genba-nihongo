@@ -584,6 +584,12 @@ abstract class AppLocalizations {
   /// **'構成漢字'**
   String get kanjiDictChars;
 
+  /// 構成漢字がタップできることのヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'タップで読み方・意味を表示'**
+  String get kanjiDictTapHint;
+
   /// 単漢字詳細の音読みラベル
   ///
   /// In ja, this message translates to:

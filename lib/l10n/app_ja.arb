@@ -416,6 +416,11 @@
     "description": "語詳細の構成漢字セクション"
   },
 
+  "kanjiDictTapHint": "タップで読み方・意味を表示",
+  "@kanjiDictTapHint": {
+    "description": "構成漢字がタップできることのヒント"
+  },
+
   "kanjiDictOnYomi": "音読み",
   "@kanjiDictOnYomi": {
     "description": "単漢字詳細の音読みラベル"

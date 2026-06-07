@@ -263,6 +263,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get kanjiDictChars => 'Kanji penyusun';
 
   @override
+  String get kanjiDictTapHint => 'Ketuk untuk melihat cara baca & arti';
+
+  @override
   String get kanjiDictOnYomi => 'On\'yomi';
 
   @override

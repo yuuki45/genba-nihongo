@@ -256,6 +256,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get kanjiDictChars => '構成漢字';
 
   @override
+  String get kanjiDictTapHint => 'タップで読み方・意味を表示';
+
+  @override
   String get kanjiDictOnYomi => '音読み';
 
   @override
