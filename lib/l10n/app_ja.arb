@@ -436,6 +436,16 @@
     "description": "ロックされたコンテンツの案内"
   },
 
+  "lockedPreviewMore": "続きの{count}件はパック購入で解錠できます",
+  "@lockedPreviewMore": {
+    "description": "ロック中カテゴリのプレビュー下の案内",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
   "lockedContentUnlock": "解錠する",
   "@lockedContentUnlock": {
     "description": "ロック解除への導線ボタン"

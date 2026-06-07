@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/phrase_provider.dart';
 import '../../providers/settings_provider.dart';
+import '../../widgets/locked_content_banner.dart';
 import '../../../data/models/phrase.dart';
 import '../../../data/models/category.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
@@ -68,7 +69,7 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           // フレーズリスト
           Expanded(
             child: phrasesAsync.when(
-              data: (phrases) => _buildPhraseList(context, ref, phrases),
+              data: (view) => _buildPhraseList(context, ref, view),
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => Center(
                 child: Text('${l10n.errorOccurred}: $error'),
@@ -152,6 +153,11 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           data: (settings) => settings.languageCode == 'ja',
           orElse: () => false,
         );
+    // ロック中（未購入パック）のカテゴリ
+    final lockedCategoryIds = ref.watch(lockedCategoryIdsProvider).maybeWhen(
+          data: (ids) => ids,
+          orElse: () => const <int>{},
+        );
 
     return Container(
       height: 60,
@@ -177,12 +183,17 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           // 各カテゴリ
           ...categories.map((category) {
             final isSelected = selectedCategoryId == category.id;
+            final isLocked = lockedCategoryIds.contains(category.id);
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: FilterChip(
                 label: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    if (isLocked) ...[
+                      const Icon(Icons.lock, size: 14),
+                      const SizedBox(width: 2),
+                    ],
                     if (category.icon != null) ...[
                       Text(category.icon!),
                       const SizedBox(width: 4),
@@ -206,8 +217,12 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
   }
 
   /// フレーズリスト
-  Widget _buildPhraseList(BuildContext context, WidgetRef ref, List<Phrase> phrases) {
+  ///
+  /// ロック中カテゴリの場合はプレビュー数件 + 解錠バナーを表示する。
+  Widget _buildPhraseList(
+      BuildContext context, WidgetRef ref, PhraseListView view) {
     final l10n = AppLocalizations.of(context)!;
+    final phrases = view.phrases;
 
     if (phrases.isEmpty) {
       return Center(
@@ -215,11 +230,22 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
       );
     }
 
+    // ロックバナーを先頭に置くため、リスト項目数を調整
+    final extraItems = view.isLockedPreview ? 1 : 0;
+
     return ListView.builder(
       padding: const EdgeInsets.all(8.0),
-      itemCount: phrases.length,
+      itemCount: phrases.length + extraItems,
       itemBuilder: (context, index) {
-        final phrase = phrases[index];
+        if (view.isLockedPreview && index == 0) {
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: LockedContentBanner(
+              message: l10n.lockedPreviewMore(view.hiddenCount),
+            ),
+          );
+        }
+        final phrase = phrases[index - extraItems];
         return _buildPhraseListItem(context, ref, phrase);
       },
       // キャッシュサイズを増やしてスクロールパフォーマンスを向上

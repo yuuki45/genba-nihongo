@@ -608,6 +608,12 @@ abstract class AppLocalizations {
   /// **'このコンテンツはパック購入で解錠できます'**
   String get lockedContentMessage;
 
+  /// ロック中カテゴリのプレビュー下の案内
+  ///
+  /// In ja, this message translates to:
+  /// **'続きの{count}件はパック購入で解錠できます'**
+  String lockedPreviewMore(int count);
+
   /// ロック解除への導線ボタン
   ///
   /// In ja, this message translates to:

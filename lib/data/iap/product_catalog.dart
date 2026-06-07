@@ -41,9 +41,19 @@ class ProductCatalog {
     icon: '📚',
   );
 
-  /// 販売中の全パック（フェーズ1以降で追加していく）
+  /// 介護フレーズパック
+  static const ContentPack kaigoPack = ContentPack(
+    productId: 'com.genba.nihongo.pack.kaigo',
+    packId: 'kaigo',
+    fallbackNameJa: '介護フレーズパック',
+    fallbackNameId: 'Paket Frasa Perawatan',
+    icon: '🤲',
+  );
+
+  /// 販売中の全パック（フェーズ2以降で追加していく）
   static const List<ContentPack> all = [
     jlptPack,
+    kaigoPack,
   ];
 
   /// 全商品IDの集合（ストアへの問い合わせに使用）

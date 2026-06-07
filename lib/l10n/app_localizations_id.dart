@@ -278,6 +278,11 @@ class AppLocalizationsId extends AppLocalizations {
       'Konten ini dapat dibuka dengan membeli paket';
 
   @override
+  String lockedPreviewMore(int count) {
+    return '$count frasa lainnya dapat dibuka dengan membeli paket';
+  }
+
+  @override
   String get lockedContentUnlock => 'Buka';
 
   @override

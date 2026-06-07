@@ -436,6 +436,16 @@
     "description": "Pemberitahuan konten terkunci"
   },
 
+  "lockedPreviewMore": "{count} frasa lainnya dapat dibuka dengan membeli paket",
+  "@lockedPreviewMore": {
+    "description": "Pemberitahuan di bawah pratinjau kategori terkunci",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
   "lockedContentUnlock": "Buka",
   "@lockedContentUnlock": {
     "description": "Tombol menuju pembukaan konten"

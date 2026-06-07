@@ -268,6 +268,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lockedContentMessage => 'このコンテンツはパック購入で解錠できます';
 
   @override
+  String lockedPreviewMore(int count) {
+    return '続きの$count件はパック購入で解錠できます';
+  }
+
+  @override
   String get lockedContentUnlock => '解錠する';
 
   @override

@@ -16,21 +16,46 @@ void main() {
 
     test('data_versionが定義されている', () {
       expect(jsonData['data_version'], isA<int>());
-      expect(jsonData['data_version'], greaterThanOrEqualTo(2));
+      expect(jsonData['data_version'], greaterThanOrEqualTo(4));
     });
 
     test('すべてのカテゴリがCategoryモデルにパースできる', () {
       final categories = (jsonData['categories'] as List)
           .map((c) => model.Category.fromJson(c as Map<String, dynamic>))
           .toList();
-      expect(categories, hasLength(5));
+      expect(categories, hasLength(6));
     });
 
     test('すべてのフレーズがPhraseモデルにパースできる', () {
       final phrases = (jsonData['phrases'] as List)
           .map((p) => Phrase.fromJson(p as Map<String, dynamic>))
           .toList();
-      expect(phrases, hasLength(329));
+      expect(phrases, hasLength(429));
+    });
+
+    test('pack_idはnullまたはkaigoのみ', () {
+      final packIds = (jsonData['phrases'] as List)
+          .map((p) => (p as Map<String, dynamic>)['pack_id'])
+          .toSet();
+      expect(packIds, {null, 'kaigo'});
+    });
+
+    test('介護パックは100件で、すべてカテゴリ6に属する', () {
+      final kaigo = (jsonData['phrases'] as List)
+          .where((p) => (p as Map<String, dynamic>)['pack_id'] == 'kaigo')
+          .cast<Map<String, dynamic>>()
+          .toList();
+      expect(kaigo, hasLength(100));
+      expect(kaigo.every((p) => p['category_id'] == 6), isTrue);
+    });
+
+    test('カテゴリ6（介護）のフレーズはすべて有料パックに属する', () {
+      // 無料フレーズが混ざるとカテゴリロック表示が崩れるため
+      final category6Free = (jsonData['phrases'] as List)
+          .cast<Map<String, dynamic>>()
+          .where((p) => p['category_id'] == 6 && p['pack_id'] == null)
+          .toList();
+      expect(category6Free, isEmpty);
     });
 
     test('フレーズIDに重複がない', () {
@@ -63,9 +88,10 @@ void main() {
       }
     });
 
-    test('N2フレーズが49件存在する', () {
+    test('無料のN2フレーズが49件存在する', () {
       final n2Count = (jsonData['phrases'] as List)
-          .where((p) => (p as Map<String, dynamic>)['jlpt_level'] == 'N2')
+          .cast<Map<String, dynamic>>()
+          .where((p) => p['jlpt_level'] == 'N2' && p['pack_id'] == null)
           .length;
       expect(n2Count, 49);
     });
