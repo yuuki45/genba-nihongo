@@ -240,12 +240,13 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
   /// フレーズリスト
   ///
   /// ロック中カテゴリの場合はプレビュー数件 + 解錠バナーを表示する。
+  /// （プレビューはN5のみのため、N4以上のタブではバナーだけになる）
   Widget _buildPhraseList(
       BuildContext context, WidgetRef ref, PhraseListView view) {
     final l10n = AppLocalizations.of(context)!;
     final phrases = view.phrases;
 
-    if (phrases.isEmpty) {
+    if (phrases.isEmpty && !view.isLockedPreview) {
       return Center(
         child: Text(l10n.noPhrases),
       );

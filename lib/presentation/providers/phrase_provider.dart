@@ -55,6 +55,22 @@ final dailyPhrasesProvider = FutureProvider<List<Phrase>>((ref) async {
 /// ロック中カテゴリのプレビュー件数
 const int phrasePreviewCount = 5;
 
+/// ロック中コンテンツのプレビュー対象を選ぶ純粋関数
+///
+/// プレビューはN5フレーズのみ（最大5件）。
+/// JLPTタブが「すべて」（null）またはN5のときだけ表示し、
+/// N4以上のタブでは中身を見せない（バナーのみ）。
+List<Phrase> selectLockedPreviewPhrases(
+  List<Phrase> phrases,
+  String? jlptLevel,
+) {
+  if (jlptLevel != null && jlptLevel != 'N5') return [];
+  return phrases
+      .where((phrase) => phrase.jlptLevel == 'N5')
+      .take(phrasePreviewCount)
+      .toList();
+}
+
 /// フレーズ一覧の表示内容
 ///
 /// ロック中カテゴリ（未購入パック）を選択した場合は、
@@ -102,7 +118,7 @@ final filteredPhrasesProvider =
 
   // 未購入のシーン・カテゴリを表示中（解錠分が0件で元データはある）→ プレビュー表示
   if (available.isEmpty && phrases.isNotEmpty) {
-    final preview = phrases.take(phrasePreviewCount).toList();
+    final preview = selectLockedPreviewPhrases(phrases, jlptLevel);
     return (
       phrases: preview,
       isLockedPreview: true,
