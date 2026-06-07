@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
 import '../../providers/purchase_provider.dart';
+import '../../../data/iap/purchase_service.dart';
 import '../../providers/settings_provider.dart';
 import '../../theme/app_theme.dart';
 import '../../../data/iap/product_catalog.dart';
@@ -110,7 +110,7 @@ class StoreScreen extends ConsumerWidget {
   Widget _buildPackList(
     BuildContext context,
     WidgetRef ref,
-    List<ProductDetails> products,
+    List<PackProduct> products,
     EntitlementState entitlement,
   ) {
     final l10n = AppLocalizations.of(context)!;
@@ -124,9 +124,9 @@ class StoreScreen extends ConsumerWidget {
 
     return Column(
       children: ProductCatalog.all.map((pack) {
-        ProductDetails? product;
+        PackProduct? product;
         for (final p in products) {
-          if (p.id == pack.productId) {
+          if (p.productId == pack.productId) {
             product = p;
             break;
           }
@@ -144,7 +144,7 @@ class StoreScreen extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
     ContentPack pack,
-    ProductDetails? product,
+    PackProduct? product,
     EntitlementState entitlement,
   ) {
     final l10n = AppLocalizations.of(context)!;
@@ -254,7 +254,7 @@ class StoreScreen extends ConsumerWidget {
                       : () {
                           ref
                               .read(entitlementProvider.notifier)
-                              .buy(product);
+                              .buy(product.productId);
                         },
                   child: isPurchasing
                       ? const SizedBox(
@@ -262,7 +262,7 @@ class StoreScreen extends ConsumerWidget {
                           height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : Text('${l10n.storeBuy}  ${product.price}'),
+                      : Text('${l10n.storeBuy}  ${product.priceString}'),
                 ),
               ),
           ],

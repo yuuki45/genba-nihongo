@@ -39,8 +39,8 @@ dependencies:
   flutter_local_notifications: ^17.2.1
   timezone: ^0.9.3
 
-  # アプリ内課金
-  in_app_purchase: ^3.2.0
+  # アプリ内課金（RevenueCat）
+  purchases_flutter: ^8.0.0
 
   # ユーティリティ
   intl: ^0.20.2

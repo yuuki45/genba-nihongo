@@ -66,7 +66,8 @@
 ```
 lib/data/iap/
 ├── product_catalog.dart      # 商品ID ⇔ packId の対応表（ここに商品を追加する）
-└── purchase_service.dart     # in_app_purchaseの薄いラッパー（テスト時はモック）
+├── purchase_service.dart     # RevenueCat（purchases_flutter）のラッパー（テスト時はモック）
+└── revenuecat_config.dart    # RevenueCatの公開SDKキー（APIキーをここに貼る）
 lib/data/repositories/
 └── purchase_repository.dart  # 解錠状態のローカル永続化（purchasesテーブル）
 lib/presentation/providers/
@@ -84,11 +85,13 @@ lib/presentation/widgets/
 4. **表示時に解錠フィルタ**(`isContentUnlocked` / `filterUnlockedContent` 純粋関数)で出し分け
 5. 解錠判定はローカルDBのみ参照 → **オフラインでも購入済みコンテンツが使える**
 
-### 購入フローの要点
-- 起動直後に `purchaseStream` を購読(`main.dart` で `entitlementProvider` をwatch)
-  → 中断したトランザクションやアプリ外での購入完了を回収
-- `purchased`/`restored` → DB書き込み → `completePurchase`(必須)
-- `canceled` → 静かにidleへ / `pending` → 承認待ち表示 / `error` → エラー表示+トランザクション解放
+### 購入フローの要点（RevenueCat）
+- 課金処理はRevenueCat（purchases_flutter）経由。レシート検証はRCサーバーが実施
+- **RCのEntitlement ID = packId**（jlpt_n3n2 / kaigo / kanji_dict）の運用
+- 起動時にRCを初期化しEntitlement更新を購読 → ローカルDB（purchases）へ反映
+  - RC未設定/オフラインでもローカルDBの解錠状態で動作（完全オフライン体験を維持）
+  - 一度解錠したパックはRC側で無効になってもローカルでは取り消さない
+- キャンセル → 静かにidleへ / 承認待ち → pending表示（承認後リスナー経由で自動解錠）
 - 「購入を復元」はストア画面と設定画面の2箇所(App Store審査の必須要件)
 
 ### 新パック追加の手順

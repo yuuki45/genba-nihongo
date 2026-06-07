@@ -1,39 +1,42 @@
-import 'dart:async';
-
 import 'package:flutter_test/flutter_test.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:nihongo/data/iap/product_catalog.dart';
 import 'package:nihongo/data/iap/purchase_service.dart';
 import 'package:nihongo/data/repositories/purchase_repository.dart';
 import 'package:nihongo/presentation/providers/purchase_provider.dart';
 
-/// テスト用のフェイクPurchaseService（ストリームを手動で流せる）
+/// テスト用のフェイクPurchaseService（RevenueCatの代わり）
 class FakePurchaseService implements PurchaseService {
-  final StreamController<List<PurchaseDetails>> controller =
-      StreamController<List<PurchaseDetails>>.broadcast();
+  bool configured = true;
+  void Function(Map<String, String>)? entitlementCallback;
 
-  final List<PurchaseDetails> completedPurchases = [];
-  bool storeAvailable = true;
+  /// buy/restoreの結果として返すEntitlement（packId → productId）
+  Map<String, String> nextEntitlements = {};
 
-  @override
-  Future<bool> isAvailable() async => storeAvailable;
-
-  @override
-  Stream<List<PurchaseDetails>> get purchaseStream => controller.stream;
+  /// buy/restoreで投げる例外（nullなら成功）
+  Object? nextError;
 
   @override
-  Future<List<ProductDetails>> queryProducts(Set<String> productIds) async =>
-      [];
+  Future<bool> initialize() async => configured;
 
   @override
-  Future<void> buy(ProductDetails product) async {}
+  void setOnEntitlementsChanged(
+      void Function(Map<String, String>)? callback) {
+    entitlementCallback = callback;
+  }
 
   @override
-  Future<void> restorePurchases() async {}
+  Future<List<PackProduct>> queryProducts(Set<String> productIds) async => [];
 
   @override
-  Future<void> completePurchase(PurchaseDetails purchase) async {
-    completedPurchases.add(purchase);
+  Future<Map<String, String>> buy(String productId) async {
+    if (nextError != null) throw nextError!;
+    return nextEntitlements;
+  }
+
+  @override
+  Future<Map<String, String>> restorePurchases() async {
+    if (nextError != null) throw nextError!;
+    return nextEntitlements;
   }
 }
 
@@ -60,26 +63,6 @@ class FakePurchaseRepository implements PurchaseRepository {
       unlocked.containsValue(packId);
 }
 
-/// テスト用のPurchaseDetailsを生成
-PurchaseDetails makePurchase(
-  String productId,
-  PurchaseStatus status, {
-  bool pendingComplete = true,
-}) {
-  final purchase = PurchaseDetails(
-    productID: productId,
-    verificationData: PurchaseVerificationData(
-      localVerificationData: 'local',
-      serverVerificationData: 'server',
-      source: 'test',
-    ),
-    transactionDate: '0',
-    status: status,
-  );
-  purchase.pendingCompletePurchase = pendingComplete;
-  return purchase;
-}
-
 void main() {
   late FakePurchaseService service;
   late FakePurchaseRepository repository;
@@ -88,91 +71,114 @@ void main() {
   final productId = ProductCatalog.jlptPack.productId;
   final packId = ProductCatalog.jlptPack.packId;
 
-  setUp(() async {
-    service = FakePurchaseService();
-    repository = FakePurchaseRepository();
-    notifier = EntitlementNotifier(service, repository);
-    // _initialize内の非同期処理（DBロード・購読開始）の完了を待つ
-    await Future<void>.delayed(Duration.zero);
-  });
-
-  tearDown(() {
-    notifier.dispose();
-    service.controller.close();
-  });
-
-  /// ストリームへイベントを流して処理完了を待つ
-  Future<void> emit(List<PurchaseDetails> purchases) async {
-    service.controller.add(purchases);
+  Future<void> pump() async {
     await Future<void>.delayed(Duration.zero);
     await Future<void>.delayed(Duration.zero);
   }
 
-  group('EntitlementNotifier テスト', () {
-    test('初期状態は未解錠・idle', () {
+  setUp(() async {
+    service = FakePurchaseService();
+    repository = FakePurchaseRepository();
+    notifier = EntitlementNotifier(service, repository);
+    await pump(); // _initialize（DBロード・購読開始）の完了を待つ
+  });
+
+  tearDown(() {
+    notifier.dispose();
+  });
+
+  group('EntitlementNotifier（RevenueCat連携）テスト', () {
+    test('初期状態は未解錠・idleで、Entitlement購読が開始される', () {
       expect(notifier.state.unlockedPackIds, isEmpty);
       expect(notifier.state.flowStatus, PurchaseFlowStatus.idle);
+      expect(service.entitlementCallback, isNotNull);
     });
 
-    test('purchasedイベントでパックが解錠され、completePurchaseが呼ばれる', () async {
-      await emit([makePurchase(productId, PurchaseStatus.purchased)]);
+    test('RevenueCat未設定でもローカルDBの解錠状態で動作する', () async {
+      final offlineService = FakePurchaseService()..configured = false;
+      final offlineRepo = FakePurchaseRepository();
+      await offlineRepo.unlockPack(productId, packId, restored: false);
+
+      final offlineNotifier = EntitlementNotifier(offlineService, offlineRepo);
+      await pump();
+
+      expect(offlineNotifier.state.unlockedPackIds, contains(packId));
+      // 未設定なので購読は開始されない
+      expect(offlineService.entitlementCallback, isNull);
+      offlineNotifier.dispose();
+    });
+
+    test('購入成功でパックが解錠される', () async {
+      service.nextEntitlements = {packId: productId};
+      await notifier.buy(productId);
 
       expect(notifier.state.unlockedPackIds, contains(packId));
       expect(notifier.state.flowStatus, PurchaseFlowStatus.idle);
-      expect(service.completedPurchases, hasLength(1));
       expect(repository.sources, ['purchase']);
     });
 
-    test('restoredイベントでもパックが解錠される（source=restore）', () async {
-      await emit([makePurchase(productId, PurchaseStatus.restored)]);
-
-      expect(notifier.state.unlockedPackIds, contains(packId));
-      expect(repository.sources, ['restore']);
-    });
-
-    test('canceledイベントは解錠せず静かにidleへ戻る', () async {
-      await emit([
-        makePurchase(productId, PurchaseStatus.canceled, pendingComplete: false),
-      ]);
+    test('購入キャンセルは解錠せず静かにidleへ戻る', () async {
+      service.nextError = PurchaseCancelledException();
+      await notifier.buy(productId);
 
       expect(notifier.state.unlockedPackIds, isEmpty);
       expect(notifier.state.flowStatus, PurchaseFlowStatus.idle);
       expect(notifier.state.errorMessage, isNull);
     });
 
-    test('pendingイベントは解錠せずpending状態になる', () async {
-      await emit([
-        makePurchase(productId, PurchaseStatus.pending, pendingComplete: false),
-      ]);
+    test('承認待ちはpending状態になり解錠しない', () async {
+      service.nextError = PurchasePendingException();
+      await notifier.buy(productId);
 
       expect(notifier.state.unlockedPackIds, isEmpty);
       expect(notifier.state.flowStatus, PurchaseFlowStatus.pending);
     });
 
-    test('errorイベントはerror状態になり、トランザクションは解放される', () async {
-      await emit([makePurchase(productId, PurchaseStatus.error)]);
+    test('購入エラーはerror状態になる', () async {
+      service.nextError = Exception('store error');
+      await notifier.buy(productId);
 
       expect(notifier.state.unlockedPackIds, isEmpty);
       expect(notifier.state.flowStatus, PurchaseFlowStatus.error);
-      expect(service.completedPurchases, hasLength(1));
+      expect(notifier.state.errorMessage, contains('store error'));
     });
 
-    test('カタログにない商品IDは解錠されないがトランザクションは解放される', () async {
-      await emit([makePurchase('com.unknown.product', PurchaseStatus.purchased)]);
+    test('復元でパックが解錠される（source=restore）', () async {
+      service.nextEntitlements = {packId: productId};
+      await notifier.restore();
+
+      expect(notifier.state.unlockedPackIds, contains(packId));
+      expect(repository.sources, ['restore']);
+    });
+
+    test('Entitlement更新リスナー経由でも解錠される（アプリ外購入の回収）', () async {
+      service.entitlementCallback!({packId: productId});
+      await pump();
+
+      expect(notifier.state.unlockedPackIds, contains(packId));
+    });
+
+    test('カタログにないEntitlementは無視される', () async {
+      service.nextEntitlements = {'unknown_pack': 'com.unknown.product'};
+      await notifier.buy(productId);
 
       expect(notifier.state.unlockedPackIds, isEmpty);
-      expect(service.completedPurchases, hasLength(1));
     });
 
-    test('同一商品の二重イベントでも解錠は冪等', () async {
-      await emit([makePurchase(productId, PurchaseStatus.purchased)]);
-      await emit([makePurchase(productId, PurchaseStatus.restored)]);
+    test('複数パックのEntitlementをまとめて解錠できる', () async {
+      service.nextEntitlements = {
+        ProductCatalog.jlptPack.packId: ProductCatalog.jlptPack.productId,
+        ProductCatalog.kaigoPack.packId: ProductCatalog.kaigoPack.productId,
+      };
+      await notifier.restore();
 
-      expect(notifier.state.unlockedPackIds, hasLength(1));
+      expect(notifier.state.unlockedPackIds,
+          containsAll([ProductCatalog.jlptPack.packId, ProductCatalog.kaigoPack.packId]));
     });
 
     test('clearErrorでidleに戻る', () async {
-      await emit([makePurchase(productId, PurchaseStatus.error)]);
+      service.nextError = Exception('x');
+      await notifier.buy(productId);
       expect(notifier.state.flowStatus, PurchaseFlowStatus.error);
 
       notifier.clearError();

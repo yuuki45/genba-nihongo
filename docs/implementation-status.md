@@ -229,6 +229,14 @@
 - QuizモデルにoptionsRomaji追加、DB v8（options_romaji列）
 - 全選択肢のローマ字存在・ASCII検証テスト追加（計96テスト）
 
+#### 課金基盤をRevenueCatへ移行 ✅（2026-06-07追加）
+- in_app_purchase直叩きをpurchases_flutter（RevenueCat）に置き換え
+- PurchaseServiceをRCラッパー化（独自DTOでRC型をUI/テストに漏らさない設計）
+- RCのEntitlement ID = packId運用。ローカルDB永続化は維持（完全オフライン解錠を保証）
+- アプリ外購入・ファミリー共有はEntitlement更新リスナーで回収
+- APIキーは lib/data/iap/revenuecat_config.dart に設定（未設定でもアプリは動作）
+- テストをRC方式に書き換え（計98テスト）
+
 ---
 
 ## ❌ 削除された機能

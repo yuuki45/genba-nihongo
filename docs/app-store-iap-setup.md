@@ -76,6 +76,28 @@
 > App Storeの「バージョン情報」ページ下部の「App内課金」セクションで
 > 3商品を選択してからアプリを審査提出してください。
 
+## 2.5 RevenueCat の設定（ASC登録後）
+
+アプリの課金処理は **RevenueCat** 経由です。ASCで商品を登録したら:
+
+1. [RevenueCatダッシュボード](https://app.revenuecat.com/) で新規プロジェクト作成
+2. **Apps > + New** でiOSアプリを追加（Bundle ID: `com.genba.nihongo`）
+   - App Store Connect の **App-Specific Shared Secret** または **In-App Purchase Key** を設定
+3. **Products** タブ: ASCに登録した3つの製品IDをインポート（自動取得可）
+4. **Entitlements** タブで3つ作成し、各製品をアタッチ:
+
+   | Entitlement ID（**packIdと完全一致させること**） | アタッチする製品 |
+   |---|---|
+   | `jlpt_n3n2` | com.genba.nihongo.pack.jlpt_n3n2 |
+   | `kaigo` | com.genba.nihongo.pack.kaigo |
+   | `kanji_dict` | com.genba.nihongo.pack.kanji_dict |
+
+5. **Project Settings > API keys** の「Apple App Store」公開SDKキー（`appl_...`）をコピーし、
+   `lib/data/iap/revenuecat_config.dart` の `revenueCatAppleApiKey` に貼り付け
+
+> ⚠️ Entitlement IDがpackIdとズレるとアプリ側で解錠されません。
+> ⚠️ APIキー未設定のままでもアプリは動作します（ストア画面が「接続できません」になるだけ）。
+
 ## 3. ローカルテスト（ASC登録前でも可能）
 
 `ios/Products.storekit` に3商品定義済み。Xcodeでの設定:
@@ -92,6 +114,11 @@
 
 > ⚠️ StoreKit Configurationを設定したままだと**本物のApp Storeに接続しない**ので、
 > Sandbox/本番テストの際はSchemeの設定を「None」に戻すこと。
+>
+> ⚠️ **RevenueCat利用時の注意**: StoreKit Configurationファイルでの購入は
+> RevenueCatのサーバー検証を通らないため、Entitlementが正しく反映されない場合があります。
+> RevenueCat経由の動作確認は **Sandbox（セクション4）を正とする**こと。
+> （RCダッシュボードの Project Settings で StoreKit Config テストを許可する設定もあります）
 
 ## 4. Sandboxテスト（ASC登録後・実機）
 

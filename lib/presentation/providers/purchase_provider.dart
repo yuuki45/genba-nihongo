@@ -1,6 +1,4 @@
-import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
 import '../../data/iap/product_catalog.dart';
 import '../../data/iap/purchase_service.dart';
 import '../../data/repositories/purchase_repository.dart';
@@ -17,11 +15,10 @@ final purchaseRepositoryProvider = Provider<PurchaseRepository>((ref) {
 
 /// ストアから商品情報を取得するProvider
 ///
-/// ストア未接続（オフライン等）の場合は空リストを返す。
+/// RevenueCat未設定・オフライン等の場合は空リストを返す。
 /// 解錠判定には影響しない（解錠はローカルDBのみ参照）。
-final productsProvider = FutureProvider<List<ProductDetails>>((ref) async {
+final productsProvider = FutureProvider<List<PackProduct>>((ref) async {
   final service = ref.watch(purchaseServiceProvider);
-  if (!await service.isAvailable()) return [];
   return await service.queryProducts(ProductCatalog.allProductIds);
 });
 
@@ -69,15 +66,15 @@ class EntitlementState {
   bool isUnlocked(String packId) => unlockedPackIds.contains(packId);
 }
 
-/// 解錠状態の管理クラス
+/// 解錠状態の管理クラス（RevenueCat連携）
 ///
 /// - 起動時にローカルDBから解錠状態をロード（オフラインでも即値が出る）
-/// - purchaseStreamを購読し、購入・復元をDBへ書き込んで解錠
-/// - 起動直後に購読を開始することで、中断したトランザクションも回収できる
+/// - RevenueCatのEntitlement更新を購読し、ローカルDBへ書き込んで解錠
+///   （アプリ外での購入完了・ファミリー共有もここで回収できる）
+/// - RevenueCatのEntitlement IDはpackIdと一致させる運用
 class EntitlementNotifier extends StateNotifier<EntitlementState> {
   final PurchaseService _service;
   final PurchaseRepository _repository;
-  StreamSubscription<List<PurchaseDetails>>? _subscription;
 
   EntitlementNotifier(this._service, this._repository)
       : super(const EntitlementState()) {
@@ -91,68 +88,30 @@ class EntitlementNotifier extends StateNotifier<EntitlementState> {
       state = state.copyWith(unlockedPackIds: unlocked);
     }
 
-    // 購入ストリームの購読を開始
-    _subscription = _service.purchaseStream.listen(
-      _onPurchaseUpdates,
-      onError: (Object error) {
-        if (mounted) {
-          state = state.copyWith(
-            flowStatus: PurchaseFlowStatus.error,
-            errorMessage: error.toString(),
-          );
-        }
-      },
-    );
+    // RevenueCatを初期化（未設定・失敗時はローカルのみで動作継続）
+    final configured = await _service.initialize();
+    if (!configured) return;
+
+    // Entitlement更新の購読を開始
+    _service.setOnEntitlementsChanged((activeEntitlements) {
+      _syncEntitlements(activeEntitlements, restored: false);
+    });
   }
 
-  /// purchaseStreamから届く購入状態の更新を処理する
-  Future<void> _onPurchaseUpdates(List<PurchaseDetails> purchases) async {
-    for (final purchase in purchases) {
-      switch (purchase.status) {
-        case PurchaseStatus.purchased:
-        case PurchaseStatus.restored:
-          await _unlock(purchase);
-          await _service.completePurchase(purchase);
-          break;
-
-        case PurchaseStatus.pending:
-          // ストア側の承認待ち。解錠せず、完了が流れてくるのを待つ
-          if (mounted) {
-            state = state.copyWith(flowStatus: PurchaseFlowStatus.pending);
-          }
-          break;
-
-        case PurchaseStatus.canceled:
-          // ユーザーによるキャンセル。エラー表示はせず静かに戻す
-          if (mounted) {
-            state = state.copyWith(flowStatus: PurchaseFlowStatus.idle);
-          }
-          break;
-
-        case PurchaseStatus.error:
-          if (mounted) {
-            state = state.copyWith(
-              flowStatus: PurchaseFlowStatus.error,
-              errorMessage: purchase.error?.message,
-            );
-          }
-          // トランザクションを解放（呼ばないとキューに残り続ける）
-          await _service.completePurchase(purchase);
-          break;
-      }
+  /// 有効なEntitlement（packId → productId）をローカルDBへ反映する
+  ///
+  /// カタログにないEntitlementは無視する。一度解錠したパックは
+  /// RC側で無効になってもローカルでは取り消さない（オフライン体験を優先）。
+  Future<void> _syncEntitlements(
+    Map<String, String> activeEntitlements, {
+    required bool restored,
+  }) async {
+    for (final entry in activeEntitlements.entries) {
+      final packId = entry.key;
+      final productId = entry.value;
+      if (ProductCatalog.fromPackId(packId) == null) continue;
+      await _repository.unlockPack(productId, packId, restored: restored);
     }
-  }
-
-  /// パックを解錠してDBに永続化する
-  Future<void> _unlock(PurchaseDetails purchase) async {
-    final pack = ProductCatalog.fromProductId(purchase.productID);
-    if (pack == null) return; // カタログにない商品は無視
-
-    await _repository.unlockPack(
-      pack.productId,
-      pack.packId,
-      restored: purchase.status == PurchaseStatus.restored,
-    );
 
     final unlocked = await _repository.getUnlockedPackIds();
     if (mounted) {
@@ -163,16 +122,29 @@ class EntitlementNotifier extends StateNotifier<EntitlementState> {
     }
   }
 
-  /// 購入を開始する（結果はpurchaseStream経由で反映される）
-  Future<void> buy(ProductDetails product) async {
+  /// 購入を開始する
+  Future<void> buy(String productId) async {
     state = state.copyWith(flowStatus: PurchaseFlowStatus.purchasing);
     try {
-      await _service.buy(product);
+      final entitlements = await _service.buy(productId);
+      await _syncEntitlements(entitlements, restored: false);
+    } on PurchaseCancelledException {
+      // ユーザーによるキャンセル。エラー表示はせず静かに戻す
+      if (mounted) {
+        state = state.copyWith(flowStatus: PurchaseFlowStatus.idle);
+      }
+    } on PurchasePendingException {
+      // 承認されるとEntitlement更新リスナー経由で自動解錠される
+      if (mounted) {
+        state = state.copyWith(flowStatus: PurchaseFlowStatus.pending);
+      }
     } catch (e) {
-      state = state.copyWith(
-        flowStatus: PurchaseFlowStatus.error,
-        errorMessage: e.toString(),
-      );
+      if (mounted) {
+        state = state.copyWith(
+          flowStatus: PurchaseFlowStatus.error,
+          errorMessage: e.toString(),
+        );
+      }
     }
   }
 
@@ -180,17 +152,15 @@ class EntitlementNotifier extends StateNotifier<EntitlementState> {
   Future<void> restore() async {
     state = state.copyWith(flowStatus: PurchaseFlowStatus.purchasing);
     try {
-      await _service.restorePurchases();
-      // 復元対象はpurchaseStreamにrestoredとして流れてくる。
-      // 対象が0件の場合は何も流れないため、ここでidleに戻しておく
-      if (mounted && state.flowStatus == PurchaseFlowStatus.purchasing) {
-        state = state.copyWith(flowStatus: PurchaseFlowStatus.idle);
-      }
+      final entitlements = await _service.restorePurchases();
+      await _syncEntitlements(entitlements, restored: true);
     } catch (e) {
-      state = state.copyWith(
-        flowStatus: PurchaseFlowStatus.error,
-        errorMessage: e.toString(),
-      );
+      if (mounted) {
+        state = state.copyWith(
+          flowStatus: PurchaseFlowStatus.error,
+          errorMessage: e.toString(),
+        );
+      }
     }
   }
 
@@ -201,7 +171,7 @@ class EntitlementNotifier extends StateNotifier<EntitlementState> {
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _service.setOnEntitlementsChanged(null);
     super.dispose();
   }
 }
@@ -209,7 +179,7 @@ class EntitlementNotifier extends StateNotifier<EntitlementState> {
 /// 解錠状態Provider
 ///
 /// アプリ起動直後にwatch/readして購読を開始すること
-/// （中断したトランザクションの回収のため）。
+/// （アプリ外での購入完了の回収のため）。
 final entitlementProvider =
     StateNotifierProvider<EntitlementNotifier, EntitlementState>((ref) {
   return EntitlementNotifier(
