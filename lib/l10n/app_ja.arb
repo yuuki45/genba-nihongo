@@ -431,6 +431,16 @@
     "description": "構成漢字がタップできることのヒント"
   },
 
+  "kanjiDictLockedTitle": "漢字辞書パックで解放される機能",
+  "@kanjiDictLockedTitle": {
+    "description": "未購入時の辞書機能紹介タイトル"
+  },
+
+  "kanjiDictLockedDesc": "この語に使われている漢字を1文字ずつ辞書で引けるようになります。\n・音読み・訓読み\n・漢字の意味（インドネシア語）\n・この漢字を使うほかの語（逆引き）",
+  "@kanjiDictLockedDesc": {
+    "description": "未購入時の辞書機能紹介文"
+  },
+
   "kanjiDictOnYomi": "音読み",
   "@kanjiDictOnYomi": {
     "description": "単漢字詳細の音読みラベル"

@@ -272,6 +272,14 @@ class AppLocalizationsId extends AppLocalizations {
   String get kanjiDictTapHint => 'Ketuk untuk melihat cara baca & arti';
 
   @override
+  String get kanjiDictLockedTitle =>
+      'Fitur yang terbuka dengan Paket Kamus Kanji';
+
+  @override
+  String get kanjiDictLockedDesc =>
+      'Anda dapat mencari setiap kanji dalam kata ini di kamus.\n・On\'yomi & kun\'yomi\n・Arti kanji (bahasa Indonesia)\n・Kata lain yang memakai kanji yang sama';
+
+  @override
   String get kanjiDictOnYomi => 'On\'yomi';
 
   @override

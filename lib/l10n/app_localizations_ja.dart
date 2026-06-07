@@ -265,6 +265,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get kanjiDictTapHint => 'タップで読み方・意味を表示';
 
   @override
+  String get kanjiDictLockedTitle => '漢字辞書パックで解放される機能';
+
+  @override
+  String get kanjiDictLockedDesc =>
+      'この語に使われている漢字を1文字ずつ辞書で引けるようになります。\n・音読み・訓読み\n・漢字の意味（インドネシア語）\n・この漢字を使うほかの語（逆引き）';
+
+  @override
   String get kanjiDictOnYomi => '音読み';
 
   @override

@@ -431,6 +431,16 @@
     "description": "Petunjuk bahwa kanji penyusun dapat diketuk"
   },
 
+  "kanjiDictLockedTitle": "Fitur yang terbuka dengan Paket Kamus Kanji",
+  "@kanjiDictLockedTitle": {
+    "description": "Judul promosi fitur kamus saat belum dibeli"
+  },
+
+  "kanjiDictLockedDesc": "Anda dapat mencari setiap kanji dalam kata ini di kamus.\n・On'yomi & kun'yomi\n・Arti kanji (bahasa Indonesia)\n・Kata lain yang memakai kanji yang sama",
+  "@kanjiDictLockedDesc": {
+    "description": "Deskripsi promosi fitur kamus saat belum dibeli"
+  },
+
   "kanjiDictOnYomi": "On'yomi",
   "@kanjiDictOnYomi": {
     "description": "Label on'yomi pada detail kanji"

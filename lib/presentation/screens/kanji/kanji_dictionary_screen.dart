@@ -296,39 +296,36 @@ class _KanjiDictionaryScreenState extends ConsumerState<KanjiDictionaryScreen> {
                   ),
 
                   // 構成漢字（漢字辞書パック）
-                  if (chars.isNotEmpty) ...[
+                  // 未購入時は中身（どの漢字かも含めて）を一切見せず、
+                  // 解放される機能の紹介と解錠バナーのみ表示する
+                  if (isDictUnlocked && chars.isNotEmpty) ...[
                     const Divider(height: 24),
                     Row(
                       children: [
                         Text(
-                          isDictUnlocked
-                              ? l10n.kanjiDictChars
-                              : '${l10n.kanjiDictChars} 🔒',
+                          l10n.kanjiDictChars,
                           style: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
-                        if (isDictUnlocked) ...[
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              l10n.kanjiDictTapHint,
-                              style: TextStyle(
-                                fontSize: 11,
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .onSurfaceVariant,
-                              ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            l10n.kanjiDictTapHint,
+                            style: TextStyle(
+                              fontSize: 11,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
                             ),
                           ),
-                        ],
+                        ),
                       ],
                     ),
                     const SizedBox(height: 8),
-                    if (isDictUnlocked)
-                      // 解錠済み: 読み・意味付きの行ボタン（タップで単漢字詳細）
-                      ...chars.map((ch) {
+                    // 読み・意味付きの行ボタン（タップで単漢字詳細）
+                    ...chars.map((ch) {
                         final character = charMap[ch]!;
                         final readings = [
                           character.onReadings,
@@ -378,28 +375,53 @@ class _KanjiDictionaryScreenState extends ConsumerState<KanjiDictionaryScreen> {
                                 _showCharacterDetail(context, character),
                           ),
                         );
-                      })
-                    else ...[
-                      // 未購入: チップ表示 + 解錠バナー
-                      Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: chars.map((ch) {
-                          return Chip(
-                            label: Text(
-                              ch,
-                              style: const TextStyle(
-                                fontFamily: AppTheme.displayFont,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
-                          );
-                        }).toList(),
+                      }),
+                  ] else if (!isDictUnlocked) ...[
+                    // 未購入: 解放される機能の紹介 + 解錠バナー（中身は見せない）
+                    const Divider(height: 24),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(14.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surfaceContainerHighest,
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      const SizedBox(height: 12),
-                      const LockedContentBanner(),
-                    ],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.lock, size: 16),
+                              const SizedBox(width: 6),
+                              Expanded(
+                                child: Text(
+                                  l10n.kanjiDictLockedTitle,
+                                  style: const TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            l10n.kanjiDictLockedDesc,
+                            style: TextStyle(
+                              fontSize: 13,
+                              height: 1.6,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const LockedContentBanner(),
                   ],
                 ],
               );
