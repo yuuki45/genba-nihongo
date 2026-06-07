@@ -53,7 +53,7 @@ class SettingsScreen extends ConsumerWidget {
         _buildSectionHeader(context, l10n.settingsAppInfo),
         _buildAppInfoTile(context, l10n.settingsVersion, '1.0.0'),
         _buildAppInfoTile(context, l10n.settingsPhraseCount, '329'),
-        _buildAppInfoTile(context, l10n.settingsDeveloper, 'Nihongo Team'),
+        _buildAppInfoTile(context, l10n.settingsDeveloper, 'Yuuki Odan'),
         _buildOfflineInfoTile(context, settings.languageCode),
         const Divider(),
 
