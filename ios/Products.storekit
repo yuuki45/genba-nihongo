@@ -1,0 +1,78 @@
+{
+  "identifier" : "B7E2A4C1",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "200",
+      "familyShareable" : false,
+      "internalID" : "A1000001",
+      "localizations" : [
+        {
+          "description" : "N3・N2の文法・語彙・漢字読みドリル120問を解錠",
+          "displayName" : "JLPT N3/N2対策パック",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "120 soal tata bahasa, kosakata, kanji N3/N2",
+          "displayName" : "Paket Latihan JLPT N3/N2",
+          "locale" : "id_ID"
+        }
+      ],
+      "productID" : "com.genba.nihongo.pack.jlpt_n3n2",
+      "referenceName" : "JLPT N3/N2 Pack",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "200",
+      "familyShareable" : false,
+      "internalID" : "A1000002",
+      "localizations" : [
+        {
+          "description" : "介護現場の声かけ・介助フレーズ100件を解錠",
+          "displayName" : "介護フレーズパック",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "100 frasa perawatan: sapaan & bantuan kerja",
+          "displayName" : "Paket Frasa Perawatan",
+          "locale" : "id_ID"
+        }
+      ],
+      "productID" : "com.genba.nihongo.pack.kaigo",
+      "referenceName" : "Kaigo Phrase Pack",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "200",
+      "familyShareable" : false,
+      "internalID" : "A1000003",
+      "localizations" : [
+        {
+          "description" : "単漢字167字の音訓読み・意味・逆引きを解錠",
+          "displayName" : "漢字辞書パック",
+          "locale" : "ja_JP"
+        },
+        {
+          "description" : "167 kanji: on-kun, arti, dan kata terkait",
+          "displayName" : "Paket Kamus Kanji",
+          "locale" : "id_ID"
+        }
+      ],
+      "productID" : "com.genba.nihongo.pack.kanji_dict",
+      "referenceName" : "Kanji Dictionary Pack",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
