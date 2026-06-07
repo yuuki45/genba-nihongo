@@ -366,6 +366,46 @@
     "description": "Terakhir diperbarui"
   },
 
+  "homeKanjiBlockTitle": "Belajar Kanji",
+  "@homeKanjiBlockTitle": {
+    "description": "Judul blok belajar kanji di beranda"
+  },
+
+  "homeKanjiBlockDesc": "Hafalkan kanji tempat kerja dengan kartu dan kuis",
+  "@homeKanjiBlockDesc": {
+    "description": "Deskripsi blok belajar kanji di beranda"
+  },
+
+  "homeJlptBlockTitle": "Latihan Soal JLPT",
+  "@homeJlptBlockTitle": {
+    "description": "Judul blok latihan soal JLPT di beranda"
+  },
+
+  "homeJlptBlockDesc": "Tata bahasa, kosakata, dan bacaan kanji N3/N2",
+  "@homeJlptBlockDesc": {
+    "description": "Deskripsi blok latihan soal JLPT di beranda"
+  },
+
+  "kanjiCategoryQuizSection": "Kuis per Kategori",
+  "@kanjiCategoryQuizSection": {
+    "description": "Judul bagian kuis per kategori di hub kanji"
+  },
+
+  "quizCategoryGrammar": "Tata Bahasa",
+  "@quizCategoryGrammar": {
+    "description": "Bidang latihan soal JLPT: tata bahasa"
+  },
+
+  "quizCategoryVocab": "Kosakata",
+  "@quizCategoryVocab": {
+    "description": "Bidang latihan soal JLPT: kosakata"
+  },
+
+  "quizCategoryKanjiReading": "Bacaan Kanji",
+  "@quizCategoryKanjiReading": {
+    "description": "Bidang latihan soal JLPT: bacaan kanji"
+  },
+
   "quizTitleN2": "Latihan Soal N2",
   "@quizTitleN2": {
     "description": "Judul layar kuis N2"

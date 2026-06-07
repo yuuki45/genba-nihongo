@@ -366,6 +366,46 @@
     "description": "最終更新日"
   },
 
+  "homeKanjiBlockTitle": "漢字学習",
+  "@homeKanjiBlockTitle": {
+    "description": "ホームの漢字学習ブロックタイトル"
+  },
+
+  "homeKanjiBlockDesc": "現場の漢字をカードとクイズで覚えよう",
+  "@homeKanjiBlockDesc": {
+    "description": "ホームの漢字学習ブロック説明"
+  },
+
+  "homeJlptBlockTitle": "JLPT演習問題",
+  "@homeJlptBlockTitle": {
+    "description": "ホームのJLPT演習問題ブロックタイトル"
+  },
+
+  "homeJlptBlockDesc": "N3・N2の文法・語彙・漢字読み",
+  "@homeJlptBlockDesc": {
+    "description": "ホームのJLPT演習問題ブロック説明"
+  },
+
+  "kanjiCategoryQuizSection": "カテゴリー別クイズ",
+  "@kanjiCategoryQuizSection": {
+    "description": "漢字ハブのカテゴリー別クイズセクション見出し"
+  },
+
+  "quizCategoryGrammar": "文法",
+  "@quizCategoryGrammar": {
+    "description": "JLPT演習問題の分野: 文法"
+  },
+
+  "quizCategoryVocab": "語彙",
+  "@quizCategoryVocab": {
+    "description": "JLPT演習問題の分野: 語彙"
+  },
+
+  "quizCategoryKanjiReading": "漢字読み",
+  "@quizCategoryKanjiReading": {
+    "description": "JLPT演習問題の分野: 漢字読み"
+  },
+
   "quizTitleN2": "N2演習問題",
   "@quizTitleN2": {
     "description": "N2クイズ画面のタイトル"

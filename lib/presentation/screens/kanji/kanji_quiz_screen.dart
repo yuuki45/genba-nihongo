@@ -6,17 +6,24 @@ import '../../theme/app_theme.dart';
 import '../../../data/models/kanji_word.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// 漢字クイズ画面（読みクイズ・意味クイズ・苦手クイズ共通）
+/// 漢字クイズ画面（読みクイズ・意味クイズ・苦手クイズ・カテゴリ別クイズ共通）
 ///
 /// 問題は漢字語データから動的に生成される（kanjiQuizQuestionsProvider）。
 /// [mode] がnullの場合は読み/意味ミックスで出題する。
 /// [favoritesOnly] がtrueの場合は苦手漢字のみから出題する。
+/// [category] を指定するとそのカテゴリの語のみから出題する。
 /// 結果はDBに保存せず、セッション内のみで完結する。
 class KanjiQuizScreen extends ConsumerStatefulWidget {
   final KanjiQuizMode? mode;
   final bool favoritesOnly;
+  final String? category;
 
-  const KanjiQuizScreen({super.key, this.mode, this.favoritesOnly = false});
+  const KanjiQuizScreen({
+    super.key,
+    this.mode,
+    this.favoritesOnly = false,
+    this.category,
+  });
 
   @override
   ConsumerState<KanjiQuizScreen> createState() => _KanjiQuizScreenState();
@@ -35,6 +42,18 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
   String get _title {
     final l10n = AppLocalizations.of(context)!;
     if (widget.favoritesOnly) return l10n.kanjiFavoritesQuiz;
+    // カテゴリ別クイズはカテゴリ名をタイトルにする
+    if (widget.category != null) {
+      final category = KanjiCategory.fromKey(widget.category!);
+      if (category != null) {
+        final isJapanese = ref.read(settingsProvider).maybeWhen(
+              data: (settings) => settings.languageCode == 'ja',
+              orElse: () => false,
+            );
+        return '${category.icon} '
+            '${isJapanese ? category.nameJa : category.nameId}';
+      }
+    }
     return widget.mode == KanjiQuizMode.meaning
         ? l10n.kanjiMenuMeaningQuiz
         : l10n.kanjiMenuReadingQuiz;
@@ -73,7 +92,11 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final questionsAsync = ref.watch(kanjiQuizQuestionsProvider(
-      (mode: widget.mode, favoritesOnly: widget.favoritesOnly),
+      (
+        mode: widget.mode,
+        favoritesOnly: widget.favoritesOnly,
+        category: widget.category,
+      ),
     ));
 
     return questionsAsync.when(

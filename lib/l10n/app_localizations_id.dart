@@ -231,6 +231,32 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
+  String get homeKanjiBlockTitle => 'Belajar Kanji';
+
+  @override
+  String get homeKanjiBlockDesc =>
+      'Hafalkan kanji tempat kerja dengan kartu dan kuis';
+
+  @override
+  String get homeJlptBlockTitle => 'Latihan Soal JLPT';
+
+  @override
+  String get homeJlptBlockDesc =>
+      'Tata bahasa, kosakata, dan bacaan kanji N3/N2';
+
+  @override
+  String get kanjiCategoryQuizSection => 'Kuis per Kategori';
+
+  @override
+  String get quizCategoryGrammar => 'Tata Bahasa';
+
+  @override
+  String get quizCategoryVocab => 'Kosakata';
+
+  @override
+  String get quizCategoryKanjiReading => 'Bacaan Kanji';
+
+  @override
   String get quizTitleN2 => 'Latihan Soal N2';
 
   @override

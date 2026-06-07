@@ -11,7 +11,10 @@ class QuizScreen extends ConsumerStatefulWidget {
   /// 出題するJLPTレベル（'N3' または 'N2'）
   final String jlptLevel;
 
-  const QuizScreen({super.key, this.jlptLevel = 'N3'});
+  /// 出題分野（'文法'・'語彙'・'漢字読み'。null=全分野）
+  final String? category;
+
+  const QuizScreen({super.key, this.jlptLevel = 'N3', this.category});
 
   @override
   ConsumerState<QuizScreen> createState() => _QuizScreenState();
@@ -36,7 +39,9 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     setState(() => _isLoading = true);
 
     final quizzes = await ref.read(
-      randomQuizzesProvider((count: 10, level: widget.jlptLevel)).future,
+      randomQuizzesProvider(
+        (count: 10, level: widget.jlptLevel, category: widget.category),
+      ).future,
     );
     await ref.read(quizSessionProvider.notifier).startSession(quizzes);
 

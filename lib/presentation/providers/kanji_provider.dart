@@ -99,7 +99,12 @@ enum KanjiQuizMode {
 ///
 /// [mode] がnullの場合は問題ごとに読み/意味をランダムに混ぜる。
 /// [favoritesOnly] がtrueの場合は苦手漢字のみから出題する。
-typedef KanjiQuizConfig = ({KanjiQuizMode? mode, bool favoritesOnly});
+/// [category] を指定するとそのカテゴリの語のみから出題する（null=全カテゴリ）。
+typedef KanjiQuizConfig = ({
+  KanjiQuizMode? mode,
+  bool favoritesOnly,
+  String? category,
+});
 
 /// 漢字クイズの1問
 ///
@@ -134,9 +139,15 @@ final kanjiQuizQuestionsProvider = FutureProvider.autoDispose
   final allWords = await repository.getAllKanjiWords();
 
   // 苦手モードでは出題語を苦手漢字に限定する（誤答候補は全語から選ぶ）
-  final questionWords = config.favoritesOnly
+  var questionWords = config.favoritesOnly
       ? await repository.getFavoriteKanjiWords()
       : allWords;
+
+  // カテゴリ指定があれば出題語を絞り込む（誤答候補は全語のまま）
+  if (config.category != null) {
+    questionWords =
+        questionWords.where((word) => word.category == config.category).toList();
+  }
 
   return generateKanjiQuizQuestions(
     allWords,

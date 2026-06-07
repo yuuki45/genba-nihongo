@@ -524,6 +524,54 @@ abstract class AppLocalizations {
   /// **'最終更新日'**
   String get lastUpdated;
 
+  /// ホームの漢字学習ブロックタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字学習'**
+  String get homeKanjiBlockTitle;
+
+  /// ホームの漢字学習ブロック説明
+  ///
+  /// In ja, this message translates to:
+  /// **'現場の漢字をカードとクイズで覚えよう'**
+  String get homeKanjiBlockDesc;
+
+  /// ホームのJLPT演習問題ブロックタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'JLPT演習問題'**
+  String get homeJlptBlockTitle;
+
+  /// ホームのJLPT演習問題ブロック説明
+  ///
+  /// In ja, this message translates to:
+  /// **'N3・N2の文法・語彙・漢字読み'**
+  String get homeJlptBlockDesc;
+
+  /// 漢字ハブのカテゴリー別クイズセクション見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'カテゴリー別クイズ'**
+  String get kanjiCategoryQuizSection;
+
+  /// JLPT演習問題の分野: 文法
+  ///
+  /// In ja, this message translates to:
+  /// **'文法'**
+  String get quizCategoryGrammar;
+
+  /// JLPT演習問題の分野: 語彙
+  ///
+  /// In ja, this message translates to:
+  /// **'語彙'**
+  String get quizCategoryVocab;
+
+  /// JLPT演習問題の分野: 漢字読み
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字読み'**
+  String get quizCategoryKanjiReading;
+
   /// N2クイズ画面のタイトル
   ///
   /// In ja, this message translates to:

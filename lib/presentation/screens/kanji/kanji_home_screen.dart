@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/kanji_provider.dart';
+import '../../providers/settings_provider.dart';
+import '../../theme/app_theme.dart';
+import '../../../data/models/kanji_word.dart';
 import '../../../l10n/app_localizations.dart';
 import 'kanji_card_screen.dart';
 import 'kanji_quiz_screen.dart';
@@ -125,7 +128,80 @@ class KanjiHomeScreen extends ConsumerWidget {
               const KanjiQuizScreen(favoritesOnly: true),
             ),
           ),
+
+          // カテゴリー別クイズ
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4.0, 16.0, 4.0, 8.0),
+            child: Row(
+              children: [
+                Container(
+                  width: 6,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    color: AppColors.safetyYellow,
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  l10n.kanjiCategoryQuizSection,
+                  style: const TextStyle(
+                    fontFamily: AppTheme.displayFont,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ...KanjiCategory.all.map(
+            (category) => _buildCategoryQuizTile(context, ref, category),
+          ),
         ],
+      ),
+    );
+  }
+
+  /// カテゴリー別クイズのタイル（読み/意味ミックスで出題）
+  Widget _buildCategoryQuizTile(
+    BuildContext context,
+    WidgetRef ref,
+    KanjiCategory category,
+  ) {
+    final isJapanese = ref.watch(settingsProvider).maybeWhen(
+          data: (settings) => settings.languageCode == 'ja',
+          orElse: () => false,
+        );
+    final signColor = AppColors.kanjiCategoryColor(category.key);
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8.0),
+      child: ListTile(
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+        leading: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: signColor.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(category.icon, style: const TextStyle(fontSize: 20)),
+          ),
+        ),
+        title: Text(
+          isJapanese ? category.nameJa : category.nameId,
+          style: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => _push(
+          context,
+          KanjiQuizScreen(category: category.key),
+        ),
       ),
     );
   }

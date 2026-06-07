@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import '../../providers/phrase_provider.dart';
-import '../../providers/purchase_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/language_segmented_control.dart';
-import '../../../data/iap/product_catalog.dart';
 import '../../../data/models/phrase.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
-import '../quiz/quiz_screen.dart';
+import '../quiz/jlpt_home_screen.dart';
 import '../kanji/kanji_home_screen.dart';
-import '../store/store_screen.dart';
 import '../../services/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -96,25 +93,18 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
                   ),
 
-                  // 現場の漢字カード
+                  // 漢字学習ブロック
                   const SizedBox(height: 24),
                   _StaggeredFadeIn(
                     index: 3,
-                    child: _buildKanjiCard(context),
+                    child: _buildKanjiBlock(context),
                   ),
 
-                  // N3演習問題カード
+                  // JLPT演習問題ブロック
                   const SizedBox(height: 12),
                   _StaggeredFadeIn(
                     index: 4,
-                    child: _buildQuizCard(context),
-                  ),
-
-                  // N2演習問題カード（対策パック）
-                  const SizedBox(height: 12),
-                  _StaggeredFadeIn(
-                    index: 5,
-                    child: _buildN2QuizCard(context),
+                    child: _buildJlptBlock(context),
                   ),
                   const SizedBox(height: 16),
                 ],
@@ -337,67 +327,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
-  /// N3演習問題カード（墨色の標識パネル）
-  Widget _buildQuizCard(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
-    return _SignPanelCard(
-      backgroundColor: AppColors.ink,
-      iconBlockColor: AppColors.safetyYellow,
-      icon: Icons.quiz,
-      iconColor: AppColors.ink,
-      title: l10n.quizCardTitle,
-      titleColor: Colors.white,
-      description: l10n.quizCardDescription,
-      descriptionColor: Colors.white70,
-      chevronColor: AppColors.safetyYellow,
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const QuizScreen()),
-        );
-      },
-    );
-  }
-
-  /// N2演習問題カード（対策パック — JIS青の指示標識パネル）
+  /// 漢字学習ブロック（JIS緑 — 案内標識パネル）
   ///
-  /// 未購入時はロックアイコンを表示し、タップでストア画面へ誘導する。
-  Widget _buildN2QuizCard(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final isUnlocked = ref.watch(
-      entitlementProvider.select(
-        (state) => state.isUnlocked(ProductCatalog.jlptPack.packId),
-      ),
-    );
-
-    return _SignPanelCard(
-      backgroundColor: AppColors.jisBlue,
-      iconBlockColor: Colors.white,
-      icon: isUnlocked ? Icons.workspace_premium : Icons.lock,
-      iconColor: AppColors.jisBlue,
-      title: l10n.quizCardTitleN2,
-      titleColor: Colors.white,
-      description: isUnlocked
-          ? l10n.quizCardDescriptionN2
-          : l10n.lockedContentMessage,
-      descriptionColor: Colors.white.withValues(alpha: 0.85),
-      chevronColor: Colors.white,
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => isUnlocked
-                ? const QuizScreen(jlptLevel: 'N2')
-                : const StoreScreen(),
-          ),
-        );
-      },
-    );
-  }
-
-  /// 現場の漢字カード（JIS緑 — 案内標識パネル）
-  Widget _buildKanjiCard(BuildContext context) {
+  /// 漢字ハブ（カード学習・各種クイズ・カテゴリー別クイズ）へ遷移する。
+  Widget _buildKanjiBlock(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return _SignPanelCard(
@@ -405,15 +338,40 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       iconBlockColor: Colors.white,
       icon: Icons.menu_book,
       iconColor: AppColors.jisGreen,
-      title: l10n.kanjiCardTitle,
+      title: l10n.homeKanjiBlockTitle,
       titleColor: Colors.white,
-      description: l10n.kanjiCardDescription,
+      description: l10n.homeKanjiBlockDesc,
       descriptionColor: Colors.white.withValues(alpha: 0.85),
       chevronColor: Colors.white,
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const KanjiHomeScreen()),
+        );
+      },
+    );
+  }
+
+  /// JLPT演習問題ブロック（墨色の標識パネル）
+  ///
+  /// JLPTハブ（N3/N2 × 分野選択）へ遷移する。N2のロックはハブ側で扱う。
+  Widget _buildJlptBlock(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return _SignPanelCard(
+      backgroundColor: AppColors.ink,
+      iconBlockColor: AppColors.safetyYellow,
+      icon: Icons.quiz,
+      iconColor: AppColors.ink,
+      title: l10n.homeJlptBlockTitle,
+      titleColor: Colors.white,
+      description: l10n.homeJlptBlockDesc,
+      descriptionColor: Colors.white70,
+      chevronColor: AppColors.safetyYellow,
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const JlptHomeScreen()),
         );
       },
     );

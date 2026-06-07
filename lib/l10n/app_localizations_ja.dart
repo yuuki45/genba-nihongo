@@ -226,6 +226,30 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
+  String get homeKanjiBlockTitle => '漢字学習';
+
+  @override
+  String get homeKanjiBlockDesc => '現場の漢字をカードとクイズで覚えよう';
+
+  @override
+  String get homeJlptBlockTitle => 'JLPT演習問題';
+
+  @override
+  String get homeJlptBlockDesc => 'N3・N2の文法・語彙・漢字読み';
+
+  @override
+  String get kanjiCategoryQuizSection => 'カテゴリー別クイズ';
+
+  @override
+  String get quizCategoryGrammar => '文法';
+
+  @override
+  String get quizCategoryVocab => '語彙';
+
+  @override
+  String get quizCategoryKanjiReading => '漢字読み';
+
+  @override
   String get quizTitleN2 => 'N2演習問題';
 
   @override

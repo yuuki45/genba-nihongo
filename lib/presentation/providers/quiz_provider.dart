@@ -15,19 +15,24 @@ final allQuizzesProvider = FutureProvider<List<Quiz>>((ref) async {
   return await repository.getAllQuizzes();
 });
 
-/// ランダムにクイズを取得するProvider（レベル指定・解錠フィルタ付き）
+/// ランダムにクイズを取得するProvider（レベル・分野指定・解錠フィルタ付き）
 ///
+/// [category] を指定すると文法・語彙・漢字読みなど分野を絞って出題する（null=全分野）。
 /// 未購入パックのクイズは出題対象から除外される。
 /// autoDisposeを使用して毎回新しいランダムクイズを取得。
 final randomQuizzesProvider = FutureProvider.autoDispose
-    .family<List<Quiz>, ({int count, String level})>((ref, params) async {
+    .family<List<Quiz>, ({int count, String level, String? category})>(
+        (ref, params) async {
   final repository = ref.watch(quizRepositoryProvider);
   // 解錠状態を監視（購入直後にクイズプールへ即反映される）
   final unlockedPackIds = ref.watch(
     entitlementProvider.select((state) => state.unlockedPackIds),
   );
 
-  final all = await repository.getQuizzesByJlptLevel(params.level);
+  var all = await repository.getQuizzesByJlptLevel(params.level);
+  if (params.category != null) {
+    all = all.where((quiz) => quiz.category == params.category).toList();
+  }
   final available = filterUnlockedContent(
     all,
     (quiz) => quiz.packId,
