@@ -524,6 +524,18 @@ abstract class AppLocalizations {
   /// **'最終更新日'**
   String get lastUpdated;
 
+  /// ボトムナビ: 漢字学習タブ
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字学習'**
+  String get navKanji;
+
+  /// ボトムナビ: 演習問題タブ
+  ///
+  /// In ja, this message translates to:
+  /// **'演習問題'**
+  String get navQuiz;
+
   /// ホームの漢字学習ブロックタイトル
   ///
   /// In ja, this message translates to:

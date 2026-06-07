@@ -226,6 +226,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
+  String get navKanji => '漢字学習';
+
+  @override
+  String get navQuiz => '演習問題';
+
+  @override
   String get homeKanjiBlockTitle => '漢字学習';
 
   @override

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import '../../providers/navigation_provider.dart';
 import '../../providers/phrase_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/header_actions.dart';
 import '../../widgets/language_segmented_control.dart';
 import '../../../data/models/phrase.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
-import '../quiz/jlpt_home_screen.dart';
-import '../kanji/kanji_home_screen.dart';
 import '../../services/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -139,16 +139,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 日付（標識の管理番号風の小ラベル）
-              Text(
-                dateText,
-                style: const TextStyle(
-                  fontFamily: AppTheme.bodyFont,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.safetyYellow,
-                  letterSpacing: 1.2,
-                ),
+              // 日付（標識の管理番号風の小ラベル）+ お気に入り・設定ボタン
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      dateText,
+                      style: const TextStyle(
+                        fontFamily: AppTheme.bodyFont,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.safetyYellow,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                  ),
+                  ...buildHeaderActions(context, color: Colors.white),
+                ],
               ),
               const SizedBox(height: 6),
               // あいさつ（時間帯に応じて切り替わる）
@@ -344,10 +351,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       descriptionColor: Colors.white.withValues(alpha: 0.85),
       chevronColor: Colors.white,
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const KanjiHomeScreen()),
-        );
+        // 漢字学習タブへ切り替え
+        ref.read(selectedTabProvider.notifier).state = AppTabs.kanji;
       },
     );
   }
@@ -369,10 +374,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       descriptionColor: Colors.white70,
       chevronColor: AppColors.safetyYellow,
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const JlptHomeScreen()),
-        );
+        // 演習問題タブへ切り替え
+        ref.read(selectedTabProvider.notifier).state = AppTabs.quiz;
       },
     );
   }

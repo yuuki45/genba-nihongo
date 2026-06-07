@@ -8,6 +8,7 @@ import '../../../l10n/app_localizations.dart';
 import 'kanji_card_screen.dart';
 import 'kanji_dictionary_screen.dart';
 import 'kanji_quiz_screen.dart';
+import '../../widgets/header_actions.dart';
 
 /// 現場の漢字 メニュー画面
 class KanjiHomeScreen extends ConsumerWidget {
@@ -23,6 +24,7 @@ class KanjiHomeScreen extends ConsumerWidget {
         title: Text(l10n.kanjiCardTitle),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
+        actions: buildHeaderActions(context, color: Colors.white),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),

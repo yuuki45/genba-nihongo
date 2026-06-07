@@ -231,6 +231,12 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
+  String get navKanji => 'Kanji';
+
+  @override
+  String get navQuiz => 'Latihan';
+
+  @override
   String get homeKanjiBlockTitle => 'Belajar Kanji';
 
   @override

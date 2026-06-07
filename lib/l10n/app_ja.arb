@@ -366,6 +366,16 @@
     "description": "最終更新日"
   },
 
+  "navKanji": "漢字学習",
+  "@navKanji": {
+    "description": "ボトムナビ: 漢字学習タブ"
+  },
+
+  "navQuiz": "演習問題",
+  "@navQuiz": {
+    "description": "ボトムナビ: 演習問題タブ"
+  },
+
   "homeKanjiBlockTitle": "漢字学習",
   "@homeKanjiBlockTitle": {
     "description": "ホームの漢字学習ブロックタイトル"

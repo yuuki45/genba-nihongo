@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/purchase_provider.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/header_actions.dart';
 import '../../widgets/locked_content_banner.dart';
 import '../../../data/iap/product_catalog.dart';
 import '../../../l10n/app_localizations.dart';
@@ -26,6 +27,7 @@ class JlptHomeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.homeJlptBlockTitle),
+        actions: buildHeaderActions(context),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),

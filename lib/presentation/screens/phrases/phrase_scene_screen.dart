@@ -7,6 +7,7 @@ import '../../../data/models/phrase_scene.dart';
 import '../search/search_screen.dart';
 import 'phrase_list_screen.dart';
 import '../../../l10n/app_localizations.dart';
+import '../../widgets/header_actions.dart';
 
 /// フレーズのシーン選択画面（ハブ）
 ///
@@ -41,6 +42,7 @@ class PhraseSceneScreen extends ConsumerWidget {
               );
             },
           ),
+          ...buildHeaderActions(context),
         ],
       ),
       body: ListView(

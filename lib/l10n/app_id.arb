@@ -366,6 +366,16 @@
     "description": "Terakhir diperbarui"
   },
 
+  "navKanji": "Kanji",
+  "@navKanji": {
+    "description": "Navigasi bawah: tab belajar kanji"
+  },
+
+  "navQuiz": "Latihan",
+  "@navQuiz": {
+    "description": "Navigasi bawah: tab latihan soal"
+  },
+
   "homeKanjiBlockTitle": "Belajar Kanji",
   "@homeKanjiBlockTitle": {
     "description": "Judul blok belajar kanji di beranda"

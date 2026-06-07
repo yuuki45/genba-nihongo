@@ -4,9 +4,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'presentation/screens/home/home_screen.dart';
 import 'presentation/screens/phrases/phrase_scene_screen.dart';
-import 'presentation/screens/favorites/favorites_screen.dart';
-import 'presentation/screens/settings/settings_screen.dart';
+import 'presentation/screens/kanji/kanji_home_screen.dart';
+import 'presentation/screens/quiz/jlpt_home_screen.dart';
 import 'presentation/services/tts_service.dart';
+import 'presentation/providers/navigation_provider.dart';
 import 'presentation/providers/settings_provider.dart';
 import 'presentation/providers/purchase_provider.dart';
 import 'presentation/theme/app_theme.dart';
@@ -102,38 +103,31 @@ class MyApp extends ConsumerWidget {
 }
 
 /// メイン画面（BottomNavigationBar付き）
-class MainScreen extends StatefulWidget {
+///
+/// タブはホーム・フレーズ・漢字学習・演習問題の学習機能で構成。
+/// お気に入り・設定は各画面右上のヘッダーボタンから開く。
+class MainScreen extends ConsumerWidget {
   const MainScreen({super.key});
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
 
   static const List<Widget> _screens = [
     HomeScreen(),
     PhraseSceneScreen(),
-    FavoritesScreen(),
-    SettingsScreen(),
+    KanjiHomeScreen(),
+    JlptHomeScreen(),
   ];
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
+    final selectedIndex = ref.watch(selectedTabProvider);
 
     return Scaffold(
-      body: _screens[_selectedIndex],
+      body: _screens[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        currentIndex: selectedIndex,
+        onTap: (index) {
+          ref.read(selectedTabProvider.notifier).state = index;
+        },
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
@@ -145,12 +139,12 @@ class _MainScreenState extends State<MainScreen> {
             label: l10n.navPhrases,
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.favorite),
-            label: l10n.navFavorites,
+            icon: const Icon(Icons.menu_book),
+            label: l10n.navKanji,
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.settings),
-            label: l10n.navSettings,
+            icon: const Icon(Icons.quiz),
+            label: l10n.navQuiz,
           ),
         ],
       ),
