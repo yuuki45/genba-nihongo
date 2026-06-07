@@ -148,11 +148,7 @@ class SettingsScreen extends ConsumerWidget {
     return ListTile(
       leading: const Icon(Icons.storefront),
       title: Text(l10n.storeTitle),
-      subtitle: Text(
-        l10n.storeDescription,
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
+      subtitle: Text(l10n.storeDescription),
       trailing: const Icon(Icons.chevron_right),
       onTap: () {
         Navigator.push(
