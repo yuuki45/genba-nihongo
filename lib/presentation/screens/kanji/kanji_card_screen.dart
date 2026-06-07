@@ -11,7 +11,7 @@ import '../../../l10n/app_localizations.dart';
 ///
 /// カテゴリ選択チップ + スワイプで進むカード形式。
 /// カードをタップすると表（漢字語）と裏（読み・意味・説明）が切り替わる。
-/// [favoritesOnly]がtrueの場合は苦手漢字のみを表示する（復習モード）。
+/// [favoritesOnly]がtrueの場合は保存した漢字のみを表示する（復習モード）。
 class KanjiCardScreen extends ConsumerStatefulWidget {
   final bool favoritesOnly;
 
@@ -57,7 +57,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
       ),
       body: Column(
         children: [
-          // カテゴリチップ（苦手モードでは非表示）
+          // カテゴリチップ（保存した漢字の復習では非表示）
           if (!widget.favoritesOnly) _buildCategoryChips(context),
 
           // カード本体
@@ -484,7 +484,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
     );
   }
 
-  /// 苦手登録ボタン（カード右上）
+  /// 保存ボタン（カード右上）
   ///
   /// 標識色の上でも視認できるよう、白い円形チップに載せる。
   Widget _buildFavoriteButton(KanjiWord word) {
@@ -508,7 +508,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
         ),
         child: IconButton(
           icon: Icon(
-            isFavorite ? Icons.star : Icons.star_border,
+            isFavorite ? Icons.bookmark : Icons.bookmark_border,
             color: isFavorite ? const Color(0xFFEEA000) : AppColors.ink,
             size: 26,
           ),

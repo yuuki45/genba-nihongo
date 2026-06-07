@@ -41,7 +41,7 @@ final filteredKanjiWordsProvider = FutureProvider<List<KanjiWord>>((ref) async {
   return await repository.getKanjiWordsByCategory(categoryKey);
 });
 
-/// 苦手漢字を取得するProvider
+/// 保存した漢字を取得するProvider
 final favoriteKanjiWordsProvider = FutureProvider<List<KanjiWord>>((ref) async {
   final repository = ref.watch(kanjiRepositoryProvider);
   return await repository.getFavoriteKanjiWords();
@@ -62,13 +62,13 @@ final kanjiSearchResultsProvider =
   return await repository.searchKanjiWords(query);
 });
 
-/// 苦手漢字の登録状態を管理するProvider
+/// 漢字の保存状態を管理するProvider
 final kanjiFavoriteStateProvider =
     StateNotifierProvider.family<KanjiFavoriteStateNotifier, bool, int>(
   (ref, kanjiWordId) => KanjiFavoriteStateNotifier(ref, kanjiWordId),
 );
 
-/// 苦手漢字の状態管理クラス
+/// 漢字の保存状態管理クラス
 class KanjiFavoriteStateNotifier extends StateNotifier<bool> {
   final Ref ref;
   final int kanjiWordId;
@@ -93,7 +93,7 @@ class KanjiFavoriteStateNotifier extends StateNotifier<bool> {
       state = true;
     }
 
-    // 苦手漢字一覧を更新
+    // 保存した漢字一覧を更新
     ref.invalidate(favoriteKanjiWordsProvider);
   }
 }
@@ -107,13 +107,8 @@ enum KanjiQuizMode {
 /// 漢字クイズの設定（出題モードと出題範囲）
 ///
 /// [mode] がnullの場合は問題ごとに読み/意味をランダムに混ぜる。
-/// [favoritesOnly] がtrueの場合は苦手漢字のみから出題する。
 /// [category] を指定するとそのカテゴリの語のみから出題する（null=全カテゴリ）。
-typedef KanjiQuizConfig = ({
-  KanjiQuizMode? mode,
-  bool favoritesOnly,
-  String? category,
-});
+typedef KanjiQuizConfig = ({KanjiQuizMode? mode, String? category});
 
 /// 漢字クイズの1問
 ///
@@ -147,12 +142,8 @@ final kanjiQuizQuestionsProvider = FutureProvider.autoDispose
   final repository = ref.watch(kanjiRepositoryProvider);
   final allWords = await repository.getAllKanjiWords();
 
-  // 苦手モードでは出題語を苦手漢字に限定する（誤答候補は全語から選ぶ）
-  var questionWords = config.favoritesOnly
-      ? await repository.getFavoriteKanjiWords()
-      : allWords;
-
   // カテゴリ指定があれば出題語を絞り込む（誤答候補は全語のまま）
+  var questionWords = allWords;
   if (config.category != null) {
     questionWords =
         questionWords.where((word) => word.category == config.category).toList();

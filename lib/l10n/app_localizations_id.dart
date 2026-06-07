@@ -384,22 +384,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get kanjiMenuMeaningQuizDesc => 'Pilih arti yang benar';
 
   @override
-  String get kanjiMenuFavorites => 'Kanji yang Sulit';
+  String get kanjiMenuFavorites => 'Kanji Tersimpan';
 
   @override
-  String get kanjiMenuFavoritesDesc => 'Ulangi kanji yang disimpan';
-
-  @override
-  String get kanjiFavoritesQuiz => 'Kuis Kanji Sulit';
-
-  @override
-  String get kanjiFavoritesQuizDesc => 'Uji kemampuan dengan kanji yang sulit';
+  String get kanjiMenuFavoritesDesc => 'Ulas kartu yang Anda simpan';
 
   @override
   String get kanjiWrongAnswers => 'Kata yang salah';
 
   @override
-  String get kanjiMarkDifficult => 'Tandai sebagai sulit';
+  String get kanjiMarkDifficult => 'Simpan';
 
   @override
   String get kanjiNoFavorites => 'Belum ada kanji yang disimpan';

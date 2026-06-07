@@ -806,29 +806,17 @@ abstract class AppLocalizations {
   /// **'正しい意味を選ぶ'**
   String get kanjiMenuMeaningQuizDesc;
 
-  /// 苦手漢字メニュー
+  /// 保存した漢字メニュー
   ///
   /// In ja, this message translates to:
-  /// **'苦手な漢字'**
+  /// **'保存した漢字'**
   String get kanjiMenuFavorites;
 
-  /// 苦手漢字メニューの説明
+  /// 保存した漢字メニューの説明
   ///
   /// In ja, this message translates to:
-  /// **'保存した漢字を復習する'**
+  /// **'保存したカードを復習する'**
   String get kanjiMenuFavoritesDesc;
-
-  /// 苦手漢字クイズのタイトル
-  ///
-  /// In ja, this message translates to:
-  /// **'苦手クイズ'**
-  String get kanjiFavoritesQuiz;
-
-  /// 苦手漢字クイズメニューの説明
-  ///
-  /// In ja, this message translates to:
-  /// **'苦手な漢字だけで腕試し'**
-  String get kanjiFavoritesQuizDesc;
 
   /// クイズ結果画面の間違えた語セクション
   ///
@@ -836,16 +824,16 @@ abstract class AppLocalizations {
   /// **'間違えた語'**
   String get kanjiWrongAnswers;
 
-  /// 苦手登録トグルのラベル
+  /// 漢字保存トグルのラベル
   ///
   /// In ja, this message translates to:
-  /// **'苦手に登録'**
+  /// **'保存する'**
   String get kanjiMarkDifficult;
 
-  /// 苦手漢字が空の場合のメッセージ
+  /// 保存した漢字が空の場合のメッセージ
   ///
   /// In ja, this message translates to:
-  /// **'苦手な漢字はまだありません'**
+  /// **'保存した漢字はまだありません'**
   String get kanjiNoFavorites;
 
   /// 漢字データが空の場合のメッセージ

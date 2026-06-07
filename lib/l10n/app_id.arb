@@ -606,24 +606,14 @@
     "description": "Deskripsi menu kuis arti"
   },
 
-  "kanjiMenuFavorites": "Kanji yang Sulit",
+  "kanjiMenuFavorites": "Kanji Tersimpan",
   "@kanjiMenuFavorites": {
-    "description": "Menu kanji yang sulit"
+    "description": "Menu kanji tersimpan"
   },
 
-  "kanjiMenuFavoritesDesc": "Ulangi kanji yang disimpan",
+  "kanjiMenuFavoritesDesc": "Ulas kartu yang Anda simpan",
   "@kanjiMenuFavoritesDesc": {
-    "description": "Deskripsi menu kanji yang sulit"
-  },
-
-  "kanjiFavoritesQuiz": "Kuis Kanji Sulit",
-  "@kanjiFavoritesQuiz": {
-    "description": "Judul kuis kanji sulit"
-  },
-
-  "kanjiFavoritesQuizDesc": "Uji kemampuan dengan kanji yang sulit",
-  "@kanjiFavoritesQuizDesc": {
-    "description": "Deskripsi menu kuis kanji sulit"
+    "description": "Deskripsi menu kanji tersimpan"
   },
 
   "kanjiWrongAnswers": "Kata yang salah",
@@ -631,7 +621,7 @@
     "description": "Bagian kata yang salah di layar hasil kuis"
   },
 
-  "kanjiMarkDifficult": "Tandai sebagai sulit",
+  "kanjiMarkDifficult": "Simpan",
   "@kanjiMarkDifficult": {
     "description": "Label tombol tandai kanji sulit"
   },

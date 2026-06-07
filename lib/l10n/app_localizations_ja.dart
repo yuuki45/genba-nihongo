@@ -370,25 +370,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get kanjiMenuMeaningQuizDesc => '正しい意味を選ぶ';
 
   @override
-  String get kanjiMenuFavorites => '苦手な漢字';
+  String get kanjiMenuFavorites => '保存した漢字';
 
   @override
-  String get kanjiMenuFavoritesDesc => '保存した漢字を復習する';
-
-  @override
-  String get kanjiFavoritesQuiz => '苦手クイズ';
-
-  @override
-  String get kanjiFavoritesQuizDesc => '苦手な漢字だけで腕試し';
+  String get kanjiMenuFavoritesDesc => '保存したカードを復習する';
 
   @override
   String get kanjiWrongAnswers => '間違えた語';
 
   @override
-  String get kanjiMarkDifficult => '苦手に登録';
+  String get kanjiMarkDifficult => '保存する';
 
   @override
-  String get kanjiNoFavorites => '苦手な漢字はまだありません';
+  String get kanjiNoFavorites => '保存した漢字はまだありません';
 
   @override
   String get kanjiNoWords => '漢字データがありません';

@@ -606,24 +606,14 @@
     "description": "意味クイズメニューの説明"
   },
 
-  "kanjiMenuFavorites": "苦手な漢字",
+  "kanjiMenuFavorites": "保存した漢字",
   "@kanjiMenuFavorites": {
-    "description": "苦手漢字メニュー"
+    "description": "保存した漢字メニュー"
   },
 
-  "kanjiMenuFavoritesDesc": "保存した漢字を復習する",
+  "kanjiMenuFavoritesDesc": "保存したカードを復習する",
   "@kanjiMenuFavoritesDesc": {
-    "description": "苦手漢字メニューの説明"
-  },
-
-  "kanjiFavoritesQuiz": "苦手クイズ",
-  "@kanjiFavoritesQuiz": {
-    "description": "苦手漢字クイズのタイトル"
-  },
-
-  "kanjiFavoritesQuizDesc": "苦手な漢字だけで腕試し",
-  "@kanjiFavoritesQuizDesc": {
-    "description": "苦手漢字クイズメニューの説明"
+    "description": "保存した漢字メニューの説明"
   },
 
   "kanjiWrongAnswers": "間違えた語",
@@ -631,14 +621,14 @@
     "description": "クイズ結果画面の間違えた語セクション"
   },
 
-  "kanjiMarkDifficult": "苦手に登録",
+  "kanjiMarkDifficult": "保存する",
   "@kanjiMarkDifficult": {
-    "description": "苦手登録トグルのラベル"
+    "description": "漢字保存トグルのラベル"
   },
 
-  "kanjiNoFavorites": "苦手な漢字はまだありません",
+  "kanjiNoFavorites": "保存した漢字はまだありません",
   "@kanjiNoFavorites": {
-    "description": "苦手漢字が空の場合のメッセージ"
+    "description": "保存した漢字が空の場合のメッセージ"
   },
 
   "kanjiNoWords": "漢字データがありません",

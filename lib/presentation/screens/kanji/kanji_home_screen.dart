@@ -75,10 +75,10 @@ class KanjiHomeScreen extends ConsumerWidget {
             ),
           ),
 
-          // 苦手な漢字
+          // 保存した漢字（カードで⭐保存した語の復習）
           _buildMenuTile(
             context,
-            icon: Icons.star,
+            icon: Icons.bookmark,
             color: Colors.amber,
             title: l10n.kanjiMenuFavorites,
             description: l10n.kanjiMenuFavoritesDesc,
@@ -87,19 +87,6 @@ class KanjiHomeScreen extends ConsumerWidget {
               orElse: () => null,
             ),
             onTap: () => _push(context, const KanjiCardScreen(favoritesOnly: true)),
-          ),
-
-          // 苦手クイズ（読み/意味ミックスで出題）
-          _buildMenuTile(
-            context,
-            icon: Icons.bolt,
-            color: Colors.deepOrange,
-            title: l10n.kanjiFavoritesQuiz,
-            description: l10n.kanjiFavoritesQuizDesc,
-            onTap: () => _push(
-              context,
-              const KanjiQuizScreen(favoritesOnly: true),
-            ),
           ),
 
           // カテゴリー別クイズ
