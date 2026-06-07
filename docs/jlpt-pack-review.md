@@ -1,6 +1,6 @@
 # JLPT N3/N2対策パック 問題レビューシート
 
-生成日: 2026-06-07 / 対象: quizzes.json（data_version: 2）の pack_id=jlpt_n3n2 全100問
+生成日: 2026-06-07 / 対象: quizzes.json（data_version: 3）の pack_id=jlpt_n3n2 全140問
 
 ## レビューの観点
 
@@ -8,6 +8,7 @@
 - [ ] JLPTのレベル感が適切か（N3/N2として自然か）
 - [ ] 日本語の問題文・解説が自然か
 - [ ] インドネシア語訳が適切か（可能ならネイティブチェック）
+- [ ] 漢字読み: 誤答の読みが「ありそうで間違い」になっているか
 
 問題ごとのチェックボックスは「レビュー済み」の印に使ってください。
 修正が必要な問題は、行末に `← 要修正: 理由` のようにメモを追記してください。
@@ -1219,4 +1220,488 @@
 
 **解説**: 正解は「違反」。「違反（いはん）」は決まりを破ることです。
 **解説(ID)**: Jawaban yang benar adalah '違反'. 「違反」berarti melanggar peraturan.
+
+## N3 漢字読み（id 201-220） — 20問
+
+### - [ ] 201. 「連絡」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「連絡」?
+
+- 　 れんかく
+- 　 れんりゃく
+- 　 えんらく
+- ✅ れんらく
+
+**解説**: 正解は「れんらく」。「連絡」は知らせること・連絡を取ることです。
+**解説(ID)**: Jawaban yang benar adalah 'れんらく'. 「連絡」berarti menghubungi atau memberi kabar.
+
+### - [ ] 202. 「相談」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「相談」?
+
+- 　 しょうだん
+- 　 そだん
+- ✅ そうだん
+- 　 そうたん
+
+**解説**: 正解は「そうだん」。「相談」は困ったことを話して意見を聞くことです。
+**解説(ID)**: Jawaban yang benar adalah 'そうだん'. 「相談」berarti berkonsultasi.
+
+### - [ ] 203. 「準備」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「準備」?
+
+- 　 じゅび
+- ✅ じゅんび
+- 　 じゅんぴ
+- 　 しゅんび
+
+**解説**: 正解は「じゅんび」。「準備」は前もって用意することです。
+**解説(ID)**: Jawaban yang benar adalah 'じゅんび'. 「準備」berarti persiapan.
+
+### - [ ] 204. 「計画」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「計画」?
+
+- ✅ けいかく
+- 　 けいが
+- 　 けかく
+- 　 けいかい
+
+**解説**: 正解は「けいかく」。「計画」はやることを前もって決めることです。
+**解説(ID)**: Jawaban yang benar adalah 'けいかく'. 「計画」berarti rencana.
+
+### - [ ] 205. 「経験」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「経験」?
+
+- 　 けいげん
+- 　 きょうけん
+- 　 けいこん
+- ✅ けいけん
+
+**解説**: 正解は「けいけん」。「経験」は実際にやってみて得た知識や技能です。
+**解説(ID)**: Jawaban yang benar adalah 'けいけん'. 「経験」berarti pengalaman.
+
+### - [ ] 206. 「技術」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「技術」?
+
+- 　 きじゅつ
+- 　 ぎしゅつ
+- ✅ ぎじゅつ
+- 　 ぎじつ
+
+**解説**: 正解は「ぎじゅつ」。「技術」はものを作ったり扱ったりする腕前です。
+**解説(ID)**: Jawaban yang benar adalah 'ぎじゅつ'. 「技術」berarti teknik atau keterampilan.
+
+### - [ ] 207. 「規則」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「規則」?
+
+- 　 きしょく
+- ✅ きそく
+- 　 きぞく
+- 　 ぎそく
+
+**解説**: 正解は「きそく」。「規則」は守らなければならない決まりです。
+**解説(ID)**: Jawaban yang benar adalah 'きそく'. 「規則」berarti peraturan.
+
+### - [ ] 208. 「書類」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「書類」?
+
+- ✅ しょるい
+- 　 しゅるい
+- 　 しょりゅう
+- 　 かきるい
+
+**解説**: 正解は「しょるい」。「書類」は仕事で使う文書です。
+**解説(ID)**: Jawaban yang benar adalah 'しょるい'. 「書類」berarti dokumen.
+
+### - [ ] 209. 「説明書」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「説明書」?
+
+- 　 せつめいがき
+- 　 せいめいしょ
+- 　 せつめいじょ
+- ✅ せつめいしょ
+
+**解説**: 正解は「せつめいしょ」。「説明書」は使い方などを説明した文書です。
+**解説(ID)**: Jawaban yang benar adalah 'せつめいしょ'. 「説明書」berarti buku petunjuk.
+
+### - [ ] 210. 「移動」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「移動」?
+
+- 　 うつどう
+- 　 いとう
+- ✅ いどう
+- 　 いどん
+
+**解説**: 正解は「いどう」。「移動」は場所を移ることです。
+**解説(ID)**: Jawaban yang benar adalah 'いどう'. 「移動」berarti berpindah tempat.
+
+### - [ ] 211. 「通勤」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「通勤」?
+
+- 　 つきん
+- ✅ つうきん
+- 　 とおきん
+- 　 つうごん
+
+**解説**: 正解は「つうきん」。「通勤」は職場へ通うことです。
+**解説(ID)**: Jawaban yang benar adalah 'つうきん'. 「通勤」berarti pergi-pulang ke tempat kerja.
+
+### - [ ] 212. 「制服」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「制服」?
+
+- ✅ せいふく
+- 　 せいぶく
+- 　 しふく
+- 　 せふく
+
+**解説**: 正解は「せいふく」。「制服」は決められた服です。
+**解説(ID)**: Jawaban yang benar adalah 'せいふく'. 「制服」berarti seragam.
+
+### - [ ] 213. 「訓練」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「訓練」?
+
+- 　 くんりん
+- 　 きんれん
+- 　 くれん
+- ✅ くんれん
+
+**解説**: 正解は「くんれん」。「訓練」は繰り返し練習して身につけることです。
+**解説(ID)**: Jawaban yang benar adalah 'くんれん'. 「訓練」berarti pelatihan.
+
+### - [ ] 214. 「機械」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「機械」?
+
+- 　 はたかい
+- 　 きけい
+- ✅ きかい
+- 　 きが
+
+**解説**: 正解は「きかい」。「機械」は動力で動く装置です。
+**解説(ID)**: Jawaban yang benar adalah 'きかい'. 「機械」berarti mesin.
+
+### - [ ] 215. 「道具」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「道具」?
+
+- 　 とうぐ
+- ✅ どうぐ
+- 　 みちぐ
+- 　 どうごう
+
+**解説**: 正解は「どうぐ」。「道具」は作業に使う物です。
+**解説(ID)**: Jawaban yang benar adalah 'どうぐ'. 「道具」berarti alat.
+
+### - [ ] 216. 「掃除」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「掃除」?
+
+- ✅ そうじ
+- 　 そうじょ
+- 　 はきじ
+- 　 そじ
+
+**解説**: 正解は「そうじ」。「掃除」はきれいに片付けることです。
+**解説(ID)**: Jawaban yang benar adalah 'そうじ'. 「掃除」berarti bersih-bersih.
+
+### - [ ] 217. 「営業」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「営業」?
+
+- 　 えいごう
+- 　 えぎょう
+- 　 えいぎょ
+- ✅ えいぎょう
+
+**解説**: 正解は「えいぎょう」。「営業」は商売・店や会社が活動することです。
+**解説(ID)**: Jawaban yang benar adalah 'えいぎょう'. 「営業」berarti kegiatan usaha atau penjualan.
+
+### - [ ] 218. 「番号」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「番号」?
+
+- 　 はんごう
+- 　 ばんこう
+- ✅ ばんごう
+- 　 ばんご
+
+**解説**: 正解は「ばんごう」。「番号」は順番を表す数字です。
+**解説(ID)**: Jawaban yang benar adalah 'ばんごう'. 「番号」berarti nomor.
+
+### - [ ] 219. 「工事」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「工事」?
+
+- 　 こうし
+- ✅ こうじ
+- 　 こうごと
+- 　 くじ
+
+**解説**: 正解は「こうじ」。「工事」は建物や道路を作る作業です。
+**解説(ID)**: Jawaban yang benar adalah 'こうじ'. 「工事」berarti pekerjaan konstruksi.
+
+### - [ ] 220. 「荷物」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「荷物」?
+
+- ✅ にもつ
+- 　 かもつ
+- 　 にもの
+- 　 にぶつ
+
+**解説**: 正解は「にもつ」。「荷物」は運ぶ物・持ち物です。
+**解説(ID)**: Jawaban yang benar adalah 'にもつ'. 「荷物」berarti barang bawaan.
+
+## N2 漢字読み（id 221-240） — 20問
+
+### - [ ] 221. 「寸法」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「寸法」?
+
+- 　 すんほう
+- 　 すんぼう
+- 　 そんぽう
+- ✅ すんぽう
+
+**解説**: 正解は「すんぽう」。「寸法」は物の長さや大きさです。
+**解説(ID)**: Jawaban yang benar adalah 'すんぽう'. 「寸法」berarti ukuran atau dimensi.
+
+### - [ ] 222. 「溶接」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「溶接」?
+
+- 　 とけせつ
+- 　 ゆうせつ
+- ✅ ようせつ
+- 　 ようぜつ
+
+**解説**: 正解は「ようせつ」。「溶接」は金属を熱でつなぎ合わせることです。
+**解説(ID)**: Jawaban yang benar adalah 'ようせつ'. 「溶接」berarti pengelasan.
+
+### - [ ] 223. 「塗装」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「塗装」?
+
+- 　 とぞう
+- ✅ とそう
+- 　 としょう
+- 　 ぬりそう
+
+**解説**: 正解は「とそう」。「塗装」はペンキなどを塗ることです。
+**解説(ID)**: Jawaban yang benar adalah 'とそう'. 「塗装」berarti pengecatan.
+
+### - [ ] 224. 「換気」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「換気」?
+
+- ✅ かんき
+- 　 かんけ
+- 　 こうき
+- 　 かえき
+
+**解説**: 正解は「かんき」。「換気」は空気を入れ替えることです。
+**解説(ID)**: Jawaban yang benar adalah 'かんき'. 「換気」berarti ventilasi (pertukaran udara).
+
+### - [ ] 225. 「騒音」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「騒音」?
+
+- 　 さわおん
+- 　 そうね
+- 　 しょうおん
+- ✅ そうおん
+
+**解説**: 正解は「そうおん」。「騒音」はうるさい音です。
+**解説(ID)**: Jawaban yang benar adalah 'そうおん'. 「騒音」berarti kebisingan.
+
+### - [ ] 226. 「振動」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「振動」?
+
+- 　 しんとう
+- 　 じんどう
+- ✅ しんどう
+- 　 ふりどう
+
+**解説**: 正解は「しんどう」。「振動」は揺れ動くことです。
+**解説(ID)**: Jawaban yang benar adalah 'しんどう'. 「振動」berarti getaran.
+
+### - [ ] 227. 「廃棄」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「廃棄」?
+
+- 　 はき
+- ✅ はいき
+- 　 はいぎ
+- 　 へいき
+
+**解説**: 正解は「はいき」。「廃棄」は不要な物を捨てることです。
+**解説(ID)**: Jawaban yang benar adalah 'はいき'. 「廃棄」berarti pembuangan barang tidak terpakai.
+
+### - [ ] 228. 「養生」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「養生」?
+
+- ✅ ようじょう
+- 　 よういく
+- 　 やしない
+- 　 ようせい
+
+**解説**: 正解は「ようじょう」。「養生」は工事や塗装で周りを保護すること（現場用語）です。
+**解説(ID)**: Jawaban yang benar adalah 'ようじょう'. 「養生」berarti pelindung sementara di lokasi kerja (istilah lapangan).
+
+### - [ ] 229. 「段取り」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「段取り」?
+
+- 　 だんとり
+- 　 たんどり
+- 　 だんしゅ
+- ✅ だんどり
+
+**解説**: 正解は「だんどり」。「段取り」は作業の準備や手順のことです。
+**解説(ID)**: Jawaban yang benar adalah 'だんどり'. 「段取り」berarti persiapan dan urutan kerja.
+
+### - [ ] 230. 「棚卸し」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「棚卸し」?
+
+- 　 ほうおろし
+- 　 たなさげ
+- ✅ たなおろし
+- 　 たなおとし
+
+**解説**: 正解は「たなおろし」。「棚卸し」は在庫を数えて確認することです。
+**解説(ID)**: Jawaban yang benar adalah 'たなおろし'. 「棚卸し」berarti penghitungan stok (stock opname).
+
+### - [ ] 231. 「伝票」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「伝票」?
+
+- 　 つたえひょう
+- ✅ でんぴょう
+- 　 でんひょう
+- 　 てんぴょう
+
+**解説**: 正解は「でんぴょう」。「伝票」は取引やお金の記録用紙です。
+**解説(ID)**: Jawaban yang benar adalah 'でんぴょう'. 「伝票」berarti slip atau nota.
+
+### - [ ] 232. 「破損」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「破損」?
+
+- ✅ はそん
+- 　 はぞん
+- 　 ばそん
+- 　 やぶれそん
+
+**解説**: 正解は「はそん」。「破損」は壊れること・傷つくことです。
+**解説(ID)**: Jawaban yang benar adalah 'はそん'. 「破損」berarti kerusakan.
+
+### - [ ] 233. 「点呼」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「点呼」?
+
+- 　 てんよ
+- 　 てんこう
+- 　 とんこ
+- ✅ てんこ
+
+**解説**: 正解は「てんこ」。「点呼」は一人ずつ名前を呼んで確認することです。
+**解説(ID)**: Jawaban yang benar adalah 'てんこ'. 「点呼」berarti absen dengan memanggil nama satu per satu.
+
+### - [ ] 234. 「衛生」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「衛生」?
+
+- 　 えせい
+- 　 えいぜい
+- ✅ えいせい
+- 　 えいしょう
+
+**解説**: 正解は「えいせい」。「衛生」は清潔で健康を保つことです。
+**解説(ID)**: Jawaban yang benar adalah 'えいせい'. 「衛生」berarti kebersihan dan kesehatan (higiene).
+
+### - [ ] 235. 「脚立」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「脚立」?
+
+- 　 きゃくたち
+- ✅ きゃたつ
+- 　 きゃくりつ
+- 　 あしだて
+
+**解説**: 正解は「きゃたつ」。「脚立」は折りたたみ式のはしごです。
+**解説(ID)**: Jawaban yang benar adalah 'きゃたつ'. 「脚立」berarti tangga lipat.
+
+### - [ ] 236. 「軍手」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「軍手」?
+
+- ✅ ぐんて
+- 　 ぐんしゅ
+- 　 くんて
+- 　 ぐんで
+
+**解説**: 正解は「ぐんて」。「軍手」は作業用の布の手袋です。
+**解説(ID)**: Jawaban yang benar adalah 'ぐんて'. 「軍手」berarti sarung tangan kerja dari kain.
+
+### - [ ] 237. 「漏電」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「漏電」?
+
+- 　 もれでん
+- 　 ろでん
+- 　 ろうてん
+- ✅ ろうでん
+
+**解説**: 正解は「ろうでん」。「漏電」は電気が漏れることです。
+**解説(ID)**: Jawaban yang benar adalah 'ろうでん'. 「漏電」berarti kebocoran listrik.
+
+### - [ ] 238. 「台車」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「台車」?
+
+- 　 だいくるま
+- 　 どうしゃ
+- ✅ だいしゃ
+- 　 たいしゃ
+
+**解説**: 正解は「だいしゃ」。「台車」は荷物を運ぶ手押しの車です。
+**解説(ID)**: Jawaban yang benar adalah 'だいしゃ'. 「台車」berarti troli dorong.
+
+### - [ ] 239. 「見本」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「見本」?
+
+- 　 みぼん
+- ✅ みほん
+- 　 けんぽん
+- 　 みもと
+
+**解説**: 正解は「みほん」。「見本」は例として見せる物・サンプルです。
+**解説(ID)**: Jawaban yang benar adalah 'みほん'. 「見本」berarti sampel atau contoh.
+
+### - [ ] 240. 「納品」の読み方はどれですか。
+
+> 🇮🇩 Bagaimana cara membaca 「納品」?
+
+- ✅ のうひん
+- 　 なっぴん
+- 　 のひん
+- 　 おさめひん
+
+**解説**: 正解は「のうひん」。「納品」は注文された品物を届けることです。
+**解説(ID)**: Jawaban yang benar adalah 'のうひん'. 「納品」berarti penyerahan barang pesanan.
 

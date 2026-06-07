@@ -15,14 +15,14 @@ void main() {
       quizzes = (jsonData['quizzes'] as List).cast<Map<String, dynamic>>();
     });
 
-    test('data_versionが2以上である', () {
+    test('data_versionが3以上である', () {
       expect(jsonData['data_version'], isA<int>());
-      expect(jsonData['data_version'], greaterThanOrEqualTo(2));
+      expect(jsonData['data_version'], greaterThanOrEqualTo(3));
     });
 
     test('すべてのクイズがQuizモデルにパースできる', () {
       final parsed = quizzes.map(Quiz.fromJson).toList();
-      expect(parsed, hasLength(200));
+      expect(parsed, hasLength(240));
     });
 
     test('クイズIDに重複がない', () {
@@ -30,11 +30,11 @@ void main() {
       expect(ids.toSet().length, ids.length);
     });
 
-    test('無料100問・対策パック100問が収録されている', () {
+    test('無料100問・対策パック140問が収録されている', () {
       final free = quizzes.where((q) => q['pack_id'] == null).length;
       final paid = quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').length;
       expect(free, 100);
-      expect(paid, 100);
+      expect(paid, 140);
     });
 
     test('pack_idはnullまたはjlpt_n3n2のみ', () {
@@ -50,13 +50,47 @@ void main() {
           reason: 'N2クイズに無料のものが含まれています: ${n2Free.map((q) => q['id'])}');
     });
 
-    test('対策パックはN3:50問 + N2:50問', () {
+    test('対策パックはN3:70問 + N2:70問（文法25+語彙25+漢字読み20）', () {
       final packQuizzes =
           quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').toList();
       final n3 = packQuizzes.where((q) => q['jlpt_level'] == 'N3').length;
       final n2 = packQuizzes.where((q) => q['jlpt_level'] == 'N2').length;
-      expect(n3, 50);
-      expect(n2, 50);
+      expect(n3, 70);
+      expect(n2, 70);
+
+      for (final level in ['N3', 'N2']) {
+        final byLevel =
+            packQuizzes.where((q) => q['jlpt_level'] == level).toList();
+        expect(byLevel.where((q) => q['category'] == '文法').length, 25,
+            reason: '$level 文法の問題数が想定と異なります');
+        expect(byLevel.where((q) => q['category'] == '語彙').length, 25,
+            reason: '$level 語彙の問題数が想定と異なります');
+        expect(byLevel.where((q) => q['category'] == '漢字読み').length, 20,
+            reason: '$level 漢字読みの問題数が想定と異なります');
+      }
+    });
+
+    test('漢字読み問題の語は漢字カード（kanji.json）と重複しない', () {
+      final kanjiJson = json.decode(
+              File('assets/data/kanji.json').readAsStringSync())
+          as Map<String, dynamic>;
+      final cardWords = (kanjiJson['kanji_words'] as List)
+          .map((w) => (w as Map<String, dynamic>)['word'] as String)
+          .toSet();
+
+      final readingQuizzes =
+          quizzes.where((q) => q['category'] == '漢字読み').toList();
+      expect(readingQuizzes, isNotEmpty);
+
+      for (final q in readingQuizzes) {
+        // 問題文「「○○」の読み方はどれですか。」から語を抽出
+        final match =
+            RegExp('「(.+?)」').firstMatch(q['question'] as String);
+        expect(match, isNotNull, reason: 'id ${q['id']} の問題文形式が不正です');
+        final word = match!.group(1)!;
+        expect(cardWords.contains(word), isFalse,
+            reason: 'id ${q['id']} の「$word」は漢字カードと重複しています');
+      }
     });
 
     test('全問題の構造が正しい（4択・重複なし・正解index範囲内・本文あり）', () {
@@ -73,8 +107,9 @@ void main() {
         expect(correct, inInclusiveRange(0, 3),
             reason: 'id $id の正解indexが範囲外です');
 
-        // 空欄（＿）形式のチェックは対策パックのみ（既存の無料問題には定義形式もある）
-        if (q['pack_id'] == 'jlpt_n3n2') {
+        // 空欄（＿）形式のチェックは対策パックの文法・語彙のみ
+        // （漢字読みは「読み方はどれですか」形式、既存の無料問題には定義形式もある）
+        if (q['pack_id'] == 'jlpt_n3n2' && q['category'] != '漢字読み') {
           expect((q['question'] as String).contains('＿'), isTrue,
               reason: 'id $id の問題文に空欄（＿）がありません');
         }
