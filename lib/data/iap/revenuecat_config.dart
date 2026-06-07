@@ -5,7 +5,7 @@
 ///
 /// ※ 公開SDKキーはアプリに埋め込む前提のキーのため、リポジトリに
 ///   含めて問題ない。Secret keyは絶対にここに書かないこと。
-const String revenueCatAppleApiKey = 'appl_REPLACE_WITH_YOUR_KEY';
+const String revenueCatAppleApiKey = 'appl_ekcecTtBemOogNhARVqTNPydOmU';
 
 /// APIキーが設定済みかどうか
 bool get isRevenueCatConfigured =>
