@@ -16,7 +16,6 @@ class KanjiHomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
-    final allKanjiAsync = ref.watch(allKanjiWordsProvider);
     final favoritesAsync = ref.watch(favoriteKanjiWordsProvider);
 
     return Scaffold(
@@ -28,45 +27,6 @@ class KanjiHomeScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
-          // ヘッダー（説明と収録語数）
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  const Text('🏭', style: TextStyle(fontSize: 36)),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.kanjiCardDescription,
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        allKanjiAsync.maybeWhen(
-                          data: (words) => Text(
-                            '${words.length}',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                          orElse: () => const SizedBox.shrink(),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-
           // 漢字辞書（インデックスは無料・単漢字詳細は辞書パック）
           _buildMenuTile(
             context,
