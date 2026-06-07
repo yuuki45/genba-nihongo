@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'revenuecat_config.dart';
@@ -48,9 +49,14 @@ class PurchaseService {
   Future<bool> _configure() async {
     if (!isRevenueCatConfigured) return false;
     try {
+      // デバッグビルドではRevenueCatの詳細ログを出す（Xcodeコンソールで確認可能）
+      if (kDebugMode) {
+        await Purchases.setLogLevel(LogLevel.debug);
+      }
       await Purchases.configure(PurchasesConfiguration(revenueCatAppleApiKey));
       return true;
-    } catch (_) {
+    } catch (e) {
+      debugPrint('RevenueCat初期化エラー: $e');
       _initialization = null; // 次回リトライできるようにする
       return false;
     }
