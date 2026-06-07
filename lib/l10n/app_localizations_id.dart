@@ -231,6 +231,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
+  String get quizTitleN2 => 'Kuis N2';
+
+  @override
+  String get quizCardTitleN2 => 'Tantang Kuis N2';
+
+  @override
+  String get quizCardDescriptionN2 =>
+      'Pelajari tata bahasa dan kosakata N2 dengan paket persiapan';
+
+  @override
   String get storeTitle => 'Paket Konten';
 
   @override

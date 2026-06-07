@@ -1,5 +1,5 @@
 {
-  "data_version": 1,
+  "data_version": 2,
   "quizzes": [
     {
       "id": 1,
@@ -1600,6 +1600,1806 @@
       "explanation_id": "「〜に気づく」berarti 'menyadari ~'.",
       "category": "文法",
       "jlpt_level": "N3"
+    },
+    {
+      "id": 101,
+      "question": "毎朝、作業の前に機械を点検する＿＿＿しています。",
+      "question_id": "Saya membiasakan diri memeriksa mesin setiap pagi sebelum bekerja.",
+      "options": [
+        "ことが",
+        "ために",
+        "ばかりに",
+        "ように"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「ように」。「〜ようにする」は習慣として努力するという意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'ように'. 「〜ようにする」berarti berusaha membiasakan diri melakukan sesuatu.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 102,
+      "question": "今、倉庫に部品を取りに行っている＿＿＿です。",
+      "question_id": "Saya sedang dalam perjalanan mengambil suku cadang di gudang.",
+      "options": [
+        "うち",
+        "こと",
+        "ところ",
+        "ばかり"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「ところ」。「〜ているところ」は動作の最中を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ところ'. 「〜ているところ」menunjukkan sedang di tengah melakukan sesuatu.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 103,
+      "question": "日本に来た＿＿＿の頃は、日本語が全然わかりませんでした。",
+      "question_id": "Saat baru saja datang ke Jepang, saya sama sekali tidak mengerti bahasa Jepang.",
+      "options": [
+        "うち",
+        "ばかり",
+        "ところ",
+        "まま"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「ばかり」。「〜たばかり」は動作の直後を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ばかり'. 「〜たばかり」menunjukkan baru saja selesai melakukan sesuatu.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 104,
+      "question": "作業手順を忘れない＿＿＿に、メモを取ってください。",
+      "question_id": "Catatlah agar tidak lupa prosedur kerja.",
+      "options": [
+        "よう",
+        "まま",
+        "ため",
+        "こと"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「よう」。「〜ないように」は目的（〜しないため）を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'よう'. 「〜ないように」menunjukkan tujuan agar sesuatu tidak terjadi.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 105,
+      "question": "暗くならない＿＿＿に、外の作業を終わらせましょう。",
+      "question_id": "Mari selesaikan pekerjaan di luar selagi belum gelap.",
+      "options": [
+        "あいだ",
+        "まで",
+        "ながら",
+        "うち"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「うち」。「〜ないうちに」は状態が変わる前に、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'うち'. 「〜ないうちに」berarti selagi keadaan belum berubah.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 106,
+      "question": "説明書をよく読んで＿＿＿、機械を操作してください。",
+      "question_id": "Operasikan mesin setelah membaca buku petunjuk dengan baik.",
+      "options": [
+        "ながら",
+        "ばかり",
+        "から",
+        "まで"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「から」。「〜てから」は動作の順序を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'から'. 「〜てから」menunjukkan urutan tindakan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 107,
+      "question": "この機械は古い＿＿＿、まだよく動きます。",
+      "question_id": "Mesin ini sudah tua, tetapi masih berfungsi dengan baik.",
+      "options": [
+        "ように",
+        "のに",
+        "ので",
+        "から"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「のに」。「〜のに」は予想と違う結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'のに'. 「〜のに」menunjukkan hasil yang berbeda dari perkiraan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 108,
+      "question": "課長は今、会議中の＿＿＿です。あとで報告しましょう。",
+      "question_id": "Kepala bagian seharusnya sedang rapat sekarang. Mari lapor nanti.",
+      "options": [
+        "はず",
+        "つもり",
+        "ところ",
+        "ため"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「はず」。「〜はず」は根拠のある推測を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'はず'. 「〜はず」menunjukkan perkiraan yang berdasar.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 109,
+      "question": "田中さんは今日、休み＿＿＿です。机の上が片付いています。",
+      "question_id": "Sepertinya Tanaka-san libur hari ini. Mejanya rapi.",
+      "options": [
+        "つもり",
+        "ため",
+        "ところ",
+        "らしい"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「らしい」。「〜らしい」は見聞きしたことからの推測を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'らしい'. 「〜らしい」menunjukkan dugaan berdasarkan apa yang dilihat atau didengar.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 110,
+      "question": "先輩に仕事のやり方を教えて＿＿＿ました。",
+      "question_id": "Saya diajari cara kerja oleh senior.",
+      "options": [
+        "くれ",
+        "やり",
+        "もらい",
+        "あげ"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「もらい」。「〜てもらう」は自分が他の人から恩恵を受けるときに使います。",
+      "explanation_id": "Jawaban yang benar adalah 'もらい'. 「〜てもらう」digunakan saat kita menerima bantuan dari orang lain.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 111,
+      "question": "新人に機械の使い方を教えて＿＿＿ました。",
+      "question_id": "Saya mengajari karyawan baru cara menggunakan mesin.",
+      "options": [
+        "いただき",
+        "あげ",
+        "もらい",
+        "くれ"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「あげ」。「〜てあげる」は自分が他の人に恩恵を与えるときに使います。",
+      "explanation_id": "Jawaban yang benar adalah 'あげ'. 「〜てあげる」digunakan saat kita memberikan bantuan kepada orang lain.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 112,
+      "question": "課長が私の報告書を直して＿＿＿ました。",
+      "question_id": "Kepala bagian memperbaiki laporan saya (untuk saya).",
+      "options": [
+        "くれ",
+        "あげ",
+        "もらい",
+        "やり"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「くれ」。「〜てくれる」は他の人が自分に恩恵を与えるときに使います。",
+      "explanation_id": "Jawaban yang benar adalah 'くれ'. 「〜てくれる」digunakan saat orang lain berbuat baik kepada kita.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 113,
+      "question": "来週、会議の時間が変更＿＿＿ました。",
+      "question_id": "Waktu rapat telah diubah minggu depan.",
+      "options": [
+        "させ",
+        "られ",
+        "した",
+        "され"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「され」。「変更される」は受身形です。",
+      "explanation_id": "Jawaban yang benar adalah 'され'. 「変更される」adalah bentuk pasif.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 114,
+      "question": "課長は私に資料をコピー＿＿＿ました。",
+      "question_id": "Kepala bagian menyuruh saya memfotokopi dokumen.",
+      "options": [
+        "した",
+        "できる",
+        "させ",
+        "され"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「させ」。「〜させる」は使役形（人に何かをさせる）です。",
+      "explanation_id": "Jawaban yang benar adalah 'させ'. 「〜させる」adalah bentuk kausatif (menyuruh seseorang melakukan sesuatu).",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 115,
+      "question": "安全靴を履か＿＿＿作業してはいけません。",
+      "question_id": "Tidak boleh bekerja tanpa memakai sepatu keselamatan.",
+      "options": [
+        "ながら",
+        "ずに",
+        "なくて",
+        "まま"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「ずに」。「〜ずに」は「〜ないで」の書き言葉的な表現です。",
+      "explanation_id": "Jawaban yang benar adalah 'ずに'. 「〜ずに」adalah ungkapan formal dari「〜ないで」(tanpa melakukan).",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 116,
+      "question": "音楽を聞き＿＿＿作業をしてはいけません。",
+      "question_id": "Tidak boleh bekerja sambil mendengarkan musik.",
+      "options": [
+        "ながら",
+        "ところ",
+        "あいだ",
+        "たまま"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ながら」。「〜ながら」は二つの動作を同時に行うことを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ながら'. 「〜ながら」menunjukkan dua tindakan yang dilakukan bersamaan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 117,
+      "question": "空が暗いですね。雨が降り＿＿＿です。",
+      "question_id": "Langitnya gelap ya. Sepertinya akan turun hujan.",
+      "options": [
+        "らしい",
+        "みたい",
+        "はず",
+        "そう"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「そう」。様態の「〜そうだ」は見た様子からの判断を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'そう'. 「〜そうだ」(penampilan) menunjukkan penilaian dari apa yang terlihat.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 118,
+      "question": "大事な書類をなくして＿＿＿ました。すみません。",
+      "question_id": "Saya (tidak sengaja) menghilangkan dokumen penting. Maaf.",
+      "options": [
+        "あり",
+        "いき",
+        "しまい",
+        "おき"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「しまい」。「〜てしまう」は後悔や残念な気持ちを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'しまい'. 「〜てしまう」menunjukkan penyesalan atau hal yang tidak diinginkan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 119,
+      "question": "明日の会議のために、資料を準備して＿＿＿ました。",
+      "question_id": "Saya sudah menyiapkan dokumen untuk rapat besok.",
+      "options": [
+        "み",
+        "おき",
+        "しまい",
+        "あり"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「おき」。「〜ておく」は前もって準備することを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'おき'. 「〜ておく」menunjukkan persiapan yang dilakukan sebelumnya.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 120,
+      "question": "この機械は、たまに変な音がする＿＿＿があります。",
+      "question_id": "Mesin ini kadang-kadang mengeluarkan suara aneh.",
+      "options": [
+        "こと",
+        "もの",
+        "ところ",
+        "はず"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「こと」。「〜ことがある」は時々起こることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'こと'. 「〜ことがある」menunjukkan sesuatu yang kadang-kadang terjadi.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 121,
+      "question": "休みの日は、掃除を＿＿＿、買い物に行ったりします。",
+      "question_id": "Pada hari libur, saya membersihkan rumah, berbelanja, dan lain-lain.",
+      "options": [
+        "しても",
+        "しながら",
+        "するし",
+        "したり"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「したり」。「〜たり〜たりする」は動作の例を並べる表現です。",
+      "explanation_id": "Jawaban yang benar adalah 'したり'. 「〜たり〜たりする」digunakan untuk menyebutkan contoh-contoh kegiatan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 122,
+      "question": "この荷物は重＿＿＿て、一人では持てません。",
+      "question_id": "Barang ini terlalu berat, tidak bisa diangkat sendirian.",
+      "options": [
+        "にく",
+        "がた",
+        "すぎ",
+        "やす"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「すぎ」。「〜すぎる」は程度が大きすぎることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'すぎ'. 「〜すぎる」menunjukkan sesuatu yang berlebihan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 123,
+      "question": "この工具は使い＿＿＿です。新人にもおすすめです。",
+      "question_id": "Perkakas ini mudah digunakan. Direkomendasikan juga untuk pemula.",
+      "options": [
+        "おわる",
+        "やすい",
+        "にくい",
+        "すぎる"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「やすい」。「〜やすい」は簡単に〜できるという意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'やすい'. 「〜やすい」berarti mudah untuk melakukan sesuatu.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 124,
+      "question": "練習すればする＿＿＿、作業が速くなります。",
+      "question_id": "Semakin banyak berlatih, semakin cepat pekerjaannya.",
+      "options": [
+        "ほど",
+        "だけ",
+        "ばかり",
+        "くらい"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ほど」。「〜ば〜ほど」は程度が一緒に変わることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ほど'. 「〜ば〜ほど」berarti semakin ~ semakin ~.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 125,
+      "question": "工場の中では、走っては＿＿＿ません。",
+      "question_id": "Di dalam pabrik tidak boleh berlari.",
+      "options": [
+        "なり",
+        "でき",
+        "かまい",
+        "いけ"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「いけ」。「〜てはいけない」は禁止を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'いけ'. 「〜てはいけない」menunjukkan larangan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 126,
+      "question": "機械の調子が悪いので、＿＿＿してもらいました。",
+      "question_id": "Karena kondisi mesin kurang baik, saya minta diperbaiki.",
+      "options": [
+        "料理",
+        "管理",
+        "修理",
+        "整理"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「修理」。「修理」は壊れたものを直すことです。",
+      "explanation_id": "Jawaban yang benar adalah '修理'. 「修理」berarti memperbaiki sesuatu yang rusak.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 127,
+      "question": "作業の前に、工具がそろっているか＿＿＿してください。",
+      "question_id": "Sebelum bekerja, periksalah apakah perkakas sudah lengkap.",
+      "options": [
+        "案内",
+        "確認",
+        "注意",
+        "用意"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「確認」。「確認」は間違いがないか確かめることです。",
+      "explanation_id": "Jawaban yang benar adalah '確認'. 「確認」berarti memastikan tidak ada kesalahan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 128,
+      "question": "問題が起きたら、すぐに上司に＿＿＿してください。",
+      "question_id": "Jika terjadi masalah, segera laporkan kepada atasan.",
+      "options": [
+        "報告",
+        "予約",
+        "放送",
+        "計算"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「報告」。「報告」は仕事の結果や状況を知らせることです。",
+      "explanation_id": "Jawaban yang benar adalah '報告'. 「報告」berarti memberitahukan hasil atau situasi pekerjaan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 129,
+      "question": "決められた時間より長く働くことを＿＿＿と言います。",
+      "question_id": "Bekerja lebih lama dari jam yang ditentukan disebut lembur.",
+      "options": [
+        "出張",
+        "休憩",
+        "早退",
+        "残業"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「残業」。「残業」は勤務時間の後も働くことです。",
+      "explanation_id": "Jawaban yang benar adalah '残業'. 「残業」berarti bekerja setelah jam kerja berakhir.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 130,
+      "question": "電車が遅れて、会社に＿＿＿してしまいました。",
+      "question_id": "Karena kereta terlambat, saya terlambat sampai di kantor.",
+      "options": [
+        "欠席",
+        "早退",
+        "遅刻",
+        "遅延"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「遅刻」。「遅刻」は決められた時間に遅れることです。",
+      "explanation_id": "Jawaban yang benar adalah '遅刻'. 「遅刻」berarti datang terlambat dari waktu yang ditentukan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 131,
+      "question": "けがをしないように、＿＿＿第一で作業しましょう。",
+      "question_id": "Mari bekerja dengan mengutamakan keselamatan agar tidak terluka.",
+      "options": [
+        "元気",
+        "安全",
+        "安心",
+        "完全"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「安全」。「安全第一」は現場の標語で、安全を最優先にすることです。",
+      "explanation_id": "Jawaban yang benar adalah '安全'. 「安全第一」adalah slogan di tempat kerja yang berarti mengutamakan keselamatan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 132,
+      "question": "製品に問題がないか調べることを＿＿＿と言います。",
+      "question_id": "Memeriksa apakah produk tidak bermasalah disebut inspeksi.",
+      "options": [
+        "検査",
+        "検索",
+        "調査",
+        "工事"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「検査」。「検査」は基準に合っているか調べることです。",
+      "explanation_id": "Jawaban yang benar adalah '検査'. 「検査」berarti memeriksa kesesuaian dengan standar.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 133,
+      "question": "機械が動かなくなることを＿＿＿と言います。",
+      "question_id": "Mesin yang berhenti berfungsi disebut rusak.",
+      "options": [
+        "事故",
+        "火事",
+        "苦情",
+        "故障"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「故障」。「故障」は機械などが正常に動かなくなることです。",
+      "explanation_id": "Jawaban yang benar adalah '故障'. 「故障」berarti mesin tidak berfungsi dengan normal.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 134,
+      "question": "商品を届ける約束の日を＿＿＿と言います。",
+      "question_id": "Tanggal yang dijanjikan untuk mengirim barang disebut tenggat pengiriman.",
+      "options": [
+        "時期",
+        "学期",
+        "納期",
+        "定期"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「納期」。「納期」は納品の期限のことです。",
+      "explanation_id": "Jawaban yang benar adalah '納期'. 「納期」berarti batas waktu penyerahan barang.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 135,
+      "question": "仕事のやり方をもっと良くすることを＿＿＿と言います。",
+      "question_id": "Membuat cara kerja menjadi lebih baik disebut kaizen (perbaikan).",
+      "options": [
+        "解決",
+        "改善",
+        "改正",
+        "開発"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「改善」。「改善」は悪いところを直して良くすることです。",
+      "explanation_id": "Jawaban yang benar adalah '改善'. 「改善」berarti memperbaiki kekurangan menjadi lebih baik.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 136,
+      "question": "事故の＿＿＿を調べて、対策を考えます。",
+      "question_id": "Kami menyelidiki penyebab kecelakaan dan memikirkan tindakan pencegahan.",
+      "options": [
+        "原因",
+        "材料",
+        "性能",
+        "効果"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「原因」。「原因」は物事が起こったもとのことです。",
+      "explanation_id": "Jawaban yang benar adalah '原因'. 「原因」berarti sebab terjadinya sesuatu.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 137,
+      "question": "部品が＿＿＿しているので、発注してください。",
+      "question_id": "Suku cadang kurang, jadi tolong dipesan.",
+      "options": [
+        "不安",
+        "不便",
+        "不満",
+        "不足"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「不足」。「不足」は足りないことです。",
+      "explanation_id": "Jawaban yang benar adalah '不足'. 「不足」berarti kekurangan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 138,
+      "question": "使い終わった工具は、決められた場所に＿＿＿てください。",
+      "question_id": "Kembalikan perkakas yang sudah dipakai ke tempat yang ditentukan.",
+      "options": [
+        "直し",
+        "渡し",
+        "戻し",
+        "返し"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「戻し」。「戻す」は元の場所に置くことです。",
+      "explanation_id": "Jawaban yang benar adalah '戻し'. 「戻す」berarti mengembalikan ke tempat semula.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 139,
+      "question": "重い物を持つときは、腰に＿＿＿してください。",
+      "question_id": "Saat mengangkat barang berat, hati-hatilah dengan pinggang Anda.",
+      "options": [
+        "遠慮",
+        "注意",
+        "注文",
+        "用事"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「注意」。「注意する」は気をつけることです。",
+      "explanation_id": "Jawaban yang benar adalah '注意'. 「注意する」berarti berhati-hati.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 140,
+      "question": "新しい仕事に＿＿＿れるまで、時間がかかります。",
+      "question_id": "Butuh waktu sampai terbiasa dengan pekerjaan baru.",
+      "options": [
+        "慣",
+        "触",
+        "倒",
+        "流"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「慣」。「慣れる」は経験を重ねて普通にできるようになることです。",
+      "explanation_id": "Jawaban yang benar adalah '慣'. 「慣れる」berarti menjadi terbiasa setelah berpengalaman.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 141,
+      "question": "この書類を3枚＿＿＿してください。",
+      "question_id": "Tolong fotokopi dokumen ini 3 lembar.",
+      "options": [
+        "チェック",
+        "キャンセル",
+        "メモ",
+        "コピー"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「コピー」。「コピーする」は複写することです。",
+      "explanation_id": "Jawaban yang benar adalah 'コピー'. 「コピーする」berarti menggandakan dokumen.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 142,
+      "question": "この機械を＿＿＿する人は、講習を受けてください。",
+      "question_id": "Orang yang mengoperasikan mesin ini harus mengikuti pelatihan.",
+      "options": [
+        "体操",
+        "作業",
+        "操作",
+        "動作"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「操作」。「操作」は機械を動かすことです。",
+      "explanation_id": "Jawaban yang benar adalah '操作'. 「操作」berarti mengoperasikan mesin.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 143,
+      "question": "ヘルメットや安全帯など、体を守る道具を＿＿＿と言います。",
+      "question_id": "Alat untuk melindungi tubuh seperti helm dan sabuk pengaman disebut alat pelindung.",
+      "options": [
+        "器具",
+        "保護具",
+        "家具",
+        "工具"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「保護具」。「保護具」は体を守るための装備です。",
+      "explanation_id": "Jawaban yang benar adalah '保護具'. 「保護具」adalah perlengkapan untuk melindungi tubuh.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 144,
+      "question": "工場で物を作ることを＿＿＿と言います。",
+      "question_id": "Membuat barang di pabrik disebut manufaktur/produksi.",
+      "options": [
+        "製造",
+        "製品",
+        "作文",
+        "生産地"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「製造」。「製造」は製品を作ることです。",
+      "explanation_id": "Jawaban yang benar adalah '製造'. 「製造」berarti membuat produk.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 145,
+      "question": "交代のとき、次の人に仕事の内容を伝えることを＿＿＿と言います。",
+      "question_id": "Menyampaikan isi pekerjaan kepada orang berikutnya saat pergantian shift disebut serah terima.",
+      "options": [
+        "引き出し",
+        "受け取り",
+        "打ち合わせ",
+        "引き継ぎ"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「引き継ぎ」。「引き継ぎ」は仕事を次の人に渡すことです。",
+      "explanation_id": "Jawaban yang benar adalah '引き継ぎ'. 「引き継ぎ」berarti menyerahkan pekerjaan kepada orang berikutnya.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 146,
+      "question": "＿＿＿が悪いときは、無理をしないでください。",
+      "question_id": "Jika kondisi badan kurang baik, jangan memaksakan diri.",
+      "options": [
+        "体温",
+        "体力",
+        "体調",
+        "体重"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「体調」。「体調」は体の調子のことです。",
+      "explanation_id": "Jawaban yang benar adalah '体調'. 「体調」berarti kondisi badan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 147,
+      "question": "決められた時間より早く帰ることを＿＿＿と言います。",
+      "question_id": "Pulang lebih awal dari jam yang ditentukan disebut pulang awal.",
+      "options": [
+        "早口",
+        "早退",
+        "早朝",
+        "早速"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「早退」。「早退」は勤務時間の途中で帰ることです。",
+      "explanation_id": "Jawaban yang benar adalah '早退'. 「早退」berarti pulang sebelum jam kerja berakhir.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 148,
+      "question": "会社を休むときは、「今日は＿＿＿します」と連絡します。",
+      "question_id": "Saat tidak masuk kerja, kita memberi tahu \"Hari ini saya tidak masuk\".",
+      "options": [
+        "欠勤",
+        "欠席",
+        "欠点",
+        "欠品"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「欠勤」。「欠勤」は仕事を休むことです（「欠席」は会議や学校）。",
+      "explanation_id": "Jawaban yang benar adalah '欠勤'. 「欠勤」berarti tidak masuk kerja (「欠席」untuk rapat atau sekolah).",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 149,
+      "question": "ごみを種類ごとに分けることを＿＿＿と言います。",
+      "question_id": "Memilah sampah berdasarkan jenisnya disebut pemilahan.",
+      "options": [
+        "分解",
+        "分析",
+        "分担",
+        "分別"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「分別」。「分別（ぶんべつ）」はごみを種類で分けることです。",
+      "explanation_id": "Jawaban yang benar adalah '分別'. 「分別」berarti memilah sampah berdasarkan jenis.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 150,
+      "question": "仕事が終わったら、机の上を＿＿＿てから帰ります。",
+      "question_id": "Setelah pekerjaan selesai, saya merapikan meja sebelum pulang.",
+      "options": [
+        "手伝っ",
+        "付き合っ",
+        "片付け",
+        "受け付け"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「片付け」。「片付ける」は整理してきれいにすることです。",
+      "explanation_id": "Jawaban yang benar adalah '片付け'. 「片付ける」berarti membereskan dan merapikan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 151,
+      "question": "部品が届かないので、作業を中断＿＿＿を得ない。",
+      "question_id": "Karena suku cadang tidak datang, terpaksa menghentikan pekerjaan.",
+      "options": [
+        "しない",
+        "せざる",
+        "しざる",
+        "せず"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「せざる」。「〜ざるを得ない」は仕方なく〜する、という意味。「する」は「せざる」になります。",
+      "explanation_id": "Jawaban yang benar adalah 'せざる'. 「〜ざるを得ない」berarti terpaksa melakukan sesuatu. Bentuk dari「する」adalah「せざる」.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 152,
+      "question": "このまま放置すると、大きな事故になり＿＿＿。",
+      "question_id": "Jika dibiarkan begini, bisa saja menjadi kecelakaan besar.",
+      "options": [
+        "かねない",
+        "かねる",
+        "がたい",
+        "きれない"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「かねない」。「〜かねない」は悪いことが起こる可能性を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'かねない'. 「〜かねない」menunjukkan kemungkinan terjadinya hal buruk.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 153,
+      "question": "その件については、私では判断し＿＿＿ます。",
+      "question_id": "Mengenai hal itu, saya tidak dapat memutuskannya.",
+      "options": [
+        "すぎ",
+        "きれ",
+        "そびれ",
+        "かね"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「かね」。「〜かねる」は（立場上）〜できない、という丁寧な断りです。",
+      "explanation_id": "Jawaban yang benar adalah 'かね'. 「〜かねる」adalah penolakan sopan yang berarti tidak dapat melakukan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 154,
+      "question": "詳細がわかり＿＿＿、ご連絡します。",
+      "question_id": "Begitu detailnya diketahui, saya akan menghubungi Anda.",
+      "options": [
+        "途端",
+        "最中",
+        "次第",
+        "直後"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「次第」。「〜次第」は〜したらすぐに、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '次第'. 「〜次第」berarti segera setelah sesuatu terjadi.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 155,
+      "question": "不良品の数は年々減り＿＿＿ある。",
+      "question_id": "Jumlah produk cacat terus berkurang dari tahun ke tahun.",
+      "options": [
+        "がちで",
+        "つつ",
+        "ながら",
+        "ており"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「つつ」。「〜つつある」は変化が進行中であることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'つつ'. 「〜つつある」menunjukkan perubahan yang sedang berlangsung.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 156,
+      "question": "図面＿＿＿に部品を加工してください。",
+      "question_id": "Proseslah suku cadang sesuai dengan gambar teknik.",
+      "options": [
+        "どおり",
+        "ばかり",
+        "がち",
+        "気味"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「どおり」。「〜どおり」はそのとおりに、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'どおり'. 「〜どおり」berarti sesuai dengan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 157,
+      "question": "何度も確認した＿＿＿、ミスをしてしまった。",
+      "question_id": "Meskipun sudah memeriksa berkali-kali, tetap saja terjadi kesalahan.",
+      "options": [
+        "によって",
+        "に際して",
+        "に基づいて",
+        "にもかかわらず"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「にもかかわらず」。「〜にもかかわらず」は予想に反する結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'にもかかわらず'. 「〜にもかかわらず」menunjukkan hasil yang bertentangan dengan harapan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 158,
+      "question": "点検の結果を＿＿＿、作業手順を見直した。",
+      "question_id": "Berdasarkan hasil inspeksi, prosedur kerja ditinjau ulang.",
+      "options": [
+        "巡って",
+        "こめて",
+        "踏まえて",
+        "通して"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「踏まえて」。「〜を踏まえて」は〜を判断の土台にして、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '踏まえて'. 「〜を踏まえて」berarti menjadikan sesuatu sebagai dasar pertimbangan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 159,
+      "question": "新しい機械を導入する＿＿＿、安全講習を行います。",
+      "question_id": "Pada saat memperkenalkan mesin baru, akan diadakan pelatihan keselamatan.",
+      "options": [
+        "にかけては",
+        "に際して",
+        "に反して",
+        "にしては"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「に際して」。「〜に際して」は特別なことが行われるときに、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に際して'. 「〜に際して」berarti pada kesempatan/saat sesuatu yang khusus dilakukan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 160,
+      "question": "生産量の増加＿＿＿、残業も増えた。",
+      "question_id": "Seiring dengan peningkatan jumlah produksi, lembur juga bertambah.",
+      "options": [
+        "に伴い",
+        "に反し",
+        "に限り",
+        "に対し"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「に伴い」。「〜に伴い」は一方の変化と一緒に他方も変わることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に伴い'. 「〜に伴い」menunjukkan perubahan yang terjadi bersamaan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 161,
+      "question": "納期が近いので、今日は休む＿＿＿にはいかない。",
+      "question_id": "Karena tenggat sudah dekat, hari ini tidak mungkin libur.",
+      "options": [
+        "こと",
+        "もの",
+        "はず",
+        "わけ"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「わけ」。「〜わけにはいかない」は事情があって〜できない、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'わけ'. 「〜わけにはいかない」berarti tidak bisa melakukan karena suatu alasan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 162,
+      "question": "原因を調べない＿＿＿には、対策は立てられない。",
+      "question_id": "Tanpa menyelidiki penyebabnya, tindakan pencegahan tidak dapat dibuat.",
+      "options": [
+        "ところ",
+        "わけ",
+        "こと",
+        "もの"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「こと」。「〜ないことには」は〜しなければ（後ろは否定）、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'こと'. 「〜ないことには」berarti jika tidak melakukan ~ (diikuti bentuk negatif).",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 163,
+      "question": "安全を確認した＿＿＿で、機械を起動してください。",
+      "question_id": "Nyalakan mesin setelah memastikan keamanan.",
+      "options": [
+        "末",
+        "上",
+        "下",
+        "中"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「上」。「〜た上で」は〜してから次のことをする、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '上'. 「〜た上で」berarti melakukan sesuatu setelah hal lain selesai.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 164,
+      "question": "この薬品は、引火する＿＿＿があるので注意してください。",
+      "question_id": "Bahan kimia ini berisiko terbakar, jadi berhati-hatilah.",
+      "options": [
+        "恐れ",
+        "望み",
+        "頼り",
+        "限り"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「恐れ」。「〜恐れがある」は悪いことが起こる可能性を表します。",
+      "explanation_id": "Jawaban yang benar adalah '恐れ'. 「〜恐れがある」menunjukkan risiko terjadinya hal buruk.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 165,
+      "question": "この区域は、関係者＿＿＿入ることができます。",
+      "question_id": "Area ini hanya boleh dimasuki oleh petugas.",
+      "options": [
+        "に伴い",
+        "に応じ",
+        "に反し",
+        "に限り"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「に限り」。「〜に限り」は〜だけ、という限定を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に限り'. 「〜に限り」menunjukkan pembatasan hanya untuk.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 166,
+      "question": "経験の有無＿＿＿、どなたでも応募できます。",
+      "question_id": "Siapa pun dapat melamar tanpa mempersoalkan ada tidaknya pengalaman.",
+      "options": [
+        "を通じて",
+        "をめぐって",
+        "を問わず",
+        "をこめて"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「を問わず」。「〜を問わず」は〜に関係なく、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'を問わず'. 「〜を問わず」berarti tanpa mempersoalkan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 167,
+      "question": "お客様の要望＿＿＿、製品を改良しました。",
+      "question_id": "Kami memperbaiki produk sesuai dengan permintaan pelanggan.",
+      "options": [
+        "に限って",
+        "に応じて",
+        "に反して",
+        "にしては"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「に応じて」。「〜に応じて」は〜に合わせて、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に応じて'. 「〜に応じて」berarti menyesuaikan dengan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 168,
+      "question": "機械を修理する＿＿＿は、必ず電源を切ってください。",
+      "question_id": "Saat memperbaiki mesin, pastikan untuk mematikan listrik.",
+      "options": [
+        "際",
+        "末",
+        "上",
+        "限り"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「際」。「〜際（さい）」は〜するとき、というフォーマルな表現です。",
+      "explanation_id": "Jawaban yang benar adalah '際'. 「〜際」adalah ungkapan formal yang berarti pada saat.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 169,
+      "question": "新しい設備を導入した＿＿＿、生産性はあまり上がらなかった。",
+      "question_id": "Meskipun peralatan baru telah diperkenalkan, produktivitas tidak banyak meningkat.",
+      "options": [
+        "おかげで",
+        "あまり",
+        "うえに",
+        "ものの"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「ものの」。「〜ものの」は〜だが、予想と違う結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ものの'. 「〜ものの」berarti meskipun, dengan hasil berbeda dari harapan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 170,
+      "question": "停電は、いつでも起こり＿＿＿。日頃の備えが大切です。",
+      "question_id": "Pemadaman listrik bisa terjadi kapan saja. Persiapan sehari-hari itu penting.",
+      "options": [
+        "抜く",
+        "かねる",
+        "得る",
+        "切る"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「得る」。「〜得る（うる）」は〜する可能性がある、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah '得る'. 「〜得る」berarti ada kemungkinan terjadi.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 171,
+      "question": "彼は技術＿＿＿、人柄も素晴らしい。",
+      "question_id": "Dia tidak hanya terampil, tetapi kepribadiannya juga luar biasa.",
+      "options": [
+        "のみで",
+        "のみならず",
+        "ばかりに",
+        "だけしか"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「のみならず」。「〜のみならず」は〜だけでなく、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'のみならず'. 「〜のみならず」berarti tidak hanya ~ tetapi juga.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 172,
+      "question": "ベテラン＿＿＿、彼の作業は速くて正確だ。",
+      "question_id": "Sebagaimana layaknya seorang veteran, pekerjaannya cepat dan akurat.",
+      "options": [
+        "だけあって",
+        "だけしか",
+        "ばかりか",
+        "のみで"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「だけあって」。「〜だけあって」は〜にふさわしく、という評価を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'だけあって'. 「〜だけあって」menunjukkan penilaian yang sesuai dengan statusnya.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 173,
+      "question": "検査の結果＿＿＿、出荷するかどうかを判断します。",
+      "question_id": "Berdasarkan hasil inspeksi, akan diputuskan apakah barang dikirim atau tidak.",
+      "options": [
+        "にかけて",
+        "において",
+        "に向かって",
+        "に基づいて"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「に基づいて」。「〜に基づいて」は〜を根拠にして、という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'に基づいて'. 「〜に基づいて」berarti berdasarkan pada.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 174,
+      "question": "注文が増える＿＿＿だ。人手が足りない。",
+      "question_id": "Pesanan terus saja bertambah. Tenaga kerja tidak cukup.",
+      "options": [
+        "両方",
+        "他方",
+        "一方",
+        "片方"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「一方」。「〜一方だ」は変化が一つの方向に進み続けることを表します。",
+      "explanation_id": "Jawaban yang benar adalah '一方'. 「〜一方だ」menunjukkan perubahan yang terus berlanjut ke satu arah.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 175,
+      "question": "品質管理の担当者＿＿＿、佐藤さんを紹介します。",
+      "question_id": "Saya memperkenalkan Sato-san sebagai penanggung jawab kontrol kualitas.",
+      "options": [
+        "によって",
+        "として",
+        "について",
+        "にとって"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「として」。「〜として」は資格・立場を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'として'. 「〜として」menunjukkan kedudukan atau peran.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 176,
+      "question": "トラブルには＿＿＿に対応することが大切です。",
+      "question_id": "Penting untuk menangani masalah dengan cepat.",
+      "options": [
+        "迅速",
+        "慎重",
+        "頻繁",
+        "永遠"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「迅速」。「迅速（じんそく）」は非常に速いことです。",
+      "explanation_id": "Jawaban yang benar adalah '迅速'. 「迅速」berarti sangat cepat.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 177,
+      "question": "まず現場の状況を＿＿＿してから、報告してください。",
+      "question_id": "Pahami dulu situasi di lapangan, lalu laporkan.",
+      "options": [
+        "保管",
+        "捕獲",
+        "開拓",
+        "把握"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「把握」。「把握（はあく）」は状況を正しく理解することです。",
+      "explanation_id": "Jawaban yang benar adalah '把握'. 「把握」berarti memahami situasi dengan benar.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 178,
+      "question": "安全ルールを全員に＿＿＿させることが課題です。",
+      "question_id": "Tantangannya adalah membuat semua orang mematuhi aturan keselamatan secara menyeluruh.",
+      "options": [
+        "徹夜",
+        "適当",
+        "徹底",
+        "撤去"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「徹底」。「徹底（てってい）」は隅々まで行き渡らせることです。",
+      "explanation_id": "Jawaban yang benar adalah '徹底'. 「徹底」berarti menerapkan secara menyeluruh.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 179,
+      "question": "事故を防ぐために、必要な＿＿＿を取りました。",
+      "question_id": "Untuk mencegah kecelakaan, tindakan yang diperlukan telah diambil.",
+      "options": [
+        "配置",
+        "措置",
+        "位置",
+        "設置"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「措置」。「措置（そち）」は問題に対する処置・手立てのことです。",
+      "explanation_id": "Jawaban yang benar adalah '措置'. 「措置」berarti tindakan penanganan terhadap masalah.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 180,
+      "question": "会社はコストの＿＿＿に取り組んでいます。",
+      "question_id": "Perusahaan sedang berupaya mengurangi biaya.",
+      "options": [
+        "削減",
+        "削除",
+        "短縮",
+        "縮小"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「削減」。「削減（さくげん）」は数量や金額を減らすことです。",
+      "explanation_id": "Jawaban yang benar adalah '削減'. 「削減」berarti mengurangi jumlah atau biaya.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 181,
+      "question": "今月の生産目標を＿＿＿しました。",
+      "question_id": "Target produksi bulan ini telah tercapai.",
+      "options": [
+        "完成",
+        "作成",
+        "養成",
+        "達成"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「達成」。「達成（たっせい）」は目標をなしとげることです。",
+      "explanation_id": "Jawaban yang benar adalah '達成'. 「達成」berarti mencapai target.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 182,
+      "question": "製品に＿＿＿が見つかったので、出荷を止めました。",
+      "question_id": "Karena ditemukan cacat pada produk, pengiriman dihentikan.",
+      "options": [
+        "不気味",
+        "不公平",
+        "不具合",
+        "不器用"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「不具合」。「不具合（ふぐあい）」は機械や製品の調子が悪いこと・欠陥のことです。",
+      "explanation_id": "Jawaban yang benar adalah '不具合'. 「不具合」berarti kerusakan atau cacat pada mesin/produk.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 183,
+      "question": "この工場の設備＿＿＿率は90%を超えています。",
+      "question_id": "Tingkat operasional peralatan pabrik ini melebihi 90%.",
+      "options": [
+        "活動",
+        "稼働",
+        "移動",
+        "運動"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「稼働」。「稼働（かどう）」は機械が動いて仕事をしていることです。",
+      "explanation_id": "Jawaban yang benar adalah '稼働'. 「稼働」berarti mesin sedang beroperasi.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 184,
+      "question": "不良の原因を調べて、＿＿＿処置を行いました。",
+      "question_id": "Kami menyelidiki penyebab cacat dan melakukan tindakan korektif.",
+      "options": [
+        "是正",
+        "規制",
+        "整備",
+        "強制"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「是正」。「是正（ぜせい）」は悪い点を正しく直すことです。品質管理の用語です。",
+      "explanation_id": "Jawaban yang benar adalah '是正'. 「是正」berarti memperbaiki kesalahan. Istilah dalam kontrol kualitas.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 185,
+      "question": "明日の搬入のために、トラックを＿＿＿しました。",
+      "question_id": "Saya telah mengatur truk untuk pengangkutan besok.",
+      "options": [
+        "心配",
+        "配達",
+        "支配",
+        "手配"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「手配」。「手配（てはい）」は必要な物や人を準備することです。",
+      "explanation_id": "Jawaban yang benar adalah '手配'. 「手配」berarti mengatur/menyiapkan barang atau orang yang diperlukan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 186,
+      "question": "ミスが続いたので、作業手順を＿＿＿すことにした。",
+      "question_id": "Karena kesalahan terus terjadi, kami memutuskan meninjau ulang prosedur kerja.",
+      "options": [
+        "見送",
+        "見落と",
+        "見直",
+        "見逃"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「見直」。「見直す」はもう一度検討して改めることです。",
+      "explanation_id": "Jawaban yang benar adalah '見直'. 「見直す」berarti meninjau kembali dan memperbaiki.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 187,
+      "question": "経験や希望を＿＿＿して、配属先を決めます。",
+      "question_id": "Penempatan kerja diputuskan dengan mempertimbangkan pengalaman dan keinginan.",
+      "options": [
+        "余裕",
+        "考慮",
+        "苦労",
+        "待遇"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「考慮」。「考慮（こうりょ）」は判断のときに考えに入れることです。",
+      "explanation_id": "Jawaban yang benar adalah '考慮'. 「考慮」berarti mempertimbangkan dalam pengambilan keputusan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 188,
+      "question": "夜間の作業では、近隣への＿＿＿が必要です。",
+      "question_id": "Dalam pekerjaan malam hari, perlu perhatian terhadap lingkungan sekitar.",
+      "options": [
+        "配慮",
+        "遠慮",
+        "飼料",
+        "材料"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「配慮」。「配慮（はいりょ）」は相手や周囲に気を配ることです。",
+      "explanation_id": "Jawaban yang benar adalah '配慮'. 「配慮」berarti memperhatikan orang lain atau sekitar.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 189,
+      "question": "繁忙期に向けて、人員を＿＿＿する必要があります。",
+      "question_id": "Menjelang musim sibuk, perlu mengamankan tenaga kerja.",
+      "options": [
+        "確認",
+        "確信",
+        "確立",
+        "確保"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「確保」。「確保（かくほ）」は確実に手に入れて保つことです。",
+      "explanation_id": "Jawaban yang benar adalah '確保'. 「確保」berarti mendapatkan dan mempertahankan dengan pasti.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 190,
+      "question": "初めての作業なので、＿＿＿に進めてください。",
+      "question_id": "Karena ini pekerjaan pertama kali, lakukanlah dengan hati-hati.",
+      "options": [
+        "尊重",
+        "体重",
+        "慎重",
+        "貴重"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「慎重」。「慎重（しんちょう）」は注意深く行うことです。",
+      "explanation_id": "Jawaban yang benar adalah '慎重'. 「慎重」berarti melakukan dengan sangat hati-hati.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 191,
+      "question": "チームの＿＿＿なコミュニケーションが、品質を支えています。",
+      "question_id": "Komunikasi tim yang lancar menopang kualitas.",
+      "options": [
+        "適度",
+        "円滑",
+        "急速",
+        "頻繁"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「円滑」。「円滑（えんかつ）」は物事がすらすら進むことです。",
+      "explanation_id": "Jawaban yang benar adalah '円滑'. 「円滑」berarti berjalan dengan lancar.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 192,
+      "question": "＿＿＿なく仕様が変更されることがあります。",
+      "question_id": "Spesifikasi dapat berubah tanpa pemberitahuan sebelumnya.",
+      "options": [
+        "予告",
+        "広告",
+        "報告",
+        "忠告"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「予告」。「予告（よこく）」は前もって知らせることです。",
+      "explanation_id": "Jawaban yang benar adalah '予告'. 「予告」berarti pemberitahuan sebelumnya.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 193,
+      "question": "月に一度、設備の定期＿＿＿を行います。",
+      "question_id": "Sebulan sekali dilakukan inspeksi berkala peralatan.",
+      "options": [
+        "点滅",
+        "点数",
+        "採点",
+        "点検"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「点検」。「点検（てんけん）」は悪いところがないか調べることです。",
+      "explanation_id": "Jawaban yang benar adalah '点検'. 「点検」berarti memeriksa apakah ada kerusakan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 194,
+      "question": "部品を期日までに＿＿＿してください。",
+      "question_id": "Tolong serahkan suku cadang sebelum tanggal yang ditentukan.",
+      "options": [
+        "収納",
+        "出納",
+        "納入",
+        "納得"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「納入」。「納入（のうにゅう）」は注文された品物を納めることです。",
+      "explanation_id": "Jawaban yang benar adalah '納入'. 「納入」berarti menyerahkan barang yang dipesan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 195,
+      "question": "事故を＿＿＿するために、毎朝ミーティングを行います。",
+      "question_id": "Untuk mencegah kecelakaan, rapat diadakan setiap pagi.",
+      "options": [
+        "予算",
+        "予防",
+        "予測",
+        "予習"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「予防」。「予防（よぼう）」は悪いことが起こる前に防ぐことです。",
+      "explanation_id": "Jawaban yang benar adalah '予防'. 「予防」berarti mencegah sebelum hal buruk terjadi.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 196,
+      "question": "作業の＿＿＿を上げるために、道具の置き場所を変えました。",
+      "question_id": "Untuk meningkatkan efisiensi kerja, tempat penyimpanan alat diubah.",
+      "options": [
+        "効率",
+        "効果",
+        "功績",
+        "高率"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「効率」。「効率（こうりつ）」は使った労力に対する成果の割合です。",
+      "explanation_id": "Jawaban yang benar adalah '効率'. 「効率」berarti perbandingan hasil terhadap usaha.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 197,
+      "question": "停電のため、作業を一時＿＿＿しました。",
+      "question_id": "Karena pemadaman listrik, pekerjaan dihentikan sementara.",
+      "options": [
+        "中止",
+        "中央",
+        "中堅",
+        "中断"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「中断」。「中断（ちゅうだん）」は途中で一時的にやめることです（「中止」は完全にやめること）。",
+      "explanation_id": "Jawaban yang benar adalah '中断'. 「中断」berarti berhenti sementara (sedangkan「中止」berarti dibatalkan).",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 198,
+      "question": "製造＿＿＿のどこで不良が発生したか調べています。",
+      "question_id": "Kami menyelidiki di bagian mana dari proses produksi cacat terjadi.",
+      "options": [
+        "日程",
+        "規程",
+        "工程",
+        "課程"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「工程」。「工程（こうてい）」は作業の流れ・段階のことです。",
+      "explanation_id": "Jawaban yang benar adalah '工程'. 「工程」berarti tahapan atau alur proses kerja.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 199,
+      "question": "最近はどこの工場も＿＿＿で困っています。",
+      "question_id": "Akhir-akhir ini semua pabrik kesulitan karena kekurangan tenaga kerja.",
+      "options": [
+        "人員整理",
+        "人手不足",
+        "人間不信",
+        "人事異動"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「人手不足」。「人手不足（ひとでぶそく）」は働く人が足りないことです。",
+      "explanation_id": "Jawaban yang benar adalah '人手不足'. 「人手不足」berarti kekurangan pekerja.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
+    },
+    {
+      "id": 200,
+      "question": "スピード＿＿＿は重大な事故につながります。",
+      "question_id": "Pelanggaran batas kecepatan dapat menyebabkan kecelakaan serius.",
+      "options": [
+        "違反",
+        "反対",
+        "反省",
+        "違和"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「違反」。「違反（いはん）」は決まりを破ることです。",
+      "explanation_id": "Jawaban yang benar adalah '違反'. 「違反」berarti melanggar peraturan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2",
+      "created_at": "2026-06-07T00:00:00.000Z"
     }
   ]
 }

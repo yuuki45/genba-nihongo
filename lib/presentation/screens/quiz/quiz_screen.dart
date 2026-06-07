@@ -3,11 +3,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/models/quiz.dart';
 import '../../providers/quiz_provider.dart';
 import '../../providers/settings_provider.dart';
+import '../../widgets/locked_content_banner.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// N3クイズ画面
+/// JLPTクイズ画面（N3: 無料 / N2: 対策パック）
 class QuizScreen extends ConsumerStatefulWidget {
-  const QuizScreen({super.key});
+  /// 出題するJLPTレベル（'N3' または 'N2'）
+  final String jlptLevel;
+
+  const QuizScreen({super.key, this.jlptLevel = 'N3'});
 
   @override
   ConsumerState<QuizScreen> createState() => _QuizScreenState();
@@ -31,10 +35,19 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   Future<void> _startQuizSession() async {
     setState(() => _isLoading = true);
 
-    final quizzes = await ref.read(randomQuizzesProvider(10).future);
+    final quizzes = await ref.read(
+      randomQuizzesProvider((count: 10, level: widget.jlptLevel)).future,
+    );
     await ref.read(quizSessionProvider.notifier).startSession(quizzes);
 
-    setState(() => _isLoading = false);
+    if (mounted) {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  /// 画面タイトル（レベルに応じて切り替え）
+  String _title(AppLocalizations l10n) {
+    return widget.jlptLevel == 'N2' ? l10n.quizTitleN2 : l10n.quizTitle;
   }
 
   void _handleAnswerSelect(int index) {
@@ -81,7 +94,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   }
 
   /// 選択肢のローマ字を取得
-  String _getOptionRomaji(String option) {
+  String? _getOptionRomaji(String option) {
     // クイズの全選択肢のローマ字マッピング
     final romajiMap = {
       // 動詞の活用形
@@ -343,7 +356,8 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
       '数える': 'kazoeru',
     };
 
-    return romajiMap[option] ?? option;
+    // マップにない選択肢（対策パックの新規問題など）はローマ字行を表示しない
+    return romajiMap[option];
   }
 
   @override
@@ -351,14 +365,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final session = ref.watch(quizSessionProvider);
     final l10n = AppLocalizations.of(context)!;
 
-    if (_isLoading || session.quizzes.isEmpty) {
+    if (_isLoading) {
       return Scaffold(
         appBar: AppBar(
-          title: Text(l10n.quizTitle),
+          title: Text(_title(l10n)),
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Colors.white,
         ),
         body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    // 出題できるクイズがない（未購入パックのレベルに直接来た場合など）
+    if (session.quizzes.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(_title(l10n)),
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Colors.white,
+        ),
+        body: const Padding(
+          padding: EdgeInsets.all(24.0),
+          child: Center(child: LockedContentBanner()),
+        ),
       );
     }
 
@@ -386,7 +415,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.quizTitle),
+        title: Text(_title(l10n)),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
@@ -616,15 +645,17 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                             height: 1.5,
                           ),
                         ),
-                        const SizedBox(height: 4),
-                        Text(
-                          _getOptionRomaji(option),
-                          style: TextStyle(
-                            fontSize: 13,
-                            color: Colors.grey[600],
-                            height: 1.3,
+                        if (_getOptionRomaji(option) != null) ...[
+                          const SizedBox(height: 4),
+                          Text(
+                            _getOptionRomaji(option)!,
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey[600],
+                              height: 1.3,
+                            ),
                           ),
-                        ),
+                        ],
                       ],
                     ),
                   ),

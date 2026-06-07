@@ -366,6 +366,21 @@
     "description": "Terakhir diperbarui"
   },
 
+  "quizTitleN2": "Kuis N2",
+  "@quizTitleN2": {
+    "description": "Judul layar kuis N2"
+  },
+
+  "quizCardTitleN2": "Tantang Kuis N2",
+  "@quizCardTitleN2": {
+    "description": "Judul kartu kuis N2 di layar beranda"
+  },
+
+  "quizCardDescriptionN2": "Pelajari tata bahasa dan kosakata N2 dengan paket persiapan",
+  "@quizCardDescriptionN2": {
+    "description": "Deskripsi kartu kuis N2 di layar beranda"
+  },
+
   "storeTitle": "Paket Konten",
   "@storeTitle": {
     "description": "Judul layar toko"

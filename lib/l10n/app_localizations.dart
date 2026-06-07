@@ -524,6 +524,24 @@ abstract class AppLocalizations {
   /// **'最終更新日'**
   String get lastUpdated;
 
+  /// N2クイズ画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'N2クイズ'**
+  String get quizTitleN2;
+
+  /// ホーム画面のN2クイズカードタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'N2クイズに挑戦'**
+  String get quizCardTitleN2;
+
+  /// ホーム画面のN2クイズカード説明
+  ///
+  /// In ja, this message translates to:
+  /// **'対策パックでN2の文法・語彙を学ぼう'**
+  String get quizCardDescriptionN2;
+
   /// ストア画面のタイトル
   ///
   /// In ja, this message translates to:

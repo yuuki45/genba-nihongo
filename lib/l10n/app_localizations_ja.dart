@@ -226,6 +226,15 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
+  String get quizTitleN2 => 'N2クイズ';
+
+  @override
+  String get quizCardTitleN2 => 'N2クイズに挑戦';
+
+  @override
+  String get quizCardDescriptionN2 => '対策パックでN2の文法・語彙を学ぼう';
+
+  @override
   String get storeTitle => 'コンテンツパック';
 
   @override

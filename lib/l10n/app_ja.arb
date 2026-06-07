@@ -366,6 +366,21 @@
     "description": "最終更新日"
   },
 
+  "quizTitleN2": "N2クイズ",
+  "@quizTitleN2": {
+    "description": "N2クイズ画面のタイトル"
+  },
+
+  "quizCardTitleN2": "N2クイズに挑戦",
+  "@quizCardTitleN2": {
+    "description": "ホーム画面のN2クイズカードタイトル"
+  },
+
+  "quizCardDescriptionN2": "対策パックでN2の文法・語彙を学ぼう",
+  "@quizCardDescriptionN2": {
+    "description": "ホーム画面のN2クイズカード説明"
+  },
+
   "storeTitle": "コンテンツパック",
   "@storeTitle": {
     "description": "ストア画面のタイトル"

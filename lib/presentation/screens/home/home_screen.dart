@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import '../../providers/phrase_provider.dart';
+import '../../providers/purchase_provider.dart';
 import '../../providers/settings_provider.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/language_segmented_control.dart';
+import '../../../data/iap/product_catalog.dart';
 import '../../../data/models/phrase.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
 import '../quiz/quiz_screen.dart';
 import '../kanji/kanji_home_screen.dart';
+import '../store/store_screen.dart';
 import '../../services/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -105,6 +108,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   _StaggeredFadeIn(
                     index: 4,
                     child: _buildQuizCard(context),
+                  ),
+
+                  // N2クイズカード（対策パック）
+                  const SizedBox(height: 12),
+                  _StaggeredFadeIn(
+                    index: 5,
+                    child: _buildN2QuizCard(context),
                   ),
                   const SizedBox(height: 16),
                 ],
@@ -345,6 +355,42 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => const QuizScreen()),
+        );
+      },
+    );
+  }
+
+  /// N2クイズカード（対策パック — JIS青の指示標識パネル）
+  ///
+  /// 未購入時はロックアイコンを表示し、タップでストア画面へ誘導する。
+  Widget _buildN2QuizCard(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final isUnlocked = ref.watch(
+      entitlementProvider.select(
+        (state) => state.isUnlocked(ProductCatalog.jlptPack.packId),
+      ),
+    );
+
+    return _SignPanelCard(
+      backgroundColor: AppColors.jisBlue,
+      iconBlockColor: Colors.white,
+      icon: isUnlocked ? Icons.workspace_premium : Icons.lock,
+      iconColor: AppColors.jisBlue,
+      title: l10n.quizCardTitleN2,
+      titleColor: Colors.white,
+      description: isUnlocked
+          ? l10n.quizCardDescriptionN2
+          : l10n.lockedContentMessage,
+      descriptionColor: Colors.white.withValues(alpha: 0.85),
+      chevronColor: Colors.white,
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => isUnlocked
+                ? const QuizScreen(jlptLevel: 'N2')
+                : const StoreScreen(),
+          ),
         );
       },
     );

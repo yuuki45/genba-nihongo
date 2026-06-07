@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/quiz.dart';
 import '../../data/repositories/quiz_repository.dart';
+import 'purchase_provider.dart';
 
 /// QuizRepositoryのProvider
 final quizRepositoryProvider = Provider<QuizRepository>((ref) {
@@ -14,18 +15,26 @@ final allQuizzesProvider = FutureProvider<List<Quiz>>((ref) async {
   return await repository.getAllQuizzes();
 });
 
-/// N3レベルのクイズを取得するProvider
-final n3QuizzesProvider = FutureProvider<List<Quiz>>((ref) async {
-  ref.keepAlive();
+/// ランダムにクイズを取得するProvider（レベル指定・解錠フィルタ付き）
+///
+/// 未購入パックのクイズは出題対象から除外される。
+/// autoDisposeを使用して毎回新しいランダムクイズを取得。
+final randomQuizzesProvider = FutureProvider.autoDispose
+    .family<List<Quiz>, ({int count, String level})>((ref, params) async {
   final repository = ref.watch(quizRepositoryProvider);
-  return await repository.getQuizzesByJlptLevel('N3');
-});
+  // 解錠状態を監視（購入直後にクイズプールへ即反映される）
+  final unlockedPackIds = ref.watch(
+    entitlementProvider.select((state) => state.unlockedPackIds),
+  );
 
-/// ランダムにクイズを取得するProvider
-/// autoDisposeを使用して毎回新しいランダムクイズを取得
-final randomQuizzesProvider = FutureProvider.autoDispose.family<List<Quiz>, int>((ref, count) async {
-  final repository = ref.watch(quizRepositoryProvider);
-  return await repository.getRandomQuizzes(count, 'N3');
+  final all = await repository.getQuizzesByJlptLevel(params.level);
+  final available = filterUnlockedContent(
+    all,
+    (quiz) => quiz.packId,
+    unlockedPackIds,
+  )..shuffle();
+
+  return available.take(params.count).toList();
 });
 
 /// クイズセッション管理用のStateNotifier
