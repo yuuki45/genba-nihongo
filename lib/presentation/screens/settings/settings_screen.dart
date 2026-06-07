@@ -51,8 +51,7 @@ class SettingsScreen extends ConsumerWidget {
 
         // アプリ情報セクション
         _buildSectionHeader(context, l10n.settingsAppInfo),
-        _buildAppInfoTile(context, l10n.settingsVersion, '1.0.0'),
-        _buildAppInfoTile(context, l10n.settingsPhraseCount, '329'),
+        _buildAppInfoTile(context, l10n.settingsVersion, '1.1.0'),
         _buildAppInfoTile(context, l10n.settingsDeveloper, 'Yuuki Odan'),
         _buildOfflineInfoTile(context, settings.languageCode),
         const Divider(),
@@ -61,11 +60,6 @@ class SettingsScreen extends ConsumerWidget {
         _buildSectionHeader(context, l10n.storeTitle),
         _buildStoreTile(context),
         _buildRestoreTile(context, ref),
-        const Divider(),
-
-        // その他
-        _buildSectionHeader(context, l10n.settingsOther),
-        _buildAboutTile(context),
         const Divider(),
 
         // 法的情報
@@ -211,37 +205,6 @@ class SettingsScreen extends ConsumerWidget {
         Icons.check_circle,
         color: Colors.green,
       ),
-    );
-  }
-
-  /// アプリについて
-  Widget _buildAboutTile(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
-    return ListTile(
-      leading: const Icon(Icons.help_outline),
-      title: Text(l10n.settingsAbout),
-      trailing: const Icon(Icons.chevron_right),
-      onTap: () {
-        showAboutDialog(
-          context: context,
-          applicationName: l10n.appTitle,
-          applicationVersion: '1.0.0',
-          applicationIcon: const FlutterLogo(size: 48),
-          children: [
-            const SizedBox(height: 16),
-            Text(
-              l10n.aboutDescription1,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              l10n.aboutDescription2,
-              textAlign: TextAlign.center,
-            ),
-          ],
-        );
-      },
     );
   }
 
