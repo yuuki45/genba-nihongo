@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/purchase_provider.dart';
+import '../../services/notification_service.dart';
 import '../../widgets/language_segmented_control.dart';
 import '../../../l10n/app_localizations.dart';
 import '../legal/terms_of_service_screen.dart';
@@ -47,6 +48,12 @@ class SettingsScreen extends ConsumerWidget {
         _buildSectionHeader(context, l10n.settingsDisplay),
         _buildLanguageSetting(context, ref, settings),
         _buildDarkModeSetting(context, ref, settings),
+        const Divider(),
+
+        // 学習リマインダーセクション
+        _buildSectionHeader(context, l10n.settingsReminder),
+        _buildReminderToggle(context, ref, settings),
+        if (settings.reminderEnabled) _buildReminderTimeTile(context, ref, settings),
         const Divider(),
 
         // アプリ情報セクション
@@ -131,6 +138,95 @@ class SettingsScreen extends ConsumerWidget {
       value: settings.isDarkMode,
       onChanged: (value) {
         ref.read(settingsProvider.notifier).setDarkMode(value);
+      },
+    );
+  }
+
+  /// 学習リマインダーのON/OFFトグル
+  ///
+  /// ONにしたときだけ通知許可をリクエストする（拒否されたらOFFのまま）。
+  Widget _buildReminderToggle(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+  ) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return SwitchListTile(
+      secondary: const Icon(Icons.notifications_outlined),
+      title: Text(l10n.settingsReminderToggle),
+      subtitle: Text(l10n.settingsReminderDesc),
+      value: settings.reminderEnabled,
+      onChanged: (enabled) => _onReminderToggled(context, ref, settings, enabled),
+    );
+  }
+
+  Future<void> _onReminderToggled(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+    bool enabled,
+  ) async {
+    final l10n = AppLocalizations.of(context)!;
+    final service = NotificationService();
+    final notifier = ref.read(settingsProvider.notifier);
+
+    if (!enabled) {
+      await notifier.setReminderEnabled(false);
+      await service.cancelDailyReminder();
+      return;
+    }
+
+    final granted = await service.requestPermission();
+    if (!granted) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.notificationPermissionDenied)),
+        );
+      }
+      return;
+    }
+
+    await notifier.setReminderEnabled(true);
+    await service.scheduleDailyReminder(
+      hour: settings.reminderHour,
+      minute: settings.reminderMinute,
+      languageCode: settings.languageCode,
+    );
+  }
+
+  /// リマインダーの通知時刻タイル（タップでTimePicker）
+  Widget _buildReminderTimeTile(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+  ) {
+    final l10n = AppLocalizations.of(context)!;
+    final time = TimeOfDay(
+      hour: settings.reminderHour,
+      minute: settings.reminderMinute,
+    );
+
+    return ListTile(
+      leading: const Icon(Icons.schedule),
+      title: Text(l10n.settingsReminderTime),
+      trailing: Text(
+        time.format(context),
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+      ),
+      onTap: () async {
+        final picked = await showTimePicker(context: context, initialTime: time);
+        if (picked == null) return;
+
+        await ref
+            .read(settingsProvider.notifier)
+            .setReminderTime(picked.hour, picked.minute);
+        // 新しい時刻で再スケジュール（同じIDなので上書きされる）
+        await NotificationService().scheduleDailyReminder(
+          hour: picked.hour,
+          minute: picked.minute,
+          languageCode: settings.languageCode,
+        );
       },
     );
   }

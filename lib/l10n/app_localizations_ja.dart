@@ -111,6 +111,22 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsLanguageId => 'Bahasa Indonesia';
 
   @override
+  String get settingsReminder => '学習リマインダー';
+
+  @override
+  String get settingsReminderToggle => '毎日の学習リマインダー';
+
+  @override
+  String get settingsReminderDesc => '今日の3フレーズをお知らせします';
+
+  @override
+  String get settingsReminderTime => '通知時刻';
+
+  @override
+  String get notificationPermissionDenied =>
+      '通知が許可されていません。端末の「設定」アプリから通知を許可してください。';
+
+  @override
   String get settingsAppInfo => 'アプリ情報';
 
   @override

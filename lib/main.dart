@@ -6,6 +6,8 @@ import 'presentation/screens/home/home_screen.dart';
 import 'presentation/screens/phrases/phrase_scene_screen.dart';
 import 'presentation/screens/kanji/kanji_home_screen.dart';
 import 'presentation/screens/quiz/jlpt_home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'presentation/services/notification_service.dart';
 import 'presentation/services/tts_service.dart';
 import 'presentation/providers/navigation_provider.dart';
 import 'presentation/providers/settings_provider.dart';
@@ -49,6 +51,18 @@ void main() async {
   // 漢字データの同期（初回ロードと差分同期の両方を担う）
   final kanjiRepository = KanjiRepository();
   await kanjiRepository.syncDataIfNeeded();
+
+  // 学習リマインダーの再スケジュール
+  // （言語変更を通知文に反映し、スケジュールを健全に保つ）
+  final prefs = await SharedPreferences.getInstance();
+  if (prefs.getBool(SettingsNotifier.keyReminderEnabled) ?? false) {
+    await NotificationService().scheduleDailyReminder(
+      hour: prefs.getInt(SettingsNotifier.keyReminderHour) ?? 20,
+      minute: prefs.getInt(SettingsNotifier.keyReminderMinute) ?? 0,
+      languageCode:
+          prefs.getString(SettingsNotifier.keyLanguageCode) ?? 'id',
+    );
+  }
 
   runApp(
     const ProviderScope(

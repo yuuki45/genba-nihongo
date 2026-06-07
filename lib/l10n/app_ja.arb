@@ -171,6 +171,31 @@
     "description": "インドネシア語"
   },
 
+  "settingsReminder": "学習リマインダー",
+  "@settingsReminder": {
+    "description": "学習リマインダーセクション"
+  },
+
+  "settingsReminderToggle": "毎日の学習リマインダー",
+  "@settingsReminderToggle": {
+    "description": "リマインダーのON/OFFトグル"
+  },
+
+  "settingsReminderDesc": "今日の3フレーズをお知らせします",
+  "@settingsReminderDesc": {
+    "description": "リマインダートグルの説明"
+  },
+
+  "settingsReminderTime": "通知時刻",
+  "@settingsReminderTime": {
+    "description": "リマインダー時刻の設定タイル"
+  },
+
+  "notificationPermissionDenied": "通知が許可されていません。端末の「設定」アプリから通知を許可してください。",
+  "@notificationPermissionDenied": {
+    "description": "通知許可が拒否されたときのメッセージ"
+  },
+
   "settingsAppInfo": "アプリ情報",
   "@settingsAppInfo": {
     "description": "アプリ情報セクション"

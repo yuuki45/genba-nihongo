@@ -302,6 +302,36 @@ abstract class AppLocalizations {
   /// **'Bahasa Indonesia'**
   String get settingsLanguageId;
 
+  /// 学習リマインダーセクション
+  ///
+  /// In ja, this message translates to:
+  /// **'学習リマインダー'**
+  String get settingsReminder;
+
+  /// リマインダーのON/OFFトグル
+  ///
+  /// In ja, this message translates to:
+  /// **'毎日の学習リマインダー'**
+  String get settingsReminderToggle;
+
+  /// リマインダートグルの説明
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の3フレーズをお知らせします'**
+  String get settingsReminderDesc;
+
+  /// リマインダー時刻の設定タイル
+  ///
+  /// In ja, this message translates to:
+  /// **'通知時刻'**
+  String get settingsReminderTime;
+
+  /// 通知許可が拒否されたときのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'通知が許可されていません。端末の「設定」アプリから通知を許可してください。'**
+  String get notificationPermissionDenied;
+
   /// アプリ情報セクション
   ///
   /// In ja, this message translates to:

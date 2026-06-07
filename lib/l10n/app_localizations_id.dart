@@ -112,6 +112,22 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsLanguageId => 'Bahasa Indonesia';
 
   @override
+  String get settingsReminder => 'Pengingat Belajar';
+
+  @override
+  String get settingsReminderToggle => 'Pengingat belajar harian';
+
+  @override
+  String get settingsReminderDesc => 'Memberi tahu 3 frasa hari ini';
+
+  @override
+  String get settingsReminderTime => 'Waktu notifikasi';
+
+  @override
+  String get notificationPermissionDenied =>
+      'Notifikasi tidak diizinkan. Silakan izinkan notifikasi dari aplikasi Pengaturan perangkat Anda.';
+
+  @override
   String get settingsAppInfo => 'Informasi Aplikasi';
 
   @override

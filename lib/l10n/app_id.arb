@@ -171,6 +171,31 @@
     "description": "Bahasa Indonesia"
   },
 
+  "settingsReminder": "Pengingat Belajar",
+  "@settingsReminder": {
+    "description": "Bagian pengingat belajar"
+  },
+
+  "settingsReminderToggle": "Pengingat belajar harian",
+  "@settingsReminderToggle": {
+    "description": "Sakelar pengingat ON/OFF"
+  },
+
+  "settingsReminderDesc": "Memberi tahu 3 frasa hari ini",
+  "@settingsReminderDesc": {
+    "description": "Deskripsi sakelar pengingat"
+  },
+
+  "settingsReminderTime": "Waktu notifikasi",
+  "@settingsReminderTime": {
+    "description": "Pengaturan waktu pengingat"
+  },
+
+  "notificationPermissionDenied": "Notifikasi tidak diizinkan. Silakan izinkan notifikasi dari aplikasi Pengaturan perangkat Anda.",
+  "@notificationPermissionDenied": {
+    "description": "Pesan saat izin notifikasi ditolak"
+  },
+
   "settingsAppInfo": "Informasi Aplikasi",
   "@settingsAppInfo": {
     "description": "Bagian informasi aplikasi"
