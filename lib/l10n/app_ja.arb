@@ -431,6 +431,11 @@
     "description": "構成漢字がタップできることのヒント"
   },
 
+  "kanjiSwipeHint": "スワイプで次のカードへ",
+  "@kanjiSwipeHint": {
+    "description": "漢字カードのスワイプ操作ヒント"
+  },
+
   "kanjiDictLockedTitle": "漢字辞書パックで解放される機能",
   "@kanjiDictLockedTitle": {
     "description": "未購入時の辞書機能紹介タイトル"

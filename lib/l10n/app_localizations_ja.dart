@@ -265,6 +265,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get kanjiDictTapHint => 'タップで読み方・意味を表示';
 
   @override
+  String get kanjiSwipeHint => 'スワイプで次のカードへ';
+
+  @override
   String get kanjiDictLockedTitle => '漢字辞書パックで解放される機能';
 
   @override

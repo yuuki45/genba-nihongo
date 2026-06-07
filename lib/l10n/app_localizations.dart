@@ -602,6 +602,12 @@ abstract class AppLocalizations {
   /// **'タップで読み方・意味を表示'**
   String get kanjiDictTapHint;
 
+  /// 漢字カードのスワイプ操作ヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプで次のカードへ'**
+  String get kanjiSwipeHint;
+
   /// 未購入時の辞書機能紹介タイトル
   ///
   /// In ja, this message translates to:

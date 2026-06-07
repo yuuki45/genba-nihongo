@@ -272,6 +272,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get kanjiDictTapHint => 'Ketuk untuk melihat cara baca & arti';
 
   @override
+  String get kanjiSwipeHint => 'Geser untuk kartu berikutnya';
+
+  @override
   String get kanjiDictLockedTitle =>
       'Fitur yang terbuka dengan Paket Kamus Kanji';
 

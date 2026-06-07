@@ -431,6 +431,11 @@
     "description": "Petunjuk bahwa kanji penyusun dapat diketuk"
   },
 
+  "kanjiSwipeHint": "Geser untuk kartu berikutnya",
+  "@kanjiSwipeHint": {
+    "description": "Petunjuk operasi geser pada kartu kanji"
+  },
+
   "kanjiDictLockedTitle": "Fitur yang terbuka dengan Paket Kamus Kanji",
   "@kanjiDictLockedTitle": {
     "description": "Judul promosi fitur kamus saat belum dibeli"
