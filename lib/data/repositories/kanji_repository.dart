@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import '../models/kanji_character.dart';
 import '../models/kanji_word.dart';
 import '../datasources/local/database_helper.dart';
 
@@ -34,6 +35,14 @@ class KanjiRepository {
       for (var kanjiWordJson in kanjiWordsJson) {
         final kanjiWord = KanjiWord.fromJson(kanjiWordJson);
         await _dbHelper.upsertKanjiWord(kanjiWord.toMap());
+      }
+
+      // 単漢字辞書を同期（漢字辞書パック）
+      final List<dynamic> charactersJson =
+          jsonData['kanji_characters'] as List<dynamic>? ?? [];
+      for (var characterJson in charactersJson) {
+        final character = KanjiCharacter.fromJson(characterJson);
+        await _dbHelper.upsertKanjiCharacter(character.toMap());
       }
 
       await _dbHelper.saveSetting(_dataVersionKey, jsonVersion.toString());
@@ -71,6 +80,12 @@ class KanjiRepository {
   Future<List<KanjiWord>> searchKanjiWords(String query) async {
     final maps = await _dbHelper.searchKanjiWords(query);
     return maps.map((map) => KanjiWord.fromMap(map)).toList();
+  }
+
+  /// すべての単漢字エントリを取得（漢字辞書パック）
+  Future<List<KanjiCharacter>> getAllKanjiCharacters() async {
+    final maps = await _dbHelper.getAllKanjiCharacters();
+    return maps.map((map) => KanjiCharacter.fromMap(map)).toList();
   }
 
   /// 苦手漢字を取得

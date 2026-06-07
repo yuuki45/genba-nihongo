@@ -386,6 +386,51 @@
     "description": "ホームのJLPT演習問題ブロック説明"
   },
 
+  "kanjiDictTitle": "漢字辞書",
+  "@kanjiDictTitle": {
+    "description": "漢字辞書画面のタイトル"
+  },
+
+  "kanjiDictMenuDesc": "収録語と漢字をまとめて引ける",
+  "@kanjiDictMenuDesc": {
+    "description": "漢字ハブの辞書メニュー説明"
+  },
+
+  "kanjiDictSearchHint": "語・読み・意味で検索",
+  "@kanjiDictSearchHint": {
+    "description": "漢字辞書の検索ヒント"
+  },
+
+  "kanjiDictSortReading": "あいうえお順",
+  "@kanjiDictSortReading": {
+    "description": "漢字辞書の並び順: 読み順"
+  },
+
+  "kanjiDictSortCategory": "カテゴリ順",
+  "@kanjiDictSortCategory": {
+    "description": "漢字辞書の並び順: カテゴリ順"
+  },
+
+  "kanjiDictChars": "構成漢字",
+  "@kanjiDictChars": {
+    "description": "語詳細の構成漢字セクション"
+  },
+
+  "kanjiDictOnYomi": "音読み",
+  "@kanjiDictOnYomi": {
+    "description": "単漢字詳細の音読みラベル"
+  },
+
+  "kanjiDictKunYomi": "訓読み",
+  "@kanjiDictKunYomi": {
+    "description": "単漢字詳細の訓読みラベル"
+  },
+
+  "kanjiDictRelated": "この漢字を使う語",
+  "@kanjiDictRelated": {
+    "description": "単漢字詳細の逆引きセクション"
+  },
+
   "kanjiCategoryQuizSection": "カテゴリー別クイズ",
   "@kanjiCategoryQuizSection": {
     "description": "漢字ハブのカテゴリー別クイズセクション見出し"

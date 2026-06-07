@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../data/models/kanji_character.dart';
 import '../../data/models/kanji_word.dart';
 import '../../data/repositories/kanji_repository.dart';
 import 'phrase_provider.dart' show searchQueryProvider;
@@ -16,6 +17,14 @@ final allKanjiWordsProvider = FutureProvider<List<KanjiWord>>((ref) async {
   ref.keepAlive();
   final repository = ref.watch(kanjiRepositoryProvider);
   return await repository.getAllKanjiWords();
+});
+
+/// すべての単漢字エントリを取得するProvider（漢字辞書パック）
+final allKanjiCharactersProvider =
+    FutureProvider<List<KanjiCharacter>>((ref) async {
+  ref.keepAlive();
+  final repository = ref.watch(kanjiRepositoryProvider);
+  return await repository.getAllKanjiCharacters();
 });
 
 /// 選択中の漢字カテゴリキーを管理するProvider（nullは「すべて」）

@@ -548,6 +548,60 @@ abstract class AppLocalizations {
   /// **'N3・N2の文法・語彙・漢字読み'**
   String get homeJlptBlockDesc;
 
+  /// 漢字辞書画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字辞書'**
+  String get kanjiDictTitle;
+
+  /// 漢字ハブの辞書メニュー説明
+  ///
+  /// In ja, this message translates to:
+  /// **'収録語と漢字をまとめて引ける'**
+  String get kanjiDictMenuDesc;
+
+  /// 漢字辞書の検索ヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'語・読み・意味で検索'**
+  String get kanjiDictSearchHint;
+
+  /// 漢字辞書の並び順: 読み順
+  ///
+  /// In ja, this message translates to:
+  /// **'あいうえお順'**
+  String get kanjiDictSortReading;
+
+  /// 漢字辞書の並び順: カテゴリ順
+  ///
+  /// In ja, this message translates to:
+  /// **'カテゴリ順'**
+  String get kanjiDictSortCategory;
+
+  /// 語詳細の構成漢字セクション
+  ///
+  /// In ja, this message translates to:
+  /// **'構成漢字'**
+  String get kanjiDictChars;
+
+  /// 単漢字詳細の音読みラベル
+  ///
+  /// In ja, this message translates to:
+  /// **'音読み'**
+  String get kanjiDictOnYomi;
+
+  /// 単漢字詳細の訓読みラベル
+  ///
+  /// In ja, this message translates to:
+  /// **'訓読み'**
+  String get kanjiDictKunYomi;
+
+  /// 単漢字詳細の逆引きセクション
+  ///
+  /// In ja, this message translates to:
+  /// **'この漢字を使う語'**
+  String get kanjiDictRelated;
+
   /// 漢字ハブのカテゴリー別クイズセクション見出し
   ///
   /// In ja, this message translates to:

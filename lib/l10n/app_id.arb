@@ -386,6 +386,51 @@
     "description": "Deskripsi blok latihan soal JLPT di beranda"
   },
 
+  "kanjiDictTitle": "Kamus Kanji",
+  "@kanjiDictTitle": {
+    "description": "Judul layar kamus kanji"
+  },
+
+  "kanjiDictMenuDesc": "Cari semua kata dan kanji di satu tempat",
+  "@kanjiDictMenuDesc": {
+    "description": "Deskripsi menu kamus di hub kanji"
+  },
+
+  "kanjiDictSearchHint": "Cari kata, cara baca, atau arti",
+  "@kanjiDictSearchHint": {
+    "description": "Petunjuk pencarian kamus kanji"
+  },
+
+  "kanjiDictSortReading": "Urutan a-i-u-e-o",
+  "@kanjiDictSortReading": {
+    "description": "Urutan kamus kanji: berdasarkan bacaan"
+  },
+
+  "kanjiDictSortCategory": "Per kategori",
+  "@kanjiDictSortCategory": {
+    "description": "Urutan kamus kanji: berdasarkan kategori"
+  },
+
+  "kanjiDictChars": "Kanji penyusun",
+  "@kanjiDictChars": {
+    "description": "Bagian kanji penyusun pada detail kata"
+  },
+
+  "kanjiDictOnYomi": "On'yomi",
+  "@kanjiDictOnYomi": {
+    "description": "Label on'yomi pada detail kanji"
+  },
+
+  "kanjiDictKunYomi": "Kun'yomi",
+  "@kanjiDictKunYomi": {
+    "description": "Label kun'yomi pada detail kanji"
+  },
+
+  "kanjiDictRelated": "Kata dengan kanji ini",
+  "@kanjiDictRelated": {
+    "description": "Bagian kata terkait pada detail kanji"
+  },
+
   "kanjiCategoryQuizSection": "Kuis per Kategori",
   "@kanjiCategoryQuizSection": {
     "description": "Judul bagian kuis per kategori di hub kanji"

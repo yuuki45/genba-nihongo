@@ -6,6 +6,7 @@ import '../../theme/app_theme.dart';
 import '../../../data/models/kanji_word.dart';
 import '../../../l10n/app_localizations.dart';
 import 'kanji_card_screen.dart';
+import 'kanji_dictionary_screen.dart';
 import 'kanji_quiz_screen.dart';
 
 /// 現場の漢字 メニュー画面
@@ -65,6 +66,16 @@ class KanjiHomeScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 16),
+
+          // 漢字辞書（インデックスは無料・単漢字詳細は辞書パック）
+          _buildMenuTile(
+            context,
+            icon: Icons.auto_stories,
+            color: Colors.indigo,
+            title: l10n.kanjiDictTitle,
+            description: l10n.kanjiDictMenuDesc,
+            onTap: () => _push(context, const KanjiDictionaryScreen()),
+          ),
 
           // 漢字カード学習
           _buildMenuTile(

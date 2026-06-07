@@ -238,6 +238,33 @@ class AppLocalizationsJa extends AppLocalizations {
   String get homeJlptBlockDesc => 'N3・N2の文法・語彙・漢字読み';
 
   @override
+  String get kanjiDictTitle => '漢字辞書';
+
+  @override
+  String get kanjiDictMenuDesc => '収録語と漢字をまとめて引ける';
+
+  @override
+  String get kanjiDictSearchHint => '語・読み・意味で検索';
+
+  @override
+  String get kanjiDictSortReading => 'あいうえお順';
+
+  @override
+  String get kanjiDictSortCategory => 'カテゴリ順';
+
+  @override
+  String get kanjiDictChars => '構成漢字';
+
+  @override
+  String get kanjiDictOnYomi => '音読み';
+
+  @override
+  String get kanjiDictKunYomi => '訓読み';
+
+  @override
+  String get kanjiDictRelated => 'この漢字を使う語';
+
+  @override
   String get kanjiCategoryQuizSection => 'カテゴリー別クイズ';
 
   @override

@@ -245,6 +245,33 @@ class AppLocalizationsId extends AppLocalizations {
       'Tata bahasa, kosakata, dan bacaan kanji N3/N2';
 
   @override
+  String get kanjiDictTitle => 'Kamus Kanji';
+
+  @override
+  String get kanjiDictMenuDesc => 'Cari semua kata dan kanji di satu tempat';
+
+  @override
+  String get kanjiDictSearchHint => 'Cari kata, cara baca, atau arti';
+
+  @override
+  String get kanjiDictSortReading => 'Urutan a-i-u-e-o';
+
+  @override
+  String get kanjiDictSortCategory => 'Per kategori';
+
+  @override
+  String get kanjiDictChars => 'Kanji penyusun';
+
+  @override
+  String get kanjiDictOnYomi => 'On\'yomi';
+
+  @override
+  String get kanjiDictKunYomi => 'Kun\'yomi';
+
+  @override
+  String get kanjiDictRelated => 'Kata dengan kanji ini';
+
+  @override
   String get kanjiCategoryQuizSection => 'Kuis per Kategori';
 
   @override

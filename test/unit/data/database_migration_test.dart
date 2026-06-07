@@ -143,6 +143,22 @@ void main() {
       contains('pack_id'),
     );
 
+    // v7: 単漢字辞書テーブルが作成され、upsertできる
+    await helper.upsertKanjiCharacter({
+      'id': 1,
+      'character': '険',
+      'on_readings': 'ケン',
+      'kun_readings': 'けわしい',
+      'meaning_id': 'berbahaya; terjal',
+      'jlpt_level': 'N3',
+      'pack_id': 'kanji_dict',
+      'created_at': '2026-06-07T00:00:00.000Z',
+      'updated_at': '2026-06-07T00:00:00.000Z',
+    });
+    final kanjiChars = await helper.getAllKanjiCharacters();
+    expect(kanjiChars, hasLength(1));
+    expect(kanjiChars.first['character'], '険');
+
     // purchasesテーブルが作成され、リポジトリ経由で使える
     final repository = PurchaseRepository(dbHelper: helper);
     expect(await repository.getUnlockedPackIds(), isEmpty);

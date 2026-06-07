@@ -50,10 +50,20 @@ class ProductCatalog {
     icon: '🤲',
   );
 
+  /// 漢字辞書パック（単漢字の音訓読み・意味・逆引き）
+  static const ContentPack kanjiDictPack = ContentPack(
+    productId: 'com.genba.nihongo.pack.kanji_dict',
+    packId: 'kanji_dict',
+    fallbackNameJa: '漢字辞書パック',
+    fallbackNameId: 'Paket Kamus Kanji',
+    icon: '📖',
+  );
+
   /// 販売中の全パック（フェーズ2以降で追加していく）
   static const List<ContentPack> all = [
     jlptPack,
     kaigoPack,
+    kanjiDictPack,
   ];
 
   /// 全商品IDの集合（ストアへの問い合わせに使用）

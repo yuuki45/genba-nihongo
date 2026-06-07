@@ -23,7 +23,7 @@ class DatabaseHelper {
 
     return await openDatabase(
       path,
-      version: 6,
+      version: 7,
       onCreate: _createDB,
       onUpgrade: _upgradeDB,
     );
@@ -120,7 +120,25 @@ class DatabaseHelper {
 
     // 購入テーブル
     await db.execute(_createPurchasesTableSql);
+
+    // 単漢字辞書テーブル
+    await db.execute(_createKanjiCharactersTableSql);
   }
+
+  /// 単漢字辞書テーブルの作成SQL（漢字辞書パック）
+  static const String _createKanjiCharactersTableSql = '''
+    CREATE TABLE kanji_characters (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      character TEXT NOT NULL UNIQUE,
+      on_readings TEXT NOT NULL,
+      kun_readings TEXT NOT NULL,
+      meaning_id TEXT NOT NULL,
+      jlpt_level TEXT,
+      pack_id TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    )
+  ''';
 
   /// 購入テーブルの作成SQL
   ///
@@ -220,6 +238,11 @@ class DatabaseHelper {
       await db.execute('ALTER TABLE phrases ADD COLUMN pack_id TEXT');
       await db.execute('ALTER TABLE quizzes ADD COLUMN pack_id TEXT');
       await db.execute(_createPurchasesTableSql);
+    }
+
+    if (oldVersion < 7) {
+      // バージョン6から7へのアップグレード: 単漢字辞書テーブルを追加
+      await db.execute(_createKanjiCharactersTableSql);
     }
   }
 
@@ -501,6 +524,24 @@ class DatabaseHelper {
       where: 'word LIKE ? OR reading LIKE ? OR romaji LIKE ? OR indonesian LIKE ?',
       whereArgs: ['%$query%', '%$query%', '%$query%', '%$query%'],
     );
+  }
+
+  // ==================== Kanji Characters ====================
+
+  /// 単漢字エントリを挿入または更新（同一IDがあれば置き換え）
+  Future<int> upsertKanjiCharacter(Map<String, dynamic> character) async {
+    final db = await database;
+    return await db.insert(
+      'kanji_characters',
+      character,
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  /// すべての単漢字エントリを取得
+  Future<List<Map<String, dynamic>>> getAllKanjiCharacters() async {
+    final db = await database;
+    return await db.query('kanji_characters');
   }
 
   // ==================== Kanji Favorites ====================
