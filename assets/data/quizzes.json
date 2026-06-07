@@ -1,5 +1,5 @@
 {
-  "data_version": 5,
+  "data_version": 6,
   "quizzes": [
     {
       "id": 1,
@@ -15,7 +15,13 @@
       "explanation": "正解は「壊れない」。「〜ないように」は「〜が起こらないために」という意味です。",
       "explanation_id": "Jawaban yang benar adalah '壊れない'. 「〜ないように」berarti 'agar tidak terjadi ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kowarenai",
+        "kowareru",
+        "kowashita",
+        "kowashite"
+      ]
     },
     {
       "id": 2,
@@ -31,7 +37,13 @@
       "explanation": "正解は「のに」。「〜のに」は予想と違う結果を表します。",
       "explanation_id": "Jawaban yang benar adalah 'のに'. 「〜のに」menunjukkan hasil yang berbeda dari perkiraan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kara",
+        "shi",
+        "noni",
+        "node"
+      ]
     },
     {
       "id": 3,
@@ -47,7 +59,13 @@
       "explanation": "正解は「始める」。「〜する前に」は動詞の辞書形を使います。",
       "explanation_id": "Jawaban yang benar adalah '始める'. 「〜する前に」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hajimeru",
+        "hajimeta",
+        "hajimete",
+        "hajimeteiru"
+      ]
     },
     {
       "id": 4,
@@ -63,7 +81,13 @@
       "explanation": "正解は「運ぶ」。「〜するとき」は動詞の辞書形を使います。",
       "explanation_id": "Jawaban yang benar adalah '運ぶ'. 「〜するとき」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hakobu",
+        "hakonda",
+        "hakonde",
+        "hakobanai"
+      ]
     },
     {
       "id": 5,
@@ -79,7 +103,13 @@
       "explanation": "正解は「見つけた」。「〜たら」は動詞のた形を使います。",
       "explanation_id": "Jawaban yang benar adalah '見つけた'. 「〜たら」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "mitsuketa",
+        "mitsukeru",
+        "mitsukete",
+        "mitsukenai"
+      ]
     },
     {
       "id": 6,
@@ -95,7 +125,13 @@
       "explanation": "正解は「そう」。様態の「〜そうだ」はます形（落ち）に接続します。「よう・らしい・みたい」はこの形には接続できません。",
       "explanation_id": "Jawaban yang benar adalah 'そう'. 「〜そうだ」(penampilan) tersambung ke masu-stem (落ち). Pilihan lain tidak bisa tersambung ke bentuk ini.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "rashii",
+        "mitai",
+        "sou",
+        "you"
+      ]
     },
     {
       "id": 7,
@@ -111,7 +147,13 @@
       "explanation": "正解は「使い」。「〜やすい」は動詞のます形の語幹に接続します。",
       "explanation_id": "Jawaban yang benar adalah '使い'. 「〜やすい」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tsukai",
+        "tsukau",
+        "tsukatte",
+        "tsukatta"
+      ]
     },
     {
       "id": 8,
@@ -127,7 +169,13 @@
       "explanation": "正解は「かぶって」。「〜ていてください」は継続的な状態を保つことを依頼する表現です。",
       "explanation_id": "Jawaban yang benar adalah 'かぶって'. 「〜ていてください」adalah ungkapan untuk meminta menjaga keadaan yang berkelanjutan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kabutte",
+        "kaburu",
+        "kabutta",
+        "kaburi"
+      ]
     },
     {
       "id": 9,
@@ -143,7 +191,13 @@
       "explanation": "正解は「ばかり」。「〜たばかり」は動作の直後を表します。",
       "explanation_id": "Jawaban yang benar adalah 'ばかり'. 「〜たばかり」menunjukkan baru saja selesai melakukan sesuatu.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "uchi",
+        "made",
+        "hodo",
+        "bakari"
+      ]
     },
     {
       "id": 10,
@@ -159,7 +213,13 @@
       "explanation": "正解は「締め」。「〜すぎる」は動詞のます形の語幹に接続します。",
       "explanation_id": "Jawaban yang benar adalah '締め'. 「〜すぎる」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shime",
+        "shimeru",
+        "shimete",
+        "shimeta"
+      ]
     },
     {
       "id": 11,
@@ -175,7 +235,13 @@
       "explanation": "正解は「たら」。「終わったら」の形になります。「ば・と・なら」はこの形（終わっ＋）には接続できません。",
       "explanation_id": "Jawaban yang benar adalah 'たら'. Bentuknya menjadi「終わったら」. Pilihan lain tidak bisa tersambung ke bentuk「終わっ」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "nara",
+        "tara",
+        "ba",
+        "to"
+      ]
     },
     {
       "id": 12,
@@ -191,7 +257,13 @@
       "explanation": "正解は「組み立て」。「組み立てる」は部品を合わせて作ることです。",
       "explanation_id": "Jawaban yang benar adalah '組み立て'. 「組み立てる」berarti merakit dari beberapa bagian.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kumitate",
+        "oritatami",
+        "harikae",
+        "nurikae"
+      ]
     },
     {
       "id": 13,
@@ -207,7 +279,13 @@
       "explanation": "正解は「測り」。「測る」は長さや大きさをはかることです。",
       "explanation_id": "Jawaban yang benar adalah '測り'. 「測る」berarti mengukur panjang atau ukuran.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kazoe",
+        "kurabe",
+        "maze",
+        "hakari"
+      ]
     },
     {
       "id": 14,
@@ -223,7 +301,13 @@
       "explanation": "正解は「交換」。「交換」は物を取り替えることです。「交代」は人が入れ替わることです。",
       "explanation_id": "Jawaban yang benar adalah '交換'. 「交換」berarti menukar barang. 「交代」dipakai untuk pergantian orang.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "henkan",
+        "kouryuu",
+        "koukan",
+        "koutai"
+      ]
     },
     {
       "id": 15,
@@ -239,7 +323,13 @@
       "explanation": "正解は「取り付け」。「取り付ける」は設置・装着することです。",
       "explanation_id": "Jawaban yang benar adalah '取り付け'. 「取り付ける」berarti memasang.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "toriage",
+        "toritsuke",
+        "toridashi",
+        "torikeshi"
+      ]
     },
     {
       "id": 16,
@@ -255,7 +345,13 @@
       "explanation": "正解は「して」。「故障している」は機械が壊れている状態を表します。",
       "explanation_id": "Jawaban yang benar adalah 'して'. 'Koshou shite iru' menunjukkan keadaan mesin yang rusak.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shite",
+        "sarete",
+        "suru",
+        "shita"
+      ]
     },
     {
       "id": 17,
@@ -271,7 +367,13 @@
       "explanation": "正解は「完成させ」。「〜なければなりません」の前は動詞の未然形を使います。",
       "explanation_id": "Jawaban yang benar adalah '完成させ'. Sebelum 「〜なければなりません」menggunakan bentuk mizenkei dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kansei suru",
+        "kansei sase",
+        "kansei shi",
+        "kansei"
+      ]
     },
     {
       "id": 18,
@@ -287,7 +389,13 @@
       "explanation": "正解は「並べ」。「並べる」は順序よく置くことです。",
       "explanation_id": "Jawaban yang benar adalah '並べ'. 「並べる」berarti menyusun dengan teratur.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kazoe",
+        "tsubushi",
+        "narabe",
+        "maze"
+      ]
     },
     {
       "id": 19,
@@ -303,7 +411,13 @@
       "explanation": "正解は「発見して」。「〜たら」の前は動詞のた形を使います。",
       "explanation_id": "Jawaban yang benar adalah '発見して'. Sebelum 「〜たら」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hakken shita",
+        "hakken suru",
+        "hakken shite",
+        "hakken shinai"
+      ]
     },
     {
       "id": 20,
@@ -319,7 +433,13 @@
       "explanation": "正解は「だから」。「〜だから」は理由を表します。",
       "explanation_id": "Jawaban yang benar adalah 'だから'. 「〜だから」menunjukkan alasan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "dakara",
+        "nanoni",
+        "keredomo",
+        "noni"
+      ]
     },
     {
       "id": 21,
@@ -335,7 +455,13 @@
       "explanation": "正解は「汚れ」。「汚れ」はよごれのことです。",
       "explanation_id": "Jawaban yang benar adalah '汚れ'. 「汚れ」berarti kotoran.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "oto",
+        "aji",
+        "nedan",
+        "yogore"
+      ]
     },
     {
       "id": 22,
@@ -351,7 +477,13 @@
       "explanation": "正解は「履かない」。「〜ないまま」は「〜しない状態で」という意味です。",
       "explanation_id": "Jawaban yang benar adalah '履かない'. 「〜ないまま」berarti 'dalam keadaan tidak ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hakanai",
+        "haite",
+        "haku",
+        "haita"
+      ]
     },
     {
       "id": 23,
@@ -367,7 +499,13 @@
       "explanation": "正解は「壊れない」。「〜ないように」は否定の目的を表します。",
       "explanation_id": "Jawaban yang benar adalah '壊れない'. 「〜ないように」menunjukkan tujuan negatif.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kowarenai",
+        "kowareta",
+        "kowasu",
+        "kowashite"
+      ]
     },
     {
       "id": 24,
@@ -383,7 +521,13 @@
       "explanation": "正解は「拭い」。「拭く」は布などでよごれを取ることです。「ぞうきんで」とあるので「拭く」を選びます。",
       "explanation_id": "Jawaban yang benar adalah '拭い'. 「拭く」berarti mengelap dengan kain. Karena ada kata \"kain lap\", pilih「拭く」.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "fui",
+        "hai",
+        "migai",
+        "arai"
+      ]
     },
     {
       "id": 25,
@@ -399,7 +543,13 @@
       "explanation": "正解は「が」。「簡単だが」の形で逆接を表します。「のに・ので」は「簡単なのに・簡単なので」の形になるため「だ」には接続できません。",
       "explanation_id": "Jawaban yang benar adalah 'が'. 「簡単だが」menunjukkan pertentangan. 「のに・ので」harus berbentuk「簡単なのに・簡単なので」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "noni",
+        "node",
+        "kara",
+        "ga"
+      ]
     },
     {
       "id": 26,
@@ -415,7 +565,13 @@
       "explanation": "正解は「包み」。「包む」は紙や布で覆うことです。",
       "explanation_id": "Jawaban yang benar adalah '包み'. 「包む」berarti membungkus.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kake",
+        "shiki",
+        "tsutsumi",
+        "tsumi"
+      ]
     },
     {
       "id": 27,
@@ -431,7 +587,13 @@
       "explanation": "正解は「けれども」。「〜けれども」は逆接（〜だが）を表します。",
       "explanation_id": "Jawaban yang benar adalah 'けれども'. 「〜けれども」menunjukkan pertentangan (tetapi).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shi",
+        "keredomo",
+        "node",
+        "kara"
+      ]
     },
     {
       "id": 28,
@@ -447,7 +609,13 @@
       "explanation": "正解は「ところ」。「〜たところ」は動作の直後を表します。「たった今」とよく一緒に使います。",
       "explanation_id": "Jawaban yang benar adalah 'ところ'. 「〜たところ」menunjukkan tepat setelah melakukan sesuatu, sering dipakai dengan「たった今」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tokoro",
+        "koto",
+        "mono",
+        "uchi"
+      ]
     },
     {
       "id": 29,
@@ -463,7 +631,13 @@
       "explanation": "正解は「持ち上げ」。「持ち上げる」は上に持つことです。",
       "explanation_id": "Jawaban yang benar adalah '持ち上げ'. 「持ち上げる」berarti mengangkat.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "miage",
+        "yomiage",
+        "migakiage",
+        "mochiage"
+      ]
     },
     {
       "id": 30,
@@ -479,7 +653,13 @@
       "explanation": "正解は「使った」。「〜た後で」は動詞のた形を使います。",
       "explanation_id": "Jawaban yang benar adalah '使った'. 「〜た後で」menggunakan bentuk ta dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tsukau",
+        "tsukatta",
+        "tsukatte",
+        "tsukatteiru"
+      ]
     },
     {
       "id": 31,
@@ -495,7 +675,13 @@
       "explanation": "正解は「やり」。「〜にくい」は動詞のます形の語幹に接続します。",
       "explanation_id": "Jawaban yang benar adalah 'やり'. 「〜にくい」terhubung ke stem dari bentuk masu kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "yari",
+        "yaru",
+        "yatte",
+        "yatta"
+      ]
     },
     {
       "id": 32,
@@ -511,7 +697,13 @@
       "explanation": "正解は「に」。「〜になっています」は状態を表します。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜になっています」menunjukkan keadaan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ni",
+        "de",
+        "ga",
+        "o"
+      ]
     },
     {
       "id": 33,
@@ -527,7 +719,13 @@
       "explanation": "正解は「上げる」。「〜ために」の前は動詞の辞書形を使います。",
       "explanation_id": "Jawaban yang benar adalah '上げる'. Sebelum 「〜ために」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ageru",
+        "agaru",
+        "agete",
+        "agatte"
+      ]
     },
     {
       "id": 34,
@@ -543,7 +741,13 @@
       "explanation": "正解は「ずれて」。「ずれる」は正しい位置から動いてしまうことです。",
       "explanation_id": "Jawaban yang benar adalah 'ずれて'. 「ずれる」berarti bergeser dari posisi yang benar.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "nurete",
+        "yaburete",
+        "zurete",
+        "koborete"
+      ]
     },
     {
       "id": 35,
@@ -559,7 +763,13 @@
       "explanation": "正解は「戻して」。「〜ておく」はて形に接続します（戻しておく）。",
       "explanation_id": "Jawaban yang benar adalah '戻して'. 「〜ておく」tersambung ke bentuk te (戻しておく).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "modori",
+        "modoshite",
+        "modotta",
+        "modosu"
+      ]
     },
     {
       "id": 36,
@@ -575,7 +785,13 @@
       "explanation": "正解は「仕上げ」。「仕上げる」は最後まで完成させることです。",
       "explanation_id": "Jawaban yang benar adalah '仕上げ'. 「仕上げる」berarti menyelesaikan hingga akhir.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shiage",
+        "shiire",
+        "shiwake",
+        "shikake"
+      ]
     },
     {
       "id": 37,
@@ -591,7 +807,13 @@
       "explanation": "正解は「弱い」。「熱に弱い」は熱で壊れやすいという意味です。「火のそばに置かない」という文脈から判断します。",
       "explanation_id": "Jawaban yang benar adalah '弱い'. 「熱に弱い」berarti mudah rusak karena panas. Dilihat dari konteks (jangan dekat api).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tsuyoi",
+        "hikui",
+        "mijikai",
+        "yowai"
+      ]
     },
     {
       "id": 38,
@@ -607,7 +829,13 @@
       "explanation": "正解は「着て」。「〜てから」は動作の順序を表します。",
       "explanation_id": "Jawaban yang benar adalah '着て'. 「〜てから」menunjukkan urutan tindakan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kiru",
+        "kita",
+        "kite",
+        "kiteiru"
+      ]
     },
     {
       "id": 39,
@@ -623,7 +851,13 @@
       "explanation": "正解は「削っ」。「削る」は表面を少しずつ取り除くことです。",
       "explanation_id": "Jawaban yang benar adalah '削っ'. 「削る」berarti mengikis sedikit demi sedikit.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "nui",
+        "kezutsu",
+        "otsu",
+        "yabutsu"
+      ]
     },
     {
       "id": 40,
@@ -639,7 +873,13 @@
       "explanation": "正解は「と」。条件の「と」は辞書形に接続します（高すぎると）。「ば」は「高すぎれば」の形になります。",
       "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional tersambung ke bentuk kamus (高すぎると).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "to",
+        "ba",
+        "temo",
+        "made"
+      ]
     },
     {
       "id": 41,
@@ -655,7 +895,13 @@
       "explanation": "正解は「でき」。「〜ことができません」は不可能を表します。",
       "explanation_id": "Jawaban yang benar adalah 'でき'. 「〜ことができません」menunjukkan ketidakmungkinan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shi",
+        "nari",
+        "ike",
+        "deki"
+      ]
     },
     {
       "id": 42,
@@ -671,7 +917,13 @@
       "explanation": "正解は「余っ」。「余る」は必要より多くて残ることです。",
       "explanation_id": "Jawaban yang benar adalah '余っ'. 「余る」berarti tersisa karena lebih dari yang diperlukan.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "fue",
+        "koe",
+        "amatsu",
+        "hetsu"
+      ]
     },
     {
       "id": 43,
@@ -687,7 +939,13 @@
       "explanation": "正解は「なって」。「〜なってしまう」は望ましくない変化を表します。",
       "explanation_id": "Jawaban yang benar adalah 'なって'. 「〜なってしまう」menunjukkan perubahan yang tidak diinginkan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "te",
+        "natte",
+        "de",
+        "ni"
+      ]
     },
     {
       "id": 44,
@@ -703,7 +961,13 @@
       "explanation": "正解は「に」。「〜に合う」は「〜と一致する」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に合う」berarti 'sesuai dengan ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "ga",
+        "de"
+      ]
     },
     {
       "id": 45,
@@ -719,7 +983,13 @@
       "explanation": "正解は「混ぜ」。「混ぜる」はかき回して均一にすることです。",
       "explanation_id": "Jawaban yang benar adalah '混ぜ'. 「混ぜる」berarti mengaduk hingga rata.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ori",
+        "mage",
+        "yaburi",
+        "maze"
+      ]
     },
     {
       "id": 46,
@@ -735,7 +1005,13 @@
       "explanation": "正解は「あいだ」。「〜のあいだに」は期間の中のある時点を表します。",
       "explanation_id": "Jawaban yang benar adalah 'あいだ'. 「〜のあいだに」menunjukkan suatu titik dalam jangka waktu.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "nagara",
+        "hodo",
+        "aida",
+        "made"
+      ]
     },
     {
       "id": 47,
@@ -751,7 +1027,13 @@
       "explanation": "正解は「に」。「〜通りに」は「〜と同じように」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜通りに」berarti 'sesuai dengan ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ni",
+        "de",
+        "o",
+        "ga"
+      ]
     },
     {
       "id": 48,
@@ -767,7 +1049,13 @@
       "explanation": "正解は「隙間」。「隙間（すきま）」は物と物の間の細い空きのことです。",
       "explanation_id": "Jawaban yang benar adalah '隙間'. 「隙間」berarti celah sempit di antara benda.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "sukima",
+        "hyoumen",
+        "uragawa",
+        "kado"
+      ]
     },
     {
       "id": 49,
@@ -783,7 +1071,13 @@
       "explanation": "正解は「で」。「〜で」は方法や手段を表します。",
       "explanation_id": "Jawaban yang benar adalah 'で'. 「〜で」menunjukkan cara atau metode.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "de",
+        "ni",
+        "o",
+        "ga"
+      ]
     },
     {
       "id": 50,
@@ -799,7 +1093,13 @@
       "explanation": "正解は「な」。な形容詞の連体修飾には「な」を使います。",
       "explanation_id": "Jawaban yang benar adalah 'な'. Untuk memodifikasi kata benda dengan na-keiyoushi, gunakan 「な」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ni",
+        "na",
+        "no",
+        "de"
+      ]
     },
     {
       "id": 51,
@@ -815,7 +1115,13 @@
       "explanation": "正解は「当番」。「当番」は順番に担当する役のことです。",
       "explanation_id": "Jawaban yang benar adalah '当番'. 「当番」berarti giliran tugas.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kouban",
+        "touban",
+        "bangumi",
+        "banchi"
+      ]
     },
     {
       "id": 52,
@@ -831,7 +1137,13 @@
       "explanation": "正解は「に」。「〜になる」は時間の到達を表します。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜になる」menunjukkan waktu telah tiba.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ni",
+        "o",
+        "ga",
+        "de"
+      ]
     },
     {
       "id": 53,
@@ -847,7 +1159,13 @@
       "explanation": "正解は「に」。「〜に気づく」は「〜を認識する」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に気づく」berarti 'menyadari ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ni",
+        "o",
+        "ga",
+        "de"
+      ]
     },
     {
       "id": 54,
@@ -863,7 +1181,13 @@
       "explanation": "正解は「半分」。「半分」は二つに分けた一方のことです。",
       "explanation_id": "Jawaban yang benar adalah '半分'. 「半分」berarti setengah bagian.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hannichi",
+        "hantoshi",
+        "hanbun",
+        "hangaku"
+      ]
     },
     {
       "id": 55,
@@ -879,7 +1203,13 @@
       "explanation": "正解は「として」。「〜として」は資格・用途を表します。",
       "explanation_id": "Jawaban yang benar adalah 'として'. 「〜として」menunjukkan fungsi atau peran.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "toshi",
+        "toshite",
+        "toshita",
+        "tosuru"
+      ]
     },
     {
       "id": 56,
@@ -895,7 +1225,13 @@
       "explanation": "正解は「して」。「作動している」は動作中の状態を表します。",
       "explanation_id": "Jawaban yang benar adalah 'して'. 'Sadou shite iru' menunjukkan keadaan sedang beroperasi.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shite",
+        "suru",
+        "shita",
+        "sare"
+      ]
     },
     {
       "id": 57,
@@ -911,7 +1247,13 @@
       "explanation": "正解は「工夫」。「工夫」は良い方法を考えることです。",
       "explanation_id": "Jawaban yang benar adalah '工夫'. 「工夫」berarti memikirkan cara yang lebih baik.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kouji",
+        "koujou",
+        "kougyou",
+        "kufuu"
+      ]
     },
     {
       "id": 58,
@@ -927,7 +1269,13 @@
       "explanation": "正解は「起こった」。「〜た場合は」の形で使います。",
       "explanation_id": "Jawaban yang benar adalah '起こった'. Digunakan dalam bentuk「〜た場合は」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "okori",
+        "okorou",
+        "okotta",
+        "okotte"
+      ]
     },
     {
       "id": 59,
@@ -943,7 +1291,13 @@
       "explanation": "正解は「に」。動詞（換気する）を修飾するので「定期的に」になります。「定期的な」は名詞を修飾する形です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. Karena menerangkan kata kerja, bentuknya「定期的に」. 「定期的な」menerangkan kata benda.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "de",
+        "ni",
+        "na",
+        "no"
+      ]
     },
     {
       "id": 60,
@@ -959,7 +1313,13 @@
       "explanation": "正解は「丈夫」。「丈夫」は壊れにくいことです。",
       "explanation_id": "Jawaban yang benar adalah '丈夫'. 「丈夫」berarti kuat dan tidak mudah rusak.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "joubu",
+        "taihen",
+        "jouzu",
+        "juubun"
+      ]
     },
     {
       "id": 61,
@@ -975,7 +1335,13 @@
       "explanation": "正解は「を」。「〜をよく見る」は注意深く見ることを表します。",
       "explanation_id": "Jawaban yang benar adalah 'を'. 「〜をよく見る」berarti melihat dengan seksama.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "de",
+        "ga"
+      ]
     },
     {
       "id": 62,
@@ -991,7 +1357,13 @@
       "explanation": "正解は「には」。「〜には」は目的達成の条件を表します。",
       "explanation_id": "Jawaban yang benar adalah 'には'. 「〜には」menunjukkan kondisi untuk mencapai tujuan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tame",
+        "niha",
+        "noni",
+        "koto"
+      ]
     },
     {
       "id": 63,
@@ -1007,7 +1379,13 @@
       "explanation": "正解は「慌て」。「慌てる」は落ち着きをなくすことです。",
       "explanation_id": "Jawaban yang benar adalah '慌て'. 「慌てる」berarti panik.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "yogore",
+        "awate",
+        "tsukare",
+        "okure"
+      ]
     },
     {
       "id": 64,
@@ -1023,7 +1401,13 @@
       "explanation": "正解は「終わる」。「〜ように」の前は動詞の辞書形を使います。",
       "explanation_id": "Jawaban yang benar adalah '終わる'. Sebelum 「〜ように」menggunakan bentuk kamus dari kata kerja.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "owaru",
+        "owari",
+        "owatte",
+        "owatta"
+      ]
     },
     {
       "id": 65,
@@ -1039,7 +1423,13 @@
       "explanation": "正解は「なり」。見た様子からの判断（様態）なので、ます形（なり）＋そうです。「なるそうです」は人から聞いた話（伝聞）になります。",
       "explanation_id": "Jawaban yang benar adalah 'なり'. Karena penilaian dari yang terlihat, bentuknya masu-stem +そうです. 「なるそうです」berarti kabar dari orang lain.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "naru",
+        "natte",
+        "natta",
+        "nari"
+      ]
     },
     {
       "id": 66,
@@ -1055,7 +1445,13 @@
       "explanation": "正解は「間に合い」。「間に合う」は時間内にできることです。",
       "explanation_id": "Jawaban yang benar adalah '間に合い'. 「間に合う」berarti sempat dalam waktu yang ditentukan.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tsukiai",
+        "niai",
+        "maniai",
+        "deai"
+      ]
     },
     {
       "id": 67,
@@ -1071,7 +1467,13 @@
       "explanation": "正解は「に」。「〜に基づいて」は「〜を根拠にして」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に基づいて」berarti 'berdasarkan ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "de",
+        "ga"
+      ]
     },
     {
       "id": 68,
@@ -1087,7 +1489,13 @@
       "explanation": "正解は「てから」。「〜てから」は動作の順序を表します。",
       "explanation_id": "Jawaban yang benar adalah 'てから'. 「〜てから」menunjukkan urutan tindakan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tekara",
+        "takara",
+        "takotoga",
+        "tahouga"
+      ]
     },
     {
       "id": 69,
@@ -1103,7 +1511,13 @@
       "explanation": "正解は「揃っ」。「揃う」は全員・全部が集まることです。",
       "explanation_id": "Jawaban yang benar adalah '揃っ'. 「揃う」berarti semua sudah lengkap.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kasanatsu",
+        "mazatsu",
+        "tsunagatsu",
+        "sorotsu"
+      ]
     },
     {
       "id": 70,
@@ -1119,7 +1533,13 @@
       "explanation": "正解は「と」。条件の「と」は「守らないと」の形で使います。「ば」は「守らなければ」の形になります。",
       "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional dipakai dalam bentuk「守らないと」.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "temo",
+        "noni",
+        "to",
+        "ba"
+      ]
     },
     {
       "id": 71,
@@ -1135,7 +1555,13 @@
       "explanation": "正解は「品質が高い」。「〜ばかりか」の前は普通形を使います。",
       "explanation_id": "Jawaban yang benar adalah '品質が高い'. Sebelum 「〜ばかりか」menggunakan bentuk biasa.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hinshitsu ga takai",
+        "hinshitsu ga takaku",
+        "hinshitsu no takai",
+        "hinshitsu takai"
+      ]
     },
     {
       "id": 72,
@@ -1151,7 +1577,13 @@
       "explanation": "正解は「ため」。「ためる」は少しずつ集めて多くすることです。",
       "explanation_id": "Jawaban yang benar adalah 'ため'. 「ためる」berarti menumpuk sedikit demi sedikit.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tame",
+        "yame",
+        "tome",
+        "kime"
+      ]
     },
     {
       "id": 73,
@@ -1167,7 +1599,13 @@
       "explanation": "正解は「ために」。「〜ために」は目的を表します。",
       "explanation_id": "Jawaban yang benar adalah 'ために'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "youni",
+        "tameni",
+        "kotoni",
+        "hodoni"
+      ]
     },
     {
       "id": 74,
@@ -1183,7 +1621,13 @@
       "explanation": "正解は「され」。「ルールが発表される」は受身形です。主語が「ルール」なので「発表し」は使えません。",
       "explanation_id": "Jawaban yang benar adalah 'され'. 「ルールが発表される」adalah bentuk pasif. Karena subjeknya \"aturan\",「発表し」tidak bisa dipakai.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "sase",
+        "suru",
+        "sare",
+        "shi"
+      ]
     },
     {
       "id": 75,
@@ -1199,7 +1643,13 @@
       "explanation": "正解は「破れ」。「破れる」は紙や布が裂けることです。ガラスは「割れる」、棒は「折れる」を使います。",
       "explanation_id": "Jawaban yang benar adalah '破れ'. 「破れる」dipakai untuk kertas/kain yang robek. Kaca pakai「割れる」, batang pakai「折れる」.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "magatsu",
+        "yabure",
+        "ware",
+        "ore"
+      ]
     },
     {
       "id": 76,
@@ -1215,7 +1665,13 @@
       "explanation": "正解は「確認し」。「〜ながら」は同時進行を表します。",
       "explanation_id": "Jawaban yang benar adalah '確認し'. 「〜ながら」menunjukkan tindakan simultan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kakunin shi",
+        "kakunin suru",
+        "kakunin shite",
+        "kakunin shita"
+      ]
     },
     {
       "id": 77,
@@ -1231,7 +1687,13 @@
       "explanation": "正解は「高い」。「〜ば〜ほど」は比例関係を表します。",
       "explanation_id": "Jawaban yang benar adalah '高い'. 「〜ば〜ほど」menunjukkan hubungan proporsional.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "takai",
+        "takaku",
+        "takakereba",
+        "takakatta"
+      ]
     },
     {
       "id": 78,
@@ -1247,7 +1709,13 @@
       "explanation": "正解は「足り」。「足りる」は必要な量があることです。「足りない」で不足を表します。",
       "explanation_id": "Jawaban yang benar adalah '足り'. 「足りる」berarti cukup. 「足りない」berarti kurang.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "hera",
+        "tomara",
+        "tari",
+        "sugi"
+      ]
     },
     {
       "id": 79,
@@ -1263,7 +1731,13 @@
       "explanation": "正解は「に」。「〜に強い」は「〜に対して耐性がある」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に強い」berarti 'tahan terhadap ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "de",
+        "ga"
+      ]
     },
     {
       "id": 80,
@@ -1279,7 +1753,13 @@
       "explanation": "正解は「せざるを」。「〜せざるを得ない」は「仕方なく〜する」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'せざるを'. 「〜せざるを得ない」berarti 'terpaksa harus ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "sezu",
+        "sezaruo",
+        "shinai",
+        "shinakute"
+      ]
     },
     {
       "id": 81,
@@ -1295,7 +1775,13 @@
       "explanation": "正解は「預け」。「預ける」は保管を頼むことです。",
       "explanation_id": "Jawaban yang benar adalah '預け'. 「預ける」berarti menitipkan.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kari",
+        "kashi",
+        "kaeshi",
+        "azuke"
+      ]
     },
     {
       "id": 82,
@@ -1311,7 +1797,13 @@
       "explanation": "正解は「ご覧」。「ご覧になる」は「見る」の尊敬語です。「拝見する」は謙譲語なので、お客様の動作には使えません。",
       "explanation_id": "Jawaban yang benar adalah 'ご覧'. 「ご覧になる」adalah bentuk hormat dari「見る」. 「拝見する」adalah bentuk merendah, tidak dipakai untuk tindakan tamu.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ome",
+        "kengaku",
+        "goran",
+        "haiken"
+      ]
     },
     {
       "id": 83,
@@ -1327,7 +1819,13 @@
       "explanation": "正解は「し」。「〜しないよう」は否定の目的を表します。",
       "explanation_id": "Jawaban yang benar adalah 'し'. 「〜しないよう」menunjukkan tujuan negatif.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "suru",
+        "shi",
+        "shite",
+        "shita"
+      ]
     },
     {
       "id": 84,
@@ -1343,7 +1841,13 @@
       "explanation": "正解は「申し込み」。「申し込む」は参加などを正式に頼むことです。",
       "explanation_id": "Jawaban yang benar adalah '申し込み'. 「申し込む」berarti mendaftar secara resmi.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "moushikomi",
+        "kakikomi",
+        "uchikomi",
+        "omoikomi"
+      ]
     },
     {
       "id": 85,
@@ -1359,7 +1863,13 @@
       "explanation": "正解は「と」。条件の「と」は辞書形に接続します（間違えると）。",
       "explanation_id": "Jawaban yang benar adalah 'と'. 「と」kondisional tersambung ke bentuk kamus (間違えると).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ba",
+        "mama",
+        "hodo",
+        "to"
+      ]
     },
     {
       "id": 86,
@@ -1375,7 +1885,13 @@
       "explanation": "正解は「前に」。出荷の前に検査をします。意味から判断します。",
       "explanation_id": "Jawaban yang benar adalah '前に'. Inspeksi dilakukan sebelum pengiriman. Dilihat dari makna kalimat.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "made",
+        "mama",
+        "maeni",
+        "atode"
+      ]
     },
     {
       "id": 87,
@@ -1391,7 +1907,13 @@
       "explanation": "正解は「詰め」。「詰める」は中にいっぱい入れることです。",
       "explanation_id": "Jawaban yang benar adalah '詰め'. 「詰める」berarti mengisi penuh ke dalam.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "seme",
+        "tsume",
+        "ume",
+        "some"
+      ]
     },
     {
       "id": 88,
@@ -1407,7 +1929,13 @@
       "explanation": "正解は「し」。「〜次第」はます形（発生し）に接続します。「発生した次第」は誤りです。",
       "explanation_id": "Jawaban yang benar adalah 'し'. 「〜次第」tersambung ke masu-stem (発生し).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "shi",
+        "suru",
+        "shita",
+        "shite"
+      ]
     },
     {
       "id": 89,
@@ -1423,7 +1951,13 @@
       "explanation": "正解は「に」。「〜に応じて」は「〜に合わせて」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に応じて」berarti 'sesuai dengan ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "de",
+        "ga"
+      ]
     },
     {
       "id": 90,
@@ -1439,7 +1973,13 @@
       "explanation": "正解は「直し」。機械や物は「直す」、病気やけがは「治す」と書きます。",
       "explanation_id": "Jawaban yang benar adalah '直し'. Untuk mesin/barang ditulis「直す」, untuk penyakit ditulis「治す」.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tooshi",
+        "kaeshi",
+        "naoshi",
+        "naoshi"
+      ]
     },
     {
       "id": 91,
@@ -1455,7 +1995,13 @@
       "explanation": "正解は「ず」。「〜ずに」は「〜しないで」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'ず'. 「〜ずに」berarti 'tanpa ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "nai",
+        "nakute",
+        "zu",
+        "naide"
+      ]
     },
     {
       "id": 92,
@@ -1471,7 +2017,13 @@
       "explanation": "正解は「ために」。「〜ために」は目的を表します。",
       "explanation_id": "Jawaban yang benar adalah 'ために'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "youni",
+        "tameni",
+        "kotoni",
+        "noni"
+      ]
     },
     {
       "id": 93,
@@ -1487,7 +2039,13 @@
       "explanation": "正解は「増え」。「増える」は数や量が多くなることです。",
       "explanation_id": "Jawaban yang benar adalah '増え'. 「増える」berarti bertambah jumlahnya.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "futotsu",
+        "sodatsu",
+        "nobi",
+        "fue"
+      ]
     },
     {
       "id": 94,
@@ -1503,7 +2061,13 @@
       "explanation": "正解は「ば」。「〜ば」は仮定条件を表します。",
       "explanation_id": "Jawaban yang benar adalah 'ば'. 「〜ば」menunjukkan kondisi hipotetis.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "ba",
+        "to",
+        "tara",
+        "nara"
+      ]
     },
     {
       "id": 95,
@@ -1519,7 +2083,13 @@
       "explanation": "正解は「どおり」。名詞の後ろでは「どおり」と濁ります（マニュアルどおり）。「どうり・とうり」は仮名の誤りです。",
       "explanation_id": "Jawaban yang benar adalah 'どおり'. Setelah kata benda dibaca「どおり」(bunyi berubah). 「どうり・とうり」adalah ejaan yang salah.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "touri",
+        "doori",
+        "toori",
+        "douri"
+      ]
     },
     {
       "id": 96,
@@ -1535,7 +2105,13 @@
       "explanation": "正解は「急」。「急に」は突然という意味です。",
       "explanation_id": "Jawaban yang benar adalah '急'. 「急に」berarti tiba-tiba.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kyuu",
+        "sassoku",
+        "chokusetsu",
+        "saikin"
+      ]
     },
     {
       "id": 97,
@@ -1551,7 +2127,13 @@
       "explanation": "正解は「ため」。「〜ために」は目的を表します。",
       "explanation_id": "Jawaban yang benar adalah 'ため'. 「〜ために」menunjukkan tujuan.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "tame",
+        "youni",
+        "kotoni",
+        "no"
+      ]
     },
     {
       "id": 98,
@@ -1567,7 +2149,13 @@
       "explanation": "正解は「ては」。「〜てはいけません」はて形に接続します（怠ってはいけません）。",
       "explanation_id": "Jawaban yang benar adalah 'ては'. 「〜てはいけません」tersambung ke bentuk te (怠ってはいけません).",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "kotoha",
+        "bekiha",
+        "teha",
+        "noha"
+      ]
     },
     {
       "id": 99,
@@ -1583,7 +2171,13 @@
       "explanation": "正解は「役に立ち」。「役に立つ」は助けになる・有用だという意味です。",
       "explanation_id": "Jawaban yang benar adalah '役に立ち'. 「役に立つ」berarti berguna.",
       "category": "語彙",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "meniiri",
+        "yakunitachi",
+        "kiniiri",
+        "teniiri"
+      ]
     },
     {
       "id": 100,
@@ -1599,7 +2193,13 @@
       "explanation": "正解は「に」。「〜に気づく」は「〜を認識する」という意味です。",
       "explanation_id": "Jawaban yang benar adalah 'に'. 「〜に気づく」berarti 'menyadari ~'.",
       "category": "文法",
-      "jlpt_level": "N3"
+      "jlpt_level": "N3",
+      "options_romaji": [
+        "o",
+        "ni",
+        "de",
+        "ga"
+      ]
     },
     {
       "id": 101,
@@ -1617,7 +2217,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kotoga",
+        "tameni",
+        "bakarini",
+        "youni"
+      ]
     },
     {
       "id": 102,
@@ -1635,7 +2241,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "uchi",
+        "koto",
+        "tokoro",
+        "bakari"
+      ]
     },
     {
       "id": 103,
@@ -1653,7 +2265,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "uchi",
+        "bakari",
+        "tokoro",
+        "mama"
+      ]
     },
     {
       "id": 104,
@@ -1671,7 +2289,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "you",
+        "mama",
+        "tame",
+        "koto"
+      ]
     },
     {
       "id": 105,
@@ -1689,7 +2313,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "aida",
+        "made",
+        "nagara",
+        "uchi"
+      ]
     },
     {
       "id": 106,
@@ -1707,7 +2337,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nagara",
+        "bakari",
+        "kara",
+        "made"
+      ]
     },
     {
       "id": 107,
@@ -1725,7 +2361,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "youni",
+        "noni",
+        "node",
+        "kara"
+      ]
     },
     {
       "id": 108,
@@ -1743,7 +2385,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hazu",
+        "tsumori",
+        "tokoro",
+        "tame"
+      ]
     },
     {
       "id": 109,
@@ -1761,7 +2409,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tsumori",
+        "tame",
+        "tokoro",
+        "rashii"
+      ]
     },
     {
       "id": 110,
@@ -1779,7 +2433,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kure",
+        "yari",
+        "morai",
+        "age"
+      ]
     },
     {
       "id": 111,
@@ -1797,7 +2457,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "itadaki",
+        "age",
+        "morai",
+        "kure"
+      ]
     },
     {
       "id": 112,
@@ -1815,7 +2481,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kure",
+        "age",
+        "morai",
+        "yari"
+      ]
     },
     {
       "id": 113,
@@ -1833,7 +2505,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sase",
+        "rare",
+        "shita",
+        "sare"
+      ]
     },
     {
       "id": 114,
@@ -1851,7 +2529,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shita",
+        "dekiru",
+        "sase",
+        "sare"
+      ]
     },
     {
       "id": 115,
@@ -1869,7 +2553,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nagara",
+        "zuni",
+        "nakute",
+        "mama"
+      ]
     },
     {
       "id": 116,
@@ -1887,7 +2577,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nagara",
+        "tokoro",
+        "aida",
+        "tamama"
+      ]
     },
     {
       "id": 117,
@@ -1905,7 +2601,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "rashii",
+        "mitai",
+        "hazu",
+        "sou"
+      ]
     },
     {
       "id": 118,
@@ -1923,7 +2625,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "ari",
+        "iki",
+        "shimai",
+        "oki"
+      ]
     },
     {
       "id": 119,
@@ -1941,7 +2649,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "mi",
+        "oki",
+        "shimai",
+        "ari"
+      ]
     },
     {
       "id": 120,
@@ -1959,7 +2673,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "koto",
+        "mono",
+        "tokoro",
+        "hazu"
+      ]
     },
     {
       "id": 121,
@@ -1977,7 +2697,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shitemo",
+        "shinagara",
+        "surushi",
+        "shitari"
+      ]
     },
     {
       "id": 122,
@@ -1995,7 +2721,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "niku",
+        "gata",
+        "sugi",
+        "yasu"
+      ]
     },
     {
       "id": 123,
@@ -2013,7 +2745,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "owaru",
+        "yasui",
+        "nikui",
+        "sugiru"
+      ]
     },
     {
       "id": 124,
@@ -2031,7 +2769,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hodo",
+        "dake",
+        "bakari",
+        "kurai"
+      ]
     },
     {
       "id": 125,
@@ -2049,7 +2793,13 @@
       "category": "文法",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nari",
+        "deki",
+        "kamai",
+        "ike"
+      ]
     },
     {
       "id": 126,
@@ -2067,7 +2817,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "ryouri",
+        "kanri",
+        "shuuri",
+        "seiri"
+      ]
     },
     {
       "id": 127,
@@ -2085,7 +2841,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "annai",
+        "kakunin",
+        "chuui",
+        "youi"
+      ]
     },
     {
       "id": 128,
@@ -2103,7 +2865,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "houkoku",
+        "yoyaku",
+        "housou",
+        "keisan"
+      ]
     },
     {
       "id": 129,
@@ -2121,7 +2889,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shucchou",
+        "kyuukei",
+        "soutai",
+        "zangyou"
+      ]
     },
     {
       "id": 130,
@@ -2139,7 +2913,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kesseki",
+        "soutai",
+        "chikoku",
+        "chien"
+      ]
     },
     {
       "id": 131,
@@ -2157,7 +2937,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "genki",
+        "anzen",
+        "anshin",
+        "kanzen"
+      ]
     },
     {
       "id": 132,
@@ -2175,7 +2961,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kensa",
+        "kensaku",
+        "chousa",
+        "kouji"
+      ]
     },
     {
       "id": 133,
@@ -2193,7 +2985,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "jiko",
+        "kaji",
+        "kujou",
+        "koshou"
+      ]
     },
     {
       "id": 134,
@@ -2211,7 +3009,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "jiki",
+        "gakki",
+        "nouki",
+        "teiki"
+      ]
     },
     {
       "id": 135,
@@ -2229,7 +3033,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kaiketsu",
+        "kaizen",
+        "kaisei",
+        "kaihatsu"
+      ]
     },
     {
       "id": 136,
@@ -2247,7 +3057,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "genin",
+        "zairyou",
+        "seinou",
+        "kouka"
+      ]
     },
     {
       "id": 137,
@@ -2265,7 +3081,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "fuan",
+        "fuben",
+        "fuman",
+        "fusoku"
+      ]
     },
     {
       "id": 138,
@@ -2283,7 +3105,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "naoshi",
+        "watashi",
+        "modoshi",
+        "kaeshi"
+      ]
     },
     {
       "id": 139,
@@ -2301,7 +3129,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "enryo",
+        "chuui",
+        "chuumon",
+        "youji"
+      ]
     },
     {
       "id": 140,
@@ -2319,7 +3153,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "na",
+        "fu",
+        "tao",
+        "naga"
+      ]
     },
     {
       "id": 141,
@@ -2337,7 +3177,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "chiekku",
+        "kyanseru",
+        "memo",
+        "kopii"
+      ]
     },
     {
       "id": 142,
@@ -2355,7 +3201,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "taisou",
+        "sagyou",
+        "sousa",
+        "dousa"
+      ]
     },
     {
       "id": 143,
@@ -2373,7 +3225,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kigu",
+        "hogogu",
+        "kagu",
+        "kougu"
+      ]
     },
     {
       "id": 144,
@@ -2391,7 +3249,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "seizou",
+        "seihin",
+        "sakubun",
+        "seisanchi"
+      ]
     },
     {
       "id": 145,
@@ -2409,7 +3273,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hikidashi",
+        "uketori",
+        "uchiawase",
+        "hikitsugi"
+      ]
     },
     {
       "id": 146,
@@ -2427,7 +3297,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "taion",
+        "tairyoku",
+        "taichou",
+        "taijuu"
+      ]
     },
     {
       "id": 147,
@@ -2445,7 +3321,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hayakuchi",
+        "soutai",
+        "souchou",
+        "sassoku"
+      ]
     },
     {
       "id": 148,
@@ -2463,7 +3345,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kekkin",
+        "kesseki",
+        "ketten",
+        "keppin"
+      ]
     },
     {
       "id": 149,
@@ -2481,7 +3369,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "bunkai",
+        "bunseki",
+        "buntan",
+        "bunbetsu"
+      ]
     },
     {
       "id": 150,
@@ -2499,7 +3393,13 @@
       "category": "語彙",
       "jlpt_level": "N3",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tetsudatsu",
+        "tsukiatsu",
+        "katazuke",
+        "uketsuke"
+      ]
     },
     {
       "id": 151,
@@ -2517,7 +3417,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shinai",
+        "sezaru",
+        "shizaru",
+        "sezu"
+      ]
     },
     {
       "id": 152,
@@ -2535,7 +3441,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kanenai",
+        "kaneru",
+        "gatai",
+        "kirenai"
+      ]
     },
     {
       "id": 153,
@@ -2553,7 +3465,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sugi",
+        "kire",
+        "sobire",
+        "kane"
+      ]
     },
     {
       "id": 154,
@@ -2571,7 +3489,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "totan",
+        "saichuu",
+        "shidai",
+        "chokugo"
+      ]
     },
     {
       "id": 155,
@@ -2589,7 +3513,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "gachide",
+        "tsutsu",
+        "nagara",
+        "teori"
+      ]
     },
     {
       "id": 156,
@@ -2607,7 +3537,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "doori",
+        "bakari",
+        "gachi",
+        "gimi"
+      ]
     },
     {
       "id": 157,
@@ -2625,7 +3561,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "niyotte",
+        "nisaishite",
+        "nimotozuite",
+        "nimokakawarazu"
+      ]
     },
     {
       "id": 158,
@@ -2643,7 +3585,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "megutte",
+        "komete",
+        "fumaete",
+        "tooshite"
+      ]
     },
     {
       "id": 159,
@@ -2661,7 +3609,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nikaketeha",
+        "nisaishite",
+        "nihanshite",
+        "nishiteha"
+      ]
     },
     {
       "id": 160,
@@ -2679,7 +3633,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nitomonai",
+        "nihanshi",
+        "nikagiri",
+        "nitaishi"
+      ]
     },
     {
       "id": 161,
@@ -2697,7 +3657,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "koto",
+        "mono",
+        "hazu",
+        "wake"
+      ]
     },
     {
       "id": 162,
@@ -2715,7 +3681,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tokoro",
+        "wake",
+        "koto",
+        "mono"
+      ]
     },
     {
       "id": 163,
@@ -2733,7 +3705,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sue",
+        "ue",
+        "shita",
+        "naka"
+      ]
     },
     {
       "id": 164,
@@ -2751,7 +3729,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "osore",
+        "nozomi",
+        "tayori",
+        "kagiri"
+      ]
     },
     {
       "id": 165,
@@ -2769,7 +3753,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nitomonai",
+        "niouji",
+        "nihanshi",
+        "nikagiri"
+      ]
     },
     {
       "id": 166,
@@ -2787,7 +3777,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "otsuujite",
+        "omegutte",
+        "otowazu",
+        "okomete"
+      ]
     },
     {
       "id": 167,
@@ -2805,7 +3801,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nikagitte",
+        "nioujite",
+        "nihanshite",
+        "nishiteha"
+      ]
     },
     {
       "id": 168,
@@ -2823,7 +3825,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sai",
+        "sue",
+        "ue",
+        "kagiri"
+      ]
     },
     {
       "id": 169,
@@ -2841,7 +3849,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "okagede",
+        "amari",
+        "ueni",
+        "monono"
+      ]
     },
     {
       "id": 170,
@@ -2859,7 +3873,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nuku",
+        "kaneru",
+        "uru",
+        "kiru"
+      ]
     },
     {
       "id": 171,
@@ -2877,7 +3897,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nomide",
+        "nominarazu",
+        "bakarini",
+        "dakeshika"
+      ]
     },
     {
       "id": 172,
@@ -2895,7 +3921,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "dakeatte",
+        "dakeshika",
+        "bakarika",
+        "nomide"
+      ]
     },
     {
       "id": 173,
@@ -2913,7 +3945,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nikakete",
+        "nioite",
+        "nimukatte",
+        "nimotozuite"
+      ]
     },
     {
       "id": 174,
@@ -2931,7 +3969,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "ryouhou",
+        "tahou",
+        "ippou",
+        "katahou"
+      ]
     },
     {
       "id": 175,
@@ -2949,7 +3993,13 @@
       "category": "文法",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "niyotte",
+        "toshite",
+        "nitsuite",
+        "nitotte"
+      ]
     },
     {
       "id": 176,
@@ -2967,7 +4017,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "jinsoku",
+        "shinchou",
+        "hinpan",
+        "eien"
+      ]
     },
     {
       "id": 177,
@@ -2985,7 +4041,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hokan",
+        "hokaku",
+        "kaitaku",
+        "haaku"
+      ]
     },
     {
       "id": 178,
@@ -3003,7 +4065,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tetsuya",
+        "tekitou",
+        "tettei",
+        "tekkyo"
+      ]
     },
     {
       "id": 179,
@@ -3021,7 +4089,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "haichi",
+        "sochi",
+        "ichi",
+        "secchi"
+      ]
     },
     {
       "id": 180,
@@ -3039,7 +4113,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sakugen",
+        "sakujo",
+        "tanshuku",
+        "shukushou"
+      ]
     },
     {
       "id": 181,
@@ -3057,7 +4137,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kansei",
+        "sakusei",
+        "yousei",
+        "tassei"
+      ]
     },
     {
       "id": 182,
@@ -3075,7 +4161,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "bukimi",
+        "fukouhei",
+        "fuguai",
+        "bukiyou"
+      ]
     },
     {
       "id": 183,
@@ -3093,7 +4185,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "katsudou",
+        "kadou",
+        "idou",
+        "undou"
+      ]
     },
     {
       "id": 184,
@@ -3111,7 +4209,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "zesei",
+        "kisei",
+        "seibi",
+        "kyousei"
+      ]
     },
     {
       "id": 185,
@@ -3129,7 +4233,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shinpai",
+        "haitatsu",
+        "shihai",
+        "tehai"
+      ]
     },
     {
       "id": 186,
@@ -3147,7 +4257,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "mioku",
+        "mioto",
+        "minao",
+        "minoga"
+      ]
     },
     {
       "id": 187,
@@ -3165,7 +4281,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "yoyuu",
+        "kouryo",
+        "kurou",
+        "taiguu"
+      ]
     },
     {
       "id": 188,
@@ -3183,7 +4305,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hairyo",
+        "enryo",
+        "shiryou",
+        "zairyou"
+      ]
     },
     {
       "id": 189,
@@ -3201,7 +4329,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kakunin",
+        "kakushin",
+        "kakuritsu",
+        "kakuho"
+      ]
     },
     {
       "id": 190,
@@ -3219,7 +4353,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sonchou",
+        "taijuu",
+        "shinchou",
+        "kichou"
+      ]
     },
     {
       "id": 191,
@@ -3237,7 +4377,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tekido",
+        "enkatsu",
+        "kyuusoku",
+        "hinpan"
+      ]
     },
     {
       "id": 192,
@@ -3255,7 +4401,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "yokoku",
+        "koukoku",
+        "houkoku",
+        "chuukoku"
+      ]
     },
     {
       "id": 193,
@@ -3273,7 +4425,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tenmetsu",
+        "tensuu",
+        "saiten",
+        "tenken"
+      ]
     },
     {
       "id": 194,
@@ -3291,7 +4449,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shuunou",
+        "suitou",
+        "nounyuu",
+        "nattoku"
+      ]
     },
     {
       "id": 195,
@@ -3309,7 +4473,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "yosan",
+        "yobou",
+        "yosoku",
+        "yoshuu"
+      ]
     },
     {
       "id": 196,
@@ -3327,7 +4497,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kouritsu",
+        "kouka",
+        "kouseki",
+        "kouritsu"
+      ]
     },
     {
       "id": 197,
@@ -3345,7 +4521,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "chuushi",
+        "chuuou",
+        "chuuken",
+        "chuudan"
+      ]
     },
     {
       "id": 198,
@@ -3363,7 +4545,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nittei",
+        "kitei",
+        "koutei",
+        "katei"
+      ]
     },
     {
       "id": 199,
@@ -3381,7 +4569,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "jininseiri",
+        "hitodebusoku",
+        "ningenfushin",
+        "jinjiidou"
+      ]
     },
     {
       "id": 200,
@@ -3399,7 +4593,13 @@
       "category": "語彙",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "ihan",
+        "hantai",
+        "hansei",
+        "iwa"
+      ]
     },
     {
       "id": 201,
@@ -3417,7 +4617,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "renkaku",
+        "renryaku",
+        "enraku",
+        "renraku"
+      ]
     },
     {
       "id": 202,
@@ -3435,7 +4641,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shoudan",
+        "sodan",
+        "soudan",
+        "soutan"
+      ]
     },
     {
       "id": 203,
@@ -3453,7 +4665,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "jubi",
+        "junbi",
+        "junpi",
+        "shunbi"
+      ]
     },
     {
       "id": 204,
@@ -3471,7 +4689,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "keikaku",
+        "keiga",
+        "kekaku",
+        "keikai"
+      ]
     },
     {
       "id": 205,
@@ -3489,7 +4713,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "keigen",
+        "kyouken",
+        "keikon",
+        "keiken"
+      ]
     },
     {
       "id": 206,
@@ -3507,7 +4737,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kijutsu",
+        "gishutsu",
+        "gijutsu",
+        "gijitsu"
+      ]
     },
     {
       "id": 207,
@@ -3525,7 +4761,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kishoku",
+        "kisoku",
+        "kizoku",
+        "gisoku"
+      ]
     },
     {
       "id": 208,
@@ -3543,7 +4785,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shorui",
+        "shurui",
+        "shoryuu",
+        "kakirui"
+      ]
     },
     {
       "id": 209,
@@ -3561,7 +4809,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "setsumeigaki",
+        "seimeisho",
+        "setsumeijo",
+        "setsumeisho"
+      ]
     },
     {
       "id": 210,
@@ -3579,7 +4833,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "utsudou",
+        "itou",
+        "idou",
+        "idon"
+      ]
     },
     {
       "id": 211,
@@ -3597,7 +4857,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tsukin",
+        "tsuukin",
+        "tookin",
+        "tsuugon"
+      ]
     },
     {
       "id": 212,
@@ -3615,7 +4881,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "seifuku",
+        "seibuku",
+        "shifuku",
+        "sefuku"
+      ]
     },
     {
       "id": 213,
@@ -3633,7 +4905,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kunrin",
+        "kinren",
+        "kuren",
+        "kunren"
+      ]
     },
     {
       "id": 214,
@@ -3651,7 +4929,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hatakai",
+        "kikei",
+        "kikai",
+        "kiga"
+      ]
     },
     {
       "id": 215,
@@ -3669,7 +4953,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tougu",
+        "dougu",
+        "michigu",
+        "dougou"
+      ]
     },
     {
       "id": 216,
@@ -3687,7 +4977,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "souji",
+        "soujo",
+        "hakiji",
+        "soji"
+      ]
     },
     {
       "id": 217,
@@ -3705,7 +5001,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "eigou",
+        "egyou",
+        "eigyo",
+        "eigyou"
+      ]
     },
     {
       "id": 218,
@@ -3723,7 +5025,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hangou",
+        "bankou",
+        "bangou",
+        "bango"
+      ]
     },
     {
       "id": 219,
@@ -3741,7 +5049,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "koushi",
+        "kouji",
+        "kougoto",
+        "kuji"
+      ]
     },
     {
       "id": 220,
@@ -3759,7 +5073,13 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null,
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nimotsu",
+        "kamotsu",
+        "nimono",
+        "nibutsu"
+      ]
     },
     {
       "id": 221,
@@ -3777,7 +5097,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sunhou",
+        "sunbou",
+        "sonpou",
+        "sunpou"
+      ]
     },
     {
       "id": 222,
@@ -3795,7 +5121,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tokesetsu",
+        "yuusetsu",
+        "yousetsu",
+        "youzetsu"
+      ]
     },
     {
       "id": 223,
@@ -3813,7 +5145,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tozou",
+        "tosou",
+        "toshou",
+        "nurisou"
+      ]
     },
     {
       "id": 224,
@@ -3831,7 +5169,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kanki",
+        "kanke",
+        "kouki",
+        "kaeki"
+      ]
     },
     {
       "id": 225,
@@ -3849,7 +5193,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "sawaon",
+        "soune",
+        "shouon",
+        "souon"
+      ]
     },
     {
       "id": 226,
@@ -3867,7 +5217,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "shintou",
+        "jindou",
+        "shindou",
+        "furidou"
+      ]
     },
     {
       "id": 227,
@@ -3885,7 +5241,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "haki",
+        "haiki",
+        "haigi",
+        "heiki"
+      ]
     },
     {
       "id": 228,
@@ -3903,7 +5265,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "youjou",
+        "youiku",
+        "yashinai",
+        "yousei"
+      ]
     },
     {
       "id": 229,
@@ -3921,7 +5289,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "dantori",
+        "tandori",
+        "danshu",
+        "dandori"
+      ]
     },
     {
       "id": 230,
@@ -3939,7 +5313,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "houoroshi",
+        "tanasage",
+        "tanaoroshi",
+        "tanaotoshi"
+      ]
     },
     {
       "id": 231,
@@ -3957,7 +5337,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tsutaehyou",
+        "denpyou",
+        "denhyou",
+        "tenpyou"
+      ]
     },
     {
       "id": 232,
@@ -3975,7 +5361,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "hason",
+        "hazon",
+        "bason",
+        "yabureson"
+      ]
     },
     {
       "id": 233,
@@ -3993,7 +5385,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "tenyo",
+        "tenkou",
+        "tonko",
+        "tenko"
+      ]
     },
     {
       "id": 234,
@@ -4011,7 +5409,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "esei",
+        "eizei",
+        "eisei",
+        "eishou"
+      ]
     },
     {
       "id": 235,
@@ -4029,7 +5433,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "kyakutachi",
+        "kyatatsu",
+        "kyakuritsu",
+        "ashidate"
+      ]
     },
     {
       "id": 236,
@@ -4047,7 +5457,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "gunte",
+        "gunshu",
+        "kunte",
+        "gunde"
+      ]
     },
     {
       "id": 237,
@@ -4065,7 +5481,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "moreden",
+        "roden",
+        "routen",
+        "rouden"
+      ]
     },
     {
       "id": 238,
@@ -4083,7 +5505,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "daikuruma",
+        "dousha",
+        "daisha",
+        "taisha"
+      ]
     },
     {
       "id": 239,
@@ -4101,7 +5529,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "mibon",
+        "mihon",
+        "kenpon",
+        "mimoto"
+      ]
     },
     {
       "id": 240,
@@ -4119,7 +5553,13 @@
       "category": "漢字読み",
       "jlpt_level": "N2",
       "pack_id": "jlpt_n3n2",
-      "created_at": "2026-06-07T00:00:00.000Z"
+      "created_at": "2026-06-07T00:00:00.000Z",
+      "options_romaji": [
+        "nouhin",
+        "nappin",
+        "nohin",
+        "osamehin"
+      ]
     }
   ]
 }

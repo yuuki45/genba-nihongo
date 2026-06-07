@@ -15,9 +15,28 @@ void main() {
       quizzes = (jsonData['quizzes'] as List).cast<Map<String, dynamic>>();
     });
 
-    test('data_versionが4以上である', () {
+    test('data_versionが6以上である', () {
       expect(jsonData['data_version'], isA<int>());
-      expect(jsonData['data_version'], greaterThanOrEqualTo(4));
+      expect(jsonData['data_version'], greaterThanOrEqualTo(6));
+    });
+
+    test('全問題の選択肢にローマ字読みが付いている', () {
+      for (final q in quizzes) {
+        final options = (q['options'] as List).cast<String>();
+        final romaji = (q['options_romaji'] as List?)?.cast<String>();
+        expect(romaji, isNotNull,
+            reason: 'id ${q['id']} にoptions_romajiがありません');
+        expect(romaji, hasLength(options.length),
+            reason: 'id ${q['id']} のローマ字数が選択肢数と一致しません');
+        for (var i = 0; i < romaji!.length; i++) {
+          expect(romaji[i].trim().isNotEmpty, isTrue,
+              reason: 'id ${q['id']} の選択肢${i + 1}「${options[i]}」のローマ字が空です');
+          // ローマ字はASCIIで構成されること（変換漏れの検出）
+          expect(RegExp(r'^[a-zA-Z\s/]+$').hasMatch(romaji[i]), isTrue,
+              reason:
+                  'id ${q['id']} の「${options[i]}」のローマ字「${romaji[i]}」に非ASCII文字が含まれています');
+        }
+      }
     });
 
     test('すべてのクイズがQuizモデルにパースできる', () {

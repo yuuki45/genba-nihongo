@@ -135,13 +135,12 @@ void main() {
     expect(phrases.first['japanese'], 'おはようございます');
     expect(phrases.first['pack_id'], isNull);
 
-    // quizzesにもpack_id列が追加されている
+    // quizzesにもpack_id列・options_romaji列（v8）が追加されている
     final quizColumns = await (await helper.database)
         .rawQuery("PRAGMA table_info('quizzes')");
-    expect(
-      quizColumns.map((c) => c['name']),
-      contains('pack_id'),
-    );
+    final quizColumnNames = quizColumns.map((c) => c['name']).toList();
+    expect(quizColumnNames, contains('pack_id'));
+    expect(quizColumnNames, contains('options_romaji'));
 
     // v7: 単漢字辞書テーブルが作成され、upsertできる
     await helper.upsertKanjiCharacter({

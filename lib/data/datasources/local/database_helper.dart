@@ -23,7 +23,7 @@ class DatabaseHelper {
 
     return await openDatabase(
       path,
-      version: 7,
+      version: 8,
       onCreate: _createDB,
       onUpgrade: _upgradeDB,
     );
@@ -96,6 +96,7 @@ class DatabaseHelper {
         category TEXT NOT NULL,
         jlpt_level TEXT NOT NULL,
         pack_id TEXT,
+        options_romaji TEXT,
         created_at TEXT NOT NULL
       )
     ''');
@@ -243,6 +244,11 @@ class DatabaseHelper {
     if (oldVersion < 7) {
       // バージョン6から7へのアップグレード: 単漢字辞書テーブルを追加
       await db.execute(_createKanjiCharactersTableSql);
+    }
+
+    if (oldVersion < 8) {
+      // バージョン7から8へのアップグレード: 選択肢のローマ字読み列を追加
+      await db.execute('ALTER TABLE quizzes ADD COLUMN options_romaji TEXT');
     }
   }
 
