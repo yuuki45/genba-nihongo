@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'presentation/screens/home/home_screen.dart';
-import 'presentation/screens/phrases/phrase_list_screen.dart';
+import 'presentation/screens/phrases/phrase_scene_screen.dart';
 import 'presentation/screens/favorites/favorites_screen.dart';
 import 'presentation/screens/settings/settings_screen.dart';
 import 'presentation/services/tts_service.dart';
@@ -114,7 +114,7 @@ class _MainScreenState extends State<MainScreen> {
 
   static const List<Widget> _screens = [
     HomeScreen(),
-    PhraseListScreen(),
+    PhraseSceneScreen(),
     FavoritesScreen(),
     SettingsScreen(),
   ];

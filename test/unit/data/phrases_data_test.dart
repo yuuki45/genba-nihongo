@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nihongo/data/models/category.dart' as model;
 import 'package:nihongo/data/models/phrase.dart';
+import 'package:nihongo/data/models/phrase_scene.dart';
 
 void main() {
   group('phrases.json データ整合性テスト', () {
@@ -94,6 +95,24 @@ void main() {
           .where((p) => p['jlpt_level'] == 'N2' && p['pack_id'] == null)
           .length;
       expect(n2Count, 49);
+    });
+
+    test('全カテゴリがちょうど1つのシーンに属する', () {
+      final categoryIds = (jsonData['categories'] as List)
+          .map((c) => (c as Map<String, dynamic>)['id'] as int)
+          .toSet();
+
+      final sceneCategoryIds = <int>[];
+      for (final scene in PhraseScene.all) {
+        sceneCategoryIds.addAll(scene.categoryIds);
+      }
+
+      // 複数シーンへの重複割当なし
+      expect(sceneCategoryIds.toSet().length, sceneCategoryIds.length,
+          reason: '複数のシーンに重複して割り当てられたカテゴリがあります');
+      // 未割当・存在しないカテゴリなし
+      expect(sceneCategoryIds.toSet(), categoryIds,
+          reason: 'シーン未割当、または存在しないカテゴリIDがあります');
     });
 
     test('すべてのフレーズのカテゴリIDが存在するカテゴリを参照している', () {

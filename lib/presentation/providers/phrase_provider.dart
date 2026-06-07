@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/phrase.dart';
 import '../../data/models/category.dart';
+import '../../data/models/phrase_scene.dart';
 import '../../data/repositories/phrase_repository.dart';
 import 'purchase_provider.dart';
 
@@ -64,24 +65,31 @@ typedef PhraseListView = ({
   int hiddenCount,
 });
 
-/// カテゴリIDとJLPTレベルでフィルタリングされたフレーズを取得するProvider
+/// シーン内でカテゴリ・JLPTレベルでフィルタリングされたフレーズを取得するProvider
 ///
-/// 未購入パックのフレーズは除外する。ただし未購入カテゴリを
-/// 直接選択した場合はプレビュー（冒頭5件）を返す。
-final filteredPhrasesProvider = FutureProvider<PhraseListView>((ref) async {
+/// 未購入パックのフレーズは除外する。ただし未購入パックのシーン・カテゴリを
+/// 直接開いた場合はプレビュー（冒頭5件）を返す。
+final filteredPhrasesProvider =
+    FutureProvider.family<PhraseListView, String>((ref, sceneKey) async {
   final repository = ref.watch(phraseRepositoryProvider);
   final categoryId = ref.watch(selectedCategoryProvider);
   final jlptLevel = ref.watch(selectedJlptLevelProvider);
   final unlockedPackIds = ref.watch(
     entitlementProvider.select((state) => state.unlockedPackIds),
   );
+  final scene = PhraseScene.fromKey(sceneKey);
 
-  // すべてのフレーズを取得
+  // シーン内のフレーズを取得
   List<Phrase> phrases;
-  if (categoryId == null) {
-    phrases = await repository.getAllPhrases();
-  } else {
+  if (categoryId != null) {
     phrases = await repository.getPhrasesByCategory(categoryId);
+  } else {
+    final all = await repository.getAllPhrases();
+    phrases = scene == null
+        ? all
+        : all
+            .where((phrase) => scene.categoryIds.contains(phrase.categoryId))
+            .toList();
   }
 
   // JLPTレベルでフィルタリング
@@ -92,8 +100,8 @@ final filteredPhrasesProvider = FutureProvider<PhraseListView>((ref) async {
   final available =
       filterUnlockedContent(phrases, (phrase) => phrase.packId, unlockedPackIds);
 
-  // 未購入カテゴリを選択中（解錠分が0件で元データはある）→ プレビュー表示
-  if (categoryId != null && available.isEmpty && phrases.isNotEmpty) {
+  // 未購入のシーン・カテゴリを表示中（解錠分が0件で元データはある）→ プレビュー表示
+  if (available.isEmpty && phrases.isNotEmpty) {
     final preview = phrases.take(phrasePreviewCount).toList();
     return (
       phrases: preview,
@@ -103,6 +111,19 @@ final filteredPhrasesProvider = FutureProvider<PhraseListView>((ref) async {
   }
 
   return (phrases: available, isLockedPreview: false, hiddenCount: 0);
+});
+
+/// ロック中（未購入パックのみで構成される）シーンキーを取得するProvider
+///
+/// ハブ画面のロックバッジ表示用。シーン内の全カテゴリがロックされていればロック。
+final lockedSceneKeysProvider = FutureProvider<Set<String>>((ref) async {
+  final lockedCategoryIds = await ref.watch(lockedCategoryIdsProvider.future);
+  return PhraseScene.all
+      .where((scene) =>
+          scene.categoryIds.isNotEmpty &&
+          scene.categoryIds.every(lockedCategoryIds.contains))
+      .map((scene) => scene.key)
+      .toSet();
 });
 
 /// ロック中（未購入パックのみで構成される）カテゴリIDを判定する純粋関数

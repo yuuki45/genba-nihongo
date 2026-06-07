@@ -5,14 +5,20 @@ import '../../providers/settings_provider.dart';
 import '../../widgets/locked_content_banner.dart';
 import '../../../data/models/phrase.dart';
 import '../../../data/models/category.dart';
+import '../../../data/models/phrase_scene.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
 import '../search/search_screen.dart';
 import '../../services/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// フレーズ一覧画面
+/// フレーズ一覧画面（シーン単位）
+///
+/// シーン選択画面（PhraseSceneScreen）から遷移し、
+/// そのシーンに属するカテゴリのフレーズだけを表示する。
 class PhraseListScreen extends ConsumerStatefulWidget {
-  const PhraseListScreen({super.key});
+  final PhraseScene scene;
+
+  const PhraseListScreen({super.key, required this.scene});
 
   @override
   ConsumerState<PhraseListScreen> createState() => _PhraseListScreenState();
@@ -31,13 +37,20 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
   Widget build(BuildContext context) {
     final selectedCategoryId = ref.watch(selectedCategoryProvider);
     final selectedJlptLevel = ref.watch(selectedJlptLevelProvider);
-    final phrasesAsync = ref.watch(filteredPhrasesProvider);
+    final phrasesAsync = ref.watch(filteredPhrasesProvider(widget.scene.key));
     final categoriesAsync = ref.watch(allCategoriesProvider);
     final l10n = AppLocalizations.of(context)!;
+    final isJapanese = ref.watch(settingsProvider).maybeWhen(
+          data: (settings) => settings.languageCode == 'ja',
+          orElse: () => false,
+        );
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.navPhrases),
+        title: Text(
+          '${widget.scene.icon} '
+          '${isJapanese ? widget.scene.nameJa : widget.scene.nameId}',
+        ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -59,12 +72,20 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           // JLPTレベルタブ
           _buildJlptLevelTabs(context, ref, selectedJlptLevel),
 
-          // カテゴリタブ
-          categoriesAsync.when(
-            data: (categories) => _buildCategoryTabs(context, ref, categories, selectedCategoryId),
-            loading: () => const SizedBox(height: 60),
-            error: (error, stack) => const SizedBox(height: 60),
-          ),
+          // カテゴリタブ（シーン内のカテゴリのみ。1つだけの場合は非表示）
+          if (widget.scene.categoryIds.length > 1)
+            categoriesAsync.when(
+              data: (categories) => _buildCategoryTabs(
+                context,
+                ref,
+                categories
+                    .where((c) => widget.scene.categoryIds.contains(c.id))
+                    .toList(),
+                selectedCategoryId,
+              ),
+              loading: () => const SizedBox(height: 60),
+              error: (error, stack) => const SizedBox(height: 60),
+            ),
 
           // フレーズリスト
           Expanded(
