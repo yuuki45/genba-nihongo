@@ -1,5 +1,5 @@
 {
-  "data_version": 4,
+  "data_version": 5,
   "quizzes": [
     {
       "id": 1,
@@ -3416,7 +3416,7 @@
       "explanation_id": "Jawaban yang benar adalah 'れんらく'. 「連絡」berarti menghubungi atau memberi kabar.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3434,7 +3434,7 @@
       "explanation_id": "Jawaban yang benar adalah 'そうだん'. 「相談」berarti berkonsultasi.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3452,7 +3452,7 @@
       "explanation_id": "Jawaban yang benar adalah 'じゅんび'. 「準備」berarti persiapan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3470,7 +3470,7 @@
       "explanation_id": "Jawaban yang benar adalah 'けいかく'. 「計画」berarti rencana.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3488,7 +3488,7 @@
       "explanation_id": "Jawaban yang benar adalah 'けいけん'. 「経験」berarti pengalaman.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3506,7 +3506,7 @@
       "explanation_id": "Jawaban yang benar adalah 'ぎじゅつ'. 「技術」berarti teknik atau keterampilan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3524,7 +3524,7 @@
       "explanation_id": "Jawaban yang benar adalah 'きそく'. 「規則」berarti peraturan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3542,7 +3542,7 @@
       "explanation_id": "Jawaban yang benar adalah 'しょるい'. 「書類」berarti dokumen.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3560,7 +3560,7 @@
       "explanation_id": "Jawaban yang benar adalah 'せつめいしょ'. 「説明書」berarti buku petunjuk.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3578,7 +3578,7 @@
       "explanation_id": "Jawaban yang benar adalah 'いどう'. 「移動」berarti berpindah tempat.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3596,7 +3596,7 @@
       "explanation_id": "Jawaban yang benar adalah 'つうきん'. 「通勤」berarti pergi-pulang ke tempat kerja.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3614,7 +3614,7 @@
       "explanation_id": "Jawaban yang benar adalah 'せいふく'. 「制服」berarti seragam.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3632,7 +3632,7 @@
       "explanation_id": "Jawaban yang benar adalah 'くんれん'. 「訓練」berarti pelatihan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3650,7 +3650,7 @@
       "explanation_id": "Jawaban yang benar adalah 'きかい'. 「機械」berarti mesin.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3668,7 +3668,7 @@
       "explanation_id": "Jawaban yang benar adalah 'どうぐ'. 「道具」berarti alat.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3686,7 +3686,7 @@
       "explanation_id": "Jawaban yang benar adalah 'そうじ'. 「掃除」berarti bersih-bersih.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3704,7 +3704,7 @@
       "explanation_id": "Jawaban yang benar adalah 'えいぎょう'. 「営業」berarti kegiatan usaha atau penjualan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3722,7 +3722,7 @@
       "explanation_id": "Jawaban yang benar adalah 'ばんごう'. 「番号」berarti nomor.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3740,7 +3740,7 @@
       "explanation_id": "Jawaban yang benar adalah 'こうじ'. 「工事」berarti pekerjaan konstruksi.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {
@@ -3758,7 +3758,7 @@
       "explanation_id": "Jawaban yang benar adalah 'にもつ'. 「荷物」berarti barang bawaan.",
       "category": "漢字読み",
       "jlpt_level": "N3",
-      "pack_id": "jlpt_n3n2",
+      "pack_id": null,
       "created_at": "2026-06-07T00:00:00.000Z"
     },
     {

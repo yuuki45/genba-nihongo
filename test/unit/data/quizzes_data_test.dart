@@ -30,11 +30,19 @@ void main() {
       expect(ids.toSet().length, ids.length);
     });
 
-    test('無料100問・対策パック140問が収録されている', () {
+    test('無料120問・対策パック120問が収録されている', () {
       final free = quizzes.where((q) => q['pack_id'] == null).length;
       final paid = quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').length;
-      expect(free, 100);
-      expect(paid, 140);
+      expect(free, 120);
+      expect(paid, 120);
+    });
+
+    test('N3の漢字読みは無料である（ハブUIとの一貫性）', () {
+      final n3Reading = quizzes.where(
+          (q) => q['jlpt_level'] == 'N3' && q['category'] == '漢字読み');
+      expect(n3Reading, isNotEmpty);
+      expect(n3Reading.every((q) => q['pack_id'] == null), isTrue,
+          reason: 'N3の漢字読みに有料問題が混ざっています');
     });
 
     test('pack_idはnullまたはjlpt_n3n2のみ', () {
@@ -50,24 +58,22 @@ void main() {
           reason: 'N2クイズに無料のものが含まれています: ${n2Free.map((q) => q['id'])}');
     });
 
-    test('対策パックはN3:70問 + N2:70問（文法25+語彙25+漢字読み20）', () {
+    test('対策パックはN3:50問（文法25+語彙25）+ N2:70問（文法25+語彙25+漢字読み20）', () {
       final packQuizzes =
           quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').toList();
-      final n3 = packQuizzes.where((q) => q['jlpt_level'] == 'N3').length;
-      final n2 = packQuizzes.where((q) => q['jlpt_level'] == 'N2').length;
-      expect(n3, 70);
-      expect(n2, 70);
+      final n3 = packQuizzes.where((q) => q['jlpt_level'] == 'N3').toList();
+      final n2 = packQuizzes.where((q) => q['jlpt_level'] == 'N2').toList();
+      expect(n3, hasLength(50));
+      expect(n2, hasLength(70));
 
-      for (final level in ['N3', 'N2']) {
-        final byLevel =
-            packQuizzes.where((q) => q['jlpt_level'] == level).toList();
-        expect(byLevel.where((q) => q['category'] == '文法').length, 25,
-            reason: '$level 文法の問題数が想定と異なります');
-        expect(byLevel.where((q) => q['category'] == '語彙').length, 25,
-            reason: '$level 語彙の問題数が想定と異なります');
-        expect(byLevel.where((q) => q['category'] == '漢字読み').length, 20,
-            reason: '$level 漢字読みの問題数が想定と異なります');
-      }
+      expect(n3.where((q) => q['category'] == '文法').length, 25);
+      expect(n3.where((q) => q['category'] == '語彙').length, 25);
+      expect(n3.where((q) => q['category'] == '漢字読み').length, 0,
+          reason: 'N3の漢字読みは無料のはずです');
+
+      expect(n2.where((q) => q['category'] == '文法').length, 25);
+      expect(n2.where((q) => q['category'] == '語彙').length, 25);
+      expect(n2.where((q) => q['category'] == '漢字読み').length, 20);
     });
 
     test('漢字読み問題の語は漢字カード（kanji.json）と重複しない', () {
