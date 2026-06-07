@@ -366,6 +366,66 @@
     "description": "Terakhir diperbarui"
   },
 
+  "storeTitle": "Paket Konten",
+  "@storeTitle": {
+    "description": "Judul layar toko"
+  },
+
+  "storeDescription": "Buka konten tambahan dengan sekali beli. Setelah dibeli, dapat digunakan selamanya.",
+  "@storeDescription": {
+    "description": "Deskripsi layar toko"
+  },
+
+  "storeBuy": "Beli",
+  "@storeBuy": {
+    "description": "Tombol beli"
+  },
+
+  "storePurchased": "Sudah dibeli",
+  "@storePurchased": {
+    "description": "Badge sudah dibeli"
+  },
+
+  "storeRestore": "Pulihkan Pembelian",
+  "@storeRestore": {
+    "description": "Tombol pulihkan pembelian"
+  },
+
+  "storeRestoreStarted": "Memeriksa pembelian Anda...",
+  "@storeRestoreStarted": {
+    "description": "Pesan saat pemulihan dimulai"
+  },
+
+  "storeUnavailable": "Tidak dapat terhubung ke toko. Periksa koneksi internet Anda.",
+  "@storeUnavailable": {
+    "description": "Pesan saat toko tidak tersedia"
+  },
+
+  "storeNoProducts": "Belum ada paket yang tersedia.",
+  "@storeNoProducts": {
+    "description": "Pesan saat tidak ada produk"
+  },
+
+  "storePending": "Menunggu persetujuan toko. Konten akan terbuka otomatis setelah disetujui.",
+  "@storePending": {
+    "description": "Pesan menunggu persetujuan pembelian"
+  },
+
+  "storeError": "Terjadi kesalahan saat pembelian",
+  "@storeError": {
+    "description": "Pesan kesalahan pembelian"
+  },
+
+  "lockedContentMessage": "Konten ini dapat dibuka dengan membeli paket",
+  "@lockedContentMessage": {
+    "description": "Pemberitahuan konten terkunci"
+  },
+
+  "lockedContentUnlock": "Buka",
+  "@lockedContentUnlock": {
+    "description": "Tombol menuju pembukaan konten"
+  },
+
   "kanjiCardTitle": "Kanji di Tempat Kerja",
   "@kanjiCardTitle": {
     "description": "Judul kartu belajar kanji di layar beranda"

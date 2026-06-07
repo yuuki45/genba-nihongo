@@ -8,6 +8,7 @@ import 'presentation/screens/favorites/favorites_screen.dart';
 import 'presentation/screens/settings/settings_screen.dart';
 import 'presentation/services/tts_service.dart';
 import 'presentation/providers/settings_provider.dart';
+import 'presentation/providers/purchase_provider.dart';
 import 'presentation/theme/app_theme.dart';
 import 'data/repositories/phrase_repository.dart';
 import 'data/repositories/quiz_repository.dart';
@@ -36,10 +37,12 @@ void main() async {
     await repository.syncDataIfNeeded();
   }
 
-  // クイズデータのロード
+  // クイズデータのロード（初回はフルロード、以降はバージョン差分を同期）
   final isQuizDataLoaded = await quizRepository.isQuizDataLoaded();
   if (!isQuizDataLoaded) {
     await quizRepository.loadInitialQuizData();
+  } else {
+    await quizRepository.syncDataIfNeeded();
   }
 
   // 漢字データの同期（初回ロードと差分同期の両方を担う）
@@ -58,6 +61,10 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // 起動直後に購入ストリームの購読を開始する
+    // （前回中断したトランザクションやアプリ外での購入完了を回収するため）
+    ref.watch(entitlementProvider);
+
     final settingsAsync = ref.watch(settingsProvider);
 
     return settingsAsync.when(

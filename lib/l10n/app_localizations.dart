@@ -524,6 +524,78 @@ abstract class AppLocalizations {
   /// **'最終更新日'**
   String get lastUpdated;
 
+  /// ストア画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'コンテンツパック'**
+  String get storeTitle;
+
+  /// ストア画面の説明文
+  ///
+  /// In ja, this message translates to:
+  /// **'買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。'**
+  String get storeDescription;
+
+  /// 購入ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'購入'**
+  String get storeBuy;
+
+  /// 購入済みバッジ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入済み'**
+  String get storePurchased;
+
+  /// 購入復元ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を復元'**
+  String get storeRestore;
+
+  /// 復元開始時のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入の復元を確認しています...'**
+  String get storeRestoreStarted;
+
+  /// ストア未接続時のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'ストアに接続できません。インターネット接続を確認してください。'**
+  String get storeUnavailable;
+
+  /// 商品がない場合のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'現在販売中のパックはありません。'**
+  String get storeNoProducts;
+
+  /// 購入承認待ちのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'ストアの承認待ちです。承認されると自動的に解錠されます。'**
+  String get storePending;
+
+  /// 購入エラーのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入処理でエラーが発生しました'**
+  String get storeError;
+
+  /// ロックされたコンテンツの案内
+  ///
+  /// In ja, this message translates to:
+  /// **'このコンテンツはパック購入で解錠できます'**
+  String get lockedContentMessage;
+
+  /// ロック解除への導線ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'解錠する'**
+  String get lockedContentUnlock;
+
   /// ホーム画面の漢字学習カードタイトル
   ///
   /// In ja, this message translates to:

@@ -366,6 +366,66 @@
     "description": "最終更新日"
   },
 
+  "storeTitle": "コンテンツパック",
+  "@storeTitle": {
+    "description": "ストア画面のタイトル"
+  },
+
+  "storeDescription": "買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。",
+  "@storeDescription": {
+    "description": "ストア画面の説明文"
+  },
+
+  "storeBuy": "購入",
+  "@storeBuy": {
+    "description": "購入ボタン"
+  },
+
+  "storePurchased": "購入済み",
+  "@storePurchased": {
+    "description": "購入済みバッジ"
+  },
+
+  "storeRestore": "購入を復元",
+  "@storeRestore": {
+    "description": "購入復元ボタン"
+  },
+
+  "storeRestoreStarted": "購入の復元を確認しています...",
+  "@storeRestoreStarted": {
+    "description": "復元開始時のメッセージ"
+  },
+
+  "storeUnavailable": "ストアに接続できません。インターネット接続を確認してください。",
+  "@storeUnavailable": {
+    "description": "ストア未接続時のメッセージ"
+  },
+
+  "storeNoProducts": "現在販売中のパックはありません。",
+  "@storeNoProducts": {
+    "description": "商品がない場合のメッセージ"
+  },
+
+  "storePending": "ストアの承認待ちです。承認されると自動的に解錠されます。",
+  "@storePending": {
+    "description": "購入承認待ちのメッセージ"
+  },
+
+  "storeError": "購入処理でエラーが発生しました",
+  "@storeError": {
+    "description": "購入エラーのメッセージ"
+  },
+
+  "lockedContentMessage": "このコンテンツはパック購入で解錠できます",
+  "@lockedContentMessage": {
+    "description": "ロックされたコンテンツの案内"
+  },
+
+  "lockedContentUnlock": "解錠する",
+  "@lockedContentUnlock": {
+    "description": "ロック解除への導線ボタン"
+  },
+
   "kanjiCardTitle": "現場の漢字",
   "@kanjiCardTitle": {
     "description": "ホーム画面の漢字学習カードタイトル"

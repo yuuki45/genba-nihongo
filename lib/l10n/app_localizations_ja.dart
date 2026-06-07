@@ -226,6 +226,42 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
+  String get storeTitle => 'コンテンツパック';
+
+  @override
+  String get storeDescription => '買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。';
+
+  @override
+  String get storeBuy => '購入';
+
+  @override
+  String get storePurchased => '購入済み';
+
+  @override
+  String get storeRestore => '購入を復元';
+
+  @override
+  String get storeRestoreStarted => '購入の復元を確認しています...';
+
+  @override
+  String get storeUnavailable => 'ストアに接続できません。インターネット接続を確認してください。';
+
+  @override
+  String get storeNoProducts => '現在販売中のパックはありません。';
+
+  @override
+  String get storePending => 'ストアの承認待ちです。承認されると自動的に解錠されます。';
+
+  @override
+  String get storeError => '購入処理でエラーが発生しました';
+
+  @override
+  String get lockedContentMessage => 'このコンテンツはパック購入で解錠できます';
+
+  @override
+  String get lockedContentUnlock => '解錠する';
+
+  @override
   String get kanjiCardTitle => '現場の漢字';
 
   @override

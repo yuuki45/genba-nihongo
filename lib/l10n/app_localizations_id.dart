@@ -231,6 +231,46 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
+  String get storeTitle => 'Paket Konten';
+
+  @override
+  String get storeDescription =>
+      'Buka konten tambahan dengan sekali beli. Setelah dibeli, dapat digunakan selamanya.';
+
+  @override
+  String get storeBuy => 'Beli';
+
+  @override
+  String get storePurchased => 'Sudah dibeli';
+
+  @override
+  String get storeRestore => 'Pulihkan Pembelian';
+
+  @override
+  String get storeRestoreStarted => 'Memeriksa pembelian Anda...';
+
+  @override
+  String get storeUnavailable =>
+      'Tidak dapat terhubung ke toko. Periksa koneksi internet Anda.';
+
+  @override
+  String get storeNoProducts => 'Belum ada paket yang tersedia.';
+
+  @override
+  String get storePending =>
+      'Menunggu persetujuan toko. Konten akan terbuka otomatis setelah disetujui.';
+
+  @override
+  String get storeError => 'Terjadi kesalahan saat pembelian';
+
+  @override
+  String get lockedContentMessage =>
+      'Konten ini dapat dibuka dengan membeli paket';
+
+  @override
+  String get lockedContentUnlock => 'Buka';
+
+  @override
   String get kanjiCardTitle => 'Kanji di Tempat Kerja';
 
   @override

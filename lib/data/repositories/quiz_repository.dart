@@ -8,16 +8,16 @@ import '../datasources/local/database_helper.dart';
 class QuizRepository {
   final DatabaseHelper _dbHelper;
 
+  /// クイズデータバージョンを保存する設定キー
+  static const String _dataVersionKey = 'quiz_data_version';
+
   QuizRepository({DatabaseHelper? dbHelper})
       : _dbHelper = dbHelper ?? DatabaseHelper.instance;
 
   /// JSONファイルからクイズ初期データをロード
   Future<void> loadInitialQuizData() async {
     try {
-      // JSONファイルを読み込み
-      final String jsonString =
-          await rootBundle.loadString('assets/data/quizzes.json');
-      final Map<String, dynamic> jsonData = json.decode(jsonString);
+      final jsonData = await _loadJsonData();
 
       // クイズをDBに挿入
       final List<dynamic> quizzesJson = jsonData['quizzes'];
@@ -25,9 +25,55 @@ class QuizRepository {
         final quiz = Quiz.fromJson(quizJson);
         await _dbHelper.insertQuiz(quiz.toMap());
       }
+
+      // ロードしたデータバージョンを保存
+      await _dbHelper.saveSetting(
+        _dataVersionKey,
+        _jsonDataVersion(jsonData).toString(),
+      );
     } catch (e) {
       throw Exception('クイズデータのロードに失敗しました: $e');
     }
+  }
+
+  /// JSONのデータバージョンがDBより新しい場合のみ、クイズを同期する
+  ///
+  /// 有料パックを含む新規クイズの追加を既存ユーザーのDBにも反映する。
+  /// クイズ結果（quiz_results）がクイズIDを参照しているため、削除同期は行わない
+  /// （JSONから消す運用はせず、追加・更新のみを想定）。
+  Future<void> syncDataIfNeeded() async {
+    try {
+      final jsonData = await _loadJsonData();
+      final jsonVersion = _jsonDataVersion(jsonData);
+
+      final storedVersionStr = await _dbHelper.getSetting(_dataVersionKey);
+      final storedVersion = int.tryParse(storedVersionStr ?? '') ?? 0;
+
+      if (jsonVersion <= storedVersion) return;
+
+      // クイズを同期（既存IDは置き換え、新規IDは追加）
+      final List<dynamic> quizzesJson = jsonData['quizzes'];
+      for (var quizJson in quizzesJson) {
+        final quiz = Quiz.fromJson(quizJson);
+        await _dbHelper.upsertQuiz(quiz.toMap());
+      }
+
+      await _dbHelper.saveSetting(_dataVersionKey, jsonVersion.toString());
+    } catch (e) {
+      throw Exception('クイズデータの同期に失敗しました: $e');
+    }
+  }
+
+  /// アセットのJSONデータを読み込む
+  Future<Map<String, dynamic>> _loadJsonData() async {
+    final String jsonString =
+        await rootBundle.loadString('assets/data/quizzes.json');
+    return json.decode(jsonString) as Map<String, dynamic>;
+  }
+
+  /// JSONデータのバージョンを取得（未定義の場合は1）
+  int _jsonDataVersion(Map<String, dynamic> jsonData) {
+    return jsonData['data_version'] as int? ?? 1;
   }
 
   /// クイズデータが既にロードされているか確認

@@ -9,6 +9,7 @@ class Quiz {
   final String explanationId; // 解説（インドネシア語）
   final String category; // カテゴリ（文法/語彙）
   final String jlptLevel; // JLPTレベル（N3）
+  final String? packId; // コンテンツパックID（null = 無料）
   final DateTime createdAt;
 
   Quiz({
@@ -21,6 +22,7 @@ class Quiz {
     required this.explanationId,
     required this.category,
     required this.jlptLevel,
+    this.packId,
     DateTime? createdAt,
   }) : createdAt = createdAt ?? DateTime.now();
 
@@ -36,6 +38,7 @@ class Quiz {
       explanationId: json['explanation_id'] as String,
       category: json['category'] as String,
       jlptLevel: json['jlpt_level'] as String,
+      packId: json['pack_id'] as String?,
       createdAt: json['created_at'] != null
           ? DateTime.parse(json['created_at'] as String)
           : DateTime.now(),
@@ -54,6 +57,7 @@ class Quiz {
       'explanation_id': explanationId,
       'category': category,
       'jlpt_level': jlptLevel,
+      'pack_id': packId,
       'created_at': createdAt.toIso8601String(),
     };
   }
@@ -70,6 +74,7 @@ class Quiz {
       'explanation_id': explanationId,
       'category': category,
       'jlpt_level': jlptLevel,
+      'pack_id': packId,
       'created_at': createdAt.toIso8601String(),
     };
   }
@@ -86,6 +91,7 @@ class Quiz {
       explanationId: map['explanation_id'] as String,
       category: map['category'] as String,
       jlptLevel: map['jlpt_level'] as String,
+      packId: map['pack_id'] as String?,
       createdAt: DateTime.parse(map['created_at'] as String),
     );
   }
@@ -101,6 +107,7 @@ class Quiz {
     String? explanationId,
     String? category,
     String? jlptLevel,
+    String? packId,
     DateTime? createdAt,
   }) {
     return Quiz(
@@ -113,6 +120,7 @@ class Quiz {
       explanationId: explanationId ?? this.explanationId,
       category: category ?? this.category,
       jlptLevel: jlptLevel ?? this.jlptLevel,
+      packId: packId ?? this.packId,
       createdAt: createdAt ?? this.createdAt,
     );
   }

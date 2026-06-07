@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/settings_provider.dart';
+import '../../providers/purchase_provider.dart';
 import '../../widgets/language_segmented_control.dart';
 import '../../../l10n/app_localizations.dart';
 import '../legal/terms_of_service_screen.dart';
 import '../legal/privacy_policy_screen.dart';
 import '../legal/contact_screen.dart';
+import '../store/store_screen.dart';
 
 /// 設定画面
 class SettingsScreen extends ConsumerWidget {
@@ -53,6 +55,12 @@ class SettingsScreen extends ConsumerWidget {
         _buildAppInfoTile(context, l10n.settingsPhraseCount, '329'),
         _buildAppInfoTile(context, l10n.settingsDeveloper, 'Nihongo Team'),
         _buildOfflineInfoTile(context, settings.languageCode),
+        const Divider(),
+
+        // コンテンツパック（ストア導線 + 購入の復元）
+        _buildSectionHeader(context, l10n.storeTitle),
+        _buildStoreTile(context),
+        _buildRestoreTile(context, ref),
         const Divider(),
 
         // その他
@@ -129,6 +137,44 @@ class SettingsScreen extends ConsumerWidget {
       value: settings.isDarkMode,
       onChanged: (value) {
         ref.read(settingsProvider.notifier).setDarkMode(value);
+      },
+    );
+  }
+
+  /// コンテンツパック（ストア画面への導線）
+  Widget _buildStoreTile(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return ListTile(
+      leading: const Icon(Icons.storefront),
+      title: Text(l10n.storeTitle),
+      subtitle: Text(
+        l10n.storeDescription,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+      ),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const StoreScreen()),
+        );
+      },
+    );
+  }
+
+  /// 購入の復元（App Store審査の必須要件。ストア画面に加えて設定にも置く）
+  Widget _buildRestoreTile(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return ListTile(
+      leading: const Icon(Icons.restore),
+      title: Text(l10n.storeRestore),
+      onTap: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.storeRestoreStarted)),
+        );
+        ref.read(entitlementProvider.notifier).restore();
       },
     );
   }

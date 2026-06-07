@@ -153,6 +153,17 @@
   - セクション分け表示、漢字語タップで標識スタイルの詳細ボトムシート
 - ❌ ホームの「今日の標識」ミニプレビューは方針変更により削除
 
+#### アプリ内課金 基盤（フェーズ0） ✅（2026-06-07追加）
+詳細仕様: `docs/monetization.md`
+- ✅ 収益化方針決定: コンテンツパック買い切り（既存コンテンツは全部無料維持）
+- ✅ in_app_purchase導入、DB v5→v6（pack_id列 + purchasesテーブル）
+- ✅ Phrase/QuizモデルにpackId（null=無料）、QuizRepositoryにdata_version差分同期
+- ✅ PurchaseService / PurchaseRepository / EntitlementNotifier（オフライン解錠対応）
+- ✅ ストア画面（商品一覧・購入・復元）、設定画面に導線、LockedContentBanner
+- ✅ 法的ページ更新（利用規約 第8条/Pasal 8 追加、プライバシーポリシー第5項改訂）
+- ✅ ユニットテスト追加（購入ステータス処理・モデル・DBマイグレーション、計68テスト）
+- ⏳ フェーズ1: JLPT N3/N2対策パックのコンテンツ制作、App Store Connect商品登録
+
 ---
 
 ## ❌ 削除された機能
