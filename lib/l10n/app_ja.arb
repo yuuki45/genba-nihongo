@@ -1,0 +1,473 @@
+{
+  "@@locale": "ja",
+
+  "appTitle": "現場にほんご",
+  "@appTitle": {
+    "description": "アプリケーションのタイトル"
+  },
+
+  "navHome": "ホーム",
+  "@navHome": {
+    "description": "ナビゲーション: ホーム"
+  },
+
+  "navPhrases": "フレーズ一覧",
+  "@navPhrases": {
+    "description": "ナビゲーション: フレーズ一覧"
+  },
+
+  "navFavorites": "お気に入り",
+  "@navFavorites": {
+    "description": "ナビゲーション: お気に入り"
+  },
+
+  "navSettings": "設定",
+  "@navSettings": {
+    "description": "ナビゲーション: 設定"
+  },
+
+  "homeGreetingMorning": "おはようございます！今日も安全第一で",
+  "@homeGreetingMorning": {
+    "description": "ホーム画面のあいさつ（朝5-10時）"
+  },
+
+  "homeGreetingDay": "こんにちは！",
+  "@homeGreetingDay": {
+    "description": "ホーム画面のあいさつ（昼10-15時）"
+  },
+
+  "homeGreetingAfternoon": "こんにちは！もうひとがんばり",
+  "@homeGreetingAfternoon": {
+    "description": "ホーム画面のあいさつ（夕方15-18時）"
+  },
+
+  "homeGreetingNight": "お疲れさまでした！ゆっくり休んでください",
+  "@homeGreetingNight": {
+    "description": "ホーム画面のあいさつ（夜18時以降・早朝）"
+  },
+
+  "stopAudio": "再生を停止",
+  "@stopAudio": {
+    "description": "音声停止ボタンのツールチップ"
+  },
+
+  "homeGreeting": "おはようございます！",
+  "@homeGreeting": {
+    "description": "ホーム画面の挨拶"
+  },
+
+  "homeDailyPhrases": "📅 今日の3フレーズ",
+  "@homeDailyPhrases": {
+    "description": "今日のフレーズセクションタイトル"
+  },
+
+  "phraseDetail": "フレーズ詳細",
+  "@phraseDetail": {
+    "description": "フレーズ詳細画面のタイトル"
+  },
+
+  "playAudio": "音声を聞く",
+  "@playAudio": {
+    "description": "音声再生ボタン"
+  },
+
+  "playing": "再生中...",
+  "@playing": {
+    "description": "再生中の状態"
+  },
+
+  "labelJapanese": "日本語",
+  "@labelJapanese": {
+    "description": "日本語ラベル"
+  },
+
+  "labelRomaji": "ローマ字",
+  "@labelRomaji": {
+    "description": "ローマ字ラベル"
+  },
+
+  "labelIndonesian": "Bahasa Indonesia",
+  "@labelIndonesian": {
+    "description": "インドネシア語ラベル"
+  },
+
+  "favoriteAdded": "お気に入りに追加しました",
+  "@favoriteAdded": {
+    "description": "お気に入り追加メッセージ"
+  },
+
+  "favoriteRemoved": "お気に入りから削除しました",
+  "@favoriteRemoved": {
+    "description": "お気に入り削除メッセージ"
+  },
+
+  "noFavorites": "お気に入りがありません",
+  "@noFavorites": {
+    "description": "お気に入りが空の時のメッセージ"
+  },
+
+  "noPhrases": "フレーズがありません",
+  "@noPhrases": {
+    "description": "フレーズが見つからない時のメッセージ"
+  },
+
+  "searchHint": "フレーズを検索...",
+  "@searchHint": {
+    "description": "検索欄のヒント"
+  },
+
+  "searchTitle": "検索",
+  "@searchTitle": {
+    "description": "検索画面のタイトル"
+  },
+
+  "allLevels": "すべて",
+  "@allLevels": {
+    "description": "すべてのレベル"
+  },
+
+  "allCategories": "すべて",
+  "@allCategories": {
+    "description": "すべてのカテゴリ"
+  },
+
+  "settingsTitle": "設定",
+  "@settingsTitle": {
+    "description": "設定画面のタイトル"
+  },
+
+  "settingsDisplay": "表示設定",
+  "@settingsDisplay": {
+    "description": "表示設定セクション"
+  },
+
+  "settingsDarkMode": "ダークモード",
+  "@settingsDarkMode": {
+    "description": "ダークモード設定"
+  },
+
+  "settingsDarkModeOn": "オン",
+  "@settingsDarkModeOn": {
+    "description": "ダークモードオン"
+  },
+
+  "settingsDarkModeOff": "オフ",
+  "@settingsDarkModeOff": {
+    "description": "ダークモードオフ"
+  },
+
+  "settingsLanguage": "言語",
+  "@settingsLanguage": {
+    "description": "言語設定"
+  },
+
+  "settingsLanguageJa": "日本語",
+  "@settingsLanguageJa": {
+    "description": "日本語"
+  },
+
+  "settingsLanguageId": "Bahasa Indonesia",
+  "@settingsLanguageId": {
+    "description": "インドネシア語"
+  },
+
+  "settingsAppInfo": "アプリ情報",
+  "@settingsAppInfo": {
+    "description": "アプリ情報セクション"
+  },
+
+  "settingsVersion": "バージョン",
+  "@settingsVersion": {
+    "description": "バージョン"
+  },
+
+  "settingsPhraseCount": "フレーズ数",
+  "@settingsPhraseCount": {
+    "description": "フレーズ数"
+  },
+
+  "settingsDeveloper": "開発者",
+  "@settingsDeveloper": {
+    "description": "開発者"
+  },
+
+  "settingsOther": "その他",
+  "@settingsOther": {
+    "description": "その他セクション"
+  },
+
+  "settingsAbout": "アプリについて",
+  "@settingsAbout": {
+    "description": "アプリについて"
+  },
+
+  "aboutDescription1": "日本の工場で働くインドネシア人技能実習生向けの日本語学習アプリです。",
+  "@aboutDescription1": {
+    "description": "アプリ説明1"
+  },
+
+  "aboutDescription2": "現場で必要な日本語フレーズを音声で学習できます。",
+  "@aboutDescription2": {
+    "description": "アプリ説明2"
+  },
+
+  "errorOccurred": "エラーが発生しました",
+  "@errorOccurred": {
+    "description": "エラーメッセージ"
+  },
+
+  "loading": "読み込み中...",
+  "@loading": {
+    "description": "読み込み中"
+  },
+
+  "favoritesCount": "{count}件のお気に入り",
+  "@favoritesCount": {
+    "description": "お気に入りの件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "noFavoritesYet": "お気に入りはまだありません",
+  "@noFavoritesYet": {
+    "description": "お気に入りが空の時のメッセージ"
+  },
+
+  "addFavoritesHint": "フレーズ詳細画面で\nハートアイコンをタップして\nお気に入りに追加しましょう",
+  "@addFavoritesHint": {
+    "description": "お気に入り追加のヒント"
+  },
+
+  "searchResults": "{count}件の検索結果",
+  "@searchResults": {
+    "description": "検索結果の件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "noSearchResults": "検索結果がありません",
+  "@noSearchResults": {
+    "description": "検索結果が見つからない時のメッセージ"
+  },
+
+  "quizTitle": "N3クイズ",
+  "@quizTitle": {
+    "description": "クイズ画面のタイトル"
+  },
+
+  "quizCardTitle": "N3クイズに挑戦",
+  "@quizCardTitle": {
+    "description": "ホーム画面のクイズカードタイトル"
+  },
+
+  "quizCardDescription": "文法と語彙を学ぼう！",
+  "@quizCardDescription": {
+    "description": "ホーム画面のクイズカード説明"
+  },
+
+  "quizAnswer": "回答する",
+  "@quizAnswer": {
+    "description": "回答ボタン"
+  },
+
+  "quizNext": "次へ",
+  "@quizNext": {
+    "description": "次へボタン"
+  },
+
+  "quizViewResults": "結果を見る",
+  "@quizViewResults": {
+    "description": "結果を見るボタン"
+  },
+
+  "quizExplanation": "解説",
+  "@quizExplanation": {
+    "description": "解説セクション"
+  },
+
+  "quizResultTitle": "結果",
+  "@quizResultTitle": {
+    "description": "結果画面のタイトル"
+  },
+
+  "quizCompleted": "クイズ完了！",
+  "@quizCompleted": {
+    "description": "クイズ完了メッセージ"
+  },
+
+  "quizYourScore": "あなたのスコア",
+  "@quizYourScore": {
+    "description": "あなたのスコア"
+  },
+
+  "quizBackToHome": "ホームに戻る",
+  "@quizBackToHome": {
+    "description": "ホームに戻るボタン"
+  },
+
+  "termsOfService": "利用規約",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+
+  "privacyPolicy": "プライバシーポリシー",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+
+  "contact": "お問い合わせ",
+  "@contact": {
+    "description": "お問い合わせ"
+  },
+
+  "termsTitle": "利用規約",
+  "@termsTitle": {
+    "description": "利用規約画面のタイトル"
+  },
+
+  "privacyTitle": "プライバシーポリシー",
+  "@privacyTitle": {
+    "description": "プライバシーポリシー画面のタイトル"
+  },
+
+  "contactTitle": "お問い合わせ",
+  "@contactTitle": {
+    "description": "お問い合わせ画面のタイトル"
+  },
+
+  "contactEmail": "メールアドレス",
+  "@contactEmail": {
+    "description": "メールアドレスラベル"
+  },
+
+  "contactMessage": "以下のメールアドレスまでお問い合わせください。",
+  "@contactMessage": {
+    "description": "お問い合わせメッセージ"
+  },
+
+  "copyEmail": "メールアドレスをコピー",
+  "@copyEmail": {
+    "description": "メールアドレスをコピーボタン"
+  },
+
+  "emailCopied": "メールアドレスをコピーしました",
+  "@emailCopied": {
+    "description": "メールアドレスコピー完了メッセージ"
+  },
+
+  "lastUpdated": "最終更新日",
+  "@lastUpdated": {
+    "description": "最終更新日"
+  },
+
+  "kanjiCardTitle": "現場の漢字",
+  "@kanjiCardTitle": {
+    "description": "ホーム画面の漢字学習カードタイトル"
+  },
+
+  "kanjiCardDescription": "工場でよく見る漢字を学ぼう",
+  "@kanjiCardDescription": {
+    "description": "ホーム画面の漢字学習カード説明"
+  },
+
+  "kanjiMenuCards": "漢字カード",
+  "@kanjiMenuCards": {
+    "description": "漢字カード学習メニュー"
+  },
+
+  "kanjiMenuCardsDesc": "カードをめくって覚える",
+  "@kanjiMenuCardsDesc": {
+    "description": "漢字カード学習メニューの説明"
+  },
+
+  "kanjiMenuReadingQuiz": "読みクイズ",
+  "@kanjiMenuReadingQuiz": {
+    "description": "読みクイズメニュー"
+  },
+
+  "kanjiMenuReadingQuizDesc": "正しい読み方を選ぶ",
+  "@kanjiMenuReadingQuizDesc": {
+    "description": "読みクイズメニューの説明"
+  },
+
+  "kanjiMenuMeaningQuiz": "意味クイズ",
+  "@kanjiMenuMeaningQuiz": {
+    "description": "意味クイズメニュー"
+  },
+
+  "kanjiMenuMeaningQuizDesc": "正しい意味を選ぶ",
+  "@kanjiMenuMeaningQuizDesc": {
+    "description": "意味クイズメニューの説明"
+  },
+
+  "kanjiMenuFavorites": "苦手な漢字",
+  "@kanjiMenuFavorites": {
+    "description": "苦手漢字メニュー"
+  },
+
+  "kanjiMenuFavoritesDesc": "保存した漢字を復習する",
+  "@kanjiMenuFavoritesDesc": {
+    "description": "苦手漢字メニューの説明"
+  },
+
+  "kanjiFavoritesQuiz": "苦手クイズ",
+  "@kanjiFavoritesQuiz": {
+    "description": "苦手漢字クイズのタイトル"
+  },
+
+  "kanjiFavoritesQuizDesc": "苦手な漢字だけで腕試し",
+  "@kanjiFavoritesQuizDesc": {
+    "description": "苦手漢字クイズメニューの説明"
+  },
+
+  "kanjiWrongAnswers": "間違えた語",
+  "@kanjiWrongAnswers": {
+    "description": "クイズ結果画面の間違えた語セクション"
+  },
+
+  "kanjiMarkDifficult": "苦手に登録",
+  "@kanjiMarkDifficult": {
+    "description": "苦手登録トグルのラベル"
+  },
+
+  "kanjiNoFavorites": "苦手な漢字はまだありません",
+  "@kanjiNoFavorites": {
+    "description": "苦手漢字が空の場合のメッセージ"
+  },
+
+  "kanjiNoWords": "漢字データがありません",
+  "@kanjiNoWords": {
+    "description": "漢字データが空の場合のメッセージ"
+  },
+
+  "kanjiTapToFlip": "タップして答えを見る",
+  "@kanjiTapToFlip": {
+    "description": "漢字カードの操作ヒント"
+  },
+
+  "kanjiQuizQuestionReading": "この漢字の読み方は?",
+  "@kanjiQuizQuestionReading": {
+    "description": "読みクイズの問題文"
+  },
+
+  "kanjiQuizQuestionMeaning": "この漢字の意味は?",
+  "@kanjiQuizQuestionMeaning": {
+    "description": "意味クイズの問題文"
+  },
+
+  "kanjiWhereToSee": "どこで見る?",
+  "@kanjiWhereToSee": {
+    "description": "漢字カードの使用場面ラベル"
+  },
+
+  "allCategoriesKanji": "すべて",
+  "@allCategoriesKanji": {
+    "description": "漢字カテゴリの「すべて」チップ"
+  }
+}

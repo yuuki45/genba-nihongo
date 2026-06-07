@@ -1,0 +1,473 @@
+{
+  "@@locale": "id",
+
+  "appTitle": "Nihongo",
+  "@appTitle": {
+    "description": "Judul aplikasi"
+  },
+
+  "navHome": "Beranda",
+  "@navHome": {
+    "description": "Navigasi: Beranda"
+  },
+
+  "navPhrases": "Daftar Frasa",
+  "@navPhrases": {
+    "description": "Navigasi: Daftar Frasa"
+  },
+
+  "navFavorites": "Favorit",
+  "@navFavorites": {
+    "description": "Navigasi: Favorit"
+  },
+
+  "navSettings": "Pengaturan",
+  "@navSettings": {
+    "description": "Navigasi: Pengaturan"
+  },
+
+  "homeGreetingMorning": "Selamat pagi! Utamakan keselamatan hari ini",
+  "@homeGreetingMorning": {
+    "description": "Salam layar beranda (pagi 5-10)"
+  },
+
+  "homeGreetingDay": "Selamat siang!",
+  "@homeGreetingDay": {
+    "description": "Salam layar beranda (siang 10-15)"
+  },
+
+  "homeGreetingAfternoon": "Selamat sore! Tetap semangat",
+  "@homeGreetingAfternoon": {
+    "description": "Salam layar beranda (sore 15-18)"
+  },
+
+  "homeGreetingNight": "Selamat malam! Selamat beristirahat",
+  "@homeGreetingNight": {
+    "description": "Salam layar beranda (malam setelah 18)"
+  },
+
+  "stopAudio": "Hentikan audio",
+  "@stopAudio": {
+    "description": "Tooltip tombol berhenti audio"
+  },
+
+  "homeGreeting": "Selamat pagi!",
+  "@homeGreeting": {
+    "description": "Salam di layar beranda"
+  },
+
+  "homeDailyPhrases": "📅 3 Frasa Hari Ini",
+  "@homeDailyPhrases": {
+    "description": "Judul bagian frasa harian"
+  },
+
+  "phraseDetail": "Detail Frasa",
+  "@phraseDetail": {
+    "description": "Judul layar detail frasa"
+  },
+
+  "playAudio": "Dengarkan Audio",
+  "@playAudio": {
+    "description": "Tombol putar audio"
+  },
+
+  "playing": "Memutar...",
+  "@playing": {
+    "description": "Status sedang memutar"
+  },
+
+  "labelJapanese": "Bahasa Jepang",
+  "@labelJapanese": {
+    "description": "Label bahasa Jepang"
+  },
+
+  "labelRomaji": "Romaji",
+  "@labelRomaji": {
+    "description": "Label romaji"
+  },
+
+  "labelIndonesian": "Bahasa Indonesia",
+  "@labelIndonesian": {
+    "description": "Label bahasa Indonesia"
+  },
+
+  "favoriteAdded": "Ditambahkan ke favorit",
+  "@favoriteAdded": {
+    "description": "Pesan penambahan favorit"
+  },
+
+  "favoriteRemoved": "Dihapus dari favorit",
+  "@favoriteRemoved": {
+    "description": "Pesan penghapusan favorit"
+  },
+
+  "noFavorites": "Tidak ada favorit",
+  "@noFavorites": {
+    "description": "Pesan ketika favorit kosong"
+  },
+
+  "noPhrases": "Tidak ada frasa",
+  "@noPhrases": {
+    "description": "Pesan ketika frasa tidak ditemukan"
+  },
+
+  "searchHint": "Cari frasa...",
+  "@searchHint": {
+    "description": "Petunjuk kolom pencarian"
+  },
+
+  "searchTitle": "Pencarian",
+  "@searchTitle": {
+    "description": "Judul layar pencarian"
+  },
+
+  "allLevels": "Semua",
+  "@allLevels": {
+    "description": "Semua level"
+  },
+
+  "allCategories": "Semua",
+  "@allCategories": {
+    "description": "Semua kategori"
+  },
+
+  "settingsTitle": "Pengaturan",
+  "@settingsTitle": {
+    "description": "Judul layar pengaturan"
+  },
+
+  "settingsDisplay": "Pengaturan Tampilan",
+  "@settingsDisplay": {
+    "description": "Bagian pengaturan tampilan"
+  },
+
+  "settingsDarkMode": "Mode Gelap",
+  "@settingsDarkMode": {
+    "description": "Pengaturan mode gelap"
+  },
+
+  "settingsDarkModeOn": "Aktif",
+  "@settingsDarkModeOn": {
+    "description": "Mode gelap aktif"
+  },
+
+  "settingsDarkModeOff": "Nonaktif",
+  "@settingsDarkModeOff": {
+    "description": "Mode gelap nonaktif"
+  },
+
+  "settingsLanguage": "Bahasa",
+  "@settingsLanguage": {
+    "description": "Pengaturan bahasa"
+  },
+
+  "settingsLanguageJa": "日本語",
+  "@settingsLanguageJa": {
+    "description": "Bahasa Jepang"
+  },
+
+  "settingsLanguageId": "Bahasa Indonesia",
+  "@settingsLanguageId": {
+    "description": "Bahasa Indonesia"
+  },
+
+  "settingsAppInfo": "Informasi Aplikasi",
+  "@settingsAppInfo": {
+    "description": "Bagian informasi aplikasi"
+  },
+
+  "settingsVersion": "Versi",
+  "@settingsVersion": {
+    "description": "Versi"
+  },
+
+  "settingsPhraseCount": "Jumlah Frasa",
+  "@settingsPhraseCount": {
+    "description": "Jumlah frasa"
+  },
+
+  "settingsDeveloper": "Pengembang",
+  "@settingsDeveloper": {
+    "description": "Pengembang"
+  },
+
+  "settingsOther": "Lainnya",
+  "@settingsOther": {
+    "description": "Bagian lainnya"
+  },
+
+  "settingsAbout": "Tentang Aplikasi",
+  "@settingsAbout": {
+    "description": "Tentang aplikasi"
+  },
+
+  "aboutDescription1": "Aplikasi pembelajaran bahasa Jepang untuk pekerja magang teknis Indonesia di pabrik Jepang.",
+  "@aboutDescription1": {
+    "description": "Deskripsi aplikasi 1"
+  },
+
+  "aboutDescription2": "Pelajari frasa bahasa Jepang yang diperlukan di tempat kerja dengan audio.",
+  "@aboutDescription2": {
+    "description": "Deskripsi aplikasi 2"
+  },
+
+  "errorOccurred": "Terjadi kesalahan",
+  "@errorOccurred": {
+    "description": "Pesan error"
+  },
+
+  "loading": "Memuat...",
+  "@loading": {
+    "description": "Sedang memuat"
+  },
+
+  "favoritesCount": "{count} favorit",
+  "@favoritesCount": {
+    "description": "Jumlah favorit",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "noFavoritesYet": "Belum ada favorit",
+  "@noFavoritesYet": {
+    "description": "Pesan ketika favorit kosong"
+  },
+
+  "addFavoritesHint": "Ketuk ikon hati di layar detail frasa\nuntuk menambahkan ke favorit",
+  "@addFavoritesHint": {
+    "description": "Petunjuk menambahkan favorit"
+  },
+
+  "searchResults": "{count} hasil pencarian",
+  "@searchResults": {
+    "description": "Jumlah hasil pencarian",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "noSearchResults": "Tidak ada hasil pencarian",
+  "@noSearchResults": {
+    "description": "Pesan ketika hasil pencarian tidak ditemukan"
+  },
+
+  "quizTitle": "Kuis N3",
+  "@quizTitle": {
+    "description": "Judul layar kuis"
+  },
+
+  "quizCardTitle": "Tantang Kuis N3",
+  "@quizCardTitle": {
+    "description": "Judul kartu kuis di layar beranda"
+  },
+
+  "quizCardDescription": "Pelajari tata bahasa dan kosakata!",
+  "@quizCardDescription": {
+    "description": "Deskripsi kartu kuis di layar beranda"
+  },
+
+  "quizAnswer": "Jawab",
+  "@quizAnswer": {
+    "description": "Tombol jawab"
+  },
+
+  "quizNext": "Berikutnya",
+  "@quizNext": {
+    "description": "Tombol berikutnya"
+  },
+
+  "quizViewResults": "Lihat Hasil",
+  "@quizViewResults": {
+    "description": "Tombol lihat hasil"
+  },
+
+  "quizExplanation": "Penjelasan",
+  "@quizExplanation": {
+    "description": "Bagian penjelasan"
+  },
+
+  "quizResultTitle": "Hasil",
+  "@quizResultTitle": {
+    "description": "Judul layar hasil"
+  },
+
+  "quizCompleted": "Kuis Selesai!",
+  "@quizCompleted": {
+    "description": "Pesan kuis selesai"
+  },
+
+  "quizYourScore": "Skor Anda",
+  "@quizYourScore": {
+    "description": "Skor Anda"
+  },
+
+  "quizBackToHome": "Kembali ke Beranda",
+  "@quizBackToHome": {
+    "description": "Tombol kembali ke beranda"
+  },
+
+  "termsOfService": "Ketentuan Layanan",
+  "@termsOfService": {
+    "description": "Ketentuan Layanan"
+  },
+
+  "privacyPolicy": "Kebijakan Privasi",
+  "@privacyPolicy": {
+    "description": "Kebijakan Privasi"
+  },
+
+  "contact": "Kontak",
+  "@contact": {
+    "description": "Kontak"
+  },
+
+  "termsTitle": "Ketentuan Layanan",
+  "@termsTitle": {
+    "description": "Judul layar ketentuan layanan"
+  },
+
+  "privacyTitle": "Kebijakan Privasi",
+  "@privacyTitle": {
+    "description": "Judul layar kebijakan privasi"
+  },
+
+  "contactTitle": "Kontak",
+  "@contactTitle": {
+    "description": "Judul layar kontak"
+  },
+
+  "contactEmail": "Alamat Email",
+  "@contactEmail": {
+    "description": "Label alamat email"
+  },
+
+  "contactMessage": "Silakan hubungi kami melalui alamat email berikut.",
+  "@contactMessage": {
+    "description": "Pesan kontak"
+  },
+
+  "copyEmail": "Salin Alamat Email",
+  "@copyEmail": {
+    "description": "Tombol salin alamat email"
+  },
+
+  "emailCopied": "Alamat email telah disalin",
+  "@emailCopied": {
+    "description": "Pesan email berhasil disalin"
+  },
+
+  "lastUpdated": "Terakhir Diperbarui",
+  "@lastUpdated": {
+    "description": "Terakhir diperbarui"
+  },
+
+  "kanjiCardTitle": "Kanji di Tempat Kerja",
+  "@kanjiCardTitle": {
+    "description": "Judul kartu belajar kanji di layar beranda"
+  },
+
+  "kanjiCardDescription": "Belajar kanji yang sering terlihat di pabrik",
+  "@kanjiCardDescription": {
+    "description": "Deskripsi kartu belajar kanji di layar beranda"
+  },
+
+  "kanjiMenuCards": "Kartu Kanji",
+  "@kanjiMenuCards": {
+    "description": "Menu belajar kartu kanji"
+  },
+
+  "kanjiMenuCardsDesc": "Belajar dengan membalik kartu",
+  "@kanjiMenuCardsDesc": {
+    "description": "Deskripsi menu kartu kanji"
+  },
+
+  "kanjiMenuReadingQuiz": "Kuis Cara Baca",
+  "@kanjiMenuReadingQuiz": {
+    "description": "Menu kuis cara baca"
+  },
+
+  "kanjiMenuReadingQuizDesc": "Pilih cara baca yang benar",
+  "@kanjiMenuReadingQuizDesc": {
+    "description": "Deskripsi menu kuis cara baca"
+  },
+
+  "kanjiMenuMeaningQuiz": "Kuis Arti",
+  "@kanjiMenuMeaningQuiz": {
+    "description": "Menu kuis arti"
+  },
+
+  "kanjiMenuMeaningQuizDesc": "Pilih arti yang benar",
+  "@kanjiMenuMeaningQuizDesc": {
+    "description": "Deskripsi menu kuis arti"
+  },
+
+  "kanjiMenuFavorites": "Kanji yang Sulit",
+  "@kanjiMenuFavorites": {
+    "description": "Menu kanji yang sulit"
+  },
+
+  "kanjiMenuFavoritesDesc": "Ulangi kanji yang disimpan",
+  "@kanjiMenuFavoritesDesc": {
+    "description": "Deskripsi menu kanji yang sulit"
+  },
+
+  "kanjiFavoritesQuiz": "Kuis Kanji Sulit",
+  "@kanjiFavoritesQuiz": {
+    "description": "Judul kuis kanji sulit"
+  },
+
+  "kanjiFavoritesQuizDesc": "Uji kemampuan dengan kanji yang sulit",
+  "@kanjiFavoritesQuizDesc": {
+    "description": "Deskripsi menu kuis kanji sulit"
+  },
+
+  "kanjiWrongAnswers": "Kata yang salah",
+  "@kanjiWrongAnswers": {
+    "description": "Bagian kata yang salah di layar hasil kuis"
+  },
+
+  "kanjiMarkDifficult": "Tandai sebagai sulit",
+  "@kanjiMarkDifficult": {
+    "description": "Label tombol tandai kanji sulit"
+  },
+
+  "kanjiNoFavorites": "Belum ada kanji yang disimpan",
+  "@kanjiNoFavorites": {
+    "description": "Pesan saat tidak ada kanji yang disimpan"
+  },
+
+  "kanjiNoWords": "Tidak ada data kanji",
+  "@kanjiNoWords": {
+    "description": "Pesan saat data kanji kosong"
+  },
+
+  "kanjiTapToFlip": "Ketuk untuk melihat jawaban",
+  "@kanjiTapToFlip": {
+    "description": "Petunjuk penggunaan kartu kanji"
+  },
+
+  "kanjiQuizQuestionReading": "Bagaimana cara membaca kanji ini?",
+  "@kanjiQuizQuestionReading": {
+    "description": "Pertanyaan kuis cara baca"
+  },
+
+  "kanjiQuizQuestionMeaning": "Apa arti kanji ini?",
+  "@kanjiQuizQuestionMeaning": {
+    "description": "Pertanyaan kuis arti"
+  },
+
+  "kanjiWhereToSee": "Di mana terlihat?",
+  "@kanjiWhereToSee": {
+    "description": "Label tempat penggunaan pada kartu kanji"
+  },
+
+  "allCategoriesKanji": "Semua",
+  "@allCategoriesKanji": {
+    "description": "Chip \"Semua\" untuk kategori kanji"
+  }
+}
