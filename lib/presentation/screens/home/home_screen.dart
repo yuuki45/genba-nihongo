@@ -59,6 +59,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.appTitle),
+        actions: buildHeaderActions(context),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -139,23 +140,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 日付（標識の管理番号風の小ラベル）+ お気に入り・設定ボタン
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      dateText,
-                      style: const TextStyle(
-                        fontFamily: AppTheme.bodyFont,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.safetyYellow,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
-                  ),
-                  ...buildHeaderActions(context, color: Colors.white),
-                ],
+              // 日付（標識の管理番号風の小ラベル）
+              Text(
+                dateText,
+                style: const TextStyle(
+                  fontFamily: AppTheme.bodyFont,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.safetyYellow,
+                  letterSpacing: 1.2,
+                ),
               ),
               const SizedBox(height: 6),
               // あいさつ（時間帯に応じて切り替わる）
