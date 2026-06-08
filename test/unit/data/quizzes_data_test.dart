@@ -41,7 +41,7 @@ void main() {
 
     test('すべてのクイズがQuizモデルにパースできる', () {
       final parsed = quizzes.map(Quiz.fromJson).toList();
-      expect(parsed, hasLength(240));
+      expect(parsed, hasLength(300));
     });
 
     test('クイズIDに重複がない', () {
@@ -49,10 +49,10 @@ void main() {
       expect(ids.toSet().length, ids.length);
     });
 
-    test('無料120問・対策パック120問が収録されている', () {
+    test('無料180問・対策パック120問が収録されている', () {
       final free = quizzes.where((q) => q['pack_id'] == null).length;
       final paid = quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').length;
-      expect(free, 120);
+      expect(free, 180);
       expect(paid, 120);
     });
 

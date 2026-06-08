@@ -1,5 +1,5 @@
 {
-  "data_version": 6,
+  "data_version": 7,
   "quizzes": [
     {
       "id": 1,
@@ -5560,6 +5560,1386 @@
         "nohin",
         "osamehin"
       ]
+    },
+    {
+      "id": 241,
+      "question": "機械の使い方を知りたい＿＿＿、私に聞いてください。",
+      "question_id": "Kalau ingin tahu cara pakai mesin, silakan tanya saya.",
+      "options": [
+        "のに",
+        "ので",
+        "たり",
+        "なら"
+      ],
+      "options_romaji": [
+        "noni",
+        "node",
+        "tari",
+        "nara"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「なら」。「〜なら」は相手の話を受けて提案・助言するときに使います。",
+      "explanation_id": "Jawaban yang benar adalah 'なら'. 「〜なら」dipakai untuk memberi saran berdasarkan ucapan lawan bicara.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 242,
+      "question": "このドアは開ける＿＿＿、大きな音がする。",
+      "question_id": "Setiap kali pintu ini dibuka, terdengar suara keras.",
+      "options": [
+        "ところに",
+        "とおりに",
+        "たびに",
+        "ように"
+      ],
+      "options_romaji": [
+        "tokoroni",
+        "toorini",
+        "tabini",
+        "youni"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「たびに」。「〜たびに」は「〜するときはいつも」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'たびに'. 「〜たびに」berarti \"setiap kali\".",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 243,
+      "question": "もう時間がない＿＿＿、急いでください。",
+      "question_id": "Karena waktu sudah habis, tolong bergegas.",
+      "options": [
+        "まで",
+        "ので",
+        "のに",
+        "たり"
+      ],
+      "options_romaji": [
+        "made",
+        "node",
+        "noni",
+        "tari"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「ので」。「〜ので」は理由を表します。命令・依頼の前で自然に使えます。",
+      "explanation_id": "Jawaban yang benar adalah 'ので'. 「〜ので」menyatakan alasan dan cocok sebelum permintaan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 244,
+      "question": "弟はいつも外で遊び＿＿＿。",
+      "question_id": "Adik laki-laki saya selalu ingin bermain di luar.",
+      "options": [
+        "たがる",
+        "たい",
+        "たく",
+        "たさ"
+      ],
+      "options_romaji": [
+        "tagaru",
+        "tai",
+        "taku",
+        "tasa"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「たがる」。第三者の願望は「〜たがる」で表します。「〜たい」は自分の願望です。",
+      "explanation_id": "Jawaban yang benar adalah 'たがる'. Keinginan orang ketiga memakai「〜たがる」, sedang「〜たい」untuk diri sendiri.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 245,
+      "question": "この水が飲める＿＿＿、調べてください。",
+      "question_id": "Tolong periksa apakah air ini bisa diminum atau tidak.",
+      "options": [
+        "ように",
+        "だろう",
+        "はず",
+        "かどうか"
+      ],
+      "options_romaji": [
+        "youni",
+        "darou",
+        "hazu",
+        "kadouka"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「かどうか」。「〜かどうか」は「〜か、そうでないか」を一つにまとめた言い方です。",
+      "explanation_id": "Jawaban yang benar adalah 'かどうか'. 「〜かどうか」menyatakan \"apakah ... atau tidak\".",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 246,
+      "question": "来週の予定＿＿＿、後で連絡します。",
+      "question_id": "Mengenai jadwal minggu depan, saya akan menghubungi nanti.",
+      "options": [
+        "によって",
+        "における",
+        "について",
+        "にとって"
+      ],
+      "options_romaji": [
+        "niyotte",
+        "niokeru",
+        "nitsuite",
+        "nitotte"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「について」。「〜について」は話題・対象（〜に関して）を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'について'. 「〜について」menunjukkan topik (mengenai ...).",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 247,
+      "question": "この製品は機械＿＿＿作られています。",
+      "question_id": "Produk ini dibuat oleh mesin.",
+      "options": [
+        "における",
+        "によって",
+        "について",
+        "にとって"
+      ],
+      "options_romaji": [
+        "niokeru",
+        "niyotte",
+        "nitsuite",
+        "nitotte"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「によって」。受け身の文で動作をする人・物は「〜によって」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'によって'. Dalam kalimat pasif, pelaku ditandai dengan「〜によって」.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 248,
+      "question": "私は工場で日本語を習っ＿＿＿があります。",
+      "question_id": "Saya pernah belajar bahasa Jepang di pabrik.",
+      "options": [
+        "たこと",
+        "ること",
+        "たもの",
+        "るところ"
+      ],
+      "options_romaji": [
+        "takoto",
+        "rukoto",
+        "tamono",
+        "rutokoro"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「たこと」。「〜たことがある」は過去の経験を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'たこと'. 「〜たことがある」menyatakan pengalaman masa lalu.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 249,
+      "question": "毎日練習して、自転車に乗れる＿＿＿なった。",
+      "question_id": "Setelah berlatih tiap hari, saya jadi bisa naik sepeda.",
+      "options": [
+        "はず",
+        "そう",
+        "みたい",
+        "ように"
+      ],
+      "options_romaji": [
+        "hazu",
+        "sou",
+        "mitai",
+        "youni"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「ように」。能力や状態の変化は「〜ようになる」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ように'. Perubahan kemampuan dinyatakan dengan「〜ようになる」.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 250,
+      "question": "部長が来月で会社をやめる＿＿＿話を聞いた。",
+      "question_id": "Saya dengar kabar bahwa manajer akan keluar bulan depan.",
+      "options": [
+        "らしい",
+        "みたい",
+        "という",
+        "そう"
+      ],
+      "options_romaji": [
+        "rashii",
+        "mitai",
+        "toiu",
+        "sou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「という」。「〜という＋名詞」で内容を後ろの名詞に説明します。",
+      "explanation_id": "Jawaban yang benar adalah 'という'. 「〜という＋kata benda」menjelaskan isi pada kata benda berikutnya.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 251,
+      "question": "5時＿＿＿、この作業を終わらせてください。",
+      "question_id": "Tolong selesaikan pekerjaan ini sebelum jam 5.",
+      "options": [
+        "だけ",
+        "までに",
+        "まで",
+        "から"
+      ],
+      "options_romaji": [
+        "dake",
+        "madeni",
+        "made",
+        "kara"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「までに」。期限（その時までに完了）は「〜までに」です。「〜まで」は継続の終点です。",
+      "explanation_id": "Jawaban yang benar adalah 'までに'. Batas waktu penyelesaian memakai「〜までに」, bukan「〜まで」.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 252,
+      "question": "お金が少し＿＿＿残っていない。",
+      "question_id": "Uang hanya tersisa sedikit saja.",
+      "options": [
+        "しか",
+        "だけ",
+        "ばかり",
+        "ぐらい"
+      ],
+      "options_romaji": [
+        "shika",
+        "dake",
+        "bakari",
+        "gurai"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「しか」。「〜しか」は必ず否定（〜ない）とともに使い、「それ以外はない」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'しか'. 「〜しか」selalu dengan bentuk negatif, berarti \"hanya\".",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 253,
+      "question": "疲れたから、お茶＿＿＿飲もう。",
+      "question_id": "Karena lelah, ayo minum teh atau semacamnya.",
+      "options": [
+        "しか",
+        "だけ",
+        "こそ",
+        "でも"
+      ],
+      "options_romaji": [
+        "shika",
+        "dake",
+        "koso",
+        "demo"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「でも」。軽く例をあげて誘うときは「〜でも」を使います。",
+      "explanation_id": "Jawaban yang benar adalah 'でも'. 「〜でも」dipakai untuk mengajak dengan menyebut satu contoh ringan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 254,
+      "question": "どうぞ、こちらのお菓子を＿＿＿ください。",
+      "question_id": "Silakan, mohon nikmati kue ini.",
+      "options": [
+        "いただいて",
+        "申して",
+        "召し上がって",
+        "拝見して"
+      ],
+      "options_romaji": [
+        "itadaite",
+        "moushite",
+        "meshiagatte",
+        "haikenshite"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「召し上がって」。「召し上がる」は「食べる・飲む」の尊敬語で、相手の動作に使います。",
+      "explanation_id": "Jawaban yang benar adalah '召し上がって'. 「召し上がる」bentuk hormat dari \"makan/minum\" untuk tindakan lawan bicara.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 255,
+      "question": "先生の作品を＿＿＿もよろしいですか。",
+      "question_id": "Bolehkah saya melihat karya Bapak/Ibu guru?",
+      "options": [
+        "なさって",
+        "拝見して",
+        "召し上がって",
+        "いらっしゃって"
+      ],
+      "options_romaji": [
+        "nasatte",
+        "haikenshite",
+        "meshiagatte",
+        "irasshatte"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「拝見して」。「拝見する」は「見る」の謙譲語で、自分の動作をへりくだって言います。",
+      "explanation_id": "Jawaban yang benar adalah '拝見して'. 「拝見する」bentuk merendah dari \"melihat\" untuk tindakan diri sendiri.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 256,
+      "question": "彼は3時間も歩き＿＿＿、ようやく休んだ。",
+      "question_id": "Dia terus berjalan sampai 3 jam, akhirnya beristirahat.",
+      "options": [
+        "続け",
+        "始め",
+        "終わり",
+        "出し"
+      ],
+      "options_romaji": [
+        "tsuzuke",
+        "hajime",
+        "owari",
+        "dashi"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「続け」。動作の継続は「ます形＋続ける」。「3時間も」が継続を示します。",
+      "explanation_id": "Jawaban yang benar adalah '続け'. 「ます形＋続ける」menyatakan tindakan yang terus berlanjut.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 257,
+      "question": "もう遅いから、早く寝＿＿＿。",
+      "question_id": "Karena sudah larut, cepat tidurlah.",
+      "options": [
+        "たい",
+        "ながら",
+        "そう",
+        "なさい"
+      ],
+      "options_romaji": [
+        "tai",
+        "nagara",
+        "sou",
+        "nasai"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「なさい」。「ます形＋なさい」は親や先生が使う、少し強い命令です。",
+      "explanation_id": "Jawaban yang benar adalah 'なさい'. 「ます形＋なさい」adalah perintah agak tegas dari orang tua/guru.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 258,
+      "question": "お金＿＿＿あれば、何でも買える。",
+      "question_id": "Asalkan ada uang, apa pun bisa dibeli.",
+      "options": [
+        "ばかり",
+        "ほど",
+        "さえ",
+        "こそ"
+      ],
+      "options_romaji": [
+        "bakari",
+        "hodo",
+        "sae",
+        "koso"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「さえ」。「〜さえ〜ば」は「それだけが条件」という意味です。",
+      "explanation_id": "Jawaban yang benar adalah 'さえ'. 「〜さえ〜ば」berarti \"asalkan ... maka\".",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 259,
+      "question": "来年、国に帰る＿＿＿です。",
+      "question_id": "Tahun depan saya berniat pulang ke negara asal.",
+      "options": [
+        "みたい",
+        "つもり",
+        "よう",
+        "そう"
+      ],
+      "options_romaji": [
+        "mitai",
+        "tsumori",
+        "you",
+        "sou"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「つもり」。自分の意志・予定は「〜つもりだ」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'つもり'. 「〜つもりだ」menyatakan niat atau rencana sendiri.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 260,
+      "question": "空が暗いから、雨が降る＿＿＿。",
+      "question_id": "Langit gelap, mungkin akan turun hujan.",
+      "options": [
+        "かもしれない",
+        "ことだ",
+        "ところだ",
+        "ばかりだ"
+      ],
+      "options_romaji": [
+        "kamoshirenai",
+        "kotoda",
+        "tokoroda",
+        "bakarida"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「かもしれない」。確実ではない可能性は「〜かもしれない」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'かもしれない'. 「〜かもしれない」menyatakan kemungkinan yang belum pasti.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 261,
+      "question": "どんなに急い＿＿＿、もう間に合わない。",
+      "question_id": "Sekeras apa pun bergegas, sudah tidak akan sempat.",
+      "options": [
+        "たり",
+        "では",
+        "だら",
+        "でも"
+      ],
+      "options_romaji": [
+        "tari",
+        "deha",
+        "dara",
+        "demo"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「でも」。「どんなに〜ても」は逆接で「〜しても無駄だ」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'でも'. 「どんなに〜ても」menyatakan \"walau bagaimanapun ... tetap\".",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 262,
+      "question": "休みの日は本を読ん＿＿＿、音楽を聞いたりする。",
+      "question_id": "Di hari libur saya membaca buku, mendengar musik, dan lain-lain.",
+      "options": [
+        "ながら",
+        "つつ",
+        "だり",
+        "でも"
+      ],
+      "options_romaji": [
+        "nagara",
+        "tsutsu",
+        "dari",
+        "demo"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「だり」。「〜たり〜たりする」は動作を例としていくつか並べます。",
+      "explanation_id": "Jawaban yang benar adalah 'だり'. 「〜たり〜たりする」menyebut beberapa contoh tindakan.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 263,
+      "question": "熱があるなら、今日は休んだ＿＿＿いいですよ。",
+      "question_id": "Kalau demam, lebih baik istirahat hari ini.",
+      "options": [
+        "ばかり",
+        "ほうが",
+        "より",
+        "ところ"
+      ],
+      "options_romaji": [
+        "bakari",
+        "houga",
+        "yori",
+        "tokoro"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「ほうが」。助言は「〜たほうがいい」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ほうが'. Saran dinyatakan dengan「〜たほうがいい」.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 264,
+      "question": "健康のために、毎朝走る＿＿＿しました。",
+      "question_id": "Demi kesehatan, saya memutuskan lari tiap pagi.",
+      "options": [
+        "ことに",
+        "ように",
+        "はずに",
+        "みたいに"
+      ],
+      "options_romaji": [
+        "kotoni",
+        "youni",
+        "hazuni",
+        "mitaini"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ことに」。自分で決めたことは「〜ことにする」で表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ことに'. 「〜ことにする」menyatakan keputusan yang diambil sendiri.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 265,
+      "question": "毎日、9時＿＿＿5時まで働いています。",
+      "question_id": "Setiap hari saya bekerja dari jam 9 sampai jam 5.",
+      "options": [
+        "より",
+        "ごろ",
+        "ぐらい",
+        "から"
+      ],
+      "options_romaji": [
+        "yori",
+        "goro",
+        "gurai",
+        "kara"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「から」。範囲の起点は「〜から」、終点は「〜まで」で対にして使います。",
+      "explanation_id": "Jawaban yang benar adalah 'から'. Titik awal rentang memakai「〜から」, berpasangan dengan「〜まで」.",
+      "category": "文法",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 266,
+      "question": "部品の＿＿＿が切れたので、追加で注文した。",
+      "question_id": "Karena stok komponen habis, saya memesan tambahan.",
+      "options": [
+        "在校",
+        "在任",
+        "在庫",
+        "在宅"
+      ],
+      "options_romaji": [
+        "zaikou",
+        "zainin",
+        "zaiko",
+        "zaitaku"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「在庫」。「在庫」は倉庫などにある商品・材料の残りの数です。",
+      "explanation_id": "Jawaban yang benar adalah '在庫'. 「在庫」berarti sisa barang/bahan yang ada di gudang.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 267,
+      "question": "作業の＿＿＿どおりに、順番に進めてください。",
+      "question_id": "Tolong lanjutkan sesuai urutan langkah kerja.",
+      "options": [
+        "拍手",
+        "手順",
+        "手間",
+        "手帳"
+      ],
+      "options_romaji": [
+        "hakushu",
+        "tejun",
+        "tema",
+        "techou"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「手順」。「手順」は作業を進める順序・段取りのことです。",
+      "explanation_id": "Jawaban yang benar adalah '手順'. 「手順」adalah urutan langkah dalam mengerjakan sesuatu.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 268,
+      "question": "通路の＿＿＿でつまずかないよう、足元に注意。",
+      "question_id": "Hati-hati agar tidak tersandung beda tinggi lantai di lorong.",
+      "options": [
+        "段差",
+        "段階",
+        "文段",
+        "階級"
+      ],
+      "options_romaji": [
+        "dansa",
+        "dankai",
+        "bundan",
+        "kaikyuu"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「段差」。「段差」は床の高さの違いのことです。",
+      "explanation_id": "Jawaban yang benar adalah '段差'. 「段差」adalah perbedaan ketinggian permukaan lantai.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 269,
+      "question": "機械の温度に＿＿＿が出たら、すぐに知らせてください。",
+      "question_id": "Kalau ada keanehan pada suhu mesin, segera beri tahu.",
+      "options": [
+        "異動",
+        "異性",
+        "意義",
+        "異常"
+      ],
+      "options_romaji": [
+        "idou",
+        "isei",
+        "igi",
+        "ijou"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「異常」。「異常」はふだんと違う、おかしな状態のことです。",
+      "explanation_id": "Jawaban yang benar adalah '異常'. 「異常」berarti keadaan tidak normal/janggal.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 270,
+      "question": "この製品は＿＿＿品なので、出荷できません。",
+      "question_id": "Produk ini barang cacat, jadi tidak bisa dikirim.",
+      "options": [
+        "不順",
+        "不調",
+        "不良",
+        "不安"
+      ],
+      "options_romaji": [
+        "fujun",
+        "fuchou",
+        "furyou",
+        "fuan"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「不良」。「不良品」は品質に問題がある製品です。",
+      "explanation_id": "Jawaban yang benar adalah '不良'. 「不良品」adalah produk yang kualitasnya bermasalah.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 271,
+      "question": "この工程の＿＿＿は山田さんです。",
+      "question_id": "Penanggung jawab proses ini adalah Yamada-san.",
+      "options": [
+        "分担",
+        "担当",
+        "担任",
+        "負担"
+      ],
+      "options_romaji": [
+        "buntan",
+        "tantou",
+        "tannin",
+        "futan"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「担当」。「担当」はその仕事を受け持つ人・ことです。",
+      "explanation_id": "Jawaban yang benar adalah '担当'. 「担当」adalah orang yang bertanggung jawab atas pekerjaan itu.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 272,
+      "question": "夜勤は二人で＿＿＿しながら働きます。",
+      "question_id": "Shift malam dikerjakan berdua secara bergantian.",
+      "options": [
+        "交代",
+        "交通",
+        "交流",
+        "交差"
+      ],
+      "options_romaji": [
+        "koutai",
+        "koutsuu",
+        "kouryuu",
+        "kousa"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「交代」。「交代」は順番に役割を入れかえることです。",
+      "explanation_id": "Jawaban yang benar adalah '交代'. 「交代」berarti bergantian peran secara bergiliran.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 273,
+      "question": "危ないときは、笛で＿＿＿を送ります。",
+      "question_id": "Saat berbahaya, saya memberi tanda dengan peluit.",
+      "options": [
+        "合計",
+        "合同",
+        "合宿",
+        "合図"
+      ],
+      "options_romaji": [
+        "goukei",
+        "goudou",
+        "gasshuku",
+        "aizu"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「合図」。「合図」は身ぶりや音で知らせるサインです。",
+      "explanation_id": "Jawaban yang benar adalah '合図'. 「合図」adalah isyarat lewat gerakan atau suara.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 274,
+      "question": "近所から騒音の＿＿＿が来たので、対応する。",
+      "question_id": "Ada keluhan soal kebisingan dari tetangga, jadi kami menangani.",
+      "options": [
+        "苦手",
+        "苦痛",
+        "苦情",
+        "苦労"
+      ],
+      "options_romaji": [
+        "nigate",
+        "kutsuu",
+        "kujou",
+        "kurou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「苦情」。「苦情」は不満を伝える文句のことです。",
+      "explanation_id": "Jawaban yang benar adalah '苦情'. 「苦情」adalah keluhan yang menyatakan ketidakpuasan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 275,
+      "question": "＿＿＿と同じ大きさに切ってください。",
+      "question_id": "Tolong potong dengan ukuran yang sama seperti contoh.",
+      "options": [
+        "本日",
+        "見本",
+        "見学",
+        "絵本"
+      ],
+      "options_romaji": [
+        "honjitsu",
+        "mihon",
+        "kengaku",
+        "ehon"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「見本」。「見本」は手本として見せる品（サンプル）です。",
+      "explanation_id": "Jawaban yang benar adalah '見本'. 「見本」adalah contoh/sampel yang diperlihatkan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 276,
+      "question": "ねじを回して、機械を＿＿＿します。",
+      "question_id": "Saya menyetel mesin dengan memutar sekrup.",
+      "options": [
+        "調整",
+        "調子",
+        "強調",
+        "順調"
+      ],
+      "options_romaji": [
+        "chousei",
+        "choushi",
+        "kyouchou",
+        "junchou"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「調整」。「調整」はちょうどよい状態になるように整えることです。",
+      "explanation_id": "Jawaban yang benar adalah '調整'. 「調整」berarti menyetel agar mencapai kondisi yang pas.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 277,
+      "question": "申込みの＿＿＿は今週の金曜日です。",
+      "question_id": "Batas akhir pendaftaran adalah Jumat ini.",
+      "options": [
+        "締め付け",
+        "踏み切り",
+        "品切れ",
+        "締め切り"
+      ],
+      "options_romaji": [
+        "shimetsuke",
+        "fumikiri",
+        "shinagire",
+        "shimekiri"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「締め切り」。「締め切り」は受付などの期限のことです。",
+      "explanation_id": "Jawaban yang benar adalah '締め切り'. 「締め切り」adalah batas waktu (tenggat).",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 278,
+      "question": "曲がる場所に＿＿＿をつけておく。",
+      "question_id": "Saya menandai tempat berbelok lebih dulu.",
+      "options": [
+        "目次",
+        "項目",
+        "目印",
+        "目上"
+      ],
+      "options_romaji": [
+        "mokuji",
+        "koumoku",
+        "mejirushi",
+        "meue"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「目印」。「目印」は見てすぐわかるようにつける印です。",
+      "explanation_id": "Jawaban yang benar adalah '目印'. 「目印」adalah tanda agar mudah dikenali.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 279,
+      "question": "箱の中身の＿＿＿が合っているか数えます。",
+      "question_id": "Saya menghitung apakah jumlah isi kotak sudah cocok.",
+      "options": [
+        "音量",
+        "数量",
+        "重量",
+        "容量"
+      ],
+      "options_romaji": [
+        "onryou",
+        "suuryou",
+        "juuryou",
+        "youryou"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「数量」。「数量」は物の数のことです。「数える」と結びつきます。",
+      "explanation_id": "Jawaban yang benar adalah '数量'. 「数量」berarti jumlah barang, berkaitan dengan \"menghitung\".",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 280,
+      "question": "金属の＿＿＿に傷がないか確認する。",
+      "question_id": "Saya memeriksa apakah ada goresan di permukaan logam.",
+      "options": [
+        "表面",
+        "表現",
+        "表紙",
+        "表情"
+      ],
+      "options_romaji": [
+        "hyoumen",
+        "hyougen",
+        "hyoushi",
+        "hyoujou"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「表面」。「表面」は物のいちばん外側の面です。",
+      "explanation_id": "Jawaban yang benar adalah '表面'. 「表面」adalah sisi terluar suatu benda.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 281,
+      "question": "ねじを正しい＿＿＿で差し込みます。",
+      "question_id": "Saya memasukkan sekrup dengan sudut yang benar.",
+      "options": [
+        "角材",
+        "三角",
+        "四角",
+        "角度"
+      ],
+      "options_romaji": [
+        "kakuzai",
+        "sankaku",
+        "shikaku",
+        "kakudo"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「角度」。「角度」は線や面が作る角の大きさです。",
+      "explanation_id": "Jawaban yang benar adalah '角度'. 「角度」adalah besar sudut yang dibentuk garis/bidang.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 282,
+      "question": "荷物の＿＿＿を量ってから運びます。",
+      "question_id": "Saya menimbang berat barang dulu baru mengangkutnya.",
+      "options": [
+        "長さ",
+        "広さ",
+        "重さ",
+        "速さ"
+      ],
+      "options_romaji": [
+        "nagasa",
+        "hirosa",
+        "omosa",
+        "hayasa"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「重さ」。「重さ」は物の重い・軽いの程度です。「量る」と結びつきます。",
+      "explanation_id": "Jawaban yang benar adalah '重さ'. 「重さ」berarti berat benda, berkaitan dengan \"menimbang\".",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 283,
+      "question": "機械を使う＿＿＿を守ってください。",
+      "question_id": "Tolong patuhi giliran pemakaian mesin.",
+      "options": [
+        "番組",
+        "順番",
+        "順調",
+        "従順"
+      ],
+      "options_romaji": [
+        "bangumi",
+        "junban",
+        "junchou",
+        "juujun"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「順番」。「順番」は物事を行う順序のことです。",
+      "explanation_id": "Jawaban yang benar adalah '順番'. 「順番」adalah urutan giliran.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 284,
+      "question": "液体は専用の＿＿＿に入れて保管する。",
+      "question_id": "Cairan disimpan dengan dimasukkan ke wadah khusus.",
+      "options": [
+        "容器",
+        "容易",
+        "内容",
+        "用紙"
+      ],
+      "options_romaji": [
+        "youki",
+        "youi",
+        "naiyou",
+        "youshi"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「容器」。「容器」は物を入れるための入れ物です。",
+      "explanation_id": "Jawaban yang benar adalah '容器'. 「容器」adalah wadah untuk menaruh sesuatu.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 285,
+      "question": "この薬品には使用＿＿＿があります。",
+      "question_id": "Bahan kimia ini memiliki batas waktu pemakaian.",
+      "options": [
+        "期待",
+        "期末",
+        "延期",
+        "期限"
+      ],
+      "options_romaji": [
+        "kitai",
+        "kimatsu",
+        "enki",
+        "kigen"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「期限」。「期限」はいつまでに、と区切られた時のことです。",
+      "explanation_id": "Jawaban yang benar adalah '期限'. 「期限」adalah batas waktu yang ditentukan.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 286,
+      "question": "＿＿＿に物を置くと、避難のとき危険です。",
+      "question_id": "Menaruh barang di lorong berbahaya saat evakuasi.",
+      "options": [
+        "通信",
+        "通学",
+        "通路",
+        "通行"
+      ],
+      "options_romaji": [
+        "tsuushin",
+        "tsuugaku",
+        "tsuuro",
+        "tsuukou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「通路」。「通路」は人が通るための道・スペースです。",
+      "explanation_id": "Jawaban yang benar adalah '通路'. 「通路」adalah jalan/ruang untuk orang lewat.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 287,
+      "question": "工場の＿＿＿を定期的に点検する。",
+      "question_id": "Fasilitas pabrik diperiksa secara berkala.",
+      "options": [
+        "予備",
+        "設備",
+        "準備",
+        "守備"
+      ],
+      "options_romaji": [
+        "yobi",
+        "setsubi",
+        "junbi",
+        "shubi"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「設備」。「設備」は工場などに備えつけられた機械や装置です。",
+      "explanation_id": "Jawaban yang benar adalah '設備'. 「設備」adalah mesin/peralatan yang terpasang di pabrik dll.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 288,
+      "question": "作業場の空気を入れ替えるため、＿＿＿をする。",
+      "question_id": "Untuk mengganti udara di tempat kerja, kami melakukan ventilasi.",
+      "options": [
+        "換気",
+        "換算",
+        "交換",
+        "空気"
+      ],
+      "options_romaji": [
+        "kanki",
+        "kansan",
+        "koukan",
+        "kuuki"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「換気」。「換気」は部屋の空気を新しく入れ替えることです。",
+      "explanation_id": "Jawaban yang benar adalah '換気'. 「換気」berarti mengganti udara ruangan dengan yang baru.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 289,
+      "question": "電気の＿＿＿が複雑なので、図を見て確認する。",
+      "question_id": "Karena pengkabelan listrik rumit, saya memeriksa dengan melihat diagram.",
+      "options": [
+        "配達",
+        "配布",
+        "無線",
+        "配線"
+      ],
+      "options_romaji": [
+        "haitatsu",
+        "haifu",
+        "musen",
+        "haisen"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「配線」。「配線」は電気を通すための線のつなぎ方です。",
+      "explanation_id": "Jawaban yang benar adalah '配線'. 「配線」adalah susunan kabel untuk mengalirkan listrik.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 290,
+      "question": "部屋の＿＿＿を一定に保ちます。",
+      "question_id": "Saya menjaga suhu ruangan tetap stabil.",
+      "options": [
+        "程度",
+        "態度",
+        "温度",
+        "角度"
+      ],
+      "options_romaji": [
+        "teido",
+        "taido",
+        "ondo",
+        "kakudo"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「温度」。「温度」は暑さ・冷たさの程度を数字で表したものです。",
+      "explanation_id": "Jawaban yang benar adalah '温度'. 「温度」adalah derajat panas/dingin yang dinyatakan angka.",
+      "category": "語彙",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 291,
+      "question": "「出発」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '出発'?",
+      "options": [
+        "しゅっぱち",
+        "しゅっぱつ",
+        "しゅつはつ",
+        "ではつ"
+      ],
+      "options_romaji": [
+        "shuppachi",
+        "shuppatsu",
+        "shutsuhatsu",
+        "dehatsu"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「しゅっぱつ」。「出発」は「しゅっぱつ」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'しゅっぱつ'. '出発' dibaca 'しゅっぱつ'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 292,
+      "question": "「到着」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '到着'?",
+      "options": [
+        "とうちゃく",
+        "とうじゃく",
+        "とうちゃ",
+        "どうちゃく"
+      ],
+      "options_romaji": [
+        "touchaku",
+        "toujaku",
+        "toucha",
+        "douchaku"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「とうちゃく」。「到着」は「とうちゃく」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'とうちゃく'. '到着' dibaca 'とうちゃく'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 293,
+      "question": "「延長」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '延長'?",
+      "options": [
+        "えんなが",
+        "えんじょう",
+        "のべちょう",
+        "えんちょう"
+      ],
+      "options_romaji": [
+        "ennaga",
+        "enjou",
+        "nobechou",
+        "enchou"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「えんちょう」。「延長」は「えんちょう」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'えんちょう'. '延長' dibaca 'えんちょう'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 294,
+      "question": "「往復」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '往復'?",
+      "options": [
+        "わふく",
+        "おうふっ",
+        "おうふく",
+        "おうぶく"
+      ],
+      "options_romaji": [
+        "wafuku",
+        "oufutsu",
+        "oufuku",
+        "oubuku"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「おうふく」。「往復」は「おうふく」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'おうふく'. '往復' dibaca 'おうふく'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 295,
+      "question": "「出席」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '出席'?",
+      "options": [
+        "しゅっせ",
+        "しゅっせき",
+        "でせき",
+        "しゅつせき"
+      ],
+      "options_romaji": [
+        "shusse",
+        "shusseki",
+        "deseki",
+        "shutsuseki"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「しゅっせき」。「出席」は「しゅっせき」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'しゅっせき'. '出席' dibaca 'しゅっせき'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 296,
+      "question": "「配達」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '配達'?",
+      "options": [
+        "はいたつ",
+        "はいだ",
+        "はいたち",
+        "くばりたつ"
+      ],
+      "options_romaji": [
+        "haitatsu",
+        "haida",
+        "haitachi",
+        "kubaritatsu"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「はいたつ」。「配達」は「はいたつ」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'はいたつ'. '配達' dibaca 'はいたつ'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 297,
+      "question": "「訪問」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '訪問'?",
+      "options": [
+        "ぼうもん",
+        "ほうど",
+        "おとずもん",
+        "ほうもん"
+      ],
+      "options_romaji": [
+        "boumon",
+        "houdo",
+        "otozumon",
+        "houmon"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「ほうもん」。「訪問」は「ほうもん」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'ほうもん'. '訪問' dibaca 'ほうもん'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 298,
+      "question": "「記録」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '記録'?",
+      "options": [
+        "ぎろく",
+        "きろ",
+        "きろく",
+        "きりょく"
+      ],
+      "options_romaji": [
+        "giroku",
+        "kiro",
+        "kiroku",
+        "kiryoku"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「きろく」。「記録」は「きろく」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'きろく'. '記録' dibaca 'きろく'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 299,
+      "question": "「登録」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '登録'?",
+      "options": [
+        "のぼろく",
+        "とうろく",
+        "とろく",
+        "どうろく"
+      ],
+      "options_romaji": [
+        "noboroku",
+        "touroku",
+        "toroku",
+        "douroku"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「とうろく」。「登録」は「とうろく」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'とうろく'. '登録' dibaca 'とうろく'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
+    },
+    {
+      "id": 300,
+      "question": "「増加」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '増加'?",
+      "options": [
+        "ぞうか",
+        "ぞうが",
+        "そうか",
+        "ましか"
+      ],
+      "options_romaji": [
+        "zouka",
+        "zouga",
+        "souka",
+        "mashika"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ぞうか」。「増加」は「ぞうか」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'ぞうか'. '増加' dibaca 'ぞうか'.",
+      "category": "漢字読み",
+      "jlpt_level": "N3",
+      "pack_id": null
     }
   ]
 }
