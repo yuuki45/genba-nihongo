@@ -41,7 +41,7 @@ void main() {
 
     test('すべてのクイズがQuizモデルにパースできる', () {
       final parsed = quizzes.map(Quiz.fromJson).toList();
-      expect(parsed, hasLength(300));
+      expect(parsed, hasLength(360));
     });
 
     test('クイズIDに重複がない', () {
@@ -49,11 +49,11 @@ void main() {
       expect(ids.toSet().length, ids.length);
     });
 
-    test('無料180問・対策パック120問が収録されている', () {
+    test('無料180問・対策パック180問が収録されている', () {
       final free = quizzes.where((q) => q['pack_id'] == null).length;
       final paid = quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').length;
       expect(free, 180);
-      expect(paid, 120);
+      expect(paid, 180);
     });
 
     test('N3の漢字読みは無料である（ハブUIとの一貫性）', () {
@@ -77,22 +77,22 @@ void main() {
           reason: 'N2クイズに無料のものが含まれています: ${n2Free.map((q) => q['id'])}');
     });
 
-    test('対策パックはN3:50問（文法25+語彙25）+ N2:70問（文法25+語彙25+漢字読み20）', () {
+    test('対策パックはN3:50問（文法25+語彙25）+ N2:130問（文法50+語彙50+漢字読み30）', () {
       final packQuizzes =
           quizzes.where((q) => q['pack_id'] == 'jlpt_n3n2').toList();
       final n3 = packQuizzes.where((q) => q['jlpt_level'] == 'N3').toList();
       final n2 = packQuizzes.where((q) => q['jlpt_level'] == 'N2').toList();
       expect(n3, hasLength(50));
-      expect(n2, hasLength(70));
+      expect(n2, hasLength(130));
 
       expect(n3.where((q) => q['category'] == '文法').length, 25);
       expect(n3.where((q) => q['category'] == '語彙').length, 25);
       expect(n3.where((q) => q['category'] == '漢字読み').length, 0,
           reason: 'N3の漢字読みは無料のはずです');
 
-      expect(n2.where((q) => q['category'] == '文法').length, 25);
-      expect(n2.where((q) => q['category'] == '語彙').length, 25);
-      expect(n2.where((q) => q['category'] == '漢字読み').length, 20);
+      expect(n2.where((q) => q['category'] == '文法').length, 50);
+      expect(n2.where((q) => q['category'] == '語彙').length, 50);
+      expect(n2.where((q) => q['category'] == '漢字読み').length, 30);
     });
 
     test('漢字読み問題の語は漢字カード（kanji.json）と重複しない', () {

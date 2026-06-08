@@ -1,5 +1,5 @@
 {
-  "data_version": 7,
+  "data_version": 8,
   "quizzes": [
     {
       "id": 1,
@@ -6940,6 +6940,1386 @@
       "category": "漢字読み",
       "jlpt_level": "N3",
       "pack_id": null
+    },
+    {
+      "id": 301,
+      "question": "今回の会議＿＿＿、重要な決定がなされた。",
+      "question_id": "Dalam rapat kali ini, dibuat keputusan penting.",
+      "options": [
+        "にとって",
+        "に向けて",
+        "にかけて",
+        "において"
+      ],
+      "options_romaji": [
+        "nitotte",
+        "nimukete",
+        "nikakete",
+        "nioite"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「において」。「〜において」は「〜という場面・場所で」を表す書き言葉です。",
+      "explanation_id": "Jawaban yang benar adalah 'において'. 「〜において」menyatakan \"dalam (situasi/tempat)\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 302,
+      "question": "お客様＿＿＿、ていねいな言葉を使います。",
+      "question_id": "Terhadap pelanggan, kami memakai bahasa yang sopan.",
+      "options": [
+        "における",
+        "をめぐって",
+        "に対して",
+        "にとって"
+      ],
+      "options_romaji": [
+        "niokeru",
+        "omegutte",
+        "nitaishite",
+        "nitotte"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「に対して」。「〜に対して」は動作の向かう相手・対象を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に対して'. 「〜に対して」menunjukkan pihak yang dituju tindakan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 303,
+      "question": "社長＿＿＿、全員が式に出席した。",
+      "question_id": "Mulai dari direktur, semua hadir di acara.",
+      "options": [
+        "をつうじて",
+        "をはじめ",
+        "をもとに",
+        "をこめて"
+      ],
+      "options_romaji": [
+        "otsuujite",
+        "ohajime",
+        "omotoni",
+        "okomete"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「をはじめ」。「〜をはじめ」は代表の例をあげて「〜など全部」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'をはじめ'. 「〜をはじめ」menyebut contoh utama lalu \"dan lainnya\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 304,
+      "question": "あの様子では、彼は知っていた＿＿＿。",
+      "question_id": "Melihat keadaannya, dia pasti sudah tahu.",
+      "options": [
+        "に違いない",
+        "ことだ",
+        "べきだ",
+        "ものだ"
+      ],
+      "options_romaji": [
+        "nichigainai",
+        "kotoda",
+        "bekida",
+        "monoda"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「に違いない」。「〜に違いない」は強い確信（きっと〜だ）を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に違いない'. 「〜に違いない」menyatakan keyakinan kuat (pasti).",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 305,
+      "question": "彼の話は、ただのうわさ＿＿＿。",
+      "question_id": "Ceritanya hanyalah desas-desus belaka.",
+      "options": [
+        "に限る",
+        "に反する",
+        "に等しい",
+        "に過ぎない"
+      ],
+      "options_romaji": [
+        "nikagiru",
+        "nihansuru",
+        "nihitoshii",
+        "nisuginai"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「に過ぎない」。「〜に過ぎない」は「ただ〜だけだ」と程度を低く言います。",
+      "explanation_id": "Jawaban yang benar adalah 'に過ぎない'. 「〜に過ぎない」berarti \"tidak lebih dari sekadar ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 306,
+      "question": "難しいという予想＿＿＿、試験は簡単だった。",
+      "question_id": "Berlawanan dengan dugaan akan sulit, ujiannya mudah.",
+      "options": [
+        "に加えて",
+        "に比べて",
+        "に反して",
+        "に沿って"
+      ],
+      "options_romaji": [
+        "nikuwaete",
+        "nikurabete",
+        "nihanshite",
+        "nisotte"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「に反して」。「〜に反して」は予想・期待と逆の結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'に反して'. 「〜に反して」menyatakan hasil yang berlawanan dengan dugaan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 307,
+      "question": "この工場では平日＿＿＿、週末も機械が動いている。",
+      "question_id": "Di pabrik ini, jangankan hari kerja, akhir pekan pun mesin beroperasi.",
+      "options": [
+        "といえば",
+        "はもちろん",
+        "どころか",
+        "にしては"
+      ],
+      "options_romaji": [
+        "toieba",
+        "hamochiron",
+        "dokoroka",
+        "nishiteha"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「はもちろん」。「〜はもちろん」は「言うまでもなく〜も」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'はもちろん'. 「〜はもちろん」berarti \"tentu saja ..., bahkan juga ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 308,
+      "question": "連絡先がないので、知らせ＿＿＿。",
+      "question_id": "Karena tidak ada kontak, tidak ada cara memberi tahu.",
+      "options": [
+        "ようがない",
+        "かねない",
+        "べきだ",
+        "ものだ"
+      ],
+      "options_romaji": [
+        "youganai",
+        "kanenai",
+        "bekida",
+        "monoda"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ようがない」。「ます形＋ようがない」は「方法がなくてできない」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ようがない'. 「ます形＋ようがない」berarti \"tidak ada cara untuk ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 309,
+      "question": "さんざん迷った＿＿＿、結局何も買わなかった。",
+      "question_id": "Setelah ragu-ragu lama, akhirnya tidak membeli apa pun.",
+      "options": [
+        "とたんに",
+        "かぎり",
+        "うえに",
+        "あげく"
+      ],
+      "options_romaji": [
+        "totanni",
+        "kagiri",
+        "ueni",
+        "ageku"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「あげく」。「〜たあげく」は長い経過の末の（多くは残念な）結果を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'あげく'. 「〜たあげく」menyatakan hasil (sering buruk) setelah proses panjang.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 310,
+      "question": "あわてた＿＿＿、大事な書類を忘れてしまった。",
+      "question_id": "Justru karena terburu-buru, saya melupakan dokumen penting.",
+      "options": [
+        "うちに",
+        "ものの",
+        "ばかりに",
+        "すえに"
+      ],
+      "options_romaji": [
+        "uchini",
+        "monono",
+        "bakarini",
+        "sueni"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「ばかりに」。「〜ばかりに」は「それだけが原因で悪い結果になった」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ばかりに'. 「〜ばかりに」menyatakan \"hanya karena itu jadi hasil buruk\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 311,
+      "question": "仕事が忙しくて、旅行＿＿＿。",
+      "question_id": "Karena kerja sibuk, sama sekali bukan saatnya berlibur.",
+      "options": [
+        "ものではない",
+        "どころではない",
+        "わけではない",
+        "はずがない"
+      ],
+      "options_romaji": [
+        "monodehanai",
+        "dokorodehanai",
+        "wakedehanai",
+        "hazuganai"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「どころではない」。「〜どころではない」は「とても〜できる状況ではない」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'どころではない'. 「〜どころではない」berarti \"sama sekali bukan situasi untuk ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 312,
+      "question": "電車が遅れた＿＿＿、会議に間に合わなかった。",
+      "question_id": "Gara-gara kereta terlambat, saya tidak sempat ke rapat.",
+      "options": [
+        "ものだから",
+        "ものの",
+        "ものなら",
+        "ものか"
+      ],
+      "options_romaji": [
+        "monodakara",
+        "monono",
+        "mononara",
+        "monoka"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ものだから」。「〜ものだから」は理由を強調して言いわけする表現です。",
+      "explanation_id": "Jawaban yang benar adalah 'ものだから'. 「〜ものだから」menekankan alasan (sering sebagai pembelaan).",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 313,
+      "question": "説明書＿＿＿、機械を正しく組み立てる。",
+      "question_id": "Sesuai dengan buku petunjuk, mesin dirakit dengan benar.",
+      "options": [
+        "にかけて",
+        "において",
+        "によると",
+        "にしたがって"
+      ],
+      "options_romaji": [
+        "nikakete",
+        "nioite",
+        "niyoruto",
+        "nishitagatte"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「にしたがって」。「〜にしたがって」は「〜のとおりに」「〜と一緒に変化して」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'にしたがって'. 「〜にしたがって」berarti \"sesuai dengan / seiring dengan\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 314,
+      "question": "買い物に行く＿＿＿、郵便局にも寄った。",
+      "question_id": "Sekalian pergi belanja, saya mampir ke kantor pos.",
+      "options": [
+        "うちに",
+        "とおりに",
+        "ついでに",
+        "あいだに"
+      ],
+      "options_romaji": [
+        "uchini",
+        "toorini",
+        "tsuideni",
+        "aidani"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「ついでに」。「〜ついでに」は「ある機会を利用して別のこともする」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'ついでに'. 「〜ついでに」berarti \"sekalian melakukan hal lain\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 315,
+      "question": "新工場の開店＿＿＿、社長があいさつをした。",
+      "question_id": "Pada kesempatan pembukaan pabrik baru, direktur memberi sambutan.",
+      "options": [
+        "にしては",
+        "にあたって",
+        "にかけて",
+        "にわたって"
+      ],
+      "options_romaji": [
+        "nishiteha",
+        "niatatte",
+        "nikakete",
+        "niwatatte"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「にあたって」。「〜にあたって」は大事なことを行う直前の機会を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'にあたって'. 「〜にあたって」menyatakan kesempatan menjelang hal penting.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 316,
+      "question": "感謝を＿＿＿、お客様に手紙を書いた。",
+      "question_id": "Dengan penuh rasa terima kasih, saya menulis surat ke pelanggan.",
+      "options": [
+        "込めて",
+        "はじめ",
+        "もとに",
+        "つうじて"
+      ],
+      "options_romaji": [
+        "komete",
+        "hajime",
+        "motoni",
+        "tsuujite"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「込めて」。「〜を込めて」は気持ちを入れて何かをすることを表します。",
+      "explanation_id": "Jawaban yang benar adalah '込めて'. 「〜を込めて」berarti \"melakukan dengan menaruh perasaan\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 317,
+      "question": "新しい計画＿＿＿、社内で議論が続いている。",
+      "question_id": "Mengenai rencana baru, perdebatan di kantor terus berlanjut.",
+      "options": [
+        "をこめて",
+        "をはじめ",
+        "をもとに",
+        "をめぐって"
+      ],
+      "options_romaji": [
+        "okomete",
+        "ohajime",
+        "omotoni",
+        "omegutte"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「をめぐって」。「〜をめぐって」は議論・対立の中心となる話題を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'をめぐって'. 「〜をめぐって」menunjukkan topik pusat perdebatan.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 318,
+      "question": "先生の指導＿＿＿、研究を進めている。",
+      "question_id": "Di bawah bimbingan guru, saya melanjutkan penelitian.",
+      "options": [
+        "のうちに",
+        "のたびに",
+        "のもとで",
+        "のかわりに"
+      ],
+      "options_romaji": [
+        "nouchini",
+        "notabini",
+        "nomotode",
+        "nokawarini"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「のもとで」。「〜のもとで」は「〜の影響・管理の下で」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'のもとで'. 「〜のもとで」berarti \"di bawah (pengaruh/bimbingan)\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 319,
+      "question": "みんなの期待＿＿＿、彼は優勝した。",
+      "question_id": "Memenuhi harapan semua orang, dia menjadi juara.",
+      "options": [
+        "にわたって",
+        "にこたえて",
+        "にくわえて",
+        "にかわって"
+      ],
+      "options_romaji": [
+        "niwatatte",
+        "nikotaete",
+        "nikuwaete",
+        "nikawatte"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「にこたえて」。「〜にこたえて」は要望・期待に応じることを表します。",
+      "explanation_id": "Jawaban yang benar adalah 'にこたえて'. 「〜にこたえて」berarti \"menanggapi/memenuhi harapan\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 320,
+      "question": "調査の結果＿＿＿、新しい計画を立てる。",
+      "question_id": "Berdasarkan hasil survei, kami menyusun rencana baru.",
+      "options": [
+        "をもとに",
+        "をこめて",
+        "をめぐって",
+        "をはじめ"
+      ],
+      "options_romaji": [
+        "omotoni",
+        "okomete",
+        "omegutte",
+        "ohajime"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「をもとに」。「〜をもとに」は「〜を基礎・材料にして」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'をもとに'. 「〜をもとに」berarti \"berdasarkan / dengan dasar ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 321,
+      "question": "この教材は子ども＿＿＿に作られている。",
+      "question_id": "Materi ini dibuat untuk anak-anak.",
+      "options": [
+        "だらけ",
+        "っぽい",
+        "がち",
+        "向け"
+      ],
+      "options_romaji": [
+        "darake",
+        "ppoi",
+        "gachi",
+        "muke"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「向け」。「〜向け」は「〜を対象にした」を表します。",
+      "explanation_id": "Jawaban yang benar adalah '向け'. 「〜向け」berarti \"ditujukan untuk ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 322,
+      "question": "机の上は、いらない書類＿＿＿だった。",
+      "question_id": "Di atas meja penuh dengan dokumen yang tak terpakai.",
+      "options": [
+        "ぎみ",
+        "っぽい",
+        "だらけ",
+        "まみれ"
+      ],
+      "options_romaji": [
+        "gimi",
+        "ppoi",
+        "darake",
+        "mamire"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「だらけ」。「〜だらけ」は「〜がたくさんある」（多くは悪い物）を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'だらけ'. 「〜だらけ」berarti \"penuh dengan ...\" (sering hal buruk).",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 323,
+      "question": "電気をつけ＿＿＿で、出かけてしまった。",
+      "question_id": "Saya pergi dengan lampu dibiarkan menyala.",
+      "options": [
+        "ぎみ",
+        "っぱなし",
+        "きり",
+        "がち"
+      ],
+      "options_romaji": [
+        "gimi",
+        "ppanashi",
+        "kiri",
+        "gachi"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「っぱなし」。「〜っぱなし」は「〜したままにしておく」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'っぱなし'. 「〜っぱなし」berarti \"membiarkan tetap dalam keadaan ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 324,
+      "question": "この工事は3か月＿＿＿行われた。",
+      "question_id": "Pekerjaan ini dilakukan selama 3 bulan penuh.",
+      "options": [
+        "にわたって",
+        "にかけて",
+        "において",
+        "にあたって"
+      ],
+      "options_romaji": [
+        "niwatatte",
+        "nikakete",
+        "nioite",
+        "niatatte"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「にわたって」。「〜にわたって」は期間や範囲の全体を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'にわたって'. 「〜にわたって」menyatakan keseluruhan rentang waktu/luas.",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 325,
+      "question": "緊張した＿＿＿、うまく話せなかった。",
+      "question_id": "Karena terlalu gugup, saya tidak bisa bicara dengan baik.",
+      "options": [
+        "うえに",
+        "ところに",
+        "きり",
+        "あまり"
+      ],
+      "options_romaji": [
+        "ueni",
+        "tokoroni",
+        "kiri",
+        "amari"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「あまり」。「〜あまり」は「〜しすぎてその結果」を表します。",
+      "explanation_id": "Jawaban yang benar adalah 'あまり'. 「〜あまり」menyatakan \"akibat karena terlalu ...\".",
+      "category": "文法",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 326,
+      "question": "完成した製品を、トラックで＿＿＿する。",
+      "question_id": "Produk yang selesai dikirim dengan truk.",
+      "options": [
+        "出勤",
+        "出席",
+        "出荷",
+        "出張"
+      ],
+      "options_romaji": [
+        "shukkin",
+        "shusseki",
+        "shukka",
+        "shucchou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「出荷」。「出荷」は商品を市場や客へ送り出すことです。",
+      "explanation_id": "Jawaban yang benar adalah '出荷'. 「出荷」berarti mengirim barang ke pasar/pelanggan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 327,
+      "question": "その案について、来週までに＿＿＿します。",
+      "question_id": "Soal usulan itu, kami akan mempertimbangkannya sampai minggu depan.",
+      "options": [
+        "検診",
+        "検討",
+        "検査",
+        "点検"
+      ],
+      "options_romaji": [
+        "kenshin",
+        "kentou",
+        "kensa",
+        "tenken"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「検討」。「検討」はよく調べて考えることです。",
+      "explanation_id": "Jawaban yang benar adalah '検討'. 「検討」berarti memikirkan dengan menelaah baik-baik.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 328,
+      "question": "スマートフォンは、急速に社会に＿＿＿した。",
+      "question_id": "Ponsel pintar dengan cepat menyebar di masyarakat.",
+      "options": [
+        "普及",
+        "普通",
+        "普段",
+        "復旧"
+      ],
+      "options_romaji": [
+        "fukyuu",
+        "futsuu",
+        "fudan",
+        "fukkyuu"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「普及」。「普及」は広く行きわたることです。",
+      "explanation_id": "Jawaban yang benar adalah '普及'. 「普及」berarti menyebar luas.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 329,
+      "question": "停電のあと、電気がすぐに＿＿＿した。",
+      "question_id": "Setelah mati listrik, listrik segera pulih.",
+      "options": [
+        "復習",
+        "予習",
+        "復活",
+        "復旧"
+      ],
+      "options_romaji": [
+        "fukushuu",
+        "yoshuu",
+        "fukkatsu",
+        "fukkyuu"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「復旧」。「復旧」は壊れた状態が元にもどることです。",
+      "explanation_id": "Jawaban yang benar adalah '復旧'. 「復旧」berarti kembali ke keadaan semula setelah rusak.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 330,
+      "question": "大雨のため、今日の作業は＿＿＿になった。",
+      "question_id": "Karena hujan deras, pekerjaan hari ini dibatalkan.",
+      "options": [
+        "中継",
+        "集中",
+        "中止",
+        "中央"
+      ],
+      "options_romaji": [
+        "chuukei",
+        "shuuchuu",
+        "chuushi",
+        "chuuou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「中止」。「中止」は予定していたことをやめることです。",
+      "explanation_id": "Jawaban yang benar adalah '中止'. 「中止」berarti membatalkan yang sudah direncanakan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 331,
+      "question": "台風のため、会議は来週に＿＿＿された。",
+      "question_id": "Karena topan, rapat ditunda ke minggu depan.",
+      "options": [
+        "短期",
+        "延期",
+        "延長",
+        "長期"
+      ],
+      "options_romaji": [
+        "tanki",
+        "enki",
+        "enchou",
+        "chouki"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「延期」。「延期」は予定の日を後ろにのばすことです。",
+      "explanation_id": "Jawaban yang benar adalah '延期'. 「延期」berarti menunda tanggal yang dijadwalkan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 332,
+      "question": "工場では、今アルバイトを＿＿＿している。",
+      "question_id": "Pabrik sedang membuka lowongan untuk pekerja paruh waktu.",
+      "options": [
+        "募集",
+        "募金",
+        "収集",
+        "応援"
+      ],
+      "options_romaji": [
+        "boshuu",
+        "bokin",
+        "shuushuu",
+        "ouen"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「募集」。「募集」は広く呼びかけて人を集めることです。",
+      "explanation_id": "Jawaban yang benar adalah '募集'. 「募集」berarti mengumpulkan orang dengan mengajak luas.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 333,
+      "question": "その求人に、インターネットから＿＿＿した。",
+      "question_id": "Saya melamar lowongan itu lewat internet.",
+      "options": [
+        "対応",
+        "反応",
+        "応援",
+        "応募"
+      ],
+      "options_romaji": [
+        "taiou",
+        "hannou",
+        "ouen",
+        "oubo"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「応募」。「応募」は募集に申し込むことです。",
+      "explanation_id": "Jawaban yang benar adalah '応募'. 「応募」berarti mendaftar pada lowongan/ajakan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 334,
+      "question": "会議で、作業を早くする方法を＿＿＿した。",
+      "question_id": "Di rapat saya mengusulkan cara mempercepat kerja.",
+      "options": [
+        "反対",
+        "感想",
+        "提案",
+        "賛成"
+      ],
+      "options_romaji": [
+        "hantai",
+        "kansou",
+        "teian",
+        "sansei"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「提案」。「提案」は考えや案を出して示すことです。",
+      "explanation_id": "Jawaban yang benar adalah '提案'. 「提案」berarti mengajukan ide atau usulan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 335,
+      "question": "その問題を、みんなで話し合って＿＿＿した。",
+      "question_id": "Masalah itu diselesaikan dengan berdiskusi bersama.",
+      "options": [
+        "解答",
+        "解決",
+        "解説",
+        "解散"
+      ],
+      "options_romaji": [
+        "kaitou",
+        "kaiketsu",
+        "kaisetsu",
+        "kaisan"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「解決」。「解決」は問題をうまく片づけることです。",
+      "explanation_id": "Jawaban yang benar adalah '解決'. 「解決」berarti menyelesaikan masalah dengan baik.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 336,
+      "question": "製品の品質を高いまま＿＿＿することが大切だ。",
+      "question_id": "Penting menjaga kualitas produk tetap tinggi.",
+      "options": [
+        "維持",
+        "維新",
+        "委員",
+        "意義"
+      ],
+      "options_romaji": [
+        "iji",
+        "ishin",
+        "iin",
+        "igi"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「維持」。「維持」は今の状態をそのまま保つことです。",
+      "explanation_id": "Jawaban yang benar adalah '維持'. 「維持」berarti mempertahankan keadaan sekarang.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 337,
+      "question": "電気の使いすぎに注意して、＿＿＿しましょう。",
+      "question_id": "Mari berhemat dengan tidak boros memakai listrik.",
+      "options": [
+        "約束",
+        "予約",
+        "契約",
+        "節約"
+      ],
+      "options_romaji": [
+        "yakusoku",
+        "yoyaku",
+        "keiyaku",
+        "setsuyaku"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「節約」。「節約」はむだを減らして大切に使うことです。",
+      "explanation_id": "Jawaban yang benar adalah '節約'. 「節約」berarti mengurangi pemborosan dan hemat.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 338,
+      "question": "痛くても、もう少し＿＿＿してください。",
+      "question_id": "Walau sakit, tolong bertahan sebentar lagi.",
+      "options": [
+        "油断",
+        "緊張",
+        "我慢",
+        "遠慮"
+      ],
+      "options_romaji": [
+        "yudan",
+        "kinchou",
+        "gaman",
+        "enryo"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「我慢」。「我慢」はつらさをこらえることです。",
+      "explanation_id": "Jawaban yang benar adalah '我慢'. 「我慢」berarti menahan rasa sakit/sulit.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 339,
+      "question": "機械の前では、絶対に＿＿＿してはいけない。",
+      "question_id": "Di depan mesin, sama sekali tidak boleh lengah.",
+      "options": [
+        "給油",
+        "油断",
+        "横断",
+        "中断"
+      ],
+      "options_romaji": [
+        "kyuuyu",
+        "yudan",
+        "oudan",
+        "chuudan"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「油断」。「油断」は気をゆるめて注意を忘れることです。",
+      "explanation_id": "Jawaban yang benar adalah '油断'. 「油断」berarti lengah dan lupa berhati-hati.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 340,
+      "question": "自分でよく考えて＿＿＿し、行動する。",
+      "question_id": "Saya berpikir baik-baik lalu memutuskan dan bertindak.",
+      "options": [
+        "判断",
+        "横断",
+        "中断",
+        "診断"
+      ],
+      "options_romaji": [
+        "handan",
+        "oudan",
+        "chuudan",
+        "shindan"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「判断」。「判断」は物事を考えて決めることです。",
+      "explanation_id": "Jawaban yang benar adalah '判断'. 「判断」berarti menimbang lalu memutuskan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 341,
+      "question": "目標を達成するまで、ずいぶん＿＿＿した。",
+      "question_id": "Sampai mencapai target, saya sangat bersusah payah.",
+      "options": [
+        "苦手",
+        "苦情",
+        "苦痛",
+        "苦労"
+      ],
+      "options_romaji": [
+        "nigate",
+        "kujou",
+        "kutsuu",
+        "kurou"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「苦労」。「苦労」は大変な思いをして努力することです。",
+      "explanation_id": "Jawaban yang benar adalah '苦労'. 「苦労」berarti berjerih payah dengan susah.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 342,
+      "question": "みんなで＿＿＿して、会場を片づけた。",
+      "question_id": "Kami bekerja sama membereskan tempat acara.",
+      "options": [
+        "協調",
+        "圧力",
+        "協力",
+        "協会"
+      ],
+      "options_romaji": [
+        "kyouchou",
+        "atsuryoku",
+        "kyouryoku",
+        "kyoukai"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「協力」。「協力」は力を合わせて行うことです。",
+      "explanation_id": "Jawaban yang benar adalah '協力'. 「協力」berarti bekerja sama menyatukan tenaga.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 343,
+      "question": "長い工事の末、ビルがついに＿＿＿した。",
+      "question_id": "Setelah konstruksi panjang, gedung akhirnya selesai.",
+      "options": [
+        "関心",
+        "完成",
+        "完了",
+        "完全"
+      ],
+      "options_romaji": [
+        "kanshin",
+        "kansei",
+        "kanryou",
+        "kanzen"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「完成」。「完成」は物が完全にでき上がることです。",
+      "explanation_id": "Jawaban yang benar adalah '完成'. 「完成」berarti sesuatu jadi sepenuhnya.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 344,
+      "question": "机の上の書類を、種類ごとに＿＿＿する。",
+      "question_id": "Saya merapikan dokumen di meja menurut jenisnya.",
+      "options": [
+        "整理",
+        "修理",
+        "料理",
+        "調理"
+      ],
+      "options_romaji": [
+        "seiri",
+        "shuuri",
+        "ryouri",
+        "chouri"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「整理」。「整理」はきちんと片づけて整えることです。",
+      "explanation_id": "Jawaban yang benar adalah '整理'. 「整理」berarti merapikan dan menata dengan teratur.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 345,
+      "question": "会社は、彼の新しいアイデアを＿＿＿した。",
+      "question_id": "Perusahaan mengadopsi ide barunya.",
+      "options": [
+        "採点",
+        "採集",
+        "採血",
+        "採用"
+      ],
+      "options_romaji": [
+        "saiten",
+        "saishuu",
+        "saiketsu",
+        "saiyou"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「採用」。「採用」は人や案を選んで取り入れることです。",
+      "explanation_id": "Jawaban yang benar adalah '採用'. 「採用」berarti memilih dan mengambil orang/usulan.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 346,
+      "question": "会議の資料を、全員に＿＿＿する。",
+      "question_id": "Materi rapat dibagikan kepada semua orang.",
+      "options": [
+        "分布",
+        "財布",
+        "配布",
+        "配置"
+      ],
+      "options_romaji": [
+        "bunpu",
+        "saifu",
+        "haifu",
+        "haichi"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「配布」。「配布」は多くの人に配ることです。",
+      "explanation_id": "Jawaban yang benar adalah '配布'. 「配布」berarti membagikan ke banyak orang.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 347,
+      "question": "上司の＿＿＿に従って、作業を進める。",
+      "question_id": "Saya melanjutkan kerja sesuai instruksi atasan.",
+      "options": [
+        "指摘",
+        "指示",
+        "指定",
+        "指導"
+      ],
+      "options_romaji": [
+        "shiteki",
+        "shiji",
+        "shitei",
+        "shidou"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「指示」。「指示」はこうしなさいと命じ示すことです。",
+      "explanation_id": "Jawaban yang benar adalah '指示'. 「指示」berarti memberi perintah/petunjuk.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 348,
+      "question": "会社は不景気のため、事業を＿＿＿した。",
+      "question_id": "Karena resesi, perusahaan memperkecil usahanya.",
+      "options": [
+        "縮小",
+        "縮図",
+        "拡大",
+        "短縮"
+      ],
+      "options_romaji": [
+        "shukushou",
+        "shukuzu",
+        "kakudai",
+        "tanshuku"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「縮小」。「縮小」は規模を小さくすることです。",
+      "explanation_id": "Jawaban yang benar adalah '縮小'. 「縮小」berarti memperkecil skala.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 349,
+      "question": "売上をのばすため、会社の規模を＿＿＿する。",
+      "question_id": "Untuk menaikkan penjualan, perusahaan memperbesar skalanya.",
+      "options": [
+        "拡散",
+        "誇大",
+        "縮小",
+        "拡大"
+      ],
+      "options_romaji": [
+        "kakusan",
+        "kodai",
+        "shukushou",
+        "kakudai"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「拡大」。「拡大」は規模を大きく広げることです。",
+      "explanation_id": "Jawaban yang benar adalah '拡大'. 「拡大」berarti memperbesar/memperluas skala.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 350,
+      "question": "わからない言葉を、ネットで＿＿＿する。",
+      "question_id": "Saya mencari kata yang tidak tahu di internet.",
+      "options": [
+        "探索",
+        "捜索",
+        "検索",
+        "検査"
+      ],
+      "options_romaji": [
+        "tansaku",
+        "sousaku",
+        "kensaku",
+        "kensa"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「検索」。「検索」は情報をさがして調べることです。",
+      "explanation_id": "Jawaban yang benar adalah '検索'. 「検索」berarti mencari informasi.",
+      "category": "語彙",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 351,
+      "question": "「研磨」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '研磨'?",
+      "options": [
+        "けんも",
+        "けんま",
+        "けんば",
+        "げんま"
+      ],
+      "options_romaji": [
+        "kenmo",
+        "kenma",
+        "kenba",
+        "genma"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「けんま」。「研磨」は「けんま」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'けんま'. '研磨' dibaca 'けんま'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 352,
+      "question": "「溶剤」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '溶剤'?",
+      "options": [
+        "ようざい",
+        "ようさい",
+        "よんざい",
+        "ようぼう"
+      ],
+      "options_romaji": [
+        "youzai",
+        "yousai",
+        "yonzai",
+        "youbou"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「ようざい」。「溶剤」は「ようざい」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'ようざい'. '溶剤' dibaca 'ようざい'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 353,
+      "question": "「潤滑」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '潤滑'?",
+      "options": [
+        "じゅんこつ",
+        "じゅんかい",
+        "うるおかつ",
+        "じゅんかつ"
+      ],
+      "options_romaji": [
+        "junkotsu",
+        "junkai",
+        "uruokatsu",
+        "junkatsu"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「じゅんかつ」。「潤滑」は「じゅんかつ」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'じゅんかつ'. '潤滑' dibaca 'じゅんかつ'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 354,
+      "question": "「摩耗」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '摩耗'?",
+      "options": [
+        "まもん",
+        "まぼう",
+        "まもう",
+        "まこう"
+      ],
+      "options_romaji": [
+        "mamon",
+        "mabou",
+        "mamou",
+        "makou"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「まもう」。「摩耗」は「まもう」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'まもう'. '摩耗' dibaca 'まもう'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 355,
+      "question": "「絶縁」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '絶縁'?",
+      "options": [
+        "たえん",
+        "ぜつえん",
+        "ぜっえん",
+        "せつえん"
+      ],
+      "options_romaji": [
+        "taen",
+        "zetsuen",
+        "zetsuen",
+        "setsuen"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「ぜつえん」。「絶縁」は「ぜつえん」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'ぜつえん'. '絶縁' dibaca 'ぜつえん'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 356,
+      "question": "「遮断」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '遮断'?",
+      "options": [
+        "しゃだん",
+        "しゃぎり",
+        "そだん",
+        "しゃたん"
+      ],
+      "options_romaji": [
+        "shadan",
+        "shagiri",
+        "sodan",
+        "shatan"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「しゃだん」。「遮断」は「しゃだん」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'しゃだん'. '遮断' dibaca 'しゃだん'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 357,
+      "question": "「引火」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '引火'?",
+      "options": [
+        "いんび",
+        "ひっか",
+        "いんが",
+        "いんか"
+      ],
+      "options_romaji": [
+        "inbi",
+        "hikka",
+        "inga",
+        "inka"
+      ],
+      "correct_answer_index": 3,
+      "explanation": "正解は「いんか」。「引火」は「いんか」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'いんか'. '引火' dibaca 'いんか'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 358,
+      "question": "「排出」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '排出'?",
+      "options": [
+        "はいで",
+        "ばいしゅつ",
+        "はいしゅつ",
+        "はいだ"
+      ],
+      "options_romaji": [
+        "haide",
+        "baishutsu",
+        "haishutsu",
+        "haida"
+      ],
+      "correct_answer_index": 2,
+      "explanation": "正解は「はいしゅつ」。「排出」は「はいしゅつ」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'はいしゅつ'. '排出' dibaca 'はいしゅつ'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 359,
+      "question": "「欠陥」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '欠陥'?",
+      "options": [
+        "けんかん",
+        "けっかん",
+        "けつかん",
+        "けっこう"
+      ],
+      "options_romaji": [
+        "kenkan",
+        "kekkan",
+        "ketsukan",
+        "kekkou"
+      ],
+      "correct_answer_index": 1,
+      "explanation": "正解は「けっかん」。「欠陥」は「けっかん」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'けっかん'. '欠陥' dibaca 'けっかん'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
+    },
+    {
+      "id": 360,
+      "question": "「異物」の読み方はどれですか。",
+      "question_id": "Bagaimana cara baca '異物'?",
+      "options": [
+        "いぶつ",
+        "いもつ",
+        "ことぶつ",
+        "いぶ"
+      ],
+      "options_romaji": [
+        "ibutsu",
+        "imotsu",
+        "kotobutsu",
+        "ibu"
+      ],
+      "correct_answer_index": 0,
+      "explanation": "正解は「いぶつ」。「異物」は「いぶつ」と読みます。",
+      "explanation_id": "Jawaban yang benar adalah 'いぶつ'. '異物' dibaca 'いぶつ'.",
+      "category": "漢字読み",
+      "jlpt_level": "N2",
+      "pack_id": "jlpt_n3n2"
     }
   ]
 }
