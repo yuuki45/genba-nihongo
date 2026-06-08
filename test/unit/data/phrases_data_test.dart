@@ -24,14 +24,14 @@ void main() {
       final categories = (jsonData['categories'] as List)
           .map((c) => model.Category.fromJson(c as Map<String, dynamic>))
           .toList();
-      expect(categories, hasLength(6));
+      expect(categories, hasLength(7));
     });
 
     test('すべてのフレーズがPhraseモデルにパースできる', () {
       final phrases = (jsonData['phrases'] as List)
           .map((p) => Phrase.fromJson(p as Map<String, dynamic>))
           .toList();
-      expect(phrases, hasLength(429));
+      expect(phrases, hasLength(470));
     });
 
     test('pack_idはnullまたはkaigoのみ', () {
