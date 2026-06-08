@@ -112,6 +112,22 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsLanguageId => 'Bahasa Indonesia';
 
   @override
+  String get settingsReminder => 'Pengingat Belajar';
+
+  @override
+  String get settingsReminderToggle => 'Pengingat belajar harian';
+
+  @override
+  String get settingsReminderDesc => 'Memberi tahu 3 frasa hari ini';
+
+  @override
+  String get settingsReminderTime => 'Waktu notifikasi';
+
+  @override
+  String get notificationPermissionDenied =>
+      'Notifikasi tidak diizinkan. Silakan izinkan notifikasi dari aplikasi Pengaturan perangkat Anda.';
+
+  @override
   String get settingsAppInfo => 'Informasi Aplikasi';
 
   @override
@@ -164,10 +180,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get noSearchResults => 'Tidak ada hasil pencarian';
 
   @override
-  String get quizTitle => 'Kuis N3';
+  String get quizTitle => 'Latihan Soal N3';
 
   @override
-  String get quizCardTitle => 'Tantang Kuis N3';
+  String get quizCardTitle => 'Coba Latihan Soal N3';
 
   @override
   String get quizCardDescription => 'Pelajari tata bahasa dan kosakata!';
@@ -188,7 +204,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get quizResultTitle => 'Hasil';
 
   @override
-  String get quizCompleted => 'Kuis Selesai!';
+  String get quizCompleted => 'Selesai! Kerja bagus!';
 
   @override
   String get quizYourScore => 'Skor Anda';
@@ -231,6 +247,134 @@ class AppLocalizationsId extends AppLocalizations {
   String get lastUpdated => 'Terakhir Diperbarui';
 
   @override
+  String get navKanji => 'Kanji';
+
+  @override
+  String get navQuiz => 'Latihan';
+
+  @override
+  String get homeKanjiBlockTitle => 'Belajar Kanji';
+
+  @override
+  String get homeKanjiBlockDesc =>
+      'Hafalkan kanji tempat kerja dengan kartu dan kuis';
+
+  @override
+  String get homeJlptBlockTitle => 'Latihan Soal JLPT';
+
+  @override
+  String get homeJlptBlockDesc =>
+      'Tata bahasa, kosakata, dan bacaan kanji N3/N2';
+
+  @override
+  String get kanjiDictTitle => 'Kamus Kanji';
+
+  @override
+  String get kanjiDictMenuDesc => 'Cari semua kata dan kanji di satu tempat';
+
+  @override
+  String get kanjiDictSearchHint => 'Cari kata, cara baca, atau arti';
+
+  @override
+  String get kanjiDictSortReading => 'Urutan a-i-u-e-o';
+
+  @override
+  String get kanjiDictSortCategory => 'Per kategori';
+
+  @override
+  String get kanjiDictChars => 'Kanji penyusun';
+
+  @override
+  String get kanjiDictTapHint => 'Ketuk untuk melihat cara baca & arti';
+
+  @override
+  String get kanjiSwipeHint => 'Geser untuk kartu berikutnya';
+
+  @override
+  String get kanjiDictLockedTitle =>
+      'Fitur yang terbuka dengan Paket Kamus Kanji';
+
+  @override
+  String get kanjiDictLockedDesc =>
+      'Anda dapat mencari setiap kanji dalam kata ini di kamus.\n・On\'yomi & kun\'yomi\n・Arti kanji (bahasa Indonesia)\n・Kata lain yang memakai kanji yang sama';
+
+  @override
+  String get kanjiDictOnYomi => 'On\'yomi';
+
+  @override
+  String get kanjiDictKunYomi => 'Kun\'yomi';
+
+  @override
+  String get kanjiDictRelated => 'Kata dengan kanji ini';
+
+  @override
+  String get kanjiCategoryQuizSection => 'Kuis per Kategori';
+
+  @override
+  String get quizCategoryGrammar => 'Tata Bahasa';
+
+  @override
+  String get quizCategoryVocab => 'Kosakata';
+
+  @override
+  String get quizCategoryKanjiReading => 'Bacaan Kanji';
+
+  @override
+  String get quizTitleN2 => 'Latihan Soal N2';
+
+  @override
+  String get quizCardTitleN2 => 'Coba Latihan Soal N2';
+
+  @override
+  String get quizCardDescriptionN2 =>
+      'Pelajari tata bahasa dan kosakata N2 dengan paket persiapan';
+
+  @override
+  String get storeTitle => 'Paket Konten';
+
+  @override
+  String get storeDescription =>
+      'Buka konten tambahan dengan sekali beli. Setelah dibeli, dapat digunakan selamanya.';
+
+  @override
+  String get storeBuy => 'Beli';
+
+  @override
+  String get storePurchased => 'Sudah dibeli';
+
+  @override
+  String get storeRestore => 'Pulihkan Pembelian';
+
+  @override
+  String get storeRestoreStarted => 'Memeriksa pembelian Anda...';
+
+  @override
+  String get storeUnavailable =>
+      'Tidak dapat terhubung ke toko. Periksa koneksi internet Anda.';
+
+  @override
+  String get storeNoProducts => 'Belum ada paket yang tersedia.';
+
+  @override
+  String get storePending =>
+      'Menunggu persetujuan toko. Konten akan terbuka otomatis setelah disetujui.';
+
+  @override
+  String get storeError => 'Terjadi kesalahan saat pembelian';
+
+  @override
+  String get lockedContentMessage =>
+      'Konten ini dapat dibuka dengan membeli paket';
+
+  @override
+  String lockedPreviewMore(int count) {
+    return '$count frasa lainnya dapat dibuka dengan membeli paket';
+  }
+
+  @override
+  String get lockedContentUnlock => 'Buka';
+
+  @override
   String get kanjiCardTitle => 'Kanji di Tempat Kerja';
 
   @override
@@ -256,22 +400,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get kanjiMenuMeaningQuizDesc => 'Pilih arti yang benar';
 
   @override
-  String get kanjiMenuFavorites => 'Kanji yang Sulit';
+  String get kanjiMenuFavorites => 'Kanji Tersimpan';
 
   @override
-  String get kanjiMenuFavoritesDesc => 'Ulangi kanji yang disimpan';
-
-  @override
-  String get kanjiFavoritesQuiz => 'Kuis Kanji Sulit';
-
-  @override
-  String get kanjiFavoritesQuizDesc => 'Uji kemampuan dengan kanji yang sulit';
+  String get kanjiMenuFavoritesDesc => 'Ulas kartu yang Anda simpan';
 
   @override
   String get kanjiWrongAnswers => 'Kata yang salah';
 
   @override
-  String get kanjiMarkDifficult => 'Tandai sebagai sulit';
+  String get kanjiMarkDifficult => 'Simpan';
 
   @override
   String get kanjiNoFavorites => 'Belum ada kanji yang disimpan';

@@ -3,11 +3,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/models/quiz.dart';
 import '../../providers/quiz_provider.dart';
 import '../../providers/settings_provider.dart';
+import '../../widgets/locked_content_banner.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// N3クイズ画面
+/// JLPT演習問題画面（N3: 無料 / N2: 対策パック）
 class QuizScreen extends ConsumerStatefulWidget {
-  const QuizScreen({super.key});
+  /// 出題するJLPTレベル（'N3' または 'N2'）
+  final String jlptLevel;
+
+  /// 出題分野（'文法'・'語彙'・'漢字読み'。null=全分野）
+  final String? category;
+
+  const QuizScreen({super.key, this.jlptLevel = 'N3', this.category});
 
   @override
   ConsumerState<QuizScreen> createState() => _QuizScreenState();
@@ -17,6 +24,22 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   int? _selectedAnswer;
   bool _hasAnswered = false;
   bool _isLoading = false;
+
+  /// 次の問題へ進んだとき問題文（上部）へ戻すためのコントローラ
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  /// 問題文がすぐ読めるようスクロール位置を先頭へ戻す
+  void _scrollToTop() {
+    if (_scrollController.hasClients) {
+      _scrollController.jumpTo(0);
+    }
+  }
 
   @override
   void initState() {
@@ -31,10 +54,21 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   Future<void> _startQuizSession() async {
     setState(() => _isLoading = true);
 
-    final quizzes = await ref.read(randomQuizzesProvider(10).future);
+    final quizzes = await ref.read(
+      randomQuizzesProvider(
+        (count: 10, level: widget.jlptLevel, category: widget.category),
+      ).future,
+    );
     await ref.read(quizSessionProvider.notifier).startSession(quizzes);
 
-    setState(() => _isLoading = false);
+    if (mounted) {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  /// 画面タイトル（レベルに応じて切り替え）
+  String _title(AppLocalizations l10n) {
+    return widget.jlptLevel == 'N2' ? l10n.quizTitleN2 : l10n.quizTitle;
   }
 
   void _handleAnswerSelect(int index) {
@@ -60,290 +94,13 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
   }
 
   void _nextQuestion() {
-    final session = ref.read(quizSessionProvider);
-    final isLastQuestion = session.currentIndex == session.totalQuestions - 1;
-
-    if (isLastQuestion) {
-      // 最後の問題の場合は完了状態に移行
-      ref.read(quizSessionProvider.notifier).nextQuestion();
-      setState(() {
-        _selectedAnswer = null;
-        _hasAnswered = false;
-      });
-    } else {
-      // 通常の次の問題へ移行
-      ref.read(quizSessionProvider.notifier).nextQuestion();
-      setState(() {
-        _selectedAnswer = null;
-        _hasAnswered = false;
-      });
-    }
-  }
-
-  /// 選択肢のローマ字を取得
-  String _getOptionRomaji(String option) {
-    // クイズの全選択肢のローマ字マッピング
-    final romajiMap = {
-      // 動詞の活用形
-      '壊れない': 'kowarenai',
-      '壊れる': 'kowareru',
-      '壊した': 'kowashita',
-      '壊して': 'kowashite',
-      '壊す': 'kowasu',
-      '壊れた': 'kowareta',
-      '始める': 'hajimeru',
-      '始めた': 'hajimeta',
-      '始めて': 'hajimete',
-      '始めている': 'hajimeteiru',
-      '運ぶ': 'hakobu',
-      '運んだ': 'hakonda',
-      '運んで': 'hakonde',
-      '運ばない': 'hakobanai',
-      '見つけた': 'mitsuketa',
-      '見つける': 'mitsukeru',
-      '見つけて': 'mitsukete',
-      '見つけない': 'mitsukenai',
-      '使い': 'tsukai',
-      '使う': 'tsukau',
-      '使って': 'tsukatte',
-      '使った': 'tsukatta',
-      'かぶって': 'kabutte',
-      'かぶる': 'kaburu',
-      'かぶった': 'kabutta',
-      'かぶり': 'kaburi',
-      '修理した': 'shuuri shita',
-      '修理する': 'shuuri suru',
-      '修理して': 'shuuri shite',
-      '修理しない': 'shuuri shinai',
-      '締め': 'shime',
-      '締める': 'shimeru',
-      '締めて': 'shimete',
-      '締めた': 'shimeta',
-      '作る': 'tsukuru',
-      '発見した': 'hakken shita',
-      '発見する': 'hakken suru',
-      '発見して': 'hakken shite',
-      '発見しない': 'hakken shinai',
-      '完成する': 'kansei suru',
-      '完成させ': 'kansei sase',
-      '完成し': 'kansei shi',
-      '完成': 'kansei',
-      '上げる': 'ageru',
-      '上がる': 'agaru',
-      '上げて': 'agete',
-      '上がって': 'agatte',
-      '終わる': 'owaru',
-      '終わり': 'owari',
-      '終わって': 'owatte',
-      '終わった': 'owatta',
-      '着る': 'kiru',
-      '着た': 'kita',
-      '着て': 'kite',
-      '着ている': 'kiteiru',
-      '履かない': 'hakanai',
-      '履いて': 'haite',
-      '履く': 'haku',
-      '履いた': 'haita',
-      '起こる': 'okoru',
-      '起こった': 'okotta',
-      '起きた': 'okita',
-      '起こり': 'okori',
-      'やり': 'yari',
-      'やる': 'yaru',
-      'やって': 'yatte',
-      'やった': 'yatta',
-      '確認し': 'kakunin shi',
-      '確認する': 'kakunin suru',
-      '確認して': 'kakunin shite',
-      '確認した': 'kakunin shita',
-
-      // 形容詞
-      '悪い': 'warui',
-      '悪そう': 'warusou',
-      '悪く': 'waruku',
-      '悪かった': 'warukatta',
-      '高い': 'takai',
-      '高く': 'takaku',
-      '高ければ': 'takakereba',
-      '高かった': 'takakatta',
-      '強い': 'tsuyoi',
-      '弱い': 'yowai',
-      '強く': 'tsuyoku',
-      '弱く': 'yowaku',
-
-      // 助詞・接続詞
-      'から': 'kara',
-      'のに': 'noni',
-      'ので': 'node',
-      'けど': 'kedo',
-      'けれども': 'keredomo',
-      'ら': 'ra',
-      'と': 'to',
-      'なら': 'nara',
-      'たら': 'tara',
-      'だから': 'dakara',
-      'なのに': 'nanoni',
-      'が': 'ga',
-      'ば': 'ba',
-      'ても': 'temo',
-      'に': 'ni',
-      'で': 'de',
-      'を': 'wo',
-      'な': 'na',
-      'の': 'no',
-
-      // サ変動詞
-      'して': 'shite',
-      'されて': 'sarete',
-      'する': 'suru',
-      'した': 'shita',
-      'され': 'sare',
-      'し': 'shi',
-      'せず': 'sezu',
-      'せざるを': 'sezaruwo',
-      'しない': 'shinai',
-      'しなくて': 'shinakute',
-      'ず': 'zu',
-      'ないで': 'naide',
-
-      // 名詞・フレーズ
-      'パーツを合わせて完成させる': 'paatsu wo awasete kansei saseru',
-      '品質や不良をチェックする': 'hinshitsu ya furyou wo chekku suru',
-      '良い製品': 'yoi seihin',
-      '新しい製品': 'atarashii seihin',
-      '品質が悪い製品': 'hinshitsu ga warui seihin',
-      '古い製品': 'furui seihin',
-      '作業の準備と手順': 'sagyou no junbi to tejun',
-      '休憩時間': 'kyuukei jikan',
-      '給料': 'kyuuryou',
-      '機械の名前': 'kikai no namae',
-      '取る': 'toru',
-      '外す': 'hazusu',
-      '設置する・装着する': 'secchi suru / souchaku suru',
-      'ペンキを塗る': 'penki wo nuru',
-      '洗う': 'arau',
-      '磨く': 'migaku',
-      '切る': 'kiru',
-      '開ける': 'akeru',
-      '箱に詰める': 'hako ni tsumeru',
-      '金属をつなぎ合わせる': 'kinzoku wo tsunagiawaseru',
-      '測る': 'hakaru',
-      '最後まで完成させる': 'saigo made kansei saseru',
-      '準備する': 'junbi suru',
-      '計画する': 'keikaku suru',
-      '表面を滑らかにする': 'hyoumen wo namerakani suru',
-      '曲げる': 'mageru',
-      '穴を開ける': 'ana wo akeru',
-      '不良品の数': 'furyouhin no kazu',
-      '良品の割合': 'ryouhin no wariai',
-      '作業時間': 'sagyou jikan',
-      '開始時間': 'kaishi jikan',
-      '終了期限': 'shuuryou kigen',
-      '給料日': 'kyuuryou bi',
-      '品質管理': 'hinshitsu kanri',
-      '製造の各段階を管理すること': 'seizou no kakudankai wo kanri suru koto',
-      '在庫管理': 'zaiko kanri',
-      '人事管理': 'jinji kanri',
-      '不良品の比率': 'furyouhin no hiritsu',
-      '作業速度': 'sagyou sokudo',
-      '残業時間': 'zangyou jikan',
-      '他に': 'hoka ni',
-      '他の': 'hoka no',
-      '別に': 'betsu ni',
-      '外に': 'soto ni',
-      '完成品': 'kansei hin',
-      '組み立てに使う材料・部品': 'kumitate ni tsukau zairyou / buhin',
-      '工具': 'kougu',
-      '機械': 'kikai',
-      '重さ': 'omosa',
-      '壊れにくさ': 'kowarenikusa',
-      '速さ': 'hayasa',
-      '大きさ': 'ookisa',
-      '契約書': 'keiyakusho',
-      '製品の詳細が書かれた文書': 'seihin no shousai ga kakareta bunsho',
-      '請求書': 'seikyuusho',
-      '報告書': 'houkokusho',
-      '結果': 'kekka',
-      '作業の進め方': 'sagyou no susume kata',
-      '道具': 'dougu',
-      '材料': 'zairyou',
-      'でき': 'deki',
-      '注文': 'chuumon',
-      '保管されている商品': 'hokan sareteiru shouhin',
-      '価格': 'kakaku',
-      '販売': 'hanbai',
-      'て': 'te',
-      'なって': 'natte',
-      '製造日': 'seizou bi',
-      '商品を納める期限': 'shouhin wo osameru kigen',
-      '発注日': 'hatchuu bi',
-      '検査日': 'kensa bi',
-      '製造に使う元の材料': 'seizou ni tsukau moto no zairyou',
-      '廃棄物': 'haiki butsu',
-      '品質が高い': 'hinshitsu ga takai',
-      '品質が高く': 'hinshitsu ga takaku',
-      '品質の高い': 'hinshitsu no takai',
-      '品質高い': 'hinshitsu takai',
-      '少量生産': 'shouryou seisan',
-      '大量に製造すること': 'tairyou ni seizou suru koto',
-      '試作': 'shisaku',
-      '設計': 'sekkei',
-      '通り': 'toori',
-      '通りに': 'toori ni',
-      'どおり': 'doori',
-      'どおりに': 'doori ni',
-      '成功': 'seikou',
-      '問題・困った事態': 'mondai / komatta jitai',
-      '改善': 'kaizen',
-      'ため': 'tame',
-      'ように': 'you ni',
-      'ことに': 'koto ni',
-      'ほどに': 'hodo ni',
-      '故障率': 'koshou ritsu',
-      '機械が実際に動いている割合': 'kikai ga jissai ni ugoiteiru wariai',
-      '不良率': 'furyou ritsu',
-      '生産速度': 'seisan sokudo',
-      '次第': 'shidai',
-      'ながら': 'nagara',
-      '最中': 'saichuu',
-      '途中': 'tochuu',
-      'には': 'niwa',
-      'ことは': 'koto wa',
-      'ては': 'tewa',
-      'のは': 'nowa',
-      'べきは': 'beki wa',
-      '前に': 'mae ni',
-      '後に': 'ato ni',
-      '時に': 'toki ni',
-      'まで': 'made',
-      '工場': 'koujou',
-      '同じ条件で生産された製品のまとまり': 'onaji jouken de seisan sareta seihin no matomari',
-      '利点': 'riten',
-      '正常に機能しない状態': 'seijou ni kinou shinai joutai',
-      '価格保証': 'kakaku hoshou',
-      '製品の品質を保証すること': 'seihin no hinshitsu wo hoshou suru koto',
-      '納期保証': 'nouki hoshou',
-      '数量保証': 'suuryou hoshou',
-      '社内で製造': 'shanai de seizou',
-      '外部の会社に依頼': 'gaibu no kaisha ni irai',
-      '輸出': 'yushutsu',
-      '輸入': 'yunyuu',
-      '問題': 'mondai',
-      'より良くするための提案': 'yori yoku suru tame no teian',
-      '評価': 'hyouka',
-      '大きさ・サイズ': 'ookisa / saizu',
-      '色': 'iro',
-      '温度': 'ondo',
-      '作業の正しい手順や方法': 'sagyou no tadashii tejun ya houhou',
-      '作業場所': 'sagyou basho',
-      '作業服': 'sagyou fuku',
-      '保管する': 'hokan suru',
-      '材料を目的の形にする': 'zairyou wo mokuteki no katachi ni suru',
-      '捨てる': 'suteru',
-      '数える': 'kazoeru',
-    };
-
-    return romajiMap[option] ?? option;
+    ref.read(quizSessionProvider.notifier).nextQuestion();
+    setState(() {
+      _selectedAnswer = null;
+      _hasAnswered = false;
+    });
+    // 次の問題の問題文がすぐ読めるよう先頭へ戻す
+    _scrollToTop();
   }
 
   @override
@@ -351,14 +108,29 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     final session = ref.watch(quizSessionProvider);
     final l10n = AppLocalizations.of(context)!;
 
-    if (_isLoading || session.quizzes.isEmpty) {
+    if (_isLoading) {
       return Scaffold(
         appBar: AppBar(
-          title: Text(l10n.quizTitle),
+          title: Text(_title(l10n)),
           backgroundColor: Theme.of(context).colorScheme.primary,
           foregroundColor: Colors.white,
         ),
         body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    // 出題できるクイズがない（未購入パックのレベルに直接来た場合など）
+    if (session.quizzes.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(_title(l10n)),
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Colors.white,
+        ),
+        body: const Padding(
+          padding: EdgeInsets.all(24.0),
+          child: Center(child: LockedContentBanner()),
+        ),
       );
     }
 
@@ -386,7 +158,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.quizTitle),
+        title: Text(_title(l10n)),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
       ),
@@ -398,6 +170,7 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
           // クイズコンテンツ
           Expanded(
             child: SingleChildScrollView(
+              controller: _scrollController,
               padding: const EdgeInsets.all(24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -560,6 +333,14 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
     );
   }
 
+  /// 選択肢のローマ字読みを取得（データに含まれる options_romaji を使用）
+  String? _optionRomaji(Quiz quiz, int index) {
+    final romajiList = quiz.optionsRomaji;
+    if (romajiList == null || index >= romajiList.length) return null;
+    final romaji = romajiList[index];
+    return romaji.isEmpty ? null : romaji;
+  }
+
   /// 選択肢
   Widget _buildOptions(Quiz quiz) {
     return Column(
@@ -616,15 +397,17 @@ class _QuizScreenState extends ConsumerState<QuizScreen> {
                             height: 1.5,
                           ),
                         ),
-                        const SizedBox(height: 4),
-                        Text(
-                          _getOptionRomaji(option),
-                          style: TextStyle(
-                            fontSize: 13,
-                            color: Colors.grey[600],
-                            height: 1.3,
+                        if (_optionRomaji(quiz, index) != null) ...[
+                          const SizedBox(height: 4),
+                          Text(
+                            _optionRomaji(quiz, index)!,
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey[600],
+                              height: 1.3,
+                            ),
                           ),
-                        ),
+                        ],
                       ],
                     ),
                   ),

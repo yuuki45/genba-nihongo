@@ -6,17 +6,21 @@ import '../../theme/app_theme.dart';
 import '../../../data/models/kanji_word.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// 漢字クイズ画面（読みクイズ・意味クイズ・苦手クイズ共通）
+/// 漢字クイズ画面（読みクイズ・意味クイズ・カテゴリ別クイズ共通）
 ///
 /// 問題は漢字語データから動的に生成される（kanjiQuizQuestionsProvider）。
 /// [mode] がnullの場合は読み/意味ミックスで出題する。
-/// [favoritesOnly] がtrueの場合は苦手漢字のみから出題する。
+/// [category] を指定するとそのカテゴリの語のみから出題する。
 /// 結果はDBに保存せず、セッション内のみで完結する。
 class KanjiQuizScreen extends ConsumerStatefulWidget {
   final KanjiQuizMode? mode;
-  final bool favoritesOnly;
+  final String? category;
 
-  const KanjiQuizScreen({super.key, this.mode, this.favoritesOnly = false});
+  const KanjiQuizScreen({
+    super.key,
+    this.mode,
+    this.category,
+  });
 
   @override
   ConsumerState<KanjiQuizScreen> createState() => _KanjiQuizScreenState();
@@ -29,12 +33,32 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
   int _correctCount = 0;
   bool _isCompleted = false;
 
-  /// 間違えた問題（結果画面で苦手登録を促す）
+  /// 次の問題へ進んだとき問題文（上部）へ戻すためのコントローラ
+  final ScrollController _scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  /// 間違えた問題（結果画面で保存を促す）
   final List<KanjiQuizQuestion> _wrongQuestions = [];
 
   String get _title {
     final l10n = AppLocalizations.of(context)!;
-    if (widget.favoritesOnly) return l10n.kanjiFavoritesQuiz;
+    // カテゴリ別クイズはカテゴリ名をタイトルにする
+    if (widget.category != null) {
+      final category = KanjiCategory.fromKey(widget.category!);
+      if (category != null) {
+        final isJapanese = ref.read(settingsProvider).maybeWhen(
+              data: (settings) => settings.languageCode == 'ja',
+              orElse: () => false,
+            );
+        return '${category.icon} '
+            '${isJapanese ? category.nameJa : category.nameId}';
+      }
+    }
     return widget.mode == KanjiQuizMode.meaning
         ? l10n.kanjiMenuMeaningQuiz
         : l10n.kanjiMenuReadingQuiz;
@@ -67,24 +91,24 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
       _selectedAnswer = null;
       _hasAnswered = false;
     });
+    // 次の問題の問題文がすぐ読めるよう先頭へ戻す
+    if (!_isCompleted && _scrollController.hasClients) {
+      _scrollController.jumpTo(0);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final questionsAsync = ref.watch(kanjiQuizQuestionsProvider(
-      (mode: widget.mode, favoritesOnly: widget.favoritesOnly),
+      (mode: widget.mode, category: widget.category),
     ));
 
     return questionsAsync.when(
       data: (questions) {
         if (questions.isEmpty) {
           return _buildScaffold(
-            body: Center(
-              child: Text(
-                widget.favoritesOnly ? l10n.kanjiNoFavorites : l10n.kanjiNoWords,
-              ),
-            ),
+            body: Center(child: Text(l10n.kanjiNoWords)),
           );
         }
         if (_isCompleted) {
@@ -125,6 +149,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
           _buildProgressBar(context, questions.length),
           Expanded(
             child: SingleChildScrollView(
+              controller: _scrollController,
               padding: const EdgeInsets.all(24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -368,7 +393,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
                 ),
               ),
             ],
-            // 苦手登録トグル（その場で復習リストに入れられる）
+            // 保存トグル（その場で復習リストに入れられる）
             if (word.id != null) ...[
               const SizedBox(height: 8),
               _buildFavoriteToggleRow(word),
@@ -379,7 +404,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
     );
   }
 
-  /// 苦手登録トグル（解説カード内）
+  /// 保存トグル（解説カード内）
   Widget _buildFavoriteToggleRow(KanjiWord word) {
     final l10n = AppLocalizations.of(context)!;
     final isFavorite = ref.watch(kanjiFavoriteStateProvider(word.id!));
@@ -395,7 +420,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              isFavorite ? Icons.star : Icons.star_border,
+              isFavorite ? Icons.bookmark : Icons.bookmark_border,
               color: isFavorite ? const Color(0xFFEEA000) : Colors.grey,
               size: 22,
             ),
@@ -530,7 +555,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
               ),
             ),
 
-            // 間違えた語（苦手登録を促す）
+            // 間違えた語（保存を促す）
             if (_wrongQuestions.isNotEmpty) ...[
               const SizedBox(height: 32),
               Text(
@@ -566,7 +591,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
     );
   }
 
-  /// 間違えた語のタイル（星タップで苦手登録）
+  /// 間違えた語のタイル（ブックマークタップで保存）
   Widget _buildWrongAnswerTile(KanjiWord word) {
     final l10n = AppLocalizations.of(context)!;
     final signColor = AppColors.kanjiCategoryColor(word.category);
@@ -596,7 +621,7 @@ class _KanjiQuizScreenState extends ConsumerState<KanjiQuizScreen> {
         trailing: IconButton(
           tooltip: l10n.kanjiMarkDifficult,
           icon: Icon(
-            isFavorite ? Icons.star : Icons.star_border,
+            isFavorite ? Icons.bookmark : Icons.bookmark_border,
             color: isFavorite ? const Color(0xFFEEA000) : Colors.grey,
             size: 28,
           ),

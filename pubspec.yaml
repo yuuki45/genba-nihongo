@@ -1,7 +1,7 @@
 name: nihongo
 description: Nihongo - 外国人技能実習生向け日本語学習アプリ
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.1.0+2
 
 environment:
   sdk: '>=3.5.0 <4.0.0'
@@ -37,7 +37,11 @@ dependencies:
 
   # 通知
   flutter_local_notifications: ^17.2.1
-  timezone: ^0.9.3
+  timezone: ^0.9.4
+  flutter_timezone: ^3.0.1
+
+  # アプリ内課金（RevenueCat）
+  purchases_flutter: ^8.0.0
 
   # ユーティリティ
   intl: ^0.20.2
@@ -60,6 +64,7 @@ dev_dependencies:
 
   # テスト
   mockito: ^5.4.4
+  sqflite_common_ffi: ^2.3.3
 
   # アイコン生成
   flutter_launcher_icons: ^0.13.1

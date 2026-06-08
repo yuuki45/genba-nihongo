@@ -21,7 +21,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${l10n.lastUpdated}: 2024年10月23日',
+              '${l10n.lastUpdated}: 2026年06月07日',
               style: TextStyle(
                 color: Colors.grey[600],
                 fontSize: 12,
@@ -74,8 +74,13 @@ class PrivacyPolicyScreen extends StatelessWidget {
           'お客様は、アプリをアンインストールすることで、デバイスに保存されたすべてのデータを削除することができます。',
         ),
         _buildSection(
-          '5. インターネット接続',
-          '本アプリは完全オフラインで動作します。インターネット接続は必要ありません。',
+          '5. インターネット接続とアプリ内課金',
+          '本アプリの学習機能は完全オフラインで動作し、インターネット接続を必要としません。\n\n'
+              'ただし、アプリ内課金（コンテンツパックの購入・購入の復元）を利用する場合のみ、App Store（Apple）および購入管理サービスのRevenueCat, Inc.との通信が行われます。\n\n'
+              '・決済処理はAppleが行い、Appleのプライバシーポリシーが適用されます\n'
+              '・購入状態の管理のため、匿名の識別子と購入履歴（レシート情報）がRevenueCatに送信されます。氏名・メールアドレス・クレジットカード情報が送信されることはありません\n'
+              '・RevenueCatのプライバシーポリシー: https://www.revenuecat.com/privacy\n\n'
+              '本アプリ自体が購入者の氏名・決済情報等の個人情報を収集・保存することはありません。',
         ),
         _buildSection(
           '6. Cookie等の使用',
@@ -126,8 +131,13 @@ class PrivacyPolicyScreen extends StatelessWidget {
           'Anda dapat menghapus semua data yang tersimpan di perangkat dengan menghapus instalasi aplikasi.',
         ),
         _buildSection(
-          '5. Koneksi Internet',
-          'Aplikasi ini berfungsi sepenuhnya secara offline. Koneksi internet tidak diperlukan.',
+          '5. Koneksi Internet dan Pembelian Dalam Aplikasi',
+          'Fungsi pembelajaran aplikasi ini berfungsi sepenuhnya secara offline dan tidak memerlukan koneksi internet.\n\n'
+              'Namun, komunikasi dengan App Store (Apple) dan layanan pengelolaan pembelian RevenueCat, Inc. hanya terjadi saat Anda menggunakan pembelian dalam aplikasi (pembelian paket konten atau pemulihan pembelian).\n\n'
+              '・Proses pembayaran ditangani oleh Apple dan tunduk pada kebijakan privasi Apple\n'
+              '・Untuk mengelola status pembelian, pengenal anonim dan riwayat pembelian (informasi struk) dikirim ke RevenueCat. Nama, alamat email, dan informasi kartu kredit tidak pernah dikirim\n'
+              '・Kebijakan privasi RevenueCat: https://www.revenuecat.com/privacy\n\n'
+              'Aplikasi ini sendiri tidak mengumpulkan atau menyimpan informasi pribadi pembeli seperti nama atau informasi pembayaran.',
         ),
         _buildSection(
           '6. Penggunaan Cookie',

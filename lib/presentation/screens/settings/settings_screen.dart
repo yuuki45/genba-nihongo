@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/settings_provider.dart';
+import '../../providers/purchase_provider.dart';
+import '../../services/notification_service.dart';
 import '../../widgets/language_segmented_control.dart';
 import '../../../l10n/app_localizations.dart';
 import '../legal/terms_of_service_screen.dart';
 import '../legal/privacy_policy_screen.dart';
 import '../legal/contact_screen.dart';
+import '../store/store_screen.dart';
 
 /// 設定画面
 class SettingsScreen extends ConsumerWidget {
@@ -47,17 +50,23 @@ class SettingsScreen extends ConsumerWidget {
         _buildDarkModeSetting(context, ref, settings),
         const Divider(),
 
+        // 学習リマインダーセクション
+        _buildSectionHeader(context, l10n.settingsReminder),
+        _buildReminderToggle(context, ref, settings),
+        if (settings.reminderEnabled) _buildReminderTimeTile(context, ref, settings),
+        const Divider(),
+
         // アプリ情報セクション
         _buildSectionHeader(context, l10n.settingsAppInfo),
-        _buildAppInfoTile(context, l10n.settingsVersion, '1.0.0'),
-        _buildAppInfoTile(context, l10n.settingsPhraseCount, '329'),
-        _buildAppInfoTile(context, l10n.settingsDeveloper, 'Nihongo Team'),
+        _buildAppInfoTile(context, l10n.settingsVersion, '1.1.0'),
+        _buildAppInfoTile(context, l10n.settingsDeveloper, 'Yuuki Odan'),
         _buildOfflineInfoTile(context, settings.languageCode),
         const Divider(),
 
-        // その他
-        _buildSectionHeader(context, l10n.settingsOther),
-        _buildAboutTile(context),
+        // コンテンツパック（ストア導線 + 購入の復元）
+        _buildSectionHeader(context, l10n.storeTitle),
+        _buildStoreTile(context),
+        _buildRestoreTile(context, ref),
         const Divider(),
 
         // 法的情報
@@ -133,6 +142,129 @@ class SettingsScreen extends ConsumerWidget {
     );
   }
 
+  /// 学習リマインダーのON/OFFトグル
+  ///
+  /// ONにしたときだけ通知許可をリクエストする（拒否されたらOFFのまま）。
+  Widget _buildReminderToggle(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+  ) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return SwitchListTile(
+      secondary: const Icon(Icons.notifications_outlined),
+      title: Text(l10n.settingsReminderToggle),
+      subtitle: Text(l10n.settingsReminderDesc),
+      value: settings.reminderEnabled,
+      onChanged: (enabled) => _onReminderToggled(context, ref, settings, enabled),
+    );
+  }
+
+  Future<void> _onReminderToggled(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+    bool enabled,
+  ) async {
+    final l10n = AppLocalizations.of(context)!;
+    final service = NotificationService();
+    final notifier = ref.read(settingsProvider.notifier);
+
+    if (!enabled) {
+      await notifier.setReminderEnabled(false);
+      await service.cancelDailyReminder();
+      return;
+    }
+
+    final granted = await service.requestPermission();
+    if (!granted) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.notificationPermissionDenied)),
+        );
+      }
+      return;
+    }
+
+    await notifier.setReminderEnabled(true);
+    await service.scheduleDailyReminder(
+      hour: settings.reminderHour,
+      minute: settings.reminderMinute,
+      languageCode: settings.languageCode,
+    );
+  }
+
+  /// リマインダーの通知時刻タイル（タップでTimePicker）
+  Widget _buildReminderTimeTile(
+    BuildContext context,
+    WidgetRef ref,
+    AppSettings settings,
+  ) {
+    final l10n = AppLocalizations.of(context)!;
+    final time = TimeOfDay(
+      hour: settings.reminderHour,
+      minute: settings.reminderMinute,
+    );
+
+    return ListTile(
+      leading: const Icon(Icons.schedule),
+      title: Text(l10n.settingsReminderTime),
+      trailing: Text(
+        time.format(context),
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+      ),
+      onTap: () async {
+        final picked = await showTimePicker(context: context, initialTime: time);
+        if (picked == null) return;
+
+        await ref
+            .read(settingsProvider.notifier)
+            .setReminderTime(picked.hour, picked.minute);
+        // 新しい時刻で再スケジュール（同じIDなので上書きされる）
+        await NotificationService().scheduleDailyReminder(
+          hour: picked.hour,
+          minute: picked.minute,
+          languageCode: settings.languageCode,
+        );
+      },
+    );
+  }
+
+  /// コンテンツパック（ストア画面への導線）
+  Widget _buildStoreTile(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return ListTile(
+      leading: const Icon(Icons.storefront),
+      title: Text(l10n.storeTitle),
+      subtitle: Text(l10n.storeDescription),
+      trailing: const Icon(Icons.chevron_right),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const StoreScreen()),
+        );
+      },
+    );
+  }
+
+  /// 購入の復元（App Store審査の必須要件。ストア画面に加えて設定にも置く）
+  Widget _buildRestoreTile(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
+
+    return ListTile(
+      leading: const Icon(Icons.restore),
+      title: Text(l10n.storeRestore),
+      onTap: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(l10n.storeRestoreStarted)),
+        );
+        ref.read(entitlementProvider.notifier).restore();
+      },
+    );
+  }
+
   /// アプリ情報タイル
   Widget _buildAppInfoTile(BuildContext context, String title, String value) {
     return ListTile(
@@ -169,37 +301,6 @@ class SettingsScreen extends ConsumerWidget {
         Icons.check_circle,
         color: Colors.green,
       ),
-    );
-  }
-
-  /// アプリについて
-  Widget _buildAboutTile(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
-    return ListTile(
-      leading: const Icon(Icons.help_outline),
-      title: Text(l10n.settingsAbout),
-      trailing: const Icon(Icons.chevron_right),
-      onTap: () {
-        showAboutDialog(
-          context: context,
-          applicationName: l10n.appTitle,
-          applicationVersion: '1.0.0',
-          applicationIcon: const FlutterLogo(size: 48),
-          children: [
-            const SizedBox(height: 16),
-            Text(
-              l10n.aboutDescription1,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              l10n.aboutDescription2,
-              textAlign: TextAlign.center,
-            ),
-          ],
-        );
-      },
     );
   }
 

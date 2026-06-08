@@ -11,7 +11,7 @@ import '../../../l10n/app_localizations.dart';
 ///
 /// カテゴリ選択チップ + スワイプで進むカード形式。
 /// カードをタップすると表（漢字語）と裏（読み・意味・説明）が切り替わる。
-/// [favoritesOnly]がtrueの場合は苦手漢字のみを表示する（復習モード）。
+/// [favoritesOnly]がtrueの場合は保存した漢字のみを表示する（復習モード）。
 class KanjiCardScreen extends ConsumerStatefulWidget {
   final bool favoritesOnly;
 
@@ -23,7 +23,9 @@ class KanjiCardScreen extends ConsumerStatefulWidget {
 
 class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
   final TtsService _ttsService = TtsService();
-  final PageController _pageController = PageController();
+
+  /// 次のカードの端をチラ見せして「スワイプできる」ことを伝える
+  final PageController _pageController = PageController(viewportFraction: 0.92);
 
   /// 現在のページ
   int _currentPage = 0;
@@ -55,7 +57,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
       ),
       body: Column(
         children: [
-          // カテゴリチップ（苦手モードでは非表示）
+          // カテゴリチップ（保存した漢字の復習では非表示）
           if (!widget.favoritesOnly) _buildCategoryChips(context),
 
           // カード本体
@@ -159,22 +161,43 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
       );
     }
 
+    final hasPrev = _currentPage > 0;
+    final hasNext = _currentPage < words.length - 1;
+
     return Column(
       children: [
-        // 進捗表示
+        // 進捗表示 + 前後ボタン（スワイプの代替手段にもなる）
         Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Text(
-            '${_currentPage + 1} / ${words.length}',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).colorScheme.primary,
-            ),
+          padding: const EdgeInsets.symmetric(vertical: 4.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                icon: const Icon(Icons.chevron_left),
+                iconSize: 32,
+                onPressed: hasPrev ? () => _goToPage(_currentPage - 1) : null,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                child: Text(
+                  '${_currentPage + 1} / ${words.length}',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+              IconButton(
+                icon: const Icon(Icons.chevron_right),
+                iconSize: 32,
+                onPressed: hasNext ? () => _goToPage(_currentPage + 1) : null,
+              ),
+            ],
           ),
         ),
 
-        // カード
+        // カード（次のカードの端が見える）
         Expanded(
           child: PageView.builder(
             controller: _pageController,
@@ -185,7 +208,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 24.0,
+                  horizontal: 8.0,
                   vertical: 16.0,
                 ),
                 child: _buildFlipCard(context, words[index], index),
@@ -193,8 +216,39 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
             },
           ),
         ),
-        const SizedBox(height: 16),
+
+        // スワイプ操作のヒント
+        Padding(
+          padding: const EdgeInsets.only(top: 4.0, bottom: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.swipe,
+                size: 16,
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
+              ),
+              const SizedBox(width: 6),
+              Text(
+                l10n.kanjiSwipeHint,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
+    );
+  }
+
+  /// 指定ページへアニメーション付きで移動
+  void _goToPage(int page) {
+    _pageController.animateToPage(
+      page,
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOut,
     );
   }
 
@@ -430,7 +484,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
     );
   }
 
-  /// 苦手登録ボタン（カード右上）
+  /// 保存ボタン（カード右上）
   ///
   /// 標識色の上でも視認できるよう、白い円形チップに載せる。
   Widget _buildFavoriteButton(KanjiWord word) {
@@ -454,7 +508,7 @@ class _KanjiCardScreenState extends ConsumerState<KanjiCardScreen> {
         ),
         child: IconButton(
           icon: Icon(
-            isFavorite ? Icons.star : Icons.star_border,
+            isFavorite ? Icons.bookmark : Icons.bookmark_border,
             color: isFavorite ? const Color(0xFFEEA000) : AppColors.ink,
             size: 26,
           ),

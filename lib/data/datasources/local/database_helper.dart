@@ -23,7 +23,7 @@ class DatabaseHelper {
 
     return await openDatabase(
       path,
-      version: 5,
+      version: 8,
       onCreate: _createDB,
       onUpgrade: _upgradeDB,
     );
@@ -55,6 +55,7 @@ class DatabaseHelper {
         importance INTEGER DEFAULT 1,
         usage_context TEXT,
         jlpt_level TEXT DEFAULT 'N5',
+        pack_id TEXT,
         created_at TEXT NOT NULL,
         updated_at TEXT NOT NULL,
         FOREIGN KEY (category_id) REFERENCES categories(id)
@@ -94,6 +95,8 @@ class DatabaseHelper {
         explanation_id TEXT NOT NULL,
         category TEXT NOT NULL,
         jlpt_level TEXT NOT NULL,
+        pack_id TEXT,
+        options_romaji TEXT,
         created_at TEXT NOT NULL
       )
     ''');
@@ -115,7 +118,42 @@ class DatabaseHelper {
 
     // 苦手漢字テーブル
     await db.execute(_createKanjiFavoritesTableSql);
+
+    // 購入テーブル
+    await db.execute(_createPurchasesTableSql);
+
+    // 単漢字辞書テーブル
+    await db.execute(_createKanjiCharactersTableSql);
   }
+
+  /// 単漢字辞書テーブルの作成SQL（漢字辞書パック）
+  static const String _createKanjiCharactersTableSql = '''
+    CREATE TABLE kanji_characters (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      character TEXT NOT NULL UNIQUE,
+      on_readings TEXT NOT NULL,
+      kun_readings TEXT NOT NULL,
+      meaning_id TEXT NOT NULL,
+      jlpt_level TEXT,
+      pack_id TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    )
+  ''';
+
+  /// 購入テーブルの作成SQL
+  ///
+  /// コンテンツパック買い切り(non-consumable)の解錠状態を保持する。
+  /// 解錠判定はこのテーブルのみを参照するため、オフラインでも
+  /// 購入済みコンテンツが利用できる。
+  static const String _createPurchasesTableSql = '''
+    CREATE TABLE purchases (
+      product_id TEXT PRIMARY KEY,
+      pack_id TEXT NOT NULL,
+      purchased_at TEXT NOT NULL,
+      source TEXT NOT NULL
+    )
+  ''';
 
   /// 漢字語テーブルの作成SQL
   static const String _createKanjiWordsTableSql = '''
@@ -193,6 +231,24 @@ class DatabaseHelper {
       // バージョン4から5へのアップグレード: 漢字学習テーブルを追加
       await db.execute(_createKanjiWordsTableSql);
       await db.execute(_createKanjiFavoritesTableSql);
+    }
+
+    if (oldVersion < 6) {
+      // バージョン5から6へのアップグレード: コンテンツパック課金対応
+      // 既存データはpack_id = NULL（無料）のまま維持される
+      await db.execute('ALTER TABLE phrases ADD COLUMN pack_id TEXT');
+      await db.execute('ALTER TABLE quizzes ADD COLUMN pack_id TEXT');
+      await db.execute(_createPurchasesTableSql);
+    }
+
+    if (oldVersion < 7) {
+      // バージョン6から7へのアップグレード: 単漢字辞書テーブルを追加
+      await db.execute(_createKanjiCharactersTableSql);
+    }
+
+    if (oldVersion < 8) {
+      // バージョン7から8へのアップグレード: 選択肢のローマ字読み列を追加
+      await db.execute('ALTER TABLE quizzes ADD COLUMN options_romaji TEXT');
     }
   }
 
@@ -476,6 +532,24 @@ class DatabaseHelper {
     );
   }
 
+  // ==================== Kanji Characters ====================
+
+  /// 単漢字エントリを挿入または更新（同一IDがあれば置き換え）
+  Future<int> upsertKanjiCharacter(Map<String, dynamic> character) async {
+    final db = await database;
+    return await db.insert(
+      'kanji_characters',
+      character,
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  /// すべての単漢字エントリを取得
+  Future<List<Map<String, dynamic>>> getAllKanjiCharacters() async {
+    final db = await database;
+    return await db.query('kanji_characters');
+  }
+
   // ==================== Kanji Favorites ====================
 
   /// 苦手漢字を追加
@@ -531,6 +605,16 @@ class DatabaseHelper {
     return await db.insert('quizzes', quiz);
   }
 
+  /// クイズを挿入または更新（同一IDがあれば置き換え）
+  Future<int> upsertQuiz(Map<String, dynamic> quiz) async {
+    final db = await database;
+    return await db.insert(
+      'quizzes',
+      quiz,
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
   /// すべてのクイズを取得
   Future<List<Map<String, dynamic>>> getAllQuizzes() async {
     final db = await database;
@@ -576,6 +660,24 @@ class DatabaseHelper {
       limit: 1,
     );
     return results.isNotEmpty ? results.first : null;
+  }
+
+  // ==================== Purchases ====================
+
+  /// 購入を保存（同一商品IDは置き換え＝冪等）
+  Future<int> upsertPurchase(Map<String, dynamic> purchase) async {
+    final db = await database;
+    return await db.insert(
+      'purchases',
+      purchase,
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  /// すべての購入を取得
+  Future<List<Map<String, dynamic>>> getAllPurchases() async {
+    final db = await database;
+    return await db.query('purchases');
   }
 
   // ==================== Quiz Results ====================

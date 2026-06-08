@@ -15,7 +15,7 @@ void main() {
 
     test('data_versionが定義されている', () {
       expect(jsonData['data_version'], isA<int>());
-      expect(jsonData['data_version'], greaterThanOrEqualTo(1));
+      expect(jsonData['data_version'], greaterThanOrEqualTo(3));
     });
 
     test('すべての漢字語がKanjiWordモデルにパースできる', () {
@@ -57,6 +57,45 @@ void main() {
       for (final category in KanjiCategory.all) {
         expect(counts[category.key], 20,
             reason: 'カテゴリ ${category.key} の語数が20ではありません');
+      }
+    });
+
+    test('単漢字辞書: すべての収録語の構成漢字を網羅している', () {
+      final characters = (jsonData['kanji_characters'] as List)
+          .cast<Map<String, dynamic>>();
+      final provided =
+          characters.map((c) => c['character'] as String).toSet();
+
+      // 漢字の重複なし
+      expect(provided.length, characters.length);
+
+      // 全語の構成漢字をカバー
+      final kanjiPattern = RegExp(r'[一-鿿]');
+      for (final w in jsonData['kanji_words'] as List) {
+        final word = (w as Map<String, dynamic>)['word'] as String;
+        for (final ch in word.split('')) {
+          if (kanjiPattern.hasMatch(ch)) {
+            expect(provided.contains(ch), isTrue,
+                reason: '「$word」の構成漢字「$ch」が単漢字辞書にありません');
+          }
+        }
+      }
+    });
+
+    test('単漢字辞書: 全エントリがkanji_dictパックで、読みと意味を持つ', () {
+      final characters = (jsonData['kanji_characters'] as List)
+          .cast<Map<String, dynamic>>();
+      expect(characters, isNotEmpty);
+
+      for (final c in characters) {
+        expect(c['pack_id'], 'kanji_dict',
+            reason: '「${c['character']}」のpack_idが不正です');
+        final on = (c['on_readings'] as String? ?? '');
+        final kun = (c['kun_readings'] as String? ?? '');
+        expect(on.isNotEmpty || kun.isNotEmpty, isTrue,
+            reason: '「${c['character']}」に読みが1つもありません');
+        expect((c['meaning_id'] as String).trim().isNotEmpty, isTrue,
+            reason: '「${c['character']}」の意味が空です');
       }
     });
 

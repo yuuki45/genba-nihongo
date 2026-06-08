@@ -2,16 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/phrase_provider.dart';
 import '../../providers/settings_provider.dart';
+import '../../widgets/locked_content_banner.dart';
 import '../../../data/models/phrase.dart';
 import '../../../data/models/category.dart';
+import '../../../data/models/phrase_scene.dart';
 import '../phrase_detail/phrase_detail_screen.dart';
 import '../search/search_screen.dart';
 import '../../services/tts_service.dart';
 import '../../../l10n/app_localizations.dart';
 
-/// フレーズ一覧画面
+/// フレーズ一覧画面（シーン単位）
+///
+/// シーン選択画面（PhraseSceneScreen）から遷移し、
+/// そのシーンに属するカテゴリのフレーズだけを表示する。
 class PhraseListScreen extends ConsumerStatefulWidget {
-  const PhraseListScreen({super.key});
+  final PhraseScene scene;
+
+  const PhraseListScreen({super.key, required this.scene});
 
   @override
   ConsumerState<PhraseListScreen> createState() => _PhraseListScreenState();
@@ -30,13 +37,20 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
   Widget build(BuildContext context) {
     final selectedCategoryId = ref.watch(selectedCategoryProvider);
     final selectedJlptLevel = ref.watch(selectedJlptLevelProvider);
-    final phrasesAsync = ref.watch(filteredPhrasesProvider);
+    final phrasesAsync = ref.watch(filteredPhrasesProvider(widget.scene.key));
     final categoriesAsync = ref.watch(allCategoriesProvider);
     final l10n = AppLocalizations.of(context)!;
+    final isJapanese = ref.watch(settingsProvider).maybeWhen(
+          data: (settings) => settings.languageCode == 'ja',
+          orElse: () => false,
+        );
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.navPhrases),
+        title: Text(
+          '${widget.scene.icon} '
+          '${isJapanese ? widget.scene.nameJa : widget.scene.nameId}',
+        ),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -58,17 +72,25 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           // JLPTレベルタブ
           _buildJlptLevelTabs(context, ref, selectedJlptLevel),
 
-          // カテゴリタブ
-          categoriesAsync.when(
-            data: (categories) => _buildCategoryTabs(context, ref, categories, selectedCategoryId),
-            loading: () => const SizedBox(height: 60),
-            error: (error, stack) => const SizedBox(height: 60),
-          ),
+          // カテゴリタブ（シーン内のカテゴリのみ。1つだけの場合は非表示）
+          if (widget.scene.categoryIds.length > 1)
+            categoriesAsync.when(
+              data: (categories) => _buildCategoryTabs(
+                context,
+                ref,
+                categories
+                    .where((c) => widget.scene.categoryIds.contains(c.id))
+                    .toList(),
+                selectedCategoryId,
+              ),
+              loading: () => const SizedBox(height: 60),
+              error: (error, stack) => const SizedBox(height: 60),
+            ),
 
           // フレーズリスト
           Expanded(
             child: phrasesAsync.when(
-              data: (phrases) => _buildPhraseList(context, ref, phrases),
+              data: (view) => _buildPhraseList(context, ref, view),
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => Center(
                 child: Text('${l10n.errorOccurred}: $error'),
@@ -152,6 +174,11 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           data: (settings) => settings.languageCode == 'ja',
           orElse: () => false,
         );
+    // ロック中（未購入パック）のカテゴリ
+    final lockedCategoryIds = ref.watch(lockedCategoryIdsProvider).maybeWhen(
+          data: (ids) => ids,
+          orElse: () => const <int>{},
+        );
 
     return Container(
       height: 60,
@@ -177,12 +204,17 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
           // 各カテゴリ
           ...categories.map((category) {
             final isSelected = selectedCategoryId == category.id;
+            final isLocked = lockedCategoryIds.contains(category.id);
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: FilterChip(
                 label: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    if (isLocked) ...[
+                      const Icon(Icons.lock, size: 14),
+                      const SizedBox(width: 2),
+                    ],
                     if (category.icon != null) ...[
                       Text(category.icon!),
                       const SizedBox(width: 4),
@@ -206,20 +238,36 @@ class _PhraseListScreenState extends ConsumerState<PhraseListScreen> {
   }
 
   /// フレーズリスト
-  Widget _buildPhraseList(BuildContext context, WidgetRef ref, List<Phrase> phrases) {
+  ///
+  /// ロック中カテゴリの場合はプレビュー数件 + 解錠バナーを表示する。
+  /// （プレビューはN5のみのため、N4以上のタブではバナーだけになる）
+  Widget _buildPhraseList(
+      BuildContext context, WidgetRef ref, PhraseListView view) {
     final l10n = AppLocalizations.of(context)!;
+    final phrases = view.phrases;
 
-    if (phrases.isEmpty) {
+    if (phrases.isEmpty && !view.isLockedPreview) {
       return Center(
         child: Text(l10n.noPhrases),
       );
     }
 
+    // ロックバナーを先頭に置くため、リスト項目数を調整
+    final extraItems = view.isLockedPreview ? 1 : 0;
+
     return ListView.builder(
       padding: const EdgeInsets.all(8.0),
-      itemCount: phrases.length,
+      itemCount: phrases.length + extraItems,
       itemBuilder: (context, index) {
-        final phrase = phrases[index];
+        if (view.isLockedPreview && index == 0) {
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: LockedContentBanner(
+              message: l10n.lockedPreviewMore(view.hiddenCount),
+            ),
+          );
+        }
+        final phrase = phrases[index - extraItems];
         return _buildPhraseListItem(context, ref, phrase);
       },
       // キャッシュサイズを増やしてスクロールパフォーマンスを向上

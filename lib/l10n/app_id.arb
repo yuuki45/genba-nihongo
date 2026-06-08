@@ -171,6 +171,31 @@
     "description": "Bahasa Indonesia"
   },
 
+  "settingsReminder": "Pengingat Belajar",
+  "@settingsReminder": {
+    "description": "Bagian pengingat belajar"
+  },
+
+  "settingsReminderToggle": "Pengingat belajar harian",
+  "@settingsReminderToggle": {
+    "description": "Sakelar pengingat ON/OFF"
+  },
+
+  "settingsReminderDesc": "Memberi tahu 3 frasa hari ini",
+  "@settingsReminderDesc": {
+    "description": "Deskripsi sakelar pengingat"
+  },
+
+  "settingsReminderTime": "Waktu notifikasi",
+  "@settingsReminderTime": {
+    "description": "Pengaturan waktu pengingat"
+  },
+
+  "notificationPermissionDenied": "Notifikasi tidak diizinkan. Silakan izinkan notifikasi dari aplikasi Pengaturan perangkat Anda.",
+  "@notificationPermissionDenied": {
+    "description": "Pesan saat izin notifikasi ditolak"
+  },
+
   "settingsAppInfo": "Informasi Aplikasi",
   "@settingsAppInfo": {
     "description": "Bagian informasi aplikasi"
@@ -256,12 +281,12 @@
     "description": "Pesan ketika hasil pencarian tidak ditemukan"
   },
 
-  "quizTitle": "Kuis N3",
+  "quizTitle": "Latihan Soal N3",
   "@quizTitle": {
     "description": "Judul layar kuis"
   },
 
-  "quizCardTitle": "Tantang Kuis N3",
+  "quizCardTitle": "Coba Latihan Soal N3",
   "@quizCardTitle": {
     "description": "Judul kartu kuis di layar beranda"
   },
@@ -296,7 +321,7 @@
     "description": "Judul layar hasil"
   },
 
-  "quizCompleted": "Kuis Selesai!",
+  "quizCompleted": "Selesai! Kerja bagus!",
   "@quizCompleted": {
     "description": "Pesan kuis selesai"
   },
@@ -366,6 +391,206 @@
     "description": "Terakhir diperbarui"
   },
 
+  "navKanji": "Kanji",
+  "@navKanji": {
+    "description": "Navigasi bawah: tab belajar kanji"
+  },
+
+  "navQuiz": "Latihan",
+  "@navQuiz": {
+    "description": "Navigasi bawah: tab latihan soal"
+  },
+
+  "homeKanjiBlockTitle": "Belajar Kanji",
+  "@homeKanjiBlockTitle": {
+    "description": "Judul blok belajar kanji di beranda"
+  },
+
+  "homeKanjiBlockDesc": "Hafalkan kanji tempat kerja dengan kartu dan kuis",
+  "@homeKanjiBlockDesc": {
+    "description": "Deskripsi blok belajar kanji di beranda"
+  },
+
+  "homeJlptBlockTitle": "Latihan Soal JLPT",
+  "@homeJlptBlockTitle": {
+    "description": "Judul blok latihan soal JLPT di beranda"
+  },
+
+  "homeJlptBlockDesc": "Tata bahasa, kosakata, dan bacaan kanji N3/N2",
+  "@homeJlptBlockDesc": {
+    "description": "Deskripsi blok latihan soal JLPT di beranda"
+  },
+
+  "kanjiDictTitle": "Kamus Kanji",
+  "@kanjiDictTitle": {
+    "description": "Judul layar kamus kanji"
+  },
+
+  "kanjiDictMenuDesc": "Cari semua kata dan kanji di satu tempat",
+  "@kanjiDictMenuDesc": {
+    "description": "Deskripsi menu kamus di hub kanji"
+  },
+
+  "kanjiDictSearchHint": "Cari kata, cara baca, atau arti",
+  "@kanjiDictSearchHint": {
+    "description": "Petunjuk pencarian kamus kanji"
+  },
+
+  "kanjiDictSortReading": "Urutan a-i-u-e-o",
+  "@kanjiDictSortReading": {
+    "description": "Urutan kamus kanji: berdasarkan bacaan"
+  },
+
+  "kanjiDictSortCategory": "Per kategori",
+  "@kanjiDictSortCategory": {
+    "description": "Urutan kamus kanji: berdasarkan kategori"
+  },
+
+  "kanjiDictChars": "Kanji penyusun",
+  "@kanjiDictChars": {
+    "description": "Bagian kanji penyusun pada detail kata"
+  },
+
+  "kanjiDictTapHint": "Ketuk untuk melihat cara baca & arti",
+  "@kanjiDictTapHint": {
+    "description": "Petunjuk bahwa kanji penyusun dapat diketuk"
+  },
+
+  "kanjiSwipeHint": "Geser untuk kartu berikutnya",
+  "@kanjiSwipeHint": {
+    "description": "Petunjuk operasi geser pada kartu kanji"
+  },
+
+  "kanjiDictLockedTitle": "Fitur yang terbuka dengan Paket Kamus Kanji",
+  "@kanjiDictLockedTitle": {
+    "description": "Judul promosi fitur kamus saat belum dibeli"
+  },
+
+  "kanjiDictLockedDesc": "Anda dapat mencari setiap kanji dalam kata ini di kamus.\n・On'yomi & kun'yomi\n・Arti kanji (bahasa Indonesia)\n・Kata lain yang memakai kanji yang sama",
+  "@kanjiDictLockedDesc": {
+    "description": "Deskripsi promosi fitur kamus saat belum dibeli"
+  },
+
+  "kanjiDictOnYomi": "On'yomi",
+  "@kanjiDictOnYomi": {
+    "description": "Label on'yomi pada detail kanji"
+  },
+
+  "kanjiDictKunYomi": "Kun'yomi",
+  "@kanjiDictKunYomi": {
+    "description": "Label kun'yomi pada detail kanji"
+  },
+
+  "kanjiDictRelated": "Kata dengan kanji ini",
+  "@kanjiDictRelated": {
+    "description": "Bagian kata terkait pada detail kanji"
+  },
+
+  "kanjiCategoryQuizSection": "Kuis per Kategori",
+  "@kanjiCategoryQuizSection": {
+    "description": "Judul bagian kuis per kategori di hub kanji"
+  },
+
+  "quizCategoryGrammar": "Tata Bahasa",
+  "@quizCategoryGrammar": {
+    "description": "Bidang latihan soal JLPT: tata bahasa"
+  },
+
+  "quizCategoryVocab": "Kosakata",
+  "@quizCategoryVocab": {
+    "description": "Bidang latihan soal JLPT: kosakata"
+  },
+
+  "quizCategoryKanjiReading": "Bacaan Kanji",
+  "@quizCategoryKanjiReading": {
+    "description": "Bidang latihan soal JLPT: bacaan kanji"
+  },
+
+  "quizTitleN2": "Latihan Soal N2",
+  "@quizTitleN2": {
+    "description": "Judul layar kuis N2"
+  },
+
+  "quizCardTitleN2": "Coba Latihan Soal N2",
+  "@quizCardTitleN2": {
+    "description": "Judul kartu kuis N2 di layar beranda"
+  },
+
+  "quizCardDescriptionN2": "Pelajari tata bahasa dan kosakata N2 dengan paket persiapan",
+  "@quizCardDescriptionN2": {
+    "description": "Deskripsi kartu kuis N2 di layar beranda"
+  },
+
+  "storeTitle": "Paket Konten",
+  "@storeTitle": {
+    "description": "Judul layar toko"
+  },
+
+  "storeDescription": "Buka konten tambahan dengan sekali beli. Setelah dibeli, dapat digunakan selamanya.",
+  "@storeDescription": {
+    "description": "Deskripsi layar toko"
+  },
+
+  "storeBuy": "Beli",
+  "@storeBuy": {
+    "description": "Tombol beli"
+  },
+
+  "storePurchased": "Sudah dibeli",
+  "@storePurchased": {
+    "description": "Badge sudah dibeli"
+  },
+
+  "storeRestore": "Pulihkan Pembelian",
+  "@storeRestore": {
+    "description": "Tombol pulihkan pembelian"
+  },
+
+  "storeRestoreStarted": "Memeriksa pembelian Anda...",
+  "@storeRestoreStarted": {
+    "description": "Pesan saat pemulihan dimulai"
+  },
+
+  "storeUnavailable": "Tidak dapat terhubung ke toko. Periksa koneksi internet Anda.",
+  "@storeUnavailable": {
+    "description": "Pesan saat toko tidak tersedia"
+  },
+
+  "storeNoProducts": "Belum ada paket yang tersedia.",
+  "@storeNoProducts": {
+    "description": "Pesan saat tidak ada produk"
+  },
+
+  "storePending": "Menunggu persetujuan toko. Konten akan terbuka otomatis setelah disetujui.",
+  "@storePending": {
+    "description": "Pesan menunggu persetujuan pembelian"
+  },
+
+  "storeError": "Terjadi kesalahan saat pembelian",
+  "@storeError": {
+    "description": "Pesan kesalahan pembelian"
+  },
+
+  "lockedContentMessage": "Konten ini dapat dibuka dengan membeli paket",
+  "@lockedContentMessage": {
+    "description": "Pemberitahuan konten terkunci"
+  },
+
+  "lockedPreviewMore": "{count} frasa lainnya dapat dibuka dengan membeli paket",
+  "@lockedPreviewMore": {
+    "description": "Pemberitahuan di bawah pratinjau kategori terkunci",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "lockedContentUnlock": "Buka",
+  "@lockedContentUnlock": {
+    "description": "Tombol menuju pembukaan konten"
+  },
+
   "kanjiCardTitle": "Kanji di Tempat Kerja",
   "@kanjiCardTitle": {
     "description": "Judul kartu belajar kanji di layar beranda"
@@ -406,24 +631,14 @@
     "description": "Deskripsi menu kuis arti"
   },
 
-  "kanjiMenuFavorites": "Kanji yang Sulit",
+  "kanjiMenuFavorites": "Kanji Tersimpan",
   "@kanjiMenuFavorites": {
-    "description": "Menu kanji yang sulit"
+    "description": "Menu kanji tersimpan"
   },
 
-  "kanjiMenuFavoritesDesc": "Ulangi kanji yang disimpan",
+  "kanjiMenuFavoritesDesc": "Ulas kartu yang Anda simpan",
   "@kanjiMenuFavoritesDesc": {
-    "description": "Deskripsi menu kanji yang sulit"
-  },
-
-  "kanjiFavoritesQuiz": "Kuis Kanji Sulit",
-  "@kanjiFavoritesQuiz": {
-    "description": "Judul kuis kanji sulit"
-  },
-
-  "kanjiFavoritesQuizDesc": "Uji kemampuan dengan kanji yang sulit",
-  "@kanjiFavoritesQuizDesc": {
-    "description": "Deskripsi menu kuis kanji sulit"
+    "description": "Deskripsi menu kanji tersimpan"
   },
 
   "kanjiWrongAnswers": "Kata yang salah",
@@ -431,7 +646,7 @@
     "description": "Bagian kata yang salah di layar hasil kuis"
   },
 
-  "kanjiMarkDifficult": "Tandai sebagai sulit",
+  "kanjiMarkDifficult": "Simpan",
   "@kanjiMarkDifficult": {
     "description": "Label tombol tandai kanji sulit"
   },

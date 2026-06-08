@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/kanji_provider.dart';
+import '../../providers/settings_provider.dart';
+import '../../theme/app_theme.dart';
+import '../../../data/models/kanji_word.dart';
 import '../../../l10n/app_localizations.dart';
 import 'kanji_card_screen.dart';
+import 'kanji_dictionary_screen.dart';
 import 'kanji_quiz_screen.dart';
+import '../../widgets/header_actions.dart';
 
 /// 現場の漢字 メニュー画面
 class KanjiHomeScreen extends ConsumerWidget {
@@ -12,7 +17,6 @@ class KanjiHomeScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
-    final allKanjiAsync = ref.watch(allKanjiWordsProvider);
     final favoritesAsync = ref.watch(favoriteKanjiWordsProvider);
 
     return Scaffold(
@@ -20,48 +24,20 @@ class KanjiHomeScreen extends ConsumerWidget {
         title: Text(l10n.kanjiCardTitle),
         backgroundColor: Theme.of(context).colorScheme.primary,
         foregroundColor: Colors.white,
+        actions: buildHeaderActions(context, color: Colors.white),
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
-          // ヘッダー（説明と収録語数）
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  const Text('🏭', style: TextStyle(fontSize: 36)),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          l10n.kanjiCardDescription,
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        allKanjiAsync.maybeWhen(
-                          data: (words) => Text(
-                            '${words.length}',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                          orElse: () => const SizedBox.shrink(),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          // 漢字辞書（インデックスは無料・単漢字詳細は辞書パック）
+          _buildMenuTile(
+            context,
+            icon: Icons.auto_stories,
+            color: Colors.indigo,
+            title: l10n.kanjiDictTitle,
+            description: l10n.kanjiDictMenuDesc,
+            onTap: () => _push(context, const KanjiDictionaryScreen()),
           ),
-          const SizedBox(height: 16),
 
           // 漢字カード学習
           _buildMenuTile(
@@ -99,10 +75,10 @@ class KanjiHomeScreen extends ConsumerWidget {
             ),
           ),
 
-          // 苦手な漢字
+          // 保存した漢字（カードで⭐保存した語の復習）
           _buildMenuTile(
             context,
-            icon: Icons.star,
+            icon: Icons.bookmark,
             color: Colors.amber,
             title: l10n.kanjiMenuFavorites,
             description: l10n.kanjiMenuFavoritesDesc,
@@ -113,19 +89,79 @@ class KanjiHomeScreen extends ConsumerWidget {
             onTap: () => _push(context, const KanjiCardScreen(favoritesOnly: true)),
           ),
 
-          // 苦手クイズ（読み/意味ミックスで出題）
-          _buildMenuTile(
-            context,
-            icon: Icons.bolt,
-            color: Colors.deepOrange,
-            title: l10n.kanjiFavoritesQuiz,
-            description: l10n.kanjiFavoritesQuizDesc,
-            onTap: () => _push(
-              context,
-              const KanjiQuizScreen(favoritesOnly: true),
+          // カテゴリー別クイズ
+          Padding(
+            padding: const EdgeInsets.fromLTRB(4.0, 16.0, 4.0, 8.0),
+            child: Row(
+              children: [
+                Container(
+                  width: 6,
+                  height: 20,
+                  decoration: BoxDecoration(
+                    color: AppColors.safetyYellow,
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  l10n.kanjiCategoryQuizSection,
+                  style: const TextStyle(
+                    fontFamily: AppTheme.displayFont,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
             ),
           ),
+          ...KanjiCategory.all.map(
+            (category) => _buildCategoryQuizTile(context, ref, category),
+          ),
         ],
+      ),
+    );
+  }
+
+  /// カテゴリー別クイズのタイル（読み/意味ミックスで出題）
+  Widget _buildCategoryQuizTile(
+    BuildContext context,
+    WidgetRef ref,
+    KanjiCategory category,
+  ) {
+    final isJapanese = ref.watch(settingsProvider).maybeWhen(
+          data: (settings) => settings.languageCode == 'ja',
+          orElse: () => false,
+        );
+    final signColor = AppColors.kanjiCategoryColor(category.key);
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8.0),
+      child: ListTile(
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+        leading: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: signColor.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(category.icon, style: const TextStyle(fontSize: 20)),
+          ),
+        ),
+        title: Text(
+          isJapanese ? category.nameJa : category.nameId,
+          style: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => _push(
+          context,
+          KanjiQuizScreen(category: category.key),
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import '../models/kanji_character.dart';
 import '../models/kanji_word.dart';
 import '../datasources/local/database_helper.dart';
 
@@ -18,7 +19,7 @@ class KanjiRepository {
   ///
   /// 初回起動時（DBが空・保存バージョンなし）も含めて、
   /// 起動時に毎回呼び出すだけで初期ロードと差分同期の両方を担う。
-  /// 苦手漢字（kanji_favorites）は別テーブルのため影響を受けない。
+  /// 保存した漢字（kanji_favorites）は別テーブルのため影響を受けない。
   Future<void> syncDataIfNeeded() async {
     try {
       final jsonData = await _loadJsonData();
@@ -34,6 +35,14 @@ class KanjiRepository {
       for (var kanjiWordJson in kanjiWordsJson) {
         final kanjiWord = KanjiWord.fromJson(kanjiWordJson);
         await _dbHelper.upsertKanjiWord(kanjiWord.toMap());
+      }
+
+      // 単漢字辞書を同期（漢字辞書パック）
+      final List<dynamic> charactersJson =
+          jsonData['kanji_characters'] as List<dynamic>? ?? [];
+      for (var characterJson in charactersJson) {
+        final character = KanjiCharacter.fromJson(characterJson);
+        await _dbHelper.upsertKanjiCharacter(character.toMap());
       }
 
       await _dbHelper.saveSetting(_dataVersionKey, jsonVersion.toString());
@@ -73,23 +82,29 @@ class KanjiRepository {
     return maps.map((map) => KanjiWord.fromMap(map)).toList();
   }
 
-  /// 苦手漢字を取得
+  /// すべての単漢字エントリを取得（漢字辞書パック）
+  Future<List<KanjiCharacter>> getAllKanjiCharacters() async {
+    final maps = await _dbHelper.getAllKanjiCharacters();
+    return maps.map((map) => KanjiCharacter.fromMap(map)).toList();
+  }
+
+  /// 保存した漢字を取得
   Future<List<KanjiWord>> getFavoriteKanjiWords() async {
     final maps = await _dbHelper.getKanjiFavorites();
     return maps.map((map) => KanjiWord.fromMap(map)).toList();
   }
 
-  /// 苦手漢字に追加
+  /// 保存した漢字に追加
   Future<void> addFavorite(int kanjiWordId) async {
     await _dbHelper.addKanjiFavorite(kanjiWordId);
   }
 
-  /// 苦手漢字から削除
+  /// 保存した漢字から削除
   Future<void> removeFavorite(int kanjiWordId) async {
     await _dbHelper.removeKanjiFavorite(kanjiWordId);
   }
 
-  /// 苦手漢字かどうか確認
+  /// 保存済みかどうか確認
   Future<bool> isFavorite(int kanjiWordId) async {
     return await _dbHelper.isKanjiFavorite(kanjiWordId);
   }

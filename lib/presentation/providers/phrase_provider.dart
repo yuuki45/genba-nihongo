@@ -2,7 +2,9 @@ import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/phrase.dart';
 import '../../data/models/category.dart';
+import '../../data/models/phrase_scene.dart';
 import '../../data/repositories/phrase_repository.dart';
+import 'purchase_provider.dart';
 
 /// PhraseRepositoryのProvider
 final phraseRepositoryProvider = Provider<PhraseRepository>((ref) {
@@ -38,25 +40,72 @@ List<Phrase> selectDailyPhrases(List<Phrase> phrases, DateTime date, int count) 
   return shuffled.take(count).toList();
 }
 
-/// 今日の3フレーズを取得するProvider（日替わり固定）
+/// 今日の3フレーズを取得するProvider（日替わり固定・解錠済みのみ）
 final dailyPhrasesProvider = FutureProvider<List<Phrase>>((ref) async {
   final repository = ref.watch(phraseRepositoryProvider);
+  final unlockedPackIds = ref.watch(
+    entitlementProvider.select((state) => state.unlockedPackIds),
+  );
   final phrases = await repository.getAllPhrases();
-  return selectDailyPhrases(phrases, DateTime.now(), 3);
+  final available =
+      filterUnlockedContent(phrases, (phrase) => phrase.packId, unlockedPackIds);
+  return selectDailyPhrases(available, DateTime.now(), 3);
 });
 
-/// カテゴリIDとJLPTレベルでフィルタリングされたフレーズを取得するProvider
-final filteredPhrasesProvider = FutureProvider<List<Phrase>>((ref) async {
+/// ロック中カテゴリのプレビュー件数
+const int phrasePreviewCount = 5;
+
+/// ロック中コンテンツのプレビュー対象を選ぶ純粋関数
+///
+/// プレビューはN5フレーズのみ（最大5件）。
+/// JLPTタブが「すべて」（null）またはN5のときだけ表示し、
+/// N4以上のタブでは中身を見せない（バナーのみ）。
+List<Phrase> selectLockedPreviewPhrases(
+  List<Phrase> phrases,
+  String? jlptLevel,
+) {
+  if (jlptLevel != null && jlptLevel != 'N5') return [];
+  return phrases
+      .where((phrase) => phrase.jlptLevel == 'N5')
+      .take(phrasePreviewCount)
+      .toList();
+}
+
+/// フレーズ一覧の表示内容
+///
+/// ロック中カテゴリ（未購入パック）を選択した場合は、
+/// 冒頭のプレビューのみ返し [isLockedPreview] をtrueにする。
+typedef PhraseListView = ({
+  List<Phrase> phrases,
+  bool isLockedPreview,
+  int hiddenCount,
+});
+
+/// シーン内でカテゴリ・JLPTレベルでフィルタリングされたフレーズを取得するProvider
+///
+/// 未購入パックのフレーズは除外する。ただし未購入パックのシーン・カテゴリを
+/// 直接開いた場合はプレビュー（冒頭5件）を返す。
+final filteredPhrasesProvider =
+    FutureProvider.family<PhraseListView, String>((ref, sceneKey) async {
   final repository = ref.watch(phraseRepositoryProvider);
   final categoryId = ref.watch(selectedCategoryProvider);
   final jlptLevel = ref.watch(selectedJlptLevelProvider);
+  final unlockedPackIds = ref.watch(
+    entitlementProvider.select((state) => state.unlockedPackIds),
+  );
+  final scene = PhraseScene.fromKey(sceneKey);
 
-  // すべてのフレーズを取得
+  // シーン内のフレーズを取得
   List<Phrase> phrases;
-  if (categoryId == null) {
-    phrases = await repository.getAllPhrases();
-  } else {
+  if (categoryId != null) {
     phrases = await repository.getPhrasesByCategory(categoryId);
+  } else {
+    final all = await repository.getAllPhrases();
+    phrases = scene == null
+        ? all
+        : all
+            .where((phrase) => scene.categoryIds.contains(phrase.categoryId))
+            .toList();
   }
 
   // JLPTレベルでフィルタリング
@@ -64,7 +113,66 @@ final filteredPhrasesProvider = FutureProvider<List<Phrase>>((ref) async {
     phrases = phrases.where((phrase) => phrase.jlptLevel == jlptLevel).toList();
   }
 
-  return phrases;
+  final available =
+      filterUnlockedContent(phrases, (phrase) => phrase.packId, unlockedPackIds);
+
+  // 未購入のシーン・カテゴリを表示中（解錠分が0件で元データはある）→ プレビュー表示
+  if (available.isEmpty && phrases.isNotEmpty) {
+    final preview = selectLockedPreviewPhrases(phrases, jlptLevel);
+    return (
+      phrases: preview,
+      isLockedPreview: true,
+      hiddenCount: phrases.length - preview.length,
+    );
+  }
+
+  return (phrases: available, isLockedPreview: false, hiddenCount: 0);
+});
+
+/// ロック中（未購入パックのみで構成される）シーンキーを取得するProvider
+///
+/// ハブ画面のロックバッジ表示用。シーン内の全カテゴリがロックされていればロック。
+final lockedSceneKeysProvider = FutureProvider<Set<String>>((ref) async {
+  final lockedCategoryIds = await ref.watch(lockedCategoryIdsProvider.future);
+  return PhraseScene.all
+      .where((scene) =>
+          scene.categoryIds.isNotEmpty &&
+          scene.categoryIds.every(lockedCategoryIds.contains))
+      .map((scene) => scene.key)
+      .toSet();
+});
+
+/// ロック中（未購入パックのみで構成される）カテゴリIDを判定する純粋関数
+///
+/// テスト容易性のためProviderから分離。
+Set<int> computeLockedCategoryIds(
+  List<Phrase> phrases,
+  Set<String> unlockedPackIds,
+) {
+  final byCategory = <int, List<Phrase>>{};
+  for (final phrase in phrases) {
+    byCategory.putIfAbsent(phrase.categoryId, () => []).add(phrase);
+  }
+
+  final locked = <int>{};
+  byCategory.forEach((categoryId, categoryPhrases) {
+    final hasUnlockedContent = categoryPhrases
+        .any((phrase) => isContentUnlocked(phrase.packId, unlockedPackIds));
+    if (!hasUnlockedContent) {
+      locked.add(categoryId);
+    }
+  });
+  return locked;
+}
+
+/// ロック中カテゴリIDの集合を取得するProvider（カテゴリタブのロック表示用）
+final lockedCategoryIdsProvider = FutureProvider<Set<int>>((ref) async {
+  final repository = ref.watch(phraseRepositoryProvider);
+  final unlockedPackIds = ref.watch(
+    entitlementProvider.select((state) => state.unlockedPackIds),
+  );
+  final phrases = await repository.getAllPhrases();
+  return computeLockedCategoryIds(phrases, unlockedPackIds);
 });
 
 /// カテゴリIDでフィルタリングされたフレーズを取得するProvider（後方互換性のため保持）
@@ -94,17 +202,21 @@ final selectedJlptLevelProvider = StateProvider<String?>((ref) => null);
 /// 検索クエリを管理するProvider
 final searchQueryProvider = StateProvider<String>((ref) => '');
 
-/// 検索結果を取得するProvider
+/// 検索結果を取得するProvider（解錠済みのみ）
 /// 検索は頻繁に変わるためautoDisposeを使用
 final searchResultsProvider = FutureProvider.autoDispose<List<Phrase>>((ref) async {
   final query = ref.watch(searchQueryProvider);
   final repository = ref.watch(phraseRepositoryProvider);
+  final unlockedPackIds = ref.watch(
+    entitlementProvider.select((state) => state.unlockedPackIds),
+  );
 
   if (query.isEmpty) {
     return [];
   }
 
-  return await repository.searchPhrases(query);
+  final results = await repository.searchPhrases(query);
+  return filterUnlockedContent(results, (phrase) => phrase.packId, unlockedPackIds);
 });
 
 /// お気に入り状態を管理するProvider

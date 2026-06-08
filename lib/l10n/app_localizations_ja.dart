@@ -111,6 +111,22 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsLanguageId => 'Bahasa Indonesia';
 
   @override
+  String get settingsReminder => '学習リマインダー';
+
+  @override
+  String get settingsReminderToggle => '毎日の学習リマインダー';
+
+  @override
+  String get settingsReminderDesc => '今日の3フレーズをお知らせします';
+
+  @override
+  String get settingsReminderTime => '通知時刻';
+
+  @override
+  String get notificationPermissionDenied =>
+      '通知が許可されていません。端末の「設定」アプリから通知を許可してください。';
+
+  @override
   String get settingsAppInfo => 'アプリ情報';
 
   @override
@@ -160,10 +176,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get noSearchResults => '検索結果がありません';
 
   @override
-  String get quizTitle => 'N3クイズ';
+  String get quizTitle => 'N3演習問題';
 
   @override
-  String get quizCardTitle => 'N3クイズに挑戦';
+  String get quizCardTitle => 'N3演習問題に挑戦';
 
   @override
   String get quizCardDescription => '文法と語彙を学ぼう！';
@@ -184,7 +200,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quizResultTitle => '結果';
 
   @override
-  String get quizCompleted => 'クイズ完了！';
+  String get quizCompleted => 'おつかれさまでした！';
 
   @override
   String get quizYourScore => 'あなたのスコア';
@@ -226,6 +242,126 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastUpdated => '最終更新日';
 
   @override
+  String get navKanji => '漢字学習';
+
+  @override
+  String get navQuiz => '演習問題';
+
+  @override
+  String get homeKanjiBlockTitle => '漢字学習';
+
+  @override
+  String get homeKanjiBlockDesc => '現場の漢字をカードとクイズで覚えよう';
+
+  @override
+  String get homeJlptBlockTitle => 'JLPT演習問題';
+
+  @override
+  String get homeJlptBlockDesc => 'N3・N2の文法・語彙・漢字読み';
+
+  @override
+  String get kanjiDictTitle => '漢字辞書';
+
+  @override
+  String get kanjiDictMenuDesc => '収録語と漢字をまとめて引ける';
+
+  @override
+  String get kanjiDictSearchHint => '語・読み・意味で検索';
+
+  @override
+  String get kanjiDictSortReading => 'あいうえお順';
+
+  @override
+  String get kanjiDictSortCategory => 'カテゴリ順';
+
+  @override
+  String get kanjiDictChars => '構成漢字';
+
+  @override
+  String get kanjiDictTapHint => 'タップで読み方・意味を表示';
+
+  @override
+  String get kanjiSwipeHint => 'スワイプで次のカードへ';
+
+  @override
+  String get kanjiDictLockedTitle => '漢字辞書パックで解放される機能';
+
+  @override
+  String get kanjiDictLockedDesc =>
+      'この語に使われている漢字を1文字ずつ辞書で引けるようになります。\n・音読み・訓読み\n・漢字の意味（インドネシア語）\n・この漢字を使うほかの語（逆引き）';
+
+  @override
+  String get kanjiDictOnYomi => '音読み';
+
+  @override
+  String get kanjiDictKunYomi => '訓読み';
+
+  @override
+  String get kanjiDictRelated => 'この漢字を使う語';
+
+  @override
+  String get kanjiCategoryQuizSection => 'カテゴリー別クイズ';
+
+  @override
+  String get quizCategoryGrammar => '文法';
+
+  @override
+  String get quizCategoryVocab => '語彙';
+
+  @override
+  String get quizCategoryKanjiReading => '漢字読み';
+
+  @override
+  String get quizTitleN2 => 'N2演習問題';
+
+  @override
+  String get quizCardTitleN2 => 'N2演習問題に挑戦';
+
+  @override
+  String get quizCardDescriptionN2 => '対策パックでN2の文法・語彙を学ぼう';
+
+  @override
+  String get storeTitle => 'コンテンツパック';
+
+  @override
+  String get storeDescription => '買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。';
+
+  @override
+  String get storeBuy => '購入';
+
+  @override
+  String get storePurchased => '購入済み';
+
+  @override
+  String get storeRestore => '購入を復元';
+
+  @override
+  String get storeRestoreStarted => '購入の復元を確認しています...';
+
+  @override
+  String get storeUnavailable => 'ストアに接続できません。インターネット接続を確認してください。';
+
+  @override
+  String get storeNoProducts => '現在販売中のパックはありません。';
+
+  @override
+  String get storePending => 'ストアの承認待ちです。承認されると自動的に解錠されます。';
+
+  @override
+  String get storeError => '購入処理でエラーが発生しました';
+
+  @override
+  String get lockedContentMessage => 'このコンテンツはパック購入で解錠できます';
+
+  @override
+  String lockedPreviewMore(int count) {
+    return '続きの$count件はパック購入で解錠できます';
+  }
+
+  @override
+  String get lockedContentUnlock => '解錠する';
+
+  @override
   String get kanjiCardTitle => '現場の漢字';
 
   @override
@@ -250,25 +386,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get kanjiMenuMeaningQuizDesc => '正しい意味を選ぶ';
 
   @override
-  String get kanjiMenuFavorites => '苦手な漢字';
+  String get kanjiMenuFavorites => '保存した漢字';
 
   @override
-  String get kanjiMenuFavoritesDesc => '保存した漢字を復習する';
-
-  @override
-  String get kanjiFavoritesQuiz => '苦手クイズ';
-
-  @override
-  String get kanjiFavoritesQuizDesc => '苦手な漢字だけで腕試し';
+  String get kanjiMenuFavoritesDesc => '保存したカードを復習する';
 
   @override
   String get kanjiWrongAnswers => '間違えた語';
 
   @override
-  String get kanjiMarkDifficult => '苦手に登録';
+  String get kanjiMarkDifficult => '保存する';
 
   @override
-  String get kanjiNoFavorites => '苦手な漢字はまだありません';
+  String get kanjiNoFavorites => '保存した漢字はまだありません';
 
   @override
   String get kanjiNoWords => '漢字データがありません';

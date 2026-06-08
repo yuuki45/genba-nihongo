@@ -171,6 +171,31 @@
     "description": "インドネシア語"
   },
 
+  "settingsReminder": "学習リマインダー",
+  "@settingsReminder": {
+    "description": "学習リマインダーセクション"
+  },
+
+  "settingsReminderToggle": "毎日の学習リマインダー",
+  "@settingsReminderToggle": {
+    "description": "リマインダーのON/OFFトグル"
+  },
+
+  "settingsReminderDesc": "今日の3フレーズをお知らせします",
+  "@settingsReminderDesc": {
+    "description": "リマインダートグルの説明"
+  },
+
+  "settingsReminderTime": "通知時刻",
+  "@settingsReminderTime": {
+    "description": "リマインダー時刻の設定タイル"
+  },
+
+  "notificationPermissionDenied": "通知が許可されていません。端末の「設定」アプリから通知を許可してください。",
+  "@notificationPermissionDenied": {
+    "description": "通知許可が拒否されたときのメッセージ"
+  },
+
   "settingsAppInfo": "アプリ情報",
   "@settingsAppInfo": {
     "description": "アプリ情報セクション"
@@ -256,12 +281,12 @@
     "description": "検索結果が見つからない時のメッセージ"
   },
 
-  "quizTitle": "N3クイズ",
+  "quizTitle": "N3演習問題",
   "@quizTitle": {
     "description": "クイズ画面のタイトル"
   },
 
-  "quizCardTitle": "N3クイズに挑戦",
+  "quizCardTitle": "N3演習問題に挑戦",
   "@quizCardTitle": {
     "description": "ホーム画面のクイズカードタイトル"
   },
@@ -296,7 +321,7 @@
     "description": "結果画面のタイトル"
   },
 
-  "quizCompleted": "クイズ完了！",
+  "quizCompleted": "おつかれさまでした！",
   "@quizCompleted": {
     "description": "クイズ完了メッセージ"
   },
@@ -366,6 +391,206 @@
     "description": "最終更新日"
   },
 
+  "navKanji": "漢字学習",
+  "@navKanji": {
+    "description": "ボトムナビ: 漢字学習タブ"
+  },
+
+  "navQuiz": "演習問題",
+  "@navQuiz": {
+    "description": "ボトムナビ: 演習問題タブ"
+  },
+
+  "homeKanjiBlockTitle": "漢字学習",
+  "@homeKanjiBlockTitle": {
+    "description": "ホームの漢字学習ブロックタイトル"
+  },
+
+  "homeKanjiBlockDesc": "現場の漢字をカードとクイズで覚えよう",
+  "@homeKanjiBlockDesc": {
+    "description": "ホームの漢字学習ブロック説明"
+  },
+
+  "homeJlptBlockTitle": "JLPT演習問題",
+  "@homeJlptBlockTitle": {
+    "description": "ホームのJLPT演習問題ブロックタイトル"
+  },
+
+  "homeJlptBlockDesc": "N3・N2の文法・語彙・漢字読み",
+  "@homeJlptBlockDesc": {
+    "description": "ホームのJLPT演習問題ブロック説明"
+  },
+
+  "kanjiDictTitle": "漢字辞書",
+  "@kanjiDictTitle": {
+    "description": "漢字辞書画面のタイトル"
+  },
+
+  "kanjiDictMenuDesc": "収録語と漢字をまとめて引ける",
+  "@kanjiDictMenuDesc": {
+    "description": "漢字ハブの辞書メニュー説明"
+  },
+
+  "kanjiDictSearchHint": "語・読み・意味で検索",
+  "@kanjiDictSearchHint": {
+    "description": "漢字辞書の検索ヒント"
+  },
+
+  "kanjiDictSortReading": "あいうえお順",
+  "@kanjiDictSortReading": {
+    "description": "漢字辞書の並び順: 読み順"
+  },
+
+  "kanjiDictSortCategory": "カテゴリ順",
+  "@kanjiDictSortCategory": {
+    "description": "漢字辞書の並び順: カテゴリ順"
+  },
+
+  "kanjiDictChars": "構成漢字",
+  "@kanjiDictChars": {
+    "description": "語詳細の構成漢字セクション"
+  },
+
+  "kanjiDictTapHint": "タップで読み方・意味を表示",
+  "@kanjiDictTapHint": {
+    "description": "構成漢字がタップできることのヒント"
+  },
+
+  "kanjiSwipeHint": "スワイプで次のカードへ",
+  "@kanjiSwipeHint": {
+    "description": "漢字カードのスワイプ操作ヒント"
+  },
+
+  "kanjiDictLockedTitle": "漢字辞書パックで解放される機能",
+  "@kanjiDictLockedTitle": {
+    "description": "未購入時の辞書機能紹介タイトル"
+  },
+
+  "kanjiDictLockedDesc": "この語に使われている漢字を1文字ずつ辞書で引けるようになります。\n・音読み・訓読み\n・漢字の意味（インドネシア語）\n・この漢字を使うほかの語（逆引き）",
+  "@kanjiDictLockedDesc": {
+    "description": "未購入時の辞書機能紹介文"
+  },
+
+  "kanjiDictOnYomi": "音読み",
+  "@kanjiDictOnYomi": {
+    "description": "単漢字詳細の音読みラベル"
+  },
+
+  "kanjiDictKunYomi": "訓読み",
+  "@kanjiDictKunYomi": {
+    "description": "単漢字詳細の訓読みラベル"
+  },
+
+  "kanjiDictRelated": "この漢字を使う語",
+  "@kanjiDictRelated": {
+    "description": "単漢字詳細の逆引きセクション"
+  },
+
+  "kanjiCategoryQuizSection": "カテゴリー別クイズ",
+  "@kanjiCategoryQuizSection": {
+    "description": "漢字ハブのカテゴリー別クイズセクション見出し"
+  },
+
+  "quizCategoryGrammar": "文法",
+  "@quizCategoryGrammar": {
+    "description": "JLPT演習問題の分野: 文法"
+  },
+
+  "quizCategoryVocab": "語彙",
+  "@quizCategoryVocab": {
+    "description": "JLPT演習問題の分野: 語彙"
+  },
+
+  "quizCategoryKanjiReading": "漢字読み",
+  "@quizCategoryKanjiReading": {
+    "description": "JLPT演習問題の分野: 漢字読み"
+  },
+
+  "quizTitleN2": "N2演習問題",
+  "@quizTitleN2": {
+    "description": "N2クイズ画面のタイトル"
+  },
+
+  "quizCardTitleN2": "N2演習問題に挑戦",
+  "@quizCardTitleN2": {
+    "description": "ホーム画面のN2クイズカードタイトル"
+  },
+
+  "quizCardDescriptionN2": "対策パックでN2の文法・語彙を学ぼう",
+  "@quizCardDescriptionN2": {
+    "description": "ホーム画面のN2クイズカード説明"
+  },
+
+  "storeTitle": "コンテンツパック",
+  "@storeTitle": {
+    "description": "ストア画面のタイトル"
+  },
+
+  "storeDescription": "買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。",
+  "@storeDescription": {
+    "description": "ストア画面の説明文"
+  },
+
+  "storeBuy": "購入",
+  "@storeBuy": {
+    "description": "購入ボタン"
+  },
+
+  "storePurchased": "購入済み",
+  "@storePurchased": {
+    "description": "購入済みバッジ"
+  },
+
+  "storeRestore": "購入を復元",
+  "@storeRestore": {
+    "description": "購入復元ボタン"
+  },
+
+  "storeRestoreStarted": "購入の復元を確認しています...",
+  "@storeRestoreStarted": {
+    "description": "復元開始時のメッセージ"
+  },
+
+  "storeUnavailable": "ストアに接続できません。インターネット接続を確認してください。",
+  "@storeUnavailable": {
+    "description": "ストア未接続時のメッセージ"
+  },
+
+  "storeNoProducts": "現在販売中のパックはありません。",
+  "@storeNoProducts": {
+    "description": "商品がない場合のメッセージ"
+  },
+
+  "storePending": "ストアの承認待ちです。承認されると自動的に解錠されます。",
+  "@storePending": {
+    "description": "購入承認待ちのメッセージ"
+  },
+
+  "storeError": "購入処理でエラーが発生しました",
+  "@storeError": {
+    "description": "購入エラーのメッセージ"
+  },
+
+  "lockedContentMessage": "このコンテンツはパック購入で解錠できます",
+  "@lockedContentMessage": {
+    "description": "ロックされたコンテンツの案内"
+  },
+
+  "lockedPreviewMore": "続きの{count}件はパック購入で解錠できます",
+  "@lockedPreviewMore": {
+    "description": "ロック中カテゴリのプレビュー下の案内",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+
+  "lockedContentUnlock": "解錠する",
+  "@lockedContentUnlock": {
+    "description": "ロック解除への導線ボタン"
+  },
+
   "kanjiCardTitle": "現場の漢字",
   "@kanjiCardTitle": {
     "description": "ホーム画面の漢字学習カードタイトル"
@@ -406,24 +631,14 @@
     "description": "意味クイズメニューの説明"
   },
 
-  "kanjiMenuFavorites": "苦手な漢字",
+  "kanjiMenuFavorites": "保存した漢字",
   "@kanjiMenuFavorites": {
-    "description": "苦手漢字メニュー"
+    "description": "保存した漢字メニュー"
   },
 
-  "kanjiMenuFavoritesDesc": "保存した漢字を復習する",
+  "kanjiMenuFavoritesDesc": "保存したカードを復習する",
   "@kanjiMenuFavoritesDesc": {
-    "description": "苦手漢字メニューの説明"
-  },
-
-  "kanjiFavoritesQuiz": "苦手クイズ",
-  "@kanjiFavoritesQuiz": {
-    "description": "苦手漢字クイズのタイトル"
-  },
-
-  "kanjiFavoritesQuizDesc": "苦手な漢字だけで腕試し",
-  "@kanjiFavoritesQuizDesc": {
-    "description": "苦手漢字クイズメニューの説明"
+    "description": "保存した漢字メニューの説明"
   },
 
   "kanjiWrongAnswers": "間違えた語",
@@ -431,14 +646,14 @@
     "description": "クイズ結果画面の間違えた語セクション"
   },
 
-  "kanjiMarkDifficult": "苦手に登録",
+  "kanjiMarkDifficult": "保存する",
   "@kanjiMarkDifficult": {
-    "description": "苦手登録トグルのラベル"
+    "description": "漢字保存トグルのラベル"
   },
 
-  "kanjiNoFavorites": "苦手な漢字はまだありません",
+  "kanjiNoFavorites": "保存した漢字はまだありません",
   "@kanjiNoFavorites": {
-    "description": "苦手漢字が空の場合のメッセージ"
+    "description": "保存した漢字が空の場合のメッセージ"
   },
 
   "kanjiNoWords": "漢字データがありません",

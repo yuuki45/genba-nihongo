@@ -302,6 +302,36 @@ abstract class AppLocalizations {
   /// **'Bahasa Indonesia'**
   String get settingsLanguageId;
 
+  /// 学習リマインダーセクション
+  ///
+  /// In ja, this message translates to:
+  /// **'学習リマインダー'**
+  String get settingsReminder;
+
+  /// リマインダーのON/OFFトグル
+  ///
+  /// In ja, this message translates to:
+  /// **'毎日の学習リマインダー'**
+  String get settingsReminderToggle;
+
+  /// リマインダートグルの説明
+  ///
+  /// In ja, this message translates to:
+  /// **'今日の3フレーズをお知らせします'**
+  String get settingsReminderDesc;
+
+  /// リマインダー時刻の設定タイル
+  ///
+  /// In ja, this message translates to:
+  /// **'通知時刻'**
+  String get settingsReminderTime;
+
+  /// 通知許可が拒否されたときのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'通知が許可されていません。端末の「設定」アプリから通知を許可してください。'**
+  String get notificationPermissionDenied;
+
   /// アプリ情報セクション
   ///
   /// In ja, this message translates to:
@@ -395,13 +425,13 @@ abstract class AppLocalizations {
   /// クイズ画面のタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N3クイズ'**
+  /// **'N3演習問題'**
   String get quizTitle;
 
   /// ホーム画面のクイズカードタイトル
   ///
   /// In ja, this message translates to:
-  /// **'N3クイズに挑戦'**
+  /// **'N3演習問題に挑戦'**
   String get quizCardTitle;
 
   /// ホーム画面のクイズカード説明
@@ -443,7 +473,7 @@ abstract class AppLocalizations {
   /// クイズ完了メッセージ
   ///
   /// In ja, this message translates to:
-  /// **'クイズ完了！'**
+  /// **'おつかれさまでした！'**
   String get quizCompleted;
 
   /// あなたのスコア
@@ -524,6 +554,240 @@ abstract class AppLocalizations {
   /// **'最終更新日'**
   String get lastUpdated;
 
+  /// ボトムナビ: 漢字学習タブ
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字学習'**
+  String get navKanji;
+
+  /// ボトムナビ: 演習問題タブ
+  ///
+  /// In ja, this message translates to:
+  /// **'演習問題'**
+  String get navQuiz;
+
+  /// ホームの漢字学習ブロックタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字学習'**
+  String get homeKanjiBlockTitle;
+
+  /// ホームの漢字学習ブロック説明
+  ///
+  /// In ja, this message translates to:
+  /// **'現場の漢字をカードとクイズで覚えよう'**
+  String get homeKanjiBlockDesc;
+
+  /// ホームのJLPT演習問題ブロックタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'JLPT演習問題'**
+  String get homeJlptBlockTitle;
+
+  /// ホームのJLPT演習問題ブロック説明
+  ///
+  /// In ja, this message translates to:
+  /// **'N3・N2の文法・語彙・漢字読み'**
+  String get homeJlptBlockDesc;
+
+  /// 漢字辞書画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字辞書'**
+  String get kanjiDictTitle;
+
+  /// 漢字ハブの辞書メニュー説明
+  ///
+  /// In ja, this message translates to:
+  /// **'収録語と漢字をまとめて引ける'**
+  String get kanjiDictMenuDesc;
+
+  /// 漢字辞書の検索ヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'語・読み・意味で検索'**
+  String get kanjiDictSearchHint;
+
+  /// 漢字辞書の並び順: 読み順
+  ///
+  /// In ja, this message translates to:
+  /// **'あいうえお順'**
+  String get kanjiDictSortReading;
+
+  /// 漢字辞書の並び順: カテゴリ順
+  ///
+  /// In ja, this message translates to:
+  /// **'カテゴリ順'**
+  String get kanjiDictSortCategory;
+
+  /// 語詳細の構成漢字セクション
+  ///
+  /// In ja, this message translates to:
+  /// **'構成漢字'**
+  String get kanjiDictChars;
+
+  /// 構成漢字がタップできることのヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'タップで読み方・意味を表示'**
+  String get kanjiDictTapHint;
+
+  /// 漢字カードのスワイプ操作ヒント
+  ///
+  /// In ja, this message translates to:
+  /// **'スワイプで次のカードへ'**
+  String get kanjiSwipeHint;
+
+  /// 未購入時の辞書機能紹介タイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字辞書パックで解放される機能'**
+  String get kanjiDictLockedTitle;
+
+  /// 未購入時の辞書機能紹介文
+  ///
+  /// In ja, this message translates to:
+  /// **'この語に使われている漢字を1文字ずつ辞書で引けるようになります。\n・音読み・訓読み\n・漢字の意味（インドネシア語）\n・この漢字を使うほかの語（逆引き）'**
+  String get kanjiDictLockedDesc;
+
+  /// 単漢字詳細の音読みラベル
+  ///
+  /// In ja, this message translates to:
+  /// **'音読み'**
+  String get kanjiDictOnYomi;
+
+  /// 単漢字詳細の訓読みラベル
+  ///
+  /// In ja, this message translates to:
+  /// **'訓読み'**
+  String get kanjiDictKunYomi;
+
+  /// 単漢字詳細の逆引きセクション
+  ///
+  /// In ja, this message translates to:
+  /// **'この漢字を使う語'**
+  String get kanjiDictRelated;
+
+  /// 漢字ハブのカテゴリー別クイズセクション見出し
+  ///
+  /// In ja, this message translates to:
+  /// **'カテゴリー別クイズ'**
+  String get kanjiCategoryQuizSection;
+
+  /// JLPT演習問題の分野: 文法
+  ///
+  /// In ja, this message translates to:
+  /// **'文法'**
+  String get quizCategoryGrammar;
+
+  /// JLPT演習問題の分野: 語彙
+  ///
+  /// In ja, this message translates to:
+  /// **'語彙'**
+  String get quizCategoryVocab;
+
+  /// JLPT演習問題の分野: 漢字読み
+  ///
+  /// In ja, this message translates to:
+  /// **'漢字読み'**
+  String get quizCategoryKanjiReading;
+
+  /// N2クイズ画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'N2演習問題'**
+  String get quizTitleN2;
+
+  /// ホーム画面のN2クイズカードタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'N2演習問題に挑戦'**
+  String get quizCardTitleN2;
+
+  /// ホーム画面のN2クイズカード説明
+  ///
+  /// In ja, this message translates to:
+  /// **'対策パックでN2の文法・語彙を学ぼう'**
+  String get quizCardDescriptionN2;
+
+  /// ストア画面のタイトル
+  ///
+  /// In ja, this message translates to:
+  /// **'コンテンツパック'**
+  String get storeTitle;
+
+  /// ストア画面の説明文
+  ///
+  /// In ja, this message translates to:
+  /// **'買い切りで追加コンテンツを解錠できます。一度購入すればずっと使えます。'**
+  String get storeDescription;
+
+  /// 購入ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'購入'**
+  String get storeBuy;
+
+  /// 購入済みバッジ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入済み'**
+  String get storePurchased;
+
+  /// 購入復元ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'購入を復元'**
+  String get storeRestore;
+
+  /// 復元開始時のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入の復元を確認しています...'**
+  String get storeRestoreStarted;
+
+  /// ストア未接続時のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'ストアに接続できません。インターネット接続を確認してください。'**
+  String get storeUnavailable;
+
+  /// 商品がない場合のメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'現在販売中のパックはありません。'**
+  String get storeNoProducts;
+
+  /// 購入承認待ちのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'ストアの承認待ちです。承認されると自動的に解錠されます。'**
+  String get storePending;
+
+  /// 購入エラーのメッセージ
+  ///
+  /// In ja, this message translates to:
+  /// **'購入処理でエラーが発生しました'**
+  String get storeError;
+
+  /// ロックされたコンテンツの案内
+  ///
+  /// In ja, this message translates to:
+  /// **'このコンテンツはパック購入で解錠できます'**
+  String get lockedContentMessage;
+
+  /// ロック中カテゴリのプレビュー下の案内
+  ///
+  /// In ja, this message translates to:
+  /// **'続きの{count}件はパック購入で解錠できます'**
+  String lockedPreviewMore(int count);
+
+  /// ロック解除への導線ボタン
+  ///
+  /// In ja, this message translates to:
+  /// **'解錠する'**
+  String get lockedContentUnlock;
+
   /// ホーム画面の漢字学習カードタイトル
   ///
   /// In ja, this message translates to:
@@ -572,29 +836,17 @@ abstract class AppLocalizations {
   /// **'正しい意味を選ぶ'**
   String get kanjiMenuMeaningQuizDesc;
 
-  /// 苦手漢字メニュー
+  /// 保存した漢字メニュー
   ///
   /// In ja, this message translates to:
-  /// **'苦手な漢字'**
+  /// **'保存した漢字'**
   String get kanjiMenuFavorites;
 
-  /// 苦手漢字メニューの説明
+  /// 保存した漢字メニューの説明
   ///
   /// In ja, this message translates to:
-  /// **'保存した漢字を復習する'**
+  /// **'保存したカードを復習する'**
   String get kanjiMenuFavoritesDesc;
-
-  /// 苦手漢字クイズのタイトル
-  ///
-  /// In ja, this message translates to:
-  /// **'苦手クイズ'**
-  String get kanjiFavoritesQuiz;
-
-  /// 苦手漢字クイズメニューの説明
-  ///
-  /// In ja, this message translates to:
-  /// **'苦手な漢字だけで腕試し'**
-  String get kanjiFavoritesQuizDesc;
 
   /// クイズ結果画面の間違えた語セクション
   ///
@@ -602,16 +854,16 @@ abstract class AppLocalizations {
   /// **'間違えた語'**
   String get kanjiWrongAnswers;
 
-  /// 苦手登録トグルのラベル
+  /// 漢字保存トグルのラベル
   ///
   /// In ja, this message translates to:
-  /// **'苦手に登録'**
+  /// **'保存する'**
   String get kanjiMarkDifficult;
 
-  /// 苦手漢字が空の場合のメッセージ
+  /// 保存した漢字が空の場合のメッセージ
   ///
   /// In ja, this message translates to:
-  /// **'苦手な漢字はまだありません'**
+  /// **'保存した漢字はまだありません'**
   String get kanjiNoFavorites;
 
   /// 漢字データが空の場合のメッセージ

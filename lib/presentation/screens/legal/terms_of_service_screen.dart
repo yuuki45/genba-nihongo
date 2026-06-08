@@ -21,7 +21,7 @@ class TermsOfServiceScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${l10n.lastUpdated}: 2024年10月23日',
+              '${l10n.lastUpdated}: 2026年06月07日',
               style: TextStyle(
                 color: Colors.grey[600],
                 fontSize: 12,
@@ -85,7 +85,15 @@ class TermsOfServiceScreen extends StatelessWidget {
           '本アプリにおける個人情報の取扱いについては、別途定めるプライバシーポリシーに従います。',
         ),
         _buildSection(
-          '第8条（準拠法・裁判管轄）',
+          '第8条（有料コンテンツ・アプリ内課金）',
+          '本アプリは、追加コンテンツ（コンテンツパック）をアプリ内課金（買い切り）により提供することがあります。\n\n'
+              '・課金処理はApple（App Store）を通じて行われ、Appleの利用規約が適用されます\n'
+              '・購入したコンテンツは、同一のApple IDで「購入を復元」することにより再取得できます\n'
+              '・返金については、Appleの返金ポリシーに従います。当方では直接返金の対応はできません\n'
+              '・購入前に、内容と価格を十分にご確認ください',
+        ),
+        _buildSection(
+          '第9条（準拠法・裁判管轄）',
           '本規約の解釈にあたっては、日本法を準拠法とします。本アプリに関して紛争が生じた場合には、東京地方裁判所を第一審の専属的合意管轄裁判所とします。',
         ),
       ],
@@ -131,7 +139,15 @@ class TermsOfServiceScreen extends StatelessWidget {
           'Penanganan informasi pribadi dalam Aplikasi akan mengikuti Kebijakan Privasi yang ditetapkan secara terpisah.',
         ),
         _buildSection(
-          'Pasal 8 (Hukum yang Berlaku dan Yurisdiksi)',
+          'Pasal 8 (Konten Berbayar dan Pembelian Dalam Aplikasi)',
+          'Aplikasi ini dapat menyediakan konten tambahan (paket konten) melalui pembelian dalam aplikasi (sekali beli).\n\n'
+              '・Proses pembayaran dilakukan melalui Apple (App Store) dan tunduk pada ketentuan layanan Apple\n'
+              '・Konten yang dibeli dapat diperoleh kembali dengan "Pulihkan Pembelian" menggunakan Apple ID yang sama\n'
+              '・Pengembalian dana mengikuti kebijakan pengembalian dana Apple. Kami tidak dapat memproses pengembalian dana secara langsung\n'
+              '・Harap periksa konten dan harga dengan saksama sebelum membeli',
+        ),
+        _buildSection(
+          'Pasal 9 (Hukum yang Berlaku dan Yurisdiksi)',
           'Ketentuan ini diatur oleh hukum Jepang. Jika terjadi perselisihan terkait Aplikasi, Pengadilan Distrik Tokyo akan menjadi pengadilan yurisdiksi eksklusif tingkat pertama.',
         ),
       ],

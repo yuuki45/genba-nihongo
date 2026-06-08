@@ -9,6 +9,7 @@ class Phrase {
   final int importance;
   final String? usageContext;
   final String jlptLevel; // N5, N4, N3
+  final String? packId; // コンテンツパックID（null = 無料）
   final DateTime createdAt;
   final DateTime updatedAt;
 
@@ -22,6 +23,7 @@ class Phrase {
     this.importance = 1,
     this.usageContext,
     this.jlptLevel = 'N5',
+    this.packId,
     required this.createdAt,
     required this.updatedAt,
   });
@@ -38,6 +40,7 @@ class Phrase {
       importance: json['importance'] as int? ?? 1,
       usageContext: json['usage_context'] as String?,
       jlptLevel: json['jlpt_level'] as String? ?? 'N5',
+      packId: json['pack_id'] as String?,
       createdAt: DateTime.parse(json['created_at'] as String),
       updatedAt: DateTime.parse(json['updated_at'] as String),
     );
@@ -55,6 +58,7 @@ class Phrase {
       'importance': importance,
       'usage_context': usageContext,
       'jlpt_level': jlptLevel,
+      'pack_id': packId,
       'created_at': createdAt.toIso8601String(),
       'updated_at': updatedAt.toIso8601String(),
     };
@@ -72,6 +76,7 @@ class Phrase {
       importance: map['importance'] as int? ?? 1,
       usageContext: map['usage_context'] as String?,
       jlptLevel: map['jlpt_level'] as String? ?? 'N5',
+      packId: map['pack_id'] as String?,
       createdAt: DateTime.parse(map['created_at'] as String),
       updatedAt: DateTime.parse(map['updated_at'] as String),
     );
@@ -89,6 +94,7 @@ class Phrase {
       'importance': importance,
       'usage_context': usageContext,
       'jlpt_level': jlptLevel,
+      'pack_id': packId,
       'created_at': createdAt.toIso8601String(),
       'updated_at': updatedAt.toIso8601String(),
     };
@@ -105,6 +111,7 @@ class Phrase {
     int? importance,
     String? usageContext,
     String? jlptLevel,
+    String? packId,
     DateTime? createdAt,
     DateTime? updatedAt,
   }) {
@@ -118,6 +125,7 @@ class Phrase {
       importance: importance ?? this.importance,
       usageContext: usageContext ?? this.usageContext,
       jlptLevel: jlptLevel ?? this.jlptLevel,
+      packId: packId ?? this.packId,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
     );
@@ -142,6 +150,7 @@ class Phrase {
         other.importance == importance &&
         other.usageContext == usageContext &&
         other.jlptLevel == jlptLevel &&
+        other.packId == packId &&
         other.createdAt == createdAt &&
         other.updatedAt == updatedAt;
   }
@@ -158,6 +167,7 @@ class Phrase {
       importance,
       usageContext,
       jlptLevel,
+      packId,
       createdAt,
       updatedAt,
     );
