@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>現場にほんご / Genba Nihongo — サポート / Dukungan</title>
+<style>
+  :root { --ink:#1C1F26; --yellow:#F6C700; --paper:#F7F5EF; --line:#e2e0d8; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,"Hiragino Sans","Segoe UI",sans-serif;
+         color:var(--ink); background:var(--paper); line-height:1.8; }
+  header { background:var(--ink); color:#fff; padding:24px 20px; }
+  header .bar { height:6px; background:repeating-linear-gradient(45deg,var(--yellow) 0 16px,var(--ink) 16px 32px); }
+  .wrap { max-width:720px; margin:0 auto; padding:24px 20px 64px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  h2 { font-size:18px; margin:32px 0 8px; border-left:5px solid var(--yellow); padding-left:10px; }
+  .sub { color:#cfcfcf; font-size:14px; }
+  a { color:#0068B7; }
+  .lang-btns { margin-top:14px; }
+  .lang-btns button { background:transparent; border:1px solid #fff; color:#fff; border-radius:20px;
+    padding:5px 16px; margin-right:8px; cursor:pointer; font-size:14px; }
+  .lang-btns button.active { background:var(--yellow); color:var(--ink); border-color:var(--yellow); font-weight:700; }
+  [data-lang] { display:none; }
+  body.ja [data-lang="ja"], body.id [data-lang="id"] { display:block; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:12px; }
+  .faq dt { font-weight:700; margin-top:14px; }
+  .faq dd { margin:4px 0 0; }
+  footer { text-align:center; color:#999; font-size:13px; padding:24px; }
+</style>
+</head>
+<body class="ja">
+<header>
+  <div class="wrap" style="padding-bottom:0">
+    <h1>現場にほんご / Genba Nihongo</h1>
+    <div class="sub" data-lang="ja">サポートページ</div>
+    <div class="sub" data-lang="id">Halaman Dukungan</div>
+    <div class="lang-btns">
+      <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+      <button id="btn-id" onclick="setLang('id')">Bahasa Indonesia</button>
+    </div>
+  </div>
+</header>
+<div class="bar"></div>
+
+<div class="wrap">
+
+  <!-- 日本語 -->
+  <div data-lang="ja">
+    <p>「現場にほんご」は、日本で働くインドネシア人の技能実習生・特定技能の方のための日本語学習アプリです。工場・介護・病院・緊急時のフレーズや、JLPT N3/N2対策の演習問題を、インドネシア語の解説つきで学べます。学習機能は完全オフラインで利用できます。</p>
+
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      ご質問・ご要望・不具合のご連絡は、以下のメールアドレスまでお願いします。<br>
+      📧 <a href="mailto:web-studio@ymail.ne.jp">web-studio@ymail.ne.jp</a><br>
+      <small>返信には数日いただく場合があります。日本語またはインドネシア語でお送りください。</small>
+    </div>
+
+    <h2>よくある質問</h2>
+    <dl class="faq">
+      <dt>Q. インターネットは必要ですか？</dt>
+      <dd>A. いいえ。学習機能はすべてオフラインで使えます。コンテンツパックの購入・復元のときだけ通信します。</dd>
+      <dt>Q. 機種変更したら、買ったパックはどうなりますか？</dt>
+      <dd>A. 同じApple IDなら、ストア画面または設定画面の「購入を復元」で無料で再び使えます。</dd>
+      <dt>Q. 言語は変えられますか？</dt>
+      <dd>A. はい。設定画面で日本語とインドネシア語を切り替えられます。</dd>
+      <dt>Q. 返金してほしいです。</dt>
+      <dd>A. ご購入の返金はApp Store（Apple）が窓口です。<a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> からお手続きください。</dd>
+      <dt>Q. JLPT対策パックの内容は？</dt>
+      <dd>A. 「文字・語彙」「文法」が中心です。読解（長文）・聴解（リスニング）は含みません。</dd>
+    </dl>
+
+    <h2>プライバシー</h2>
+    <p>個人情報の取り扱いについては <a href="privacy.html">プライバシーポリシー</a> をご覧ください。</p>
+  </div>
+
+  <!-- Bahasa Indonesia -->
+  <div data-lang="id">
+    <p>"Genba Nihongo" adalah aplikasi belajar bahasa Jepang untuk pekerja magang teknis (技能実習生) dan tenaga kerja berketerampilan (特定技能) asal Indonesia yang bekerja di Jepang. Pelajari frasa pabrik, perawatan, rumah sakit, dan darurat, serta latihan soal JLPT N3/N2, lengkap dengan penjelasan bahasa Indonesia. Fitur belajar dapat dipakai sepenuhnya offline.</p>
+
+    <h2>Kontak</h2>
+    <div class="card">
+      Untuk pertanyaan, masukan, atau laporan masalah, silakan hubungi:<br>
+      📧 <a href="mailto:web-studio@ymail.ne.jp">web-studio@ymail.ne.jp</a><br>
+      <small>Balasan mungkin perlu beberapa hari. Silakan kirim dalam bahasa Jepang atau Indonesia.</small>
+    </div>
+
+    <h2>Pertanyaan yang Sering Diajukan</h2>
+    <dl class="faq">
+      <dt>T. Apakah perlu koneksi internet?</dt>
+      <dd>J. Tidak. Semua fitur belajar bisa dipakai offline. Komunikasi hanya saat membeli atau memulihkan paket konten.</dd>
+      <dt>T. Bagaimana paket yang sudah dibeli kalau ganti HP?</dt>
+      <dd>J. Dengan Apple ID yang sama, tekan "Pulihkan Pembelian" di layar toko atau pengaturan untuk memakainya lagi tanpa biaya.</dd>
+      <dt>T. Bisakah mengganti bahasa?</dt>
+      <dd>J. Bisa. Anda dapat beralih antara bahasa Jepang dan Indonesia di layar pengaturan.</dd>
+      <dt>T. Saya ingin pengembalian dana.</dt>
+      <dd>J. Pengembalian dana ditangani oleh App Store (Apple). Silakan ajukan di <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a>.</dd>
+      <dt>T. Apa isi Paket Latihan JLPT?</dt>
+      <dd>J. Berfokus pada "Huruf-Kosakata" dan "Tata Bahasa". Tidak termasuk membaca teks panjang (dokkai) atau mendengarkan (choukai).</dd>
+    </dl>
+
+    <h2>Privasi</h2>
+    <p>Mengenai penanganan data pribadi, lihat <a href="privacy.html">Kebijakan Privasi</a>.</p>
+  </div>
+
+</div>
+
+<footer>© 2026 Yuuki Odan — Genba Nihongo</footer>
+
+<script>
+  function setLang(l){
+    document.body.className = l;
+    document.documentElement.lang = l;
+    document.getElementById('btn-ja').classList.toggle('active', l==='ja');
+    document.getElementById('btn-id').classList.toggle('active', l==='id');
+  }
+  // 端末がインドネシア語なら初期表示をidに
+  if ((navigator.language||'').toLowerCase().startsWith('id')) setLang('id');
+</script>
+</body>
+</html>
