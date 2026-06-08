@@ -22,11 +22,19 @@
 - 別サブタイトル案: `Frasa kerja, perawatan & JLPT`（29字／"kerja"=仕事でより広く）
 - **キーワード欄**（100字・非表示・スペースなしのカンマ区切り。名前/サブタイトルの語は入れない）:
   ```
-  belajar,kanji,N3,N2,N4,N5,kaigo,magang,kerja,kosakata,hiragana,katakana,kamus,TKI,offline,jisho
+  belajar,kanji,N3,N2,N4,N5,kaigo,magang,kerja,kosakata,hiragana,katakana,kamus,TKI,offline,ujian
   ```
   （95字。名前/サブタイトルにある bahasa/jepang/nihongo/genba/frasa/pabrik/perawatan/JLPT は重複を避けて除外）
+  - インドネシア人は漢字では検索しない → すべてローマ字・インドネシア語。「kanji」「hiragana」のように
+    日本語の概念もローマ字で打つ前提（"辞書"ではなく "kamus"）
+  - ⚠️ **ASCで必ず「インドネシア語」ローカリゼーションを追加すること**。なければ主言語（日本語＝漢字）の
+    キーワードがフォールバックされ、インドネシア語端末のユーザーに検索ヒットしなくなる
 
 ## 日本語ロケール（ja）
+
+> 注: 漢字のキーワードは「端末を日本語に設定しているユーザー」にしか効かない。
+> インドネシア人実習生の多くは端末がインドネシア語なので、彼らに効くのは id 版。
+> ja 版は日本語話者（雇用側・支援者など）向け、および主言語フォールバック用。
 
 | 項目 | 案 | 文字数 |
 |------|-----|:---:|
